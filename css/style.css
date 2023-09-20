@@ -274,7 +274,7 @@ header .header_btn_wrap ul .all_menu_open a svg {
 }
 #all_menu_contain .all_menu_wrap > ul.all_menu_list_wrap li.dep_01 > a {
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 1px;
   height: 100%;
   display: flex;
@@ -409,7 +409,7 @@ aside {
   header .header_btn_wrap ul .login a {
     display: block;
   }
-  header .header_btn_wrap ul .all_menu a svg {
+  header .header_btn_wrap ul .all_menu_open a svg {
     fill: #333;
   }
   #all_menu_contain .all_menu_login_contain {

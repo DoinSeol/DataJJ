@@ -197,7 +197,7 @@ header {
 
 
         > a {
-          color: #fff; font-size: 24px; letter-spacing: 1px; 
+          color: #fff; font-size: 20px; letter-spacing: 1px; 
           height: 100%;
           display: flex; justify-content: space-between; align-items: center;
           padding: 24px 16px;
@@ -327,9 +327,9 @@ aside {
         .login a {
           display: block;
         }
-        
-        .all_menu a {
-        svg {fill: #333;}
+
+        .all_menu_open a {
+          svg {fill: #333;}
         }
       }
     }
