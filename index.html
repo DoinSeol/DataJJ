@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>개선)전주시데이터포털</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="./js/jquery-3.7.1.min.js"></script>
   <script defer src="./js/index.js"></script>
 </head>
 <body>
@@ -68,7 +69,7 @@
               <span>로그인</span>
             </a>
           </li>
-          <li class="all_menu">
+          <li class="all_menu_open">
             <a href="#">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
             </a>
@@ -88,8 +89,6 @@
         <article class="main_cont_02_wrap"></article>
         <article class="main_cont_03_wrap"></article>
       </div>
-
-
     </section>
 
     <footer>
@@ -117,6 +116,94 @@
         <div class="left_direct_menu_wrap"></div>
       </div>
     </aside>
+
+
+
+
+
+
+    <div id="all_menu_contain">
+
+      <!-- <div class="all_menu_login_contain">
+        <div class="all_menu_login_wrap">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
+            <span>로그인</span>
+          </a>
+        </div>
+      </div> -->
+
+      <!-- <div class="all_menu_wrap"> -->
+
+        <div class="all_menu_top_wrap">
+
+          <div class="all_menu_top">
+            <a href="#" title="홈으로이동"></a>
+          </div>
+
+          <div class="all_menu_close">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <nav class="all_menu_wrap">
+          <ul class="all_menu_list_wrap">
+            <li class="dep_01">
+              <a href="#">
+                데이터개방
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="#">공공데이터 소개</a></li>
+                <li><a href="#">데이터 목록</a></li>
+                <li><a href="#">데이터 요청 창구</a></li>
+                <li><a href="#">설문조사</a></li>
+                <li><a href="#">통합검색</a></li>
+              </ul>
+            </li>
+            <li class="dep_01">
+              <a href="#">
+                데이터활용
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="#">전주의 하루</a></li>
+                <li><a href="#">통계 시각화</a></li>
+                <li><a href="#">경제·산업동향</a></li>
+                <li><a href="#">생활·지리정보</a></li>
+                <li><a href="#">상권·분석정보</a></li>
+              </ul>
+            </li>
+            <li class="dep_01">
+              <a href="#">
+                통계마당
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="#">통계보고서</a></li>
+                <li><a href="#">통계 DB</a></li>
+                <li><a href="#">통계 E-Book</a></li>
+                <li><a href="#">통계조사 안내</a></li>
+              </ul>
+            </li>
+            <li class="dep_01">
+              <a href="#">
+                이용안내
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="#">공지사항</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        
+      <!-- </div> -->
+    </div>
+
 
   </main>
 </body>
