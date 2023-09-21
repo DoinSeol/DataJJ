@@ -1,11 +1,23 @@
 // Main
 main {
   position: relative;
+}
+
+
+// 헤더:글로벌메뉴
+header {
+  width: 100%; height: 100px;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+  position: fixed; top: 0px; left: 0; z-index:10;
+
+
   // 탑로그인:모바일
   .login_mobile {
     display: block;
-    width: 100%; height: 40px; z-index: 10;
-    position: absolute; top:0; left:0; padding: 0 16px;
+    width: 100%; height: 40px; padding: 0 16px;
+    // z-index: 10;
+    // position: absolute; top:0; left:0; padding: 0 16px;
     display: flex; justify-content: flex-end; align-items: center;
     background-color: rgba(0, 0, 0, 0.2);
     a {
@@ -13,15 +25,6 @@ main {
       span { color: #eee; font-size: 14px;}
     }
   }
-}
-
-
-// 헤더:글로벌메뉴
-header {
-  width: 100%; height: 65px;
-  background-color: rgba(255, 255, 255, 0);
-  display: flex; justify-content: space-between; align-items: center;
-  position: fixed; top: 40px; left: 0; z-index:10;
 
 
   // &:hover {
@@ -54,7 +57,7 @@ header {
   // }
 
   .header_logo_wrap{
-    width: 180px;  height: calc(100% - 16px);
+    width: 180px;  height: calc(100% - 40px); padding-left: 16px;
     a {
       width: 100%;  height: 100%;
       background-image: url("../images/logo/logo_W.png");
@@ -110,6 +113,7 @@ header {
 
 
   .header_btn_wrap {
+    padding-right: 16px;
     ul {
       display: flex; justify-content: space-between; align-items: center; 
       gap: 4px;
@@ -328,10 +332,10 @@ aside {
 
   // 헤더::PC
   header {
-    width: calc(100% - 84px); top:0; gap: 40px; margin-left: 84px;
+    width: calc(100% - 84px); height: 65px; top:0; gap: 40px; margin-left: 84px;
 
     .header_logo_wrap{
-      flex-grow: 2;
+      flex-grow: 2; height: calc(100% - 18px);
     }
 
     .gnb_menu_wrap {
