@@ -66,6 +66,29 @@ table {
 main {
   position: relative;
 }
+main .login_mobile {
+  display: block;
+  width: 100%;
+  height: 40px;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+main .login_mobile a svg {
+  width: 12px;
+  fill: #eee;
+  margin-bottom: -2px;
+}
+main .login_mobile a span {
+  color: #eee;
+  font-size: 14px;
+}
 
 header {
   width: 100%;
@@ -75,7 +98,7 @@ header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0;
+  top: 40px;
   left: 0;
   z-index: 10;
 }
@@ -166,6 +189,7 @@ header .header_btn_wrap ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 4px;
 }
 header .header_btn_wrap ul a {
   display: flex;
@@ -191,10 +215,11 @@ header .header_btn_wrap ul .login a {
 }
 header .header_btn_wrap ul .login a svg {
   width: 13px;
-  fill: #333;
+  fill: #fff;
 }
 header .header_btn_wrap ul .login a span {
   margin-bottom: -5px;
+  color: #fff;
 }
 header .header_btn_wrap ul .all_menu_open a svg {
   fill: #fff;
@@ -389,8 +414,12 @@ aside {
   display: none;
 }
 @media screen and (min-width: 1400px) {
+  main .login_mobile {
+    display: none;
+  }
   header {
     width: calc(100% - 84px);
+    top: 0;
     gap: 40px;
     margin-left: 84px;
   }
@@ -408,6 +437,12 @@ aside {
   }
   header .header_btn_wrap ul .login a {
     display: block;
+  }
+  header .header_btn_wrap ul .login a svg {
+    fill: #333;
+  }
+  header .header_btn_wrap ul .login a span {
+    color: #333;
   }
   header .header_btn_wrap ul .all_menu_open a svg {
     fill: #333;
