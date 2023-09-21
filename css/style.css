@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -63,6 +64,34 @@ table {
   border-spacing: 0;
 }
 
+body::-webkit-scrollbar {
+  width: 8px; /* 세로축 스크롤바 폭 너비 */
+  height: 8px; /* 가로축 스크롤바 폭 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(#0D7ACF, hsl(189, 88%, 43%));
+  border-radius: 25px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.visual_dep02_contain::-webkit-scrollbar {
+  width: 8px; /* 세로축 스크롤바 폭 너비 */
+  height: 8px; /* 가로축 스크롤바 폭 너비 */
+}
+
+.visual_dep02_contain::-webkit-scrollbar-thumb {
+  background: linear-gradient(#0D7ACF, hsl(189, 88%, 43%));
+  border-radius: 25px;
+}
+
+.visual_dep02_contain::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 main {
   position: relative;
 }
@@ -78,7 +107,7 @@ header {
   position: fixed;
   top: 0px;
   left: 0;
-  z-index: 10;
+  z-index: 8;
 }
 header .login_mobile {
   display: block;
@@ -98,6 +127,12 @@ header .login_mobile a svg {
 header .login_mobile a span {
   color: #eee;
   font-size: 14px;
+}
+header .login_mobile a:hover svg {
+  fill: #33a7ff;
+}
+header .login_mobile a:hover span {
+  color: #33a7ff;
 }
 header.active {
   background-color: rgb(255, 255, 255);
@@ -232,7 +267,7 @@ header .header_btn_wrap ul .all_menu_open a svg {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 11;
+  z-index: 15;
   background-color: #0D7ACF;
   display: flex;
   flex-direction: column;
@@ -338,7 +373,7 @@ footer {
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 9;
+  z-index: 7;
   width: 100%;
   background-color: #444;
   font-size: 14px;
@@ -412,8 +447,176 @@ aside {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 14;
   display: none;
 }
+aside .left_menu_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+aside .left_menu_wrap .left_visual_menu_wrap, aside .left_menu_wrap .left_direct_menu_wrap {
+  width: 100%;
+}
+aside .left_menu_wrap .left_visual_menu_wrap ul li, aside .left_menu_wrap .left_direct_menu_wrap ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+}
+aside .left_menu_wrap .left_visual_menu_wrap ul li p, aside .left_menu_wrap .left_direct_menu_wrap ul li p {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+aside .left_menu_wrap .left_visual_menu_wrap ul li svg, aside .left_menu_wrap .left_direct_menu_wrap ul li svg {
+  fill: #333;
+  width: 40px;
+}
+aside .left_menu_wrap .left_visual_menu_wrap ul {
+  margin-top: 50px;
+  border: 1px solid red;
+}
+aside .left_menu_wrap .left_visual_menu_wrap ul li:hover {
+  background-color: rgb(255, 255, 255);
+}
+aside .left_menu_wrap .left_visual_menu_wrap ul li:hover p {
+  color: #0D7ACF;
+}
+aside .left_menu_wrap .left_visual_menu_wrap ul li:hover svg {
+  fill: #0D7ACF;
+}
+aside .left_menu_wrap .left_direct_menu_wrap ul {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+aside .left_menu_wrap .left_direct_menu_wrap ul li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+aside .left_menu_wrap .left_direct_menu_wrap ul li:hover p {
+  color: #053153;
+}
+
+.visual_back_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 11;
+  display: none;
+}
+
+.visual_dep02_contain {
+  position: absolute;
+  top: 0;
+  left: -220px;
+  z-index: 13;
+  background-color: #fff;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  width: 220px;
+  height: 100vh;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.visual_dep02_contain .visual_menu_close {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.visual_dep02_contain .visual_menu_close a svg {
+  width: 28px;
+  fill: #333;
+}
+.visual_dep02_contain .visual_dep02_top {
+  width: 100%;
+}
+.visual_dep02_contain .visual_dep02_top .visual_dep02_top_icon {
+  width: 100%;
+  height: 100px;
+  border: 1px solid red;
+}
+.visual_dep02_contain .visual_dep02_top .visual_dep02_top_title {
+  font-size: 22px;
+  text-align: center;
+  padding: 16px;
+  color: #053153;
+  font-family: bold_font_G;
+}
+.visual_dep02_contain .visual_dep02_menu {
+  width: 100%;
+}
+.visual_dep02_contain .visual_dep02_menu li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.visual_dep02_contain .visual_dep02_menu li:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.visual_dep02_contain .visual_dep02_menu li a {
+  padding: 20px 8px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.visual_dep02_contain .visual_dep02_menu li a:hover {
+  color: #0D7ACF;
+}
+.visual_dep02_contain .visual_dep02_menu li a span {
+  background-color: rgba(13, 122, 207, 0.5);
+  margin-right: 10px;
+  margin-bottom: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.visual_dep02_contain .visual_dep02_menu li a span::after {
+  content: "";
+  box-sizing: "border-box";
+  margin-left: -3px;
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(45deg);
+}
+
+.visual_dep03_contain {
+  position: absolute;
+  z-index: 12;
+  top: 150px;
+  left: 304px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  background-color: #fff;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.visual_dep03_contain img {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
 @media screen and (min-width: 1400px) {
   main .login_mobile {
     display: none;
