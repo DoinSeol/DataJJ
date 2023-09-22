@@ -14,6 +14,7 @@ $(document).ready(function(){
   // all_menu
   $("#all_menu_contain").hide();
 
+
   $( '.all_menu_open' ).on('click', function() {
     $( '#all_menu_contain' ).slideDown( 300, 'linear' );
   } );
@@ -42,6 +43,9 @@ $(document).ready(function(){
     ); 
   });
 
+  // side_menu_dep03
+  $(".visual_dep03_contain").hide();
+  
   // side_menu_dep03_open
   $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseenter', function(){
     $('.visual_dep03_contain').show();

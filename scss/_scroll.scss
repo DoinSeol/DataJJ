@@ -1,26 +1,27 @@
-body::-webkit-scrollbar {
-  width: 8px;  /* 세로축 스크롤바 폭 너비 */
-  height: 8px;  /* 가로축 스크롤바 폭 너비 */
+body::-webkit-scrollbar, .visual_dep02_contain::-webkit-scrollbar, .main_right_wrap::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb, .visual_dep02_contain::-webkit-scrollbar-thumb, .main_right_wrap::-webkit-scrollbar-thumb {
   background: linear-gradient(#0D7ACF, hsl(189, 88%, 43%));
   border-radius: 25px;
 }
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track, .visual_dep02_contain::-webkit-scrollbar-track, .main_right_wrap::-webkit-scrollbar {
   // background-color: #575757;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.visual_dep02_contain::-webkit-scrollbar {
-  width: 8px;  /* 세로축 스크롤바 폭 너비 */
-  height: 8px;  /* 가로축 스크롤바 폭 너비 */
-}
-.visual_dep02_contain::-webkit-scrollbar-thumb {
-  background: linear-gradient(#0D7ACF, hsl(189, 88%, 43%));
-  border-radius: 25px;
-}
-.visual_dep02_contain::-webkit-scrollbar-track{
-  // background-color: #575757;
-  background-color: rgba(0, 0, 0, 0.3);
-}
+// .visual_dep02_contain::-webkit-scrollbar {
+//   width: 8px;
+//   height: 8px;
+// }
+// .visual_dep02_contain::-webkit-scrollbar-thumb {
+//   background: linear-gradient(#0D7ACF, hsl(189, 88%, 43%));
+//   border-radius: 25px;
+// }
+// .visual_dep02_contain::-webkit-scrollbar-track{
+//   // background-color: #575757;
+//   background-color: rgba(0, 0, 0, 0.3);
+// }
+
 
