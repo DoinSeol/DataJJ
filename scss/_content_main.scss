@@ -5,8 +5,65 @@ section {
   
   // 메인콘텐츠::Left
   .main_left_wrap {
-    width: 100%; height: 500px;
-    padding-top: 100px;
+    width: 100%; height: 400px;
+    padding: 100px 0 0 0; 
+    overflow-y: visible;
+    display: flex; justify-content: center; align-items: center;
+    
+    .main_cont_wrap{
+      display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 56px;
+      width: 100%; margin: auto 0;
+
+      .main_text_wrap {
+        p, h1 {color: #fff; text-align: center;}
+        p {font-family: light_font_G; margin-bottom: 16px;}
+        h1 {font-size: 32px;}
+      }
+      .main_search_wrap {
+        width: 100%; 
+        .search_box {
+          width: 80%; max-width: 500px; height: 50px; margin: 0 auto;
+          background-color: #fff; border-radius: 8px; border: 1px solid #ddd;
+          display: flex;
+          overflow: hidden;
+          // input {width: calc(100% - 50px);}
+          input {
+            width: 100%; border: none; padding: 0 16px; outline: none;
+            font-size: 15px; 
+          }
+          button {
+            background-color: transparent; width: 45px; height: 100%; border: none;
+            background-image: url("../images/icon_main_cont/magnifying-glass-solid.svg");
+            background-repeat: no-repeat; background-position: center; background-size: 22px;
+            svg {}
+          }
+        }
+        p {font: 13px/1 "light_font_G"; color: #ddd; text-align: center; margin-top: 8px;}
+      }
+      .main_count_wrap {
+        display: flex; gap: 32px;
+
+
+        .count_box {
+          display: flex; flex-direction: column; justify-content: flex-start; align-items: center; gap:16px;
+
+          &:nth-child(1) .count_circle {background-image: url("../images/icon_main_cont/count_i_1_w.png");}
+          &:nth-child(2) .count_circle {background-image: url("../images/icon_main_cont/count_i_2_w.png");}
+          &:nth-child(3) .count_circle {background-image: url("../images/icon_main_cont/count_i_3_w.png");}
+
+          .count_circle {
+            width: 100px; height: 100px; border-radius: 50%;
+            background-color: #0D7ACF;
+            background-repeat: no-repeat; background-position: center; background-size: 56px;
+          }
+          .count_text {
+            h3, p {color: #fff;text-align: center;}
+            h3 {font-family: bold_font_G; font-size: 24px; margin-bottom: 4px;}
+            p {}
+          }
+        }
+      }
+    }
   }
 
   // 메인콘텐츠::Right
@@ -66,8 +123,6 @@ section {
               display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;
               position: absolute; bottom: 0; left: 0;
               transition: 0.2s;
-
-              
             }
           }
         }
@@ -203,9 +258,15 @@ section {
         }
 
       > li.request_data {
-        padding: 16px; 
-        display: flex; flex-direction: column; gap:8px; justify-content: space-between; align-items: flex-start;
-        .main_cont_03_request_text {}
+          padding: 16px; 
+          display: flex; flex-direction: column; gap:8px; justify-content: space-between; align-items: flex-start;
+          background-image: url("../images/img_main_cont/request_data_img.png");
+          background-repeat: no-repeat; background-position: center; background-size: cover;
+        .main_cont_03_request_text {
+          p, h2 {color: #fff;}
+          p {margin-bottom: 8px;}
+          h2 {font-size: 28px;}
+        }
         .main_cont_03_request_bt_box {
           width: 100%; display: flex; justify-content: flex-end; align-items: flex-end;
           a {
@@ -274,6 +335,9 @@ section {
     
     .main_left_wrap {
       width: 35%; height: 100%;
+      padding: 80px 0 80px 84px;
+      overflow-y: auto;
+
     }
   
     .main_right_wrap {
