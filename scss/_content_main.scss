@@ -6,12 +6,16 @@ section {
   // 메인콘텐츠::Left
   .main_left_wrap {
     width: 100%; height: 400px;
+    position: relative;
     padding: 100px 0 0 0; 
     overflow-y: visible;
     display: flex; justify-content: center; align-items: center;
+    background-color: #053153;
+    background-image: url("../images/img_main_cont/data_main_back.png");
+    background-repeat: no-repeat; background-position: center bottom -200px; background-size: 100% auto;
     
     .main_cont_wrap{
-      display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 56px;
+      display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 36px;
       width: 100%; margin: auto 0;
 
       .main_text_wrap {
@@ -41,7 +45,7 @@ section {
         p {font: 13px/1 "light_font_G"; color: #ddd; text-align: center; margin-top: 8px;}
       }
       .main_count_wrap {
-        display: flex; gap: 32px;
+        display: flex; gap: 32px; display: none;
 
 
         .count_box {
@@ -93,7 +97,7 @@ section {
         flex-wrap: wrap;
 
         > li {
-          width: 100%; height: 170px;
+          width: 100%; height: 200px;
           border-radius: 8px; background-color: #fff; overflow: hidden;
           border:1px solid rgba(0, 0, 0, 0.1);
         }
@@ -145,11 +149,14 @@ section {
             }
           }
 
-          &:nth-child(1) .main_cont_01_img {background-image: url("../images/img_visualization/visual_1_1.png");}
+          &:nth-child(1) .main_cont_01_img {background-image: url("../images/img_visualization/main_visual_1_1.png");}
+          &:nth-child(2) .main_cont_01_img {background-image: url("../images/img_visualization/main_visual_2_1.png");}
+          &:nth-child(3) .main_cont_01_img {background-image: url("../images/img_visualization/main_visual_3_1.png");}
+          &:nth-child(4) .main_cont_01_img {background-image: url("../images/img_visualization/main_visual_4_1.png");}
 
           .main_cont_01_img {
             margin-bottom: 45px;
-            background-repeat: no-repeat; background-position: center 8px; background-size: cover;
+            background-repeat: no-repeat; background-position: center bottom; background-size: 100% auto;
             .main_cont_modal {
               height: 45px;
 
@@ -185,7 +192,10 @@ section {
           &:nth-child(3) {background-color: #ebf2ff;}
           &:nth-child(4) {background-color: #fff7eb;}
 
-          &:nth-child(1) .main_cont_02_img {background-image: url("../images/img_visualization/visual_1_1.png");}
+          &:nth-child(1) .main_cont_02_img {background-image: url("../images/img_visualization/main_db_visual_1_1.png");}
+          &:nth-child(2) .main_cont_02_img {background-image: url("../images/img_visualization/main_db_visual_2_1.png");}
+          &:nth-child(3) .main_cont_02_img {background-image: url("../images/img_visualization/main_db_visual_3_1.png");}
+          &:nth-child(4) .main_cont_02_img {background-image: url("../images/img_visualization/main_db_visual_4_1.png");}
 
           &:nth-child(1) .main_cont_02_img .main_cont_modal a {background-color: #5529af;}
           &:nth-child(2) .main_cont_02_img .main_cont_modal a {background-color: #e73470;}
@@ -195,7 +205,7 @@ section {
           &:hover .main_cont_02_img .main_cont_modal {transform: translateY(0);}
 
           .main_cont_02_img {
-            background-repeat: no-repeat; background-position: center 8px; background-size: cover;
+            background-repeat: no-repeat; background-position: center; background-size: 70% auto;
             position: relative;
 
             .main_cont_modal {
@@ -294,6 +304,8 @@ section {
 
       // main_cont_01,02,03공통
       .main_cont_01_wrap, .main_cont_02_wrap, .main_cont_03_wrap {
+
+
         ul.main_cont {
           > li {
             width: 48%; 
@@ -317,7 +329,15 @@ section {
         ul.main_cont {
           flex-wrap: nowrap;
           > li {
-            width: 100%; 
+            width: 100%; height: 170px;
+          }
+        }
+      }
+
+      .main_cont_03_wrap {
+        ul.main_cont {
+          > li {
+            height: 200px;
           }
         }
       }
@@ -337,6 +357,19 @@ section {
       width: 35%; height: 100%;
       padding: 80px 0 80px 84px;
       overflow-y: auto;
+      background-position: center bottom;
+
+
+
+      .main_cont_wrap{
+      gap: 56px;
+        .main_count_wrap {
+          display: flex;
+        }
+      } 
+
+
+
 
     }
   
