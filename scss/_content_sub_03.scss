@@ -1,0 +1,92 @@
+// 03_통계마당
+
+// 서브콘텐츠::Mobile
+
+// 03_01_통계보고서
+
+
+// 03_02_통계DB
+section.sub_section {
+  .sub_cont_wrap {
+    .sub_cont {
+      // 03_01 통계DB
+      .sub_cont_inner.db_visual_wrap {
+        display: flex; flex-wrap: wrap; 
+        justify-content: flex-start; align-items: flex-start; 
+        gap: 32px 16px;
+        .db_visual_box {
+          // width: calc(100% / 4);
+          width: calc((100% / 4) - 12px);
+          height: 320px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+
+          .inner_top {
+            width: 100%; height: 100px; padding: 16px 8px;
+            display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            .db_visual_box_ci {
+              width: 90px; height: 35px;
+              background-image: url("../images/logo/sub_cont_ci_01.png");
+              background-repeat: no-repeat; background-position: center; background-size: 100% auto;
+            }
+            h2 {}
+          }
+          .inner_bottom {
+            width: 100%; height: calc(100% - 100px); background-color: #efefef;
+            background-repeat: no-repeat; background-position: center; background-size: 90% auto;
+            position: relative;  
+
+            .db_visual_box_modal {
+              background-color: rgba(0, 0, 0, 0.8); 
+              width: 100%; height: 100%; display: block;
+              display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;
+              position: absolute; bottom: -100%; left: 0;
+              transition: 0.2s;
+            }
+          }
+
+          &:hover .inner_bottom .db_visual_box_modal {bottom: 0;}
+        }
+
+        .db_visual_box:nth-child(1) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_1_1.png");}
+        .db_visual_box:nth-child(2) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_2_1.png");}
+        .db_visual_box:nth-child(3) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_3_1.png");}
+        .db_visual_box:nth-child(4) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_4_1.png");}
+        .db_visual_box:nth-child(5) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_1_1.png");}
+        .db_visual_box:nth-child(6) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_2_1.png");}
+        .db_visual_box:nth-child(7) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_3_1.png");}
+        .db_visual_box:nth-child(8) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_4_1.png");}
+                
+      }
+    }
+  }
+}
+
+// 03_03_통계Ebook
+
+// 03_04_통계조사안내
+
+
+// 서브콘텐츠::600
+@media screen and (min-width: 600px){
+  section.sub_section {
+  }
+  
+}
+
+// 서브콘텐츠::1024
+@media screen and (min-width: 1024px){
+  section.sub_section {
+  }
+  
+}
+
+
+// 서브콘텐츠::1440(PC)
+@media screen and (min-width: 1400px){
+  section.sub_section {
+
+  }
+  
+}

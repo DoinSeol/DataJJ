@@ -20,8 +20,8 @@ section {
 
       .main_text_wrap {
         p, h1 {color: #fff; text-align: center;}
-        p {font-family: light_font_G; margin-bottom: 16px;}
-        h1 {font-size: 32px;}
+        p {font-family: light_font_G; margin-bottom: 16px; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);}
+        h1 {font-size: 32px; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);}
       }
       .main_search_wrap {
         width: 100%; 
@@ -30,6 +30,7 @@ section {
           background-color: #fff; border-radius: 8px; border: 1px solid #ddd;
           display: flex;
           overflow: hidden;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
           // input {width: calc(100% - 50px);}
           input {
             width: 100%; border: none; padding: 0 16px; outline: none;
@@ -42,7 +43,7 @@ section {
             svg {}
           }
         }
-        p {font: 13px/1 "light_font_G"; color: #ddd; text-align: center; margin-top: 8px;}
+        p {font: 13px/1 "light_font_G"; color: #fdfdfd; text-align: center; margin-top: 8px;  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);}
       }
       .main_count_wrap {
         display: flex; gap: 32px; display: none;
@@ -59,11 +60,12 @@ section {
             width: 100px; height: 100px; border-radius: 50%;
             background-color: #0D7ACF;
             background-repeat: no-repeat; background-position: center; background-size: 56px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3)
           }
           .count_text {
             h3, p {color: #fff;text-align: center;}
-            h3 {font-family: bold_font_G; font-size: 24px; margin-bottom: 4px;}
-            p {}
+            h3 {font-family: bold_font_G; font-size: 24px; margin-bottom: 4px; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);}
+            p {text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);}
           }
         }
       }
@@ -105,7 +107,7 @@ section {
     }
 
     .basic_bt a {
-      display: block; padding: 8px 16px; border-radius: 15px; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+      display: block; padding: 8px 16px; border-radius: 15px; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
       background-color: #0D7ACF; color: #fff; font-size: 14px;
       display: flex; justify-content: center; align-items: center; gap: 8px;
       transition: 0.2s;
@@ -197,10 +199,22 @@ section {
           &:nth-child(3) .main_cont_02_img {background-image: url("../images/img_visualization/main_db_visual_3_1.png");}
           &:nth-child(4) .main_cont_02_img {background-image: url("../images/img_visualization/main_db_visual_4_1.png");}
 
-          &:nth-child(1) .main_cont_02_img .main_cont_modal a {background-color: #5529af;}
-          &:nth-child(2) .main_cont_02_img .main_cont_modal a {background-color: #e73470;}
-          &:nth-child(3) .main_cont_02_img .main_cont_modal a {background-color: #4a5cbd;}
-          &:nth-child(4) .main_cont_02_img .main_cont_modal a {background-color: #f89500;}
+          &:nth-child(1) .main_cont_02_img .main_cont_modal a {
+            background-color: #5529af;
+            &:hover {background-color: #6638c4;}
+          }
+          &:nth-child(2) .main_cont_02_img .main_cont_modal a {
+            background-color: #e73470;
+            &:hover {background-color: #fc4280;}
+          }
+          &:nth-child(3) .main_cont_02_img .main_cont_modal a {
+            background-color: #4a5cbd;
+            &:hover {background-color: #5466cc;}
+          }
+          &:nth-child(4) .main_cont_02_img .main_cont_modal a {
+            background-color: #f89500;
+            &:hover {background-color: #ffa217;}
+          }
 
           &:hover .main_cont_02_img .main_cont_modal {transform: translateY(0);}
 
@@ -274,8 +288,8 @@ section {
           background-repeat: no-repeat; background-position: center; background-size: cover;
         .main_cont_03_request_text {
           p, h2 {color: #fff;}
-          p {margin-bottom: 8px;}
-          h2 {font-size: 28px;}
+          p {margin-bottom: 8px;text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);}
+          h2 {font-size: 28px; letter-spacing: 1px; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);}
         }
         .main_cont_03_request_bt_box {
           width: 100%; display: flex; justify-content: flex-end; align-items: flex-end;
@@ -283,6 +297,13 @@ section {
             background-color: #E1F2FF;
             span {color:#0D7ACF;}
             svg {fill:#0D7ACF;}
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+            &:hover{
+              background-color: #0D7ACF;
+              span {color:#E1F2FF;}
+              svg {fill:#E1F2FF;}
+            }
             
           }
         }
@@ -292,8 +313,6 @@ section {
 
   }
 
-
-
 }
 
 
@@ -301,10 +320,10 @@ section {
 @media screen and (min-width: 600px){
   section {
     .main_right_wrap {
+      padding-bottom: 240px;
 
       // main_cont_01,02,03공통
       .main_cont_01_wrap, .main_cont_02_wrap, .main_cont_03_wrap {
-
 
         ul.main_cont {
           > li {
@@ -359,17 +378,12 @@ section {
       overflow-y: auto;
       background-position: center bottom;
 
-
-
       .main_cont_wrap{
       gap: 56px;
         .main_count_wrap {
           display: flex;
         }
       } 
-
-
-
 
     }
   

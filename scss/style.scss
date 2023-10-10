@@ -3,11 +3,15 @@
 @import "_scroll";
 @import "_common";
 @import "_content_main";
+@import "_content_sub_common";
+@import "_content_sub_03";
+// @import "../03/scss/_content_sub";
+
 @font-face { font-family: bold_font_G; src: url(../font/GmarketSansBold.otf);}
 @font-face { font-family: medium_font_G; src: url(../font/GmarketSansMedium.otf);}
 @font-face { font-family: light_font_G; src: url(../font/GmarketSansLight.otf);}
 
-body {background-color: #053153;}
+// body {background-color: #053153;}
 svg {width: 25px;}
 section.main_left_wrap, section.main_right_wrap, section.footer {padding: 0 16px;}
 * {font-family: medium_font_G;}
