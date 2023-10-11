@@ -2,23 +2,35 @@
 @import "_reset";
 @import "_scroll";
 @import "_common";
+@import "_button";
+@import "_chart";
 @import "_content_main";
 @import "_content_sub_common";
 @import "_content_sub_03";
 // @import "../03/scss/_content_sub";
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
 @font-face { font-family: bold_font_G; src: url(../font/GmarketSansBold.otf);}
 @font-face { font-family: medium_font_G; src: url(../font/GmarketSansMedium.otf);}
 @font-face { font-family: light_font_G; src: url(../font/GmarketSansLight.otf);}
 
-// body {background-color: #053153;}
 svg {width: 25px;}
 section.main_left_wrap, section.main_right_wrap, section.footer {padding: 0 16px;}
-* {font-family: medium_font_G;}
+* {font-family: medium_font_G, 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', sans-serif;}
+.sub_section {font-family: medium_font_G, 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', sans-serif;}
+
+.border_lg {border: 1px solid #ddd;}
+.radius_m {border-radius: 8px;}
 
 
+.flex_wrap {flex-wrap: wrap;}
+.flex_no_wrap {flex-wrap: nowrap;}
+
+.flex_c_cc {display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.flex_c_cb {display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
 
 
+.flex_r_cc {display: flex; flex-direction: row; align-items: flex-start; justify-content: flex-start; }
 
 
 

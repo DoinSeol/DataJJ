@@ -106,15 +106,6 @@ section {
       }
     }
 
-    .basic_bt a {
-      display: block; padding: 8px 16px; border-radius: 15px; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-      background-color: #0D7ACF; color: #fff; font-size: 14px;
-      display: flex; justify-content: center; align-items: center; gap: 8px;
-      transition: 0.2s;
-      span {color: #fff; margin-bottom: -4px;}
-      svg {width: 14px; fill: #fff;}
-    }
-
     // .main_cont_01,02공통
     .main_cont_01_wrap, .main_cont_02_wrap {
       ul.main_cont {
@@ -129,6 +120,11 @@ section {
               display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;
               position: absolute; bottom: 0; left: 0;
               transition: 0.2s;
+
+              .btn_round_shadow {
+                font-size: 14px;
+                svg {width: 14px;}
+              }
             }
           }
         }
@@ -165,12 +161,8 @@ section {
               h3 {color: #FFB74D; font-size: 18px;}
               p {color: #fff; font: 14px/1.2 "light_font_G"; text-align: center; display: none;}
               a {
-                width: 120px;
-                background-color: #0D7ACF;
+                min-width: 120px;
                 display: none;
-                &:hover {
-                  background-color: #1488e0;
-                }
               }
             }
           }

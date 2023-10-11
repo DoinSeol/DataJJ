@@ -11,15 +11,13 @@ section.sub_section {
     .sub_cont {
       // 03_01 통계DB
       .sub_cont_inner.db_visual_wrap {
-        display: flex; flex-wrap: wrap; 
-        justify-content: flex-start; align-items: flex-start; 
-        gap: 32px 16px;
+        gap: 16px;
         .db_visual_box {
-          // width: calc(100% / 4);
-          width: calc((100% / 4) - 12px);
-          height: 320px;
+          width: 100%;
+          height: 280px;
           border: 1px solid #ddd;
           border-radius: 8px;
+          overflow: hidden;
 
           .inner_top {
             width: 100%; height: 100px; padding: 16px 8px;
@@ -34,8 +32,8 @@ section.sub_section {
           }
           .inner_bottom {
             width: 100%; height: calc(100% - 100px); background-color: #efefef;
-            background-repeat: no-repeat; background-position: center; background-size: 90% auto;
-            position: relative;  
+            background-repeat: no-repeat; background-position: center; background-size: auto 90%;
+            position: relative;
 
             .db_visual_box_modal {
               background-color: rgba(0, 0, 0, 0.8); 
@@ -47,18 +45,82 @@ section.sub_section {
           }
 
           &:hover .inner_bottom .db_visual_box_modal {bottom: 0;}
-        }
 
-        .db_visual_box:nth-child(1) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_1_1.png");}
-        .db_visual_box:nth-child(2) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_2_1.png");}
-        .db_visual_box:nth-child(3) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_3_1.png");}
-        .db_visual_box:nth-child(4) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_4_1.png");}
-        .db_visual_box:nth-child(5) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_1_1.png");}
-        .db_visual_box:nth-child(6) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_2_1.png");}
-        .db_visual_box:nth-child(7) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_3_1.png");}
-        .db_visual_box:nth-child(8) .inner_bottom {background-image: url("../images/img_visualization/main_db_visual_4_1.png");}
-                
+          &:nth-child(1) .inner_bottom {
+            background-image: url("../images/img_visualization/main_db_visual_1_1.png");
+            .db_visual_box_modal > div {
+              background-color: #5529af;
+              &:hover {background-color: #6638c4;}
+            }
+          }
+          &:nth-child(2) .inner_bottom {
+            background-image: url("../images/img_visualization/main_db_visual_2_1.png");
+            .db_visual_box_modal > div {
+              background-color: #e73470;
+              &:hover {background-color: #fc4280;}
+            }
+          }
+          &:nth-child(3) .inner_bottom {
+            background-image: url("../images/img_visualization/main_db_visual_3_1.png");
+            .db_visual_box_modal > div {
+              background-color: #4a5cbd;
+              &:hover {background-color: #5466cc;}
+            }
+          }
+          &:nth-child(4) .inner_bottom {
+            background-image: url("../images/img_visualization/main_db_visual_4_1.png");
+            .db_visual_box_modal > div {
+              background-color: #f89500;
+              &:hover {background-color: #ffa217;}
+            }
+          }
+          &:nth-child(5) .inner_bottom {
+            background-image: url("../images/img_visualization/main_db_visual_1_1.png");
+            .db_visual_box_modal > div {
+              background-color: #5529af;
+              &:hover {background-color: #6638c4;}
+            }
+          }
+          &:nth-child(6) .inner_bottom {
+            background-image: url("../images/img_visualization/main_db_visual_2_1.png");
+            .db_visual_box_modal > div {
+              background-color: #e73470;
+              &:hover {background-color: #fc4280;}
+            }
+          }
+          &:nth-child(7) .inner_bottom {
+            background-image: url("../images/img_visualization/main_db_visual_3_1.png");
+            .db_visual_box_modal > div {
+              background-color: #4a5cbd;
+              &:hover {background-color: #5466cc;}
+            }
+          }
+          &:nth-child(8) .inner_bottom {
+            background-image: url("../images/img_visualization/main_db_visual_4_1.png");
+            .db_visual_box_modal > div {
+              background-color: #f89500;
+              &:hover {background-color: #ffa217;}
+            }
+          }
+        }
       }
+
+
+      // 03_01_02 통계DB_02.전주시 사회조사
+      .sub_cont_inner.db_visual_detail_dw_wrap {
+        .db_visual_dw_box {
+          padding: 32px; background-color: #f5f5f5;
+          text-align: center;
+          gap: 16px;
+          p {margin-bottom: -4px;}
+          .btn_square_navy {}
+        }
+      }
+      
+
+
+
+
     }
   }
 }
@@ -71,14 +133,39 @@ section.sub_section {
 // 서브콘텐츠::600
 @media screen and (min-width: 600px){
   section.sub_section {
+    .sub_cont_wrap {
+      .sub_cont {
+        // 03_02_통계DB
+        .sub_cont_inner.db_visual_wrap {
+          gap: 32px 16px;
+          .db_visual_box {
+            width: calc((100% / 2) - 8px);
+            height: 300px;
+          }
+        }
+      }
+    }
   }
-  
+}
+
+// 서브콘텐츠::920
+@media screen and (min-width: 920px){
+  section.sub_section {
+    .sub_cont_wrap {
+      .sub_cont {
+        // 03_02_통계DB
+        .sub_cont_inner.db_visual_wrap {
+          .db_visual_box {
+            width: calc((100% / 3) - 11.5px);
+          }
+        }
+      }
+    }
+  }
 }
 
 // 서브콘텐츠::1024
 @media screen and (min-width: 1024px){
-  section.sub_section {
-  }
   
 }
 
@@ -86,7 +173,17 @@ section.sub_section {
 // 서브콘텐츠::1440(PC)
 @media screen and (min-width: 1400px){
   section.sub_section {
+    .sub_cont_wrap {
+      .sub_cont {
+        // 03_02_통계DB
+        .sub_cont_inner.db_visual_wrap {
+          .db_visual_box {
+            width: calc((100% / 4) - 12px);
 
+          }
+        }
+      }
+    }
   }
   
 }

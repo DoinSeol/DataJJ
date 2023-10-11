@@ -14,14 +14,14 @@
     <!-- 헤더:글로벌메뉴 -->
     <header class="sub_header">
       <div class="login_mobile">
-        <a href="index.html">
+        <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
           <span>로그인</span>
         </a>
       </div>
 
       <div class="header_logo_wrap">
-        <a href="#" title="홈으로이동"></a>
+        <a href="../index.html" title="홈으로이동"></a>
       </div>
 
       <nav class="gnb_menu_wrap">
@@ -67,7 +67,7 @@
       <div class="header_btn_wrap">
         <ul>
           <li class="dr_btn">
-            <a href="#">
+            <a title="전주시청 홈페이지 새창열기" href="#">
               전주시청 바로가기
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
             </a>
@@ -169,7 +169,7 @@
       <div class="sub_top_wrap">
         <div class="sub_top">
           <div class="sub_top_title">
-            <h1>통계 DB</h1>
+            <h1>통계 DB 상세보기</h1>
           </div>
           <div class="sub_top_navgation">
             <a href="../index.html">
@@ -194,89 +194,65 @@
       <!-- 서브 콘텐츠::bottom -->
       <div class="sub_cont_wrap">
         <div class="sub_cont">
-          <!-- <h2 class="sub_cont_title">Sub_Title</h2> -->
-          <div class="sub_cont_inner db_visual_wrap">
-            <a href="#" class="db_visual_box">
-              <div class="inner_top">
-                <div class="db_visual_box_ci"></div>
-                <h2>통계연보</h2>
-              </div class="inner_top">
-              <div class="inner_bottom">
-                <!-- db_visual_img -->
-              </div class="inner_bottom">
-            </a>
+          <!-- 서브 콘텐츠::03_02_02_통계DB 상세보기 -->
+          <h2 class="sub_cont_title">전주시 사회 조사</h2>
+          <div class="sub_cont_inner db_visual_detail_dw_wrap">
+            <div class="db_visual_dw_box border_lg radius_m flex_c_cc">
+              <p>
+                전주시 사회에 대한 통계를 조회하고 다운로드 받으실 수 있습니다.
+              </p>
+              <a class="btn_square_navy" title="kosis 홈페이지 새창열기" href="#">
+                <span>통계조회 및 다운로드 바로가기</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+              </a>
+            </div>
+          </div>
 
-            <a href="#" class="db_visual_box">
-              <div class="inner_top">
-                <div class="db_visual_box_ci"></div>
-                <h2>전주시 사회조사</h2>
-              </div class="inner_top">
-              <div class="inner_bottom">
-                <!-- db_visual_img -->
-              </div class="inner_bottom">
-            </a>
+          <div class="sub_cont_inner db_visual_detail_chart_wrap">
+            <table class="chart_R">
+              <caption>전라북도·전주시 통합 사회조사</caption>
+              <tbody>
+                <tr>
+                  <td>목적</td>
+                  <td>시민의 주관적 만족도, 의식, 사회적 관심사 등을 조사하여 삶의 질적 수준과 사회상태의 변화를 파악하고 정책수립 자료로 제공
+                  </td>
+                </tr>
+                <tr>
+                  <td>조사시기</td>
+                  <td>4월</td>
+                </tr>
+                <tr>
+                  <td>조사주기</td>
+                  <td> 매년(부문별 2년 주기)
+                  </td>
+                </tr>
+                <tr>
+                  <td>조사내용</td>
+                  <td>
+                    - 홀수년도(7개부문) : 교육, 보건·의료, 주거·교통, 환경, 여가·문화, 안전, 특성
+                    <br/><br/>
+                    - 짝수년도(6개부문) : 가구·가족, 소득·소비, 고용·노사, 복지, 사회참여, 특성
+                  </td>
+                </tr>
+                <tr>
+                  <td>조사대상</td>
+                  <td>전주시 2,010개의 표본가구 내 만15세 이상 가구원</td>
+                </tr>
+                <tr>
+                  <td>조사방법</td>
+                  <td>가구방문 면접조사</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-            <a href="#" class="db_visual_box">
-              <div class="inner_top">
-                <div class="db_visual_box_ci"></div>
-                <h2>전통시장 및 상점가 조사</h2>
-              </div class="inner_top">
-              <div class="inner_bottom">
-                <!-- db_visual_img -->
-              </div class="inner_bottom">
-            </a>
-
-            <a href="#" class="db_visual_box">
-              <div class="inner_top">
-                <div class="db_visual_box_ci"></div>
-                <h2>전주시 청년 통계</h2>
-              </div class="inner_top">
-              <div class="inner_bottom">
-                <!-- db_visual_img -->
-              </div class="inner_bottom">
-            </a>
-
-            <a href="#" class="db_visual_box">
-              <div class="inner_top">
-                <div class="db_visual_box_ci"></div>
-                <h2>최신월별통계(인구,무역 등)</h2>
-              </div class="inner_top">
-              <div class="inner_bottom">
-                <!-- db_visual_img -->
-              </div class="inner_bottom">
-            </a>
-
-            <a href="#" class="db_visual_box">
-              <div class="inner_top">
-                <div class="db_visual_box_ci"></div>
-                <h2>사업체조사보고서</h2>
-              </div class="inner_top">
-              <div class="inner_bottom">
-                <!-- db_visual_img -->
-              </div class="inner_bottom">
-            </a>
-
-            <a href="#" class="db_visual_box">
-              <div class="inner_top">
-                <div class="db_visual_box_ci"></div>
-                <h2>전주시주거실태조사</h2>
-              </div class="inner_top">
-              <div class="inner_bottom">
-                <!-- db_visual_img -->
-              </div class="inner_bottom">
-            </a>
-
-            <a href="#" class="db_visual_box">
-              <div class="inner_top">
-                <div class="db_visual_box_ci"></div>
-                <h2>기타통계</h2>
-              </div class="inner_top">
-              <div class="inner_bottom">
-                <!-- db_visual_img -->
-              </div class="inner_bottom">
-            </a>
+          <h2 class="sub_cont_title">주요 통계</h2>
+          <div class="sub_cont_inner db_visual_detail_data_wrap">
 
           </div>
+
+
+
         </div>
       </div>
     </section>
