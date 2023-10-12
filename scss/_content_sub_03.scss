@@ -9,7 +9,7 @@
 section.sub_section {
   .sub_cont_wrap {
     .sub_cont {
-      // 03_01 통계DB
+      // 03_01_통계DB
       .sub_cont_inner.db_visual_wrap {
         gap: 16px;
         .db_visual_box {
@@ -106,10 +106,9 @@ section.sub_section {
       }
 
 
-      // 03_01_02 통계DB_02.전주시 사회조사
+      // 03_01_02_통계DB_02.전주시사회조사
       .sub_cont_inner.db_visual_detail_dw_wrap {
         .db_visual_dw_box {
-          padding: 32px; background-color: #f5f5f5;
           text-align: center;
           gap: 16px;
           p {margin-bottom: -4px;}
