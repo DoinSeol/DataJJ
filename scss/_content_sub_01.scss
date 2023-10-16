@@ -85,6 +85,28 @@ section {
         }
 
 
+        // 01_02_01 공공데이터목록
+        .sub_cont_inner.db_list_detail_chart_wrap {
+          gap: 16px;
+          .update_info_box {
+            gap: 16px;
+            width: 100%;
+            p, span {
+              font-size: 14px;
+              font-family: 'Noto Sans KR';
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            p.date_info, p.view_info, p.view_info>span {color: #888; font-weight: 600;}
+            p.update_info {span{color: #0D7ACF;  margin-right: 4px;}}
+            p.view_info {gap: 4px; svg {width: 17px; fill: #888;} span{margin-bottom: 1px;}}
+          }
+        }
+
+        .sub_cont_inner.db_connection_list_wrap {}
+
+
       }
     }
   }
