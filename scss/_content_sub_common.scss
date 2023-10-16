@@ -1,14 +1,15 @@
 // 서브공통
 // 서브콘텐츠::Mobile
-section.sub_section {
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  flex-direction: column;
-  padding: 10px;
-  padding-top: 90px;
-  padding-bottom: 300px;
-
+section {
+  div.sub_section {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 90px;
+    padding-bottom: 300px;
+  }
 
 
   .sub_top_wrap, .sub_cont_wrap {
@@ -28,7 +29,7 @@ section.sub_section {
         h1 {
           display: inline-block;
           padding: 18px;
-          background-image: url("../images/icon_common/sub_title_common.png");
+          background-image: url("../images/icon_sub_cont/sub_title_common.png");
           background-repeat: no-repeat; background-position: top left; background-size: auto 59%;
           }
         }
@@ -71,31 +72,35 @@ section.sub_section {
 
 // 서브콘텐츠::600
 @media screen and (min-width: 600px){
-  section.sub_section {
+  section{
+    div.sub_section {
       padding: 12px;
       padding-top: 90px;
       padding-bottom: 210px;
+    }
   }
   
 }
 
 // 서브콘텐츠::1024
 @media screen and (min-width: 1024px){
-  section.sub_section {
+  section {
+    div.sub_section {
       padding-bottom: 140px;
+    }
   }
-  
 }
 
 
 // 서브콘텐츠::1440(PC)
 @media screen and (min-width: 1400px){
-  section.sub_section {
-    width: 100%;
-    padding: 16px;
-    padding-top: 60px;
-    padding-left: 98px;
-    padding-bottom: 140px;
-  }
-  
+  section {
+    div.sub_section {
+      width: 100%;
+      padding: 16px;
+      padding-top: 60px;
+      padding-left: 98px;
+      padding-bottom: 140px;
+    }
+  }  
 }
