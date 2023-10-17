@@ -27,6 +27,21 @@
   }
 }
 
+.btn_square_arrow_blue {
+  padding: 12px 10px 12px 18px; border-radius: 8px;
+  border: none;
+  background-color: #0D7ACF; 
+  color: #fff; font-size: 16px;
+  display: flex; justify-content: center; align-items: center; gap: 8px;
+  transition: 0.2s;
+  span{color: #fff; margin-bottom: -4px; font-family: medium_font_G;}
+  svg {height: 14px; fill: #fff;}
+  
+  &:hover {
+    background-color: #1488e0;
+  }
+}
+
 .btn_square_navy {
   padding: 0px 18px 0 18px; height: 38px; min-width: 120px;
   border-radius: 8px;

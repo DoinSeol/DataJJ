@@ -5,7 +5,7 @@ section {
   div.sub_section {
     .sub_cont_wrap {
       .sub_cont {
-        // 01_02_공공데이터목록
+        // 01_02_공공데이터목록, 01_05_통합검색 공통 상단 데이터 검색 박스
         .sub_cont_inner.data_set_box_wrap {
           .data_set_box {
             gap: 32px;
@@ -31,19 +31,28 @@ section {
           }
         }
 
-        .sub_cont_inner.data_list_box_wrap {
-          gap: 24px;
-          div {width: 100%;}
-          .data_list_select {gap: 12px; padding-bottom: 16px}
+        .sub_cont_inner {
           .data_list_total {
             font-size: 14px; 
             p {color: #888;}
           }
+        }
+
+        // 01_02_공공데이터목록
+        .sub_cont_inner.data_list_box_wrap {
+          gap: 24px;
+          div {width: 100%;}
+          .data_list_select {gap: 12px; padding-bottom: 16px}
+          // .data_list_total {
+          //   font-size: 14px; 
+          //   p {color: #888;}
+          // }
           .data_list_box {
             gap: 12px;
             .data_list {
               width: 100%;
               gap: 16px;
+              transition: 0.2s;
               .data_list_title_box {
                 gap: 12px;
                 .data_list_category_icon {
@@ -55,18 +64,23 @@ section {
                   }
                 .data_list_title {
                   width: calc(100% - 67px);
-                  .data_list_category {}
+                  .data_list_category {
+                    font-size: 13px;
+                    display: inline-block;
+                    background-color: #E1F5FE;
+                    padding: 8px 5px 3px; border-radius: 4px;margin-bottom : 8px;
+                  }
                   h3 {
                     width: 100%;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    transition: 0.2s;
                   }
                 }
               }
               .data_list_detail_box {
                 padding-top: 16px;
-                // margin-top: 16px;
                 gap: 12px;
                 p, span {
                   font-size: 14px;
@@ -76,9 +90,18 @@ section {
                   text-overflow: ellipsis;
                 }
                 p.text {width: 100%; font-size: 15px;}
-                p.date, p.view, p.view>span {color: #888; font-weight: 600;}
+                p.date, p.view, p.view>span {color: #888; font-weight: 500;}
                 p.date {span{color: #0D7ACF;  margin-right: 4px;}}
                 p.view {gap: 4px; svg {width: 17px; fill: #888;} span{margin-bottom: 1px;}}
+              }
+
+              &:hover {
+                background-color: #fafafa;
+                .data_list_category_icon {
+                  // border: 3px solid #0D7ACF;
+                  // border: 3px solid #003863;
+                }
+                h3 {text-decoration: underline; color: #003863;}
               }
             }
           }
@@ -86,7 +109,7 @@ section {
 
 
         // 01_02_01 공공데이터목록
-        .sub_cont_inner.db_list_detail_chart_wrap {
+        .sub_cont_inner.data_list_detail_chart_wrap {
           gap: 16px;
           .update_info_box {
             gap: 16px;
@@ -98,13 +121,143 @@ section {
               overflow: hidden;
               text-overflow: ellipsis;
             }
-            p.date_info, p.view_info, p.view_info>span {color: #888; font-weight: 600;}
+            p.update_info, p.view_info, p.view_info>span {color: #888; font-weight: 500;}
             p.update_info {span{color: #0D7ACF;  margin-right: 4px;}}
             p.view_info {gap: 4px; svg {width: 17px; fill: #888;} span{margin-bottom: 1px;}}
           }
         }
 
-        .sub_cont_inner.db_connection_list_wrap {}
+        .sub_cont_inner.data_connection_list_wrap {
+          gap: 12px;
+          .data_connection_list {
+            width: 100%;
+            gap: 16px;
+            transition: 0.2s;
+            .data_connection_list_title_box {
+              width: 100%;
+              .data_connection_list_title {
+                width: 100%;
+                .data_connection_list_category {
+                  font-size: 13px;
+                  display: inline-block;
+                  background-color: #E1F5FE;
+                  padding: 10px 10px 6px; border-radius: 4px; margin-bottom : 12px;
+                }
+                h3 {
+                  width: 100%;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+              }
+            }
+            .data_connection_list_detail_box {
+              padding-top: 16px;
+              width: 100%;
+              p {
+                width: 100%; font-size: 15px; line-height: 1.2; color: #555;
+                font-family: 'Noto Sans KR';
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                // white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+            }
+
+            &:hover {
+              background-color: #fafafa;
+            }
+          }
+        }
+
+
+        // 01_05_통합검색
+        .sub_cont_inner.integrated_search_list_box_wrap {
+          gap: 24px;
+          .serch_open_data_list_box {
+            width: 100%;
+            gap: 48px;
+            .serch_open_data_list {
+              width: 100%;
+              border-bottom: 1px solid #ddd;
+              .integrated_search_title {
+                height: 45px;
+                width: 100%;
+                padding-left: 16px;
+                border-bottom: 1px solid #0D7ACF;
+                background-color: #0D7ACF;
+                div {
+                  gap: 24px;
+                  h3, span {
+                    margin-bottom: -4px;
+                    color: #fff;
+                  }
+                  span {
+                    font-family: light_font_G;
+                    font-size: 14px;
+                  }
+                  
+                }
+                button {
+                  width: 22px;
+                  height: 22px;
+                  background-color: transparent;
+                  border: none;
+                  margin-right: 10px;
+                  background-image: url(../images/icon_main_cont/plus-solid_w.svg);
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-size: cover;
+                  cursor: pointer;
+                  transition: 0.2s;
+                  &:hover {background-image: url(../images/icon_main_cont/plus-solid_sb.svg);}
+                }
+              }
+              ul.integrated_search_list {
+                padding: 16px;
+                li {
+                  padding: 16px 0;
+                  gap: 26px;
+                  a {
+                    width: 100%; 
+                    .list_text_box {
+                      gap: 8px;
+                      width: 100%; 
+                      .search_data_title, .search_data_detail, .search_data_nav {
+                        width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        transition: 0.3s;
+                      }
+                      .search_data_detail, .search_data_nav {
+                        font-family: "Noto Sans KR";
+                        font-size: 16px;
+                        color: #777;
+                      }
+                      .search_data_nav {color: #0D7ACF; font-size: 14px; font-weight: 500;}
+                    }
+
+                    &:hover {
+                      .list_text_box {
+                        .search_data_title {
+                          color: #0b5fa0; padding-left: 16px;
+                          background-image: url("../images/icon_sub_cont/caret-right-solid.svg");
+                          background-repeat: no-repeat; background-position: bottom 2px left; background-size: auto;
+                      }
+
+                      }
+                  }
+                  }
+                }
+              }
+            }
+          }
+
+
+        }
 
 
       }
@@ -127,6 +280,13 @@ section {
               }
             }
           }
+
+          // 01_02_01 공공데이터목록
+          .sub_cont_inner.data_connection_list_wrap {
+            .data_connection_list {
+              width: calc((100% / 2) - 6px);
+            }
+          }
         }
       }
     }
@@ -145,6 +305,13 @@ section {
               .data_list {
                 width: calc((100% / 2) - 6px);
               }
+            }
+          }
+
+          // 01_02_01 공공데이터목록
+          .sub_cont_inner.data_connection_list_wrap {
+            .data_connection_list {
+              width: calc((100% / 4) - 9px);
             }
           }
         }
@@ -172,6 +339,8 @@ section {
               }
             }
           }
+
+
         }
       }
     }

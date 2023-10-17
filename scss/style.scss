@@ -2,14 +2,16 @@
 @import "_reset";
 @import "_scroll";
 @import "_common";
-@import "_button";
-@import "_table";
 @import "_content_main";
 @import "_content_sub_common";
+@import "_table";
+@import "_button";
+@import "_paging";
 @import "_content_sub_01";
 // @import "_content_sub_02";
 @import "_content_sub_03";
-// @import "../03/scss/_content_sub";
+// @import "_content_sub_04";
+
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
 @font-face { font-family: bold_font_G; src: url(../font/GmarketSansBold.otf);}
@@ -45,6 +47,7 @@ section.main_left_wrap, section.main_right_wrap, section.footer {padding: 0 16px
 .flex_c_cs {display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
 .flex_c_cb {display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
 .flex_c_sc {display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.flex_c_ss {display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; }
 
 // flex_style_row
 .flex_r_sc {display: flex; flex-direction: row; justify-content: flex-start; align-items: center; }
@@ -54,41 +57,7 @@ section.main_left_wrap, section.main_right_wrap, section.footer {padding: 0 16px
 .flex_r_bc {display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
 
 
-// paging_box
-.sub_paging_wrap {
-  padding-top: 16px;
-  &, ul.sub_pasing_box {gap: 8px;}
-  button, ul.sub_pasing_box li.paging_number_li a {
-    width: 28px; height: 28px;
-    font-size: 13px; color: #777;
-    // font-family: 'Noto Sans KR'; 
-    display: flex; justify-content: center; align-items: center;
-    cursor: pointer;
-  }
-  button {
-    border: none; width: 18px;
-    background-color: transparent;
-    background-repeat: no-repeat; background-position: center;
-    &.first_pg_bt {background-image: url("../images/icon_sub_cont/sub_paging_fist.png");}
-    &.prev_pg_bt {background-image: url("../images/icon_sub_cont/sub_paging_prev.png");}
-    &.next_pg_bt {background-image: url("../images/icon_sub_cont/sub_paging_next.png");}
-    &.last_pg_bt {background-image: url("../images/icon_sub_cont/sub_paging_last.png");}
-    &:hover {border-bottom: 1px solid #666;}
-  }
-  ul.sub_pasing_box {
-    li.paging_number_li a {
-      // border: 1px solid #ddd; 
-      border-radius: 4px;
-      transition: 0.1s;
-      &:hover {
-        color: #fff; background-color: rgba(0, 0, 0, 0.3); border: none;
-      }
-    }
-    li.paging_number_li a.active {
-      color: #fff; background-color: #0D7ACF; border: none; 
-    }
-  }
-}
+
 
 // input
 label {
