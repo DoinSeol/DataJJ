@@ -1725,7 +1725,7 @@ section .sub_cont_wrap .sub_cont .sub_cont_inner {
   padding-top: 16px;
 }
 .sub_paging_wrap, .sub_paging_wrap ul.sub_pasing_box {
-  gap: 8px;
+  gap: 11px;
 }
 .sub_paging_wrap button, .sub_paging_wrap ul.sub_pasing_box li.paging_number_li a {
   width: 28px;
@@ -2405,6 +2405,13 @@ select option {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+.flex_c_es {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .flex_r_sc {

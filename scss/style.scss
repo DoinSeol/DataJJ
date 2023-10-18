@@ -92,6 +92,7 @@ select option {color: #666; font-size: 14px;}
 .flex_c_cb {display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
 .flex_c_sc {display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
 .flex_c_ss {display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; }
+.flex_c_es {display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end; }
 
 // flex_style_row
 .flex_r_sc {display: flex; flex-direction: row; justify-content: flex-start; align-items: center; }
