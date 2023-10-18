@@ -23,8 +23,121 @@
         vertical-align : middle;
         &:nth-of-type(odd) {background-color: #f5f5f5; text-align: center; font-weight: bold; min-width: 100px;}
       }
+    }
+  }
+}
+
+.chart_C_basic {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  vertical-align : middle;
+  border-collapse: collapse;
+
+  caption {
+    overflow: hidden; position: relative; width: 0; height: 0; margin: 0; padding: 0; line-height: 0;
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid #ddd;
+      th {
+        padding: 18px 8px 14px;
+        background-color: #f5f5f5;
+        vertical-align : middle;
+      }
+      td {
+        padding: 18px 8px 14px ;
+        font-size: 14px;
+        
+        &:nth-child(2) {
+          text-align: left;
+          padding: 0;
+          vertical-align : middle;
+          display: table;
+          table-layout: fixed;
+          width: 100%;
+          white-space: nowrap;
+          a {
+            width: 100%;
+            padding: 18px 8px 14px;
+            display: table-cell;
+            overflow: hidden;
+            vertical-align: middle;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+
+      th, td {
+        &:nth-child(3){display: none;}
+        &:nth-child(4){display: none;}
+        &:nth-child(5){display: none;}
+      }
 
     }
   }
+}
 
+// 비공개||공개
+.public_0, .public_1 {
+  color: #fff; padding: 4px 6px 2px; border-radius: 4px;
+  font-size: 12px;
+}
+.public_0 {
+  background-color: #78439d;
+  
+}
+.public_1 {
+  background-color: #0D7ACF;
+}
+
+// 전수(진행중)||완료
+.finish_0 .finish_1 {
+
+}
+.finish_0 {
+  color: #0D7ACF;
+}
+.finish_1 {
+  color: #b30006;
+}
+
+
+
+// table::660
+@media screen and (min-width: 660px){
+  .chart_C_basic {
+    tbody {
+      tr {
+        th, td {
+          &:nth-child(4){display: table-cell;}
+        }
+      }
+    }
+  }
+}
+
+// table::920
+@media screen and (min-width: 920px){
+  .chart_C_basic {
+    tbody {
+      tr {
+        th, td {
+          &:nth-child(3){display: table-cell;}
+          &:nth-child(5){display: table-cell;}
+        }
+      }
+    }
+  }
+}
+
+// table::1024
+@media screen and (min-width: 1024px){
+  
+}
+
+// table::1440(PC)
+@media screen and (min-width: 1400px){
+  
+  
 }

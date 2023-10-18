@@ -1496,6 +1496,97 @@ section .sub_cont_wrap .sub_cont .sub_cont_inner {
   min-width: 100px;
 }
 
+.chart_C_basic {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+.chart_C_basic caption {
+  overflow: hidden;
+  position: relative;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+.chart_C_basic tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+.chart_C_basic tbody tr th {
+  padding: 18px 8px 14px;
+  background-color: #f5f5f5;
+  vertical-align: middle;
+}
+.chart_C_basic tbody tr td {
+  padding: 18px 8px 14px;
+  font-size: 14px;
+}
+.chart_C_basic tbody tr td:nth-child(2) {
+  text-align: left;
+  padding: 0;
+  vertical-align: middle;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  white-space: nowrap;
+}
+.chart_C_basic tbody tr td:nth-child(2) a {
+  width: 100%;
+  padding: 18px 8px 14px;
+  display: table-cell;
+  overflow: hidden;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+}
+.chart_C_basic tbody tr th:nth-child(3), .chart_C_basic tbody tr td:nth-child(3) {
+  display: none;
+}
+.chart_C_basic tbody tr th:nth-child(4), .chart_C_basic tbody tr td:nth-child(4) {
+  display: none;
+}
+.chart_C_basic tbody tr th:nth-child(5), .chart_C_basic tbody tr td:nth-child(5) {
+  display: none;
+}
+
+.public_0, .public_1 {
+  color: #fff;
+  padding: 4px 6px 2px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.public_0 {
+  background-color: #78439d;
+}
+
+.public_1 {
+  background-color: #0D7ACF;
+}
+
+.finish_0 {
+  color: #0D7ACF;
+}
+
+.finish_1 {
+  color: #b30006;
+}
+
+@media screen and (min-width: 660px) {
+  .chart_C_basic tbody tr th:nth-child(4), .chart_C_basic tbody tr td:nth-child(4) {
+    display: table-cell;
+  }
+}
+@media screen and (min-width: 920px) {
+  .chart_C_basic tbody tr th:nth-child(3), .chart_C_basic tbody tr td:nth-child(3) {
+    display: table-cell;
+  }
+  .chart_C_basic tbody tr th:nth-child(5), .chart_C_basic tbody tr td:nth-child(5) {
+    display: table-cell;
+  }
+}
 .btn_round_shadow {
   padding: 8px 16px;
   border-radius: 16px;
@@ -1696,24 +1787,11 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.data_set_box_wr
   margin-right: 4px;
   margin-bottom: 3px;
 }
-section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.data_set_box_wrap .data_set_box .data_set_2 .data_set_serch_box {
-  gap: 12px;
-}
-section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner .data_list_total {
-  font-size: 14px;
-}
-section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner .data_list_total p {
-  color: #888;
-}
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.data_list_box_wrap {
   gap: 24px;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.data_list_box_wrap div {
   width: 100%;
-}
-section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.data_list_box_wrap .data_list_select {
-  gap: 12px;
-  padding-bottom: 16px;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.data_list_box_wrap .data_list_box {
   gap: 12px;
@@ -1901,6 +1979,11 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.integrated_sear
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.integrated_search_list_box_wrap .serch_open_data_list_box .serch_open_data_list .integrated_search_title div span {
   font-family: light_font_G;
   font-size: 14px;
+  color: #fefefe;
+}
+section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.integrated_search_list_box_wrap .serch_open_data_list_box .serch_open_data_list .integrated_search_title div span span {
+  color: #ffd152;
+  font-weight: 600;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.integrated_search_list_box_wrap .serch_open_data_list_box .serch_open_data_list .integrated_search_title button {
   width: 22px;
@@ -2204,7 +2287,83 @@ section.main_left_wrap, section.main_right_wrap, section.footer {
   top: 0px;
   font-weight: 600;
 }
+.back_box_inner_title.no_title {
+  padding: 0;
+}
 
+.sub_cont_inner {
+  gap: 24px;
+}
+.sub_cont_inner .list_select {
+  gap: 12px;
+  padding-bottom: 16px;
+}
+.sub_cont_inner .list_total {
+  font-size: 14px;
+}
+.sub_cont_inner .list_total p {
+  color: #888;
+}
+.sub_cont_inner .list_total p span {
+  color: #0D7ACF;
+}
+
+label {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+input[type=checkbox] {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  border-top: 1px solid red !important;
+  border-bottom: 1px solid red !important;
+  accent-color: #0D7ACF;
+}
+
+input[type=search] {
+  height: 100%;
+  color: #666;
+  font-size: 14px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  height: 38px;
+  flex-grow: 1;
+}
+
+select {
+  height: 100%;
+  min-width: 150px;
+  color: #666;
+  font-size: 14px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  border-radius: 8px;
+  height: 38px;
+}
+
+select option {
+  color: #666;
+  font-size: 14px;
+}
+
+.data_set_serch_box, .search_double_bt {
+  gap: 12px;
+}
+
+.data_set_serch_box select:first-child {
+  width: 100%;
+}
+
+@media screen and (min-width: 460px) {
+  .data_set_serch_box select:first-child {
+    width: auto;
+  }
+}
 .flex_wrap {
   flex-wrap: wrap;
 }
@@ -2281,49 +2440,6 @@ section.main_left_wrap, section.main_right_wrap, section.footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-label {
-  vertical-align: middle;
-  display: inline-block;
-}
-
-input[type=checkbox] {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
-  border-top: 1px solid red !important;
-  border-bottom: 1px solid red !important;
-  accent-color: #0D7ACF;
-}
-
-input[type=search] {
-  height: 100%;
-  color: #666;
-  font-size: 14px;
-  padding: 0 10px;
-  border: 1px solid #ddd;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  height: 38px;
-  flex-grow: 1;
-}
-
-select {
-  height: 100%;
-  min-width: 150px;
-  color: #666;
-  font-size: 14px;
-  padding: 0 10px;
-  border: 1px solid #ddd;
-  background-color: #ffffff;
-  border-radius: 8px;
-  height: 38px;
-}
-
-select option {
-  color: #666;
-  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */

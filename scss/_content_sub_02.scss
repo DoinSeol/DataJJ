@@ -1,0 +1,69 @@
+// 02_데이터활용
+
+// 서브콘텐츠::Mobile
+
+// 02_01_전주의하루
+
+section{
+  div.sub_section {
+    .sub_cont_wrap {
+      .sub_cont {
+        // 02_01_전주의하루
+        .sub_cont_inner.db_visual_wrap {
+
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+// 서브콘텐츠::600
+@media screen and (min-width: 600px){
+  section{
+    div.sub_section {
+      .sub_cont_wrap {
+        .sub_cont {
+          // 02_01_전주의하루
+
+        }
+      }
+    }
+  }
+}
+
+// 서브콘텐츠::920
+@media screen and (min-width: 920px){
+  section {
+    div.sub_section {
+      .sub_cont_wrap {
+        .sub_cont {
+
+        }
+      }
+    }
+  }
+}
+
+// 서브콘텐츠::1024
+@media screen and (min-width: 1024px){
+  
+}
+
+// 서브콘텐츠::1440(PC)
+@media screen and (min-width: 1400px){
+  section {
+    div.sub_section {
+      .sub_cont_wrap {
+        .sub_cont {
+
+        }
+      }
+    }
+  }
+}

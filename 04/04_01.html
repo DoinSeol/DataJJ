@@ -50,7 +50,7 @@
             <a href="#">통계마당</a>
             <ul class="drop_down">
               <li><a href="#">통계보고서</a></li>
-              <li><a href="./03_02.html">통계 DB</a></li>
+              <li><a href="../03/03_02.html">통계 DB</a></li>
               <li><a href="#">통계 E-Book</a></li>
               <li><a href="#">통계조사 안내</a></li>
             </ul>
@@ -58,7 +58,7 @@
           <li class="dep_01">
             <a href="#">이용안내</a>
             <ul class="drop_down">
-              <li><a href="../04/04_01.html">공지사항</a></li>
+              <li><a href="./04_01.html">공지사항</a></li>
             </ul>
           </li>
         </ul>
@@ -142,7 +142,7 @@
               </a>
               <ul class="drop_down">
                 <li><a href="#">통계보고서</a></li>
-                <li><a href="./03/03_02.html">통계 DB</a></li>
+                <li><a href="../03/03_02.html">통계 DB</a></li>
                 <li><a href="#">통계 E-Book</a></li>
                 <li><a href="#">통계조사 안내</a></li>
               </ul>
@@ -153,7 +153,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
               </a>
               <ul class="drop_down">
-                <li><a href="../04/04_01.html">공지사항</a></li>
+                <li><a href="./04_01.html">공지사항</a></li>
               </ul>
             </li>
           </ul>
@@ -170,7 +170,7 @@
         <div class="sub_top_wrap">
           <div class="sub_top">
             <div class="sub_top_title">
-              <h1>통계 DB 상세보기</h1>
+              <h1>공지사항</h1>
             </div>
             <div class="sub_top_navgation">
               <a href="../index.html">
@@ -179,13 +179,13 @@
               <span>
                 <p>></p>
                 <a href="#">
-                  <p>통계마당</p>
+                  <p>이용안내</p>
                 </a>
               </span>
               <span>
               <p>></p>
                 <a href="#">
-                  <p>통계DB</p>
+                  <p>공지사항</p>
                 </a>
               </span>
             </div>
@@ -196,64 +196,143 @@
         <div class="sub_cont_wrap">
           <div class="sub_cont">
             <!-- 서브 콘텐츠::03_02_02_통계DB 상세보기 -->
-            <h2 class="sub_cont_title">전주시 사회 조사</h2>
-            <div class="sub_cont_inner db_visual_detail_dw_wrap">
-              <div class="db_visual_dw_box gray_back_box radius_m flex_c_cc">
-                <p>
-                  전주시 사회에 대한 통계를 조회하고 다운로드 받으실 수 있습니다.
-                </p>
-                <a class="btn_square_arrow_navy" title="kosis 홈페이지 새창열기" href="#">
-                  <span>통계조회 및 다운로드 바로가기</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
-                </a>
+            <!-- <h2 class="sub_cont_title"></h2> -->
+            <!-- 검색 -->
+            <div class="sub_cont_inner data_set_box_wrap">
+              <div class="data_set_box white_back_box radius_m flex_c_sc">
+                <div class="data_set_2 back_box_inner_title no_title">
+                  <!-- <h3>직접검색</h3> -->
+                  <form class="data_set_serch_box flex_r_cc flex_wrap">
+                    <select>
+                      <option value="">전체</option>
+                      <option value="">제목</option>
+                      <option value="">내용</option>
+                      <option value="">작성자</option>
+                    </select>
+                    <input type="search" placeholder="찾고 싶은 데이터를 입력해주세요">
+                    <div class="flex_r_cc search_double_bt">
+                      <input class="btn_square_blue" type="submit" onclick="" value="검색">
+                      <input class="btn_square_navy" type="submit" onclick="" value="전체보기">
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
 
-            <div class="sub_cont_inner db_visual_detail_chart_wrap">
-              <div class="table_wrap">
-                <table class="chart_R">
-                  <caption>전라북도·전주시 통합 사회조사</caption>
-                  <tbody>
-                    <tr>
-                      <td>목적</td>
-                      <td>시민의 주관적 만족도, 의식, 사회적 관심사 등을 조사하여 삶의 질적 수준과 사회상태의 변화를 파악하고 정책수립 자료로 제공
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>조사시기</td>
-                      <td>4월</td>
-                    </tr>
-                    <tr>
-                      <td>조사주기</td>
-                      <td> 매년(부문별 2년 주기)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>조사내용</td>
-                      <td>
-                        - 홀수년도(7개부문) : 교육, 보건·의료, 주거·교통, 환경, 여가·문화, 안전, 특성
-                        <br/><br/>
-                        - 짝수년도(6개부문) : 가구·가족, 소득·소비, 고용·노사, 복지, 사회참여, 특성
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>조사대상</td>
-                      <td>전주시 2,010개의 표본가구 내 만15세 이상 가구원</td>
-                    </tr>
-                    <tr>
-                      <td>조사방법</td>
-                      <td>가구방문 면접조사</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <!-- 리스트 -->
+            <div class="sub_cont_inner data_list_box_wrap flex_c_cs">
+              <div class="list_select flex_r_ec border_b_lg">
+                <select>
+                  <option value="">10개씩 보기</option>
+                  <option value="">30개씩 보기</option>
+                  <option value="">50개씩 보기</option>
+                </select>
               </div>
+
+              <div class="list_total">
+                <P>Total <span>123</span> | page 1/13</P>
+              </div>
+
+              <div class="data_list_box flex_r_ss flex_wrap">
+                <div class="table_wrap">
+                  <table class="chart_C_basic">
+                    <caption>공지사항</caption>
+                    <tbody>
+                      <tr>
+                        <th width="8%">번호</th>
+                        <th width="62%">제목</th>
+                        <th width="8%">첨부</th>
+                        <th width="14%">작성일</th>
+                        <th width="8%">조회</th>
+                      </tr>
+                      <tr>
+                        <td>22</td>
+                        <td><a href="#">[알림] 2022년 기준 전통시장 및 상점가조사 공표 및 만족도 조사[알림] 2022년 기준 전통시장 및 상점가조사 공표 및 만족도 조사[알림] 2022년 기준 전통시장 및 상점가조사 공표 및 만족도 조사</a></td>
+                        <td></td>
+                        <td>2023-08-30</td>
+                        <td>29</td>
+                      </tr>
+                      <tr>
+                        <td>21</td>
+                        <td><a href="#">[알림] 2023년 공표예정 통계 안내</a></td>
+                        <td></td>
+                        <td>2023-08-30</td>
+                        <td>35</td>
+                      </tr>
+                      <tr>
+                        <td>20</td>
+                        <td><a href="#">「2023 전주시 데이터 분석 공모전」 결과 공고</a></td>
+                        <td></td>
+                        <td>2023-07-11</td>
+                        <td>268</td>
+                      </tr>
+                      <tr>
+                        <td>19</td>
+                        <td><a href="#">「2023 전주시 데이터 분석 공모전」 발표 심사 안내</a></td>
+                        <td></td>
+                        <td>2023-06-22</td>
+                        <td>368</td>
+                      </tr>
+                      <tr>
+                        <td>18</td>
+                        <td><a href="#">접수마감)「2023 전주시 데이터 분석 공모전」 안내</a></td>
+                        <td></td>
+                        <td>2023-04-28</td>
+                        <td>2321</td>
+                      </tr>
+                      <tr>
+                        <td>17</td>
+                        <td><a href="#">[알림] 2022년 전주시 주거실태조사 공표 및 만족도조사</a></td>
+                        <td></td>
+                        <td>2022-12-29</td>
+                        <td>314</td>
+                      </tr>
+                      <tr>
+                        <td>16</td>
+                        <td><a href="#">[알림] 2022 전주시 청년통계 공표 및 만족도조사</a></td>
+                        <td></td>
+                        <td>2022-12-29</td>
+                        <td>321</td>
+                      </tr>
+                      <tr>
+                        <td>15</td>
+                        <td><a href="#">[알림] 2022 전주시 사회조사 공표 및 만족도조사</a></td>
+                        <td></td>
+                        <td>2022-12-29</td>
+                        <td>342</td>
+                      </tr>
+                      <tr>
+                        <td>14</td>
+                        <td><a href="#">2022 전주시 공공데이터 활용 분석 공모전 결과 공고</a></td>
+                        <td></td>
+                        <td>2022-11-14</td>
+                        <td>700</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td><a href="#">「2022 전주시 공공데이터 활용 분석 공모전」 발표 심사 안내</a></td>
+                        <td></td>
+                        <td>2022-10-21</td>
+                        <td>497</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
             </div>
 
-            <h2 class="sub_cont_title">주요 통계</h2>
-            <div class="sub_cont_inner db_visual_detail_data_wrap">
-
+            <div class="sub_paging_wrap flex_r_cc">
+              <button class="first_pg_bt"></button>
+              <button class="prev_pg_bt"></button>
+              <ul class="sub_pasing_box flex_r_cc">
+                <li class="paging_number_li"><a href="#" class="active">1</a></li>
+                <li class="paging_number_li"><a href="#">2</a></li>
+                <li class="paging_number_li"><a href="#">3</a></li>
+                <li class="paging_number_li"><a href="#">4</a></li>
+                <li class="paging_number_li"><a href="#">5</a></li>
+              </ul>
+              <button class="next_pg_bt"></button>
+              <button class="last_pg_bt"></button>
             </div>
-
 
 
           </div>
@@ -275,7 +354,7 @@
       <div class="footer_info_wrap">
         <div class="footer_logo_wrap"></div>
         <div class="footer_txt_wrap">
-          <address>(54994) 전라북도 전주시 완산구 노송광장로 10 &nbsp; ☎ 대표전화 063-222-1000</address>
+          <address>(54994) 전라북도 전주시 완산구 노송광장로 10 &nbsp; ☎ 대표전화) 063-222-1000</address>
           <p>본 사이트에 게시된 이메일주소의 자동수집을 거부하며, 이를 위반시 정보통신법에 의해 형사처벌됨을 유념하시기 바랍니다.</p>
           <p class="copyright">COPYRIGHT © 2023 JEONJU CITY. ALL RIGHTS RESERVED.</p>
         </div>
