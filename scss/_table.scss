@@ -80,26 +80,27 @@
 
 // 비공개||공개
 .public_0, .public_1 {
-  color: #fff; padding: 4px 6px 2px; border-radius: 4px;
-  font-size: 12px;
+  
 }
 .public_0 {
-  background-color: #78439d;
+  color: #78439d;
   
 }
 .public_1 {
-  background-color: #0D7ACF;
+  color: #0D7ACF;
 }
 
 // 전수(진행중)||완료
-.finish_0 .finish_1 {
-
+.finish_0, .finish_1 {
+  color: #fff; padding: 4px 6px 2px; border-radius: 4px;
+  font-size: 12px;
 }
 .finish_0 {
-  color: #0D7ACF;
+  background-color: #EE2E5B;
 }
 .finish_1 {
-  color: #b30006;
+  // background-color: #b30006;
+  background-color: #0D7ACF;
 }
 
 

@@ -42,6 +42,7 @@ section.main_left_wrap, section.main_right_wrap, section.footer {padding: 0 16px
 // sub_list_select&total
 .sub_cont_inner {
   gap: 24px;
+  div {width: 100%;}
   .list_select {gap: 12px; padding-bottom: 16px}
   .list_total {
     font-size: 14px; 

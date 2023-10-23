@@ -9,9 +9,75 @@ section{
     .sub_cont_wrap {
       .sub_cont {
         // 02_01_전주의하루
-        .sub_cont_inner.db_visual_wrap {
+
+        .sub_cont_inner.yearly_list_box_wrap {
+          .yearly_list_standard_title {
+            background-color: #0D7ACF;
+            padding: 16px 8px;
+            p{color: #fff; text-align: center; margin-bottom: -4px;}
+          }
+
+          .yearly_list_box {
+            gap: 12px;
+            .yearly_list {
+              width: calc((100% / 4) - 9px);
+              overflow: hidden;
+              .yearly_list_title {
+                // background-color: #0A62A6; 
+                padding: 16px; padding-top: 24px;
+                h3 {
+                  // color: #fff; 
+                  margin-bottom: -4px;
+                  font-weight: 600;
+                  text-align: center;
+                }
+              }
+              .yearly_list_icon {
+                width:100%; height: 85px;
+                background-position: center; background-repeat: no-repeat;
+                background-size: auto 100%;
+              }
+              .yearly_list_data {
+                background-color: #efefef; 
+                margin-top: 24px;
+                padding: 14px 8px;
+                p {
+                  margin-bottom: -4px; text-align: center;
+                  font-weight: 600;
+                  span {
+                  font-weight: 400;
+                  }
+                }
+              }
+
+              &:nth-child(1) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_01.png");}
+              &:nth-child(2) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_02.png");}
+              &:nth-child(3) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_03.png");}
+              &:nth-child(4) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_04.png");}
+              &:nth-child(5) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_05.png");}
+              &:nth-child(6) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_06.png");}
+              &:nth-child(7) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_07.png");}
+              &:nth-child(8) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_08.png");}
+              &:nth-child(9) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_09.png");}
+              &:nth-child(10) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_10.png");}
+              &:nth-child(11) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_11.png");}
+              &:nth-child(12) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_12.png");}
+              &:nth-child(13) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_13.png");}
+              &:nth-child(14) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_14.png");}
+              &:nth-child(15) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_15.png");}
+              &:nth-child(16) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_16.png");}
+              &:nth-child(17) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_17.png");}
+              &:nth-child(18) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_18.png");}
+              &:nth-child(19) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_19.png");}
+              &:nth-child(20) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_20.png");}
+            }
+
+
+          }
+
 
         }
+
       }
     }
   }
