@@ -24,7 +24,7 @@ section{
               overflow: hidden;
               .yearly_list_title {
                 // background-color: #0A62A6; 
-                padding-top: 28px; padding-bottom: 20px;
+                padding-top: 28px; padding-bottom: 24px;
                 h3 {
                   // color: #fff; 
                   margin-bottom: -4px;
@@ -40,17 +40,15 @@ section{
               }
               .yearly_list_data {
                 background-color: #efefef; 
-                height: 60px;
+                height: 64px;
                 margin-top: 18px;
-                display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap;
+                display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap; gap: 12px;
                 p {
-                  margin-top: 10px;
                   margin-bottom: -4px; text-align: center;
                   font-weight: 600;
                   span.yearly_standard {
                   font-weight: 400;
                   }
-                &:nth-child(1) {margin-top: 0;}
                 }
                 
               }

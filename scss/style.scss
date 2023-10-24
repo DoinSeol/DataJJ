@@ -25,6 +25,7 @@ section.main_left_wrap, section.main_right_wrap, section.footer {padding: 0 16px
 .sub_section {font-family: medium_font_G, 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', sans-serif;}
 
 // box_style
+.width_auto {width: auto !important;}
 .radius_m {border-radius: 8px;}
 .border_lg {border: 1px solid #ddd;}
 .border_t_lg {border-top: 1px solid #ddd;}
@@ -42,7 +43,8 @@ section.main_left_wrap, section.main_right_wrap, section.footer {padding: 0 16px
 // sub_list_select&total
 .sub_cont_inner {
   gap: 24px;
-  div {width: 100%;}
+  &.data_list_box_wrap div {width: 100%;}
+  &.yearly_list_box_wrap div {width: 100%;}
   .list_select {gap: 12px; padding-bottom: 16px}
   .list_total {
     font-size: 14px; 
