@@ -2069,18 +2069,19 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box
   margin-bottom: -4px;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box {
-  gap: 12px;
+  gap: 18px 12px;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list {
-  width: calc(25% - 9px);
+  width: 100%;
   overflow: hidden;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list .yearly_list_title {
-  padding: 16px;
-  padding-top: 24px;
+  padding-top: 28px;
+  padding-bottom: 20px;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list .yearly_list_title h3 {
   margin-bottom: -4px;
+  font-size: 19px;
   font-weight: 600;
   text-align: center;
 }
@@ -2093,16 +2094,25 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list .yearly_list_data {
   background-color: #efefef;
-  margin-top: 24px;
-  padding: 14px 8px;
+  height: 60px;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list .yearly_list_data p {
+  margin-top: 10px;
   margin-bottom: -4px;
   text-align: center;
   font-weight: 600;
 }
-section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list .yearly_list_data p span {
+section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list .yearly_list_data p span.yearly_standard {
   font-weight: 400;
+}
+section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list .yearly_list_data p:nth-child(1) {
+  margin-top: 0;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list:nth-child(1) .yearly_list_icon {
   background-image: url("../images/icon_sub_cont/yearly_icon_01.png");
@@ -2165,6 +2175,21 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box
   background-image: url("../images/icon_sub_cont/yearly_icon_20.png");
 }
 
+@media screen and (min-width: 400px) {
+  section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list {
+    width: calc(50% - 6px);
+  }
+}
+@media screen and (min-width: 600px) {
+  section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list {
+    width: calc(33.3333333333% - 8px);
+  }
+}
+@media screen and (min-width: 920px) {
+  section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list {
+    width: calc(25% - 9px);
+  }
+}
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_wrap {
   gap: 16px;
 }

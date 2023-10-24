@@ -18,16 +18,17 @@ section{
           }
 
           .yearly_list_box {
-            gap: 12px;
+            gap: 18px 12px;
             .yearly_list {
-              width: calc((100% / 4) - 9px);
+              width: 100%;
               overflow: hidden;
               .yearly_list_title {
                 // background-color: #0A62A6; 
-                padding: 16px; padding-top: 24px;
+                padding-top: 28px; padding-bottom: 20px;
                 h3 {
                   // color: #fff; 
                   margin-bottom: -4px;
+                  font-size: 19px;
                   font-weight: 600;
                   text-align: center;
                 }
@@ -39,15 +40,19 @@ section{
               }
               .yearly_list_data {
                 background-color: #efefef; 
-                margin-top: 24px;
-                padding: 14px 8px;
+                height: 60px;
+                margin-top: 18px;
+                display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap;
                 p {
+                  margin-top: 10px;
                   margin-bottom: -4px; text-align: center;
                   font-weight: 600;
-                  span {
+                  span.yearly_standard {
                   font-weight: 400;
                   }
+                &:nth-child(1) {margin-top: 0;}
                 }
+                
               }
 
               &:nth-child(1) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_01.png");}
@@ -71,13 +76,8 @@ section{
               &:nth-child(19) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_19.png");}
               &:nth-child(20) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_20.png");}
             }
-
-
           }
-
-
         }
-
       }
     }
   }
@@ -86,7 +86,25 @@ section{
 
 
 
-
+// 서브콘텐츠::400
+@media screen and (min-width: 400px){
+  section{
+    div.sub_section {
+      .sub_cont_wrap {
+        .sub_cont {
+          // 02_01_전주의하루
+          .sub_cont_inner.yearly_list_box_wrap {
+            .yearly_list_box {
+              .yearly_list {
+                width: calc((100% / 2) - 6px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 
 // 서브콘텐츠::600
@@ -96,7 +114,13 @@ section{
       .sub_cont_wrap {
         .sub_cont {
           // 02_01_전주의하루
-
+          .sub_cont_inner.yearly_list_box_wrap {
+            .yearly_list_box {
+              .yearly_list {
+                width: calc((100% / 3) - 8px);
+              }
+            }
+          }
         }
       }
     }
@@ -109,6 +133,14 @@ section{
     div.sub_section {
       .sub_cont_wrap {
         .sub_cont {
+          // 02_01_전주의하루
+          .sub_cont_inner.yearly_list_box_wrap {
+            .yearly_list_box {
+              .yearly_list {
+                width: calc((100% / 4) - 9px);
+              }
+            }
+          }
 
         }
       }
