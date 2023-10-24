@@ -75,7 +75,7 @@ section {
           //   p {color: #888;}
           // }
           .data_list_box {
-            gap: 12px;
+            gap: 16px;
             .data_list {
               width: 100%;
               gap: 16px;
@@ -315,7 +315,7 @@ section {
           .sub_cont_inner.data_list_box_wrap {
             .data_list_box {
               .data_list {
-                width: calc((100% / 2) - 6px);
+                width: calc((100% / 2) - 8px);
               }
             }
           }
@@ -361,7 +361,6 @@ section {
           .sub_cont_inner.data_list_box_wrap {
             .data_list_box {
               .data_list {
-                width: calc((100% / 2) - 6px);
               }
             }
           }
@@ -416,7 +415,7 @@ section {
           .sub_cont_inner.data_list_box_wrap {
             .data_list_box {
               .data_list {
-                width: calc((100% / 3) - 8px);
+                width: calc((100% / 3) - 12px);
               }
             }
           }
