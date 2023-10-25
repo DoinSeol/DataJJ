@@ -16,7 +16,6 @@ section {
           .intro_text_box {
             width: 100%;
             p {
-              font-family: 'Noto Sans KR';
               color: #444;
               line-height: 1.5;
               margin-bottom: 16px;
@@ -111,7 +110,6 @@ section {
                 gap: 12px;
                 p, span {
                   font-size: 14px;
-                  font-family: 'Noto Sans KR';
                   white-space: nowrap;
                   overflow: hidden;
                   text-overflow: ellipsis;
@@ -143,7 +141,6 @@ section {
             width: 100%;
             p, span {
               font-size: 14px;
-              font-family: 'Noto Sans KR';
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -183,7 +180,6 @@ section {
               width: 100%;
               p {
                 width: 100%; font-size: 15px; line-height: 1.2; color: #555;
-                font-family: 'Noto Sans KR';
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
@@ -262,7 +258,6 @@ section {
                         transition: 0.3s;
                       }
                       .search_data_detail, .search_data_nav {
-                        font-family: "Noto Sans KR";
                         font-size: 16px;
                         color: #777;
                       }
