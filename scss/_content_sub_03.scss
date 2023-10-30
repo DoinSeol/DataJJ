@@ -64,7 +64,7 @@ section{
                   background-size: 22px;
                   cursor: pointer;
                   transition: 0.2s;
-                  &:hover {background-image: url(../images/icon_main_cont/plus-solid_sb.svg);}
+                  &:hover {background-image: url(../images/icon_main_cont/plus-solid_y.svg);}
                 }
 
               }
@@ -116,6 +116,7 @@ section{
                       &:hover {
                         background-color: #f5f5f5;
                         background-image: url("../images/icon_sub_cont/download-solid_b.svg");
+                        text-decoration: underline;
                       }
                     }
                   }
@@ -126,11 +127,12 @@ section{
             li.report_list_box.active {
               a.report_list_title {
                 background-color: #0D7ACF;
+                button {
+                  background-image: url(../images/icon_main_cont/minus-solid_w.svg);
+                  &:hover {background-image: url(../images/icon_main_cont/minus-solid_y.svg);}
+                }
+
               }
-              ul.report_list {display: block;}
-
-
-              
             }
           }
         }

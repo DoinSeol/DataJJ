@@ -9,12 +9,15 @@ head.addEventListener('mouseleave', () => {
 })
 
 
+// const report_list_box = document.querySelector(".report_list_box");
+
+// report_list_box.addEventListener('click', () => {
+//   report_list_box.classList.remove('active');
+//   report_list_box.classList.add('active');
+// })
+
 
 $(document).ready(function(){
-
-
-
-
 
   // all_menu
   $("#all_menu_contain").hide();
@@ -60,6 +63,20 @@ $(document).ready(function(){
   $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseleave', function(){
     $('.visual_dep03_contain').hide();
   });
+
+  // 03_01 통계보고서
+  $('.report_list_box').click(function(){
+    $('.report_list').slideUp();
+    $('.report_list_box').removeClass( 'active' );
+      if (
+      $(this).children('.report_list').is(':hidden')){
+      $(this).children('.report_list').slideDown();
+      $(this).addClass( 'active' );
+    } else{
+      $(this).children('.report_list').slideUp();
+      $(this).removeClass( 'active' );
+    }
+ });
 
 });
 
