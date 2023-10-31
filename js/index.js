@@ -64,7 +64,11 @@ $(document).ready(function(){
     $('.visual_dep03_contain').hide();
   });
 
-  // 03_01 통계보고서
+  // 02_02 통계 시각화
+
+
+
+  // 03_01_통계보고서
   $('.report_list_box').click(function(){
     $('.report_list').slideUp();
     $('.report_list_box').removeClass( 'active' );
@@ -76,7 +80,14 @@ $(document).ready(function(){
       $(this).children('.report_list').slideUp();
       $(this).removeClass( 'active' );
     }
- });
+  });
+
+  // 03_04_통계조사안내
+  $('.research_list_title').click(function(){
+    $(this).next(".research_list").stop().slideToggle(300);
+    $(this).toggleClass('active').siblings().removeClass('active');
+    $(this).next(".research_list").siblings(".research_list").slideUp(300); // 1개씩 펼치기
+  });
 
 });
 
@@ -140,10 +151,45 @@ $(window).resize(function(){
 
   }
   
-  }).resize(); 
+  }).resize();
 
 
 
+
+function findParent(el, className){
+  let check = el.parentNode.classList.contains(className);
+  
+  if(check === true){
+    return el.parentNode;
+  }else{
+    return findParent(el.parentNode, className);
+  }
+}
+
+function bindingTabEvent(wrap){
+  let wrapEl = document.querySelectorAll(wrap);
+  
+  wrapEl.forEach(function(tabArea){
+    let btn = tabArea.querySelectorAll('.visual_menu_btn_tab');
+    
+    btn.forEach(function(item){
+      item.addEventListener('click', function(){
+        let parent = findParent(this, 'visual_tab_area');
+        let idx = this.dataset['idx'];
+        let depth = this.dataset['depth'];
+        let btnArr = parent.querySelectorAll('.visual_menu_btn_tab[data-depth="'+ depth +'"]');
+        let contentArr = parent.querySelectorAll('.visual_menu_content_area[data-depth="'+ depth +'"]');
+        
+        btnArr.forEach(function(btn){ btn.classList.remove('act'); });
+        this.classList.add('act');
+        contentArr.forEach(function(content){ content.classList.remove('act'); });
+        parent.querySelector('.visual_menu_content_area[data-idx="'+ idx +'"][data-depth="'+ depth +'"]').classList.add('act');
+      });
+    });
+  });
+}
+
+bindingTabEvent('.visual_tab_wrap');
 
 
 

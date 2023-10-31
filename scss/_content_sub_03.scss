@@ -302,14 +302,130 @@ section{
           }
         }
 
+        // 03_04_통계조사안내
+        .sub_cont_inner.research_list_box_wrap {
+          ul.research_list_contain {
+            // gap: 16px;
+
+            .research_list_box:nth-child(1) .research_list_title {border-top: 1px solid #ddd; }
+
+            li.research_list_box {
+              width: 100%; 
+              border-bottom: 1px solid #ddd; 
+              flex-wrap: wrap;
+
+              .research_list_title {
+                min-height: 100px;
+                padding: 16px;
+                background-color: #fff;
+                gap: 10px;
+                cursor: pointer;
+                transition: 0.2s;
+                flex-wrap: wrap;
+
+                h3 {
+                  margin-bottom: -4px;
+                  flex-basis: 250px;
+                  order: 0;
+                }
+                .research_list_summary {
+                  background-color: #f7f7f7;
+                  gap: 12px;
+                  padding: 16px;
+                  align-items: stretch;
+                  order: 1;
+                  width: 100%;
+                  li {
+                    // width: calc(50% - 12px);
+                    width: 100%;
+                    margin-bottom: -4px;
+                    p {
+                      font-size: 15px;
+                      color: #444;
+                      span {
+                      color: #666;
+                      // font-fami]ly: 'Noto Sans KR';
+                      }
+                    }
+                  }
+                }
+                .down_icon {
+                  flex-basis: 50px;
+                  order: 0;
+                  button {
+                    width: 40px;
+                    height: 40px;
+                    background-color: transparent;
+                    border: none;
+                    background-image: url("../images/icon_sub_cont/chevron-down-solid_lg.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 22px;
+                    cursor: pointer;
+                    transition: 0.2s;
+                  }
+                }
+                &:hover div button {background-image: url("../images/icon_sub_cont/chevron-down-solid_b.svg");}
+
+
+              }
+
+              ul.research_list {
+                display: none;
+                padding: 24px 16px;
+                
+                li {
+                  align-items: stretch;
+                  gap: 24px;
+                  .research_list_detail {
+                    // width: calc((100% / 3) - 8px); 
+                    width: 100%; 
+                    background-color: #fff;
+                    gap: 8px;
+                    p.sub_title {
+                      font-size: 16px;
+                      padding-left: 18px;
+                      background-image: url("../images/icon_sub_cont/circle-chevron-right-solid_lg.svg");
+                      background-position: top left;
+                      background-size: 13px;
+                      background-repeat: no-repeat;
+                    }
+                    p.sub_text {
+                      font-size: 16px; 
+                      line-height: 1.2;
+                      font-family: 'Noto Sans KR';
+                      color: #555;
+                      padding-left: 18px;
+                    }
+
+                  }
+                }
+
+              }
+            }
+
+            .research_list_box .research_list_title.active {
+              background-color: #eeeeee;
+              &:hover div button {background-image: url("../images/icon_sub_cont/chevron-down-solid_b.svg");}
+              div {
+                button {
+                  transform: rotate( -180deg ); transform-origin: center;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
 }
 
-// 03_03_통계Ebook
 
-// 03_04_통계조사안내
+
+
+
+
+
 
 
 // 서브콘텐츠::600
@@ -364,6 +480,10 @@ section{
               }
             }
           }
+
+          // 03_04_통계조사안내
+          
+
         }
       }
     }
@@ -404,6 +524,34 @@ section{
               width: calc((100% / 3) - 11.5px);
             }
           }
+
+          // 03_04_통계조사안내  
+          .sub_cont_inner.research_list_box_wrap {
+            ul.research_list_contain {
+              li.research_list_box {
+                flex-wrap: nowrap;
+                .research_list_title {
+                  .research_list_summary {
+                    order: 0;
+                    width: auto;
+                    flex: 1;
+                  li {
+                      width: calc(50% - 12px);
+                    }
+                  }
+                }
+                ul.research_list {
+                  li {
+                    .research_list_detail {
+                      // width: calc((100% / 3) - 8px); 
+                      width: 100%; 
+                    }
+                  }
+                }
+              }
+            }
+          }
+
         }
       }
     }
@@ -413,6 +561,11 @@ section{
 // 서브콘텐츠::1024
 @media screen and (min-width: 1024px){
   
+
+
+
+
+
 }
 
 // 서브콘텐츠::1060
@@ -443,7 +596,24 @@ section{
               }
             }
           }
+
+          // 03_04_통계조사안내  
+          .sub_cont_inner.research_list_box_wrap {
+            ul.research_list_contain {
+              li.research_list_box {
+                ul.research_list {
+                  padding: 32px 24px;
+                  li {
+                    .research_list_detail {
+                      width: calc((100% / 3) - 16px); 
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
+
       }
     }
   }

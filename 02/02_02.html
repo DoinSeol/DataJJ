@@ -39,8 +39,8 @@
           <li class="dep_01">
             <a href="#">데이터활용</a>
             <ul class="drop_down">
-              <li><a href="../02/02_01.html">전주의 하루</a></li>
-              <li><a href="../02/02_02.html">통계 시각화</a></li>
+              <li><a href="./02_01.html">전주의 하루</a></li>
+              <li><a href="./02_02.html">통계 시각화</a></li>
               <li><a href="#">경제·산업동향</a></li>
               <li><a href="#">생활·지리정보</a></li>
               <li><a href="#">상권·분석정보</a></li>
@@ -58,7 +58,7 @@
           <li class="dep_01">
             <a href="#">이용안내</a>
             <ul class="drop_down">
-              <li><a href="./04_01.html">공지사항</a></li>
+              <li><a href="#">공지사항</a></li>
             </ul>
           </li>
         </ul>
@@ -119,7 +119,7 @@
                 <li><a href="../01/01_02.html">데이터 목록</a></li>
                 <li><a href="../01/01_03.html">데이터 요청 창구</a></li>
                 <li><a href="../01/01_04.html">설문조사</a></li>
-                <li><a href="../01/01_05.html">통합검색</a></li>
+                <li><a href="../01_05.html">통합검색</a></li>
               </ul>
             </li>
             <li class="dep_01">
@@ -128,8 +128,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
               </a>
               <ul class="drop_down">
-                <li><a href="../02/02_01.html">전주의 하루</a></li>
-                <li><a href="../02/02_02.html">통계 시각화</a></li>
+                <li><a href="./02_01.html">전주의 하루</a></li>
+                <li><a href="./02_02.html">통계 시각화</a></li>
                 <li><a href="#">경제·산업동향</a></li>
                 <li><a href="#">생활·지리정보</a></li>
                 <li><a href="#">상권·분석정보</a></li>
@@ -153,7 +153,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
               </a>
               <ul class="drop_down">
-                <li><a href="./04_01.html">공지사항</a></li>
+                <li><a href="#">공지사항</a></li>
               </ul>
             </li>
           </ul>
@@ -170,7 +170,7 @@
         <div class="sub_top_wrap">
           <div class="sub_top">
             <div class="sub_top_title">
-              <h1>공지사항</h1>
+              <h1>통계 시각화</h1>
             </div>
             <div class="sub_top_navgation">
               <a href="../index.html">
@@ -179,13 +179,13 @@
               <span>
                 <p>></p>
                 <a href="#">
-                  <p>이용안내</p>
+                  <p>데이터활용</p>
                 </a>
               </span>
               <span>
               <p>></p>
                 <a href="#">
-                  <p>공지사항</p>
+                  <p>통계시각화</p>
                 </a>
               </span>
             </div>
@@ -195,130 +195,78 @@
         <!-- 서브 콘텐츠::bottom -->
         <div class="sub_cont_wrap">
           <div class="sub_cont">
-            <!-- 서브 콘텐츠::03_02_02_통계DB 상세보기 -->
+            <!-- 서브 콘텐츠::02_02_통계시각화 -->
             <!-- <h2 class="sub_cont_title"></h2> -->
-            <!-- 검색 -->
-            <div class="sub_cont_inner data_set_box_wrap">
-              <div class="data_set_box white_back_box radius_m flex_c_sc">
-                <div class="data_set_2 back_box_inner_title no_title">
-                  <!-- <h3>직접검색</h3> -->
-                  <form class="data_set_serch_box flex_r_cc flex_wrap">
-                    <select>
-                      <option value="">전체</option>
-                      <option value="">제목</option>
-                      <option value="">내용</option>
-                      <option value="">작성자</option>
-                    </select>
-                    <input type="search" placeholder="찾고 싶은 데이터를 입력해주세요">
-                    <div class="flex_r_cc search_double_bt">
-                      <input class="btn_square_blue" type="submit" onclick="" value="검색">
-                      <input class="btn_square_navy" type="submit" onclick="" value="전체보기">
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
 
             <!-- 리스트 -->
-            <div class="sub_cont_inner data_list_box_wrap flex_c_cs">
-              <div class="list_select flex_r_ec border_b_lg">
-                <select>
-                  <option value="">10개씩 보기</option>
-                  <option value="">30개씩 보기</option>
-                  <option value="">50개씩 보기</option>
-                </select>
+            <div class="visual_tab_wrap visual_tab_area">
+              <div class="visual_menu_btn_area clearfix">
+                <button class="btn visual_menu_btn_tab act" data-depth="0" data-idx="0">인구·교육</button>
+                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="1">보건·복지</button>
+                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="2">경제·산업</button>
+                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="3">환경·녹지</button>
+                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="4">교통·안전</button>
+                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="5">관광·문화</button>
               </div>
-
-              <div class="list_total">
-                <P>Total <span>123</span> | page 1/13</P>
-              </div>
-
-              <div class="data_list_box flex_r_ss flex_wrap">
-                <div class="table_wrap">
-                  <table class="chart_C_basic">
-                    <caption>공지사항</caption>
-                    <tbody>
-                      <tr>
-                        <th width="8%">번호</th>
-                        <th width="62%">제목</th>
-                        <th width="8%">첨부</th>
-                        <th width="14%">작성일</th>
-                        <th width="8%">조회</th>
-                      </tr>
-                      <tr>
-                        <td>22</td>
-                        <td><a href="#">[알림] 2022년 기준 전통시장 및 상점가조사 공표 및 만족도 조사[알림] 2022년 기준 전통시장 및 상점가조사 공표 및 만족도 조사[알림] 2022년 기준 전통시장 및 상점가조사 공표 및 만족도 조사</a></td>
-                        <td></td>
-                        <td>2023-08-30</td>
-                        <td>29</td>
-                      </tr>
-                      <tr>
-                        <td>21</td>
-                        <td><a href="#">[알림] 2023년 공표예정 통계 안내</a></td>
-                        <td></td>
-                        <td>2023-08-30</td>
-                        <td>35</td>
-                      </tr>
-                      <tr>
-                        <td>20</td>
-                        <td><a href="#">「2023 전주시 데이터 분석 공모전」 결과 공고</a></td>
-                        <td></td>
-                        <td>2023-07-11</td>
-                        <td>268</td>
-                      </tr>
-                      <tr>
-                        <td>19</td>
-                        <td><a href="#">「2023 전주시 데이터 분석 공모전」 발표 심사 안내</a></td>
-                        <td></td>
-                        <td>2023-06-22</td>
-                        <td>368</td>
-                      </tr>
-                      <tr>
-                        <td>18</td>
-                        <td><a href="#">접수마감)「2023 전주시 데이터 분석 공모전」 안내</a></td>
-                        <td></td>
-                        <td>2023-04-28</td>
-                        <td>2321</td>
-                      </tr>
-                      <tr>
-                        <td>17</td>
-                        <td><a href="#">[알림] 2022년 전주시 주거실태조사 공표 및 만족도조사</a></td>
-                        <td></td>
-                        <td>2022-12-29</td>
-                        <td>314</td>
-                      </tr>
-                      <tr>
-                        <td>16</td>
-                        <td><a href="#">[알림] 2022 전주시 청년통계 공표 및 만족도조사</a></td>
-                        <td></td>
-                        <td>2022-12-29</td>
-                        <td>321</td>
-                      </tr>
-                      <tr>
-                        <td>15</td>
-                        <td><a href="#">[알림] 2022 전주시 사회조사 공표 및 만족도조사</a></td>
-                        <td></td>
-                        <td>2022-12-29</td>
-                        <td>342</td>
-                      </tr>
-                      <tr>
-                        <td>14</td>
-                        <td><a href="#">2022 전주시 공공데이터 활용 분석 공모전 결과 공고</a></td>
-                        <td></td>
-                        <td>2022-11-14</td>
-                        <td>700</td>
-                      </tr>
-                      <tr>
-                        <td>13</td>
-                        <td><a href="#">「2022 전주시 공공데이터 활용 분석 공모전」 발표 심사 안내</a></td>
-                        <td></td>
-                        <td>2022-10-21</td>
-                        <td>497</td>
-                      </tr>
-                    </tbody>
-                  </table>
+              
+              <div class="visual_menu_content_area act" data-depth="0" data-idx="0">First tab content</div>
+              <div class="visual_menu_content_area" data-depth="0" data-idx="1">
+                <p>Second tab content</p>
+                <div class="visual_tab_area">
+                  <div class="visual_menu_btn_area clearfix">
+                    <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0">의료기관 현황</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="1">의료기관종사 의료인력</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="2">노인복지시설 현황</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="3">장애인복지시설 현황</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="4">국민연금 지급자수</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="5">국민연금 지급금액</button>
+                  </div>
+            
+                  <div class="visual_menu_content_area act" data-depth="1" data-idx="0">2Depth First tab content</div>
+                  <div class="visual_menu_content_area" data-depth="1" data-idx="1">2Depth Second tab content</div>
+                  <div class="visual_menu_content_area" data-depth="1" data-idx="2">2Depth Third tab content</div>
+                  <div class="visual_menu_content_area" data-depth="1" data-idx="3">2Depth Fourth tab content</div>
                 </div>
+              </div>
+              <div class="visual_menu_content_area" data-depth="0" data-idx="2">
+                <p>Third tab content</p>
+                <div class="visual_tab_area">
+                    <div class="visual_menu_btn_area clearfix">
+                      <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0">First</button>
+                      <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="1">Second</button>
+                      <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="2">Third</button>
+                      <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="3">Fourth</button>
+                    </div>
+            
+                    <div class="visual_menu_content_area act" data-depth="1" data-idx="0">2Depth First tab content</div>
+                    <div class="visual_menu_content_area" data-depth="1" data-idx="1">2Depth Second tab content</div>
+                    <div class="visual_menu_content_area" data-depth="1" data-idx="2">2Depth Third tab content</div>
+                    <div class="visual_menu_content_area" data-depth="1" data-idx="3">2Depth Fourth tab content</div>
+                  </div>
+                </div>
+              <div class="visual_menu_content_area" data-depth="0" data-idx="3">Fourth tab content</div>
             </div>
+            
+            <!-- <div class="visual_tab_wrap visual_tab_area">
+              <div class="visual_menu_btn_area clearfix">
+                <button class="btn visual_menu_btn_tab act" data-depth="0" data-idx="0">First</button>
+                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="1">Second</button>
+                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="2">Third</button>
+                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="3">Fourth</button>
+              </div>
+              
+              <div class="visual_menu_content_area act" data-depth="0" data-idx="0">First tab content</div>
+              <div class="visual_menu_content_area" data-depth="0" data-idx="1">Second tab content</div>
+              <div class="visual_menu_content_area" data-depth="0" data-idx="2">Third tab content</div>
+              <div class="visual_menu_content_area" data-depth="0" data-idx="3">Fourth tab content</div>
+            </div> -->
+
+              
+
+
+
+            </div>
+
 
           </div>
         </div>
