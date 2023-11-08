@@ -2308,21 +2308,19 @@ section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap {
   width: 100%;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_btn_area .visual_menu_btn_tab {
-  width: 16.6666666667%;
+  width: 50%;
   min-height: 25px;
   background: #f5f5f5;
-  border-radius: 10px 10px 0 0;
   border: 1px solid #ddd;
-  border-bottom: 2px solid #ddd;
   text-align: center;
-  padding: 8px 16px;
+  padding: 12px 16px;
   box-sizing: border-box;
   cursor: pointer;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_btn_area .visual_menu_btn_tab.act {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-bottom: 2px solid #0D7ACF;
+  background: #0D7ACF;
+  color: #fff;
+  border: 1px solid #0D7ACF;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area {
   display: none;
@@ -2345,6 +2343,7 @@ section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_c
   width: auto;
   background-color: transparent;
   color: #555;
+  padding: 8px 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2374,6 +2373,7 @@ section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_c
 section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .visual_menu_info_area {
   gap: 8px;
   font-size: 12px;
+  margin-top: 12px;
   margin-bottom: 8px;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .visual_menu_info_area p {
@@ -2399,11 +2399,8 @@ section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_c
 section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart tspan {
   font-size: 12px;
 }
-section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half:nth-child(2) {
-  border-left: 1px solid #ddd;
-}
 section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half {
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half dt {
@@ -2420,31 +2417,38 @@ section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_c
   height: 270px;
   font-size: 12px;
 }
-section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half.map_area dd {
+section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half:nth-child(1) {
+  width: 100%;
+}
+section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half:nth-child(2) {
+  width: 100%;
+  border-left: 1px solid #ddd;
+}
+section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half:nth-child(2).map_area dd {
   position: relative;
   background: url("../images/img_sub_cont/graph_map.png") no-repeat center;
   height: 450px;
-  background-size: auto 90%;
+  background-size: auto 85%;
 }
-section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half.map_area ul {
+section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half:nth-child(2).map_area ul {
   position: absolute;
   width: 100%;
   top: calc(50% - 100px);
 }
-section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half.map_area ul li {
+section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half:nth-child(2).map_area ul li {
   font-size: 14px;
   position: relative;
   width: 100%;
   text-align: center;
 }
-section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half.map_area ul li:first-child {
+section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half:nth-child(2).map_area ul li:first-child {
   margin-bottom: 100px;
 }
-section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half.map_area ul li span {
+section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half:nth-child(2).map_area ul li span {
   display: inline-block;
   margin-right: 10px;
 }
-section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half.map_area ul li strong {
+section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half:nth-child(2).map_area ul li strong {
   background: #404a6f;
   color: #fff;
   padding: 5px 15px;
@@ -2478,6 +2482,37 @@ section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_c
 @media screen and (min-width: 600px) {
   section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list {
     width: calc(33.3333333333% - 8px);
+  }
+  section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap {
+    width: 100%;
+  }
+  section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_btn_area .visual_menu_btn_tab {
+    width: 16.6666666667%;
+    min-height: 25px;
+    background: #f5f5f5;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_btn_area .visual_menu_btn_tab.act {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-bottom: 2px solid #0D7ACF;
+  }
+  section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half:nth-child(1) {
+    width: 55%;
+  }
+  section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half:nth-child(2) {
+    width: 45%;
+    border-left: 1px solid #ddd;
+  }
+  section div.sub_section .sub_cont_wrap .sub_cont .visual_tab_wrap .visual_menu_content_area .visual_tab_area .visual_menu_content_area .chart .wd_half:nth-child(2).map_area dd {
+    background-size: auto 90%;
   }
 }
 @media screen and (min-width: 920px) {
