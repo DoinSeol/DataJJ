@@ -5000,829 +5000,1469 @@ if (val == 'chart_box_04_06') {
 
 
 /*----- 05_교통·안전 Chart 영역---------------------------------------------------------------------------*/
-// /* 05_01_자동차등록 -----------------------------------------------------------*/
-// if(val == 'chart_box_05_01'){
-//   am4core.ready(function() {
-//   am4core.useTheme(am4themes_animated);
+/* 05_01_자동차등록 -----------------------------------------------------------*/
+if(val == 'chart_box_05_01'){
+  am4core.ready(function() {
+  am4core.useTheme(am4themes_animated);
 
-//   // 5-1. 자동차 등록_chartdiv29 //
-//   chart_5_1 = am4core.create("chart_05_01", am4charts.XYChart);
+  // 5-1. 자동차 등록_chartdiv29 //
+  chart_5_1 = am4core.create("chart_05_01", am4charts.XYChart);
 
-//   // Data for both series
-//   chart_5_1.data = [ {
-//     "year" : "2021",
-//     "series1" : 288821,
-//     "series2" : 38911,
-//     "series3" : 24703,
-//     "series4" : 9337,
-//     "series5" : 1261
-//   }, {
-//     "year" : "2022",
-//     "series1" : 293406,
-//     "series2" : 39711,
-//     "series3" : 24893,
-//     "series4" : 9017,
-//     "series5" : 1420
-//   }, {
-//     "year" : "2023.04",
-//     "series1" : 293916,
-//     "series2" : 40206,
-//     "series3" : 24983,
-//     "series4" : 8833,
-//     "series5" : 1439
-//   }, {
-//     "year" : "2023.05",
-//     "series1" : 293863,
-//     "series2" : 40090,
-//     "series3" : 25007,
-//     "series4" : 8768,
-//     "series5" : 1449
-//   }, {
-//     "year" : "2023.06",
-//     "series1" : 293850,
-//     "series2" : 40075,
-//     "series3" : 25019,
-//     "series4" : 8709,
-//     "series5" : 1451
-//   }, {
-//     "year" : "2023.07",
-//     "series1" : 293918,
-//     "series2" : 40019,
-//     "series3" : 25009,
-//     "series4" : 8662,
-//     "series5" : 1452
-//   }, {
-//     "year" : "2023.08",
-//     "series1" : 293547,
-//     "series2" : 40043,
-//     "series3" : 8610,
-//     "series4" : 1451,
-//     "series5" : 25018
-//   }, {
-//     "year" : "2023.09",
-//     "series1" : 293872,
-//     "series2" : 39999,
-//     "series3" : 8597,
-//     "series4" : 1453,
-//     "series5" : 25055
-//   }, {
-//     "year" : "2023.10",
-//     "series1" : 293911,
-//     "series2" : 39951,
-//     "series3" : 8598,
-//     "series4" : 1457,
-//     "series5" : 25057
-//   }, ];
+  // Data for both series
+  chart_5_1.data = [ {
+    "year" : "2021",
+    "series1" : 288821,
+    "series2" : 38911,
+    "series3" : 24703,
+    "series4" : 9337,
+    "series5" : 1261
+  }, {
+    "year" : "2022",
+    "series1" : 293406,
+    "series2" : 39711,
+    "series3" : 24893,
+    "series4" : 9017,
+    "series5" : 1420
+  }, {
+    "year" : "2023.04",
+    "series1" : 293916,
+    "series2" : 40206,
+    "series3" : 24983,
+    "series4" : 8833,
+    "series5" : 1439
+  }, {
+    "year" : "2023.05",
+    "series1" : 293863,
+    "series2" : 40090,
+    "series3" : 25007,
+    "series4" : 8768,
+    "series5" : 1449
+  }, {
+    "year" : "2023.06",
+    "series1" : 293850,
+    "series2" : 40075,
+    "series3" : 25019,
+    "series4" : 8709,
+    "series5" : 1451
+  }, {
+    "year" : "2023.07",
+    "series1" : 293918,
+    "series2" : 40019,
+    "series3" : 25009,
+    "series4" : 8662,
+    "series5" : 1452
+  }, {
+    "year" : "2023.08",
+    "series1" : 293547,
+    "series2" : 40043,
+    "series3" : 8610,
+    "series4" : 1451,
+    "series5" : 25018
+  }, {
+    "year" : "2023.09",
+    "series1" : 293872,
+    "series2" : 39999,
+    "series3" : 8597,
+    "series4" : 1453,
+    "series5" : 25055
+  }, {
+    "year" : "2023.10",
+    "series1" : 293911,
+    "series2" : 39951,
+    "series3" : 8598,
+    "series4" : 1457,
+    "series5" : 25057
+  }, ];
 
-//   // Create axes
-//   categoryAxis = chart_5_1.xAxes.push(new am4charts.CategoryAxis());
-//   categoryAxis.dataFields.category = "year";
-//   categoryAxis.renderer.grid.template.location = 0;
+  // Create axes
+  categoryAxis = chart_5_1.xAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.dataFields.category = "year";
+  categoryAxis.renderer.grid.template.location = 0;
 
-//   categoryAxis.renderer.grid.template.location = 0;
-//   categoryAxis.renderer.minGridDistance = 20;
+  categoryAxis.renderer.grid.template.location = 0;
+  categoryAxis.renderer.minGridDistance = 20;
 
-//   valueAxis = chart_5_1.yAxes.push(new am4charts.ValueAxis());
-//   valueAxis.min = 0;
-//   valueAxis.max = 300000;
+  valueAxis = chart_5_1.yAxes.push(new am4charts.ValueAxis());
+  valueAxis.min = 0;
+  valueAxis.max = 300000;
 
-//   // Create series
-//   function createSeries1(field, name, stacked) {
-//     var series = chart_5_1.series.push(new am4charts.ColumnSeries());
-//     series.dataFields.valueY = field;
-//     series.dataFields.categoryX = "year";
-//     series.name = name;
-//     // Set up tooltip
-//     series.adapter.add("tooltipText", function(ev) {
-//       var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
-//       chart_5_1.series.each(function(item) {
-//         text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 대\n";
-//       });
-//       return text;
-//     });
-//     series.tooltip.getFillFromObject = false;
-//     series.tooltip.background.fill = am4core.color("#fff");
-//     series.tooltip.label.fill = am4core.color("#00");
-//     series.stacked = stacked;
-//     series.columns.template.width = am4core.percent(60);
-//   }
+  // Create series
+  function createSeries1(field, name, stacked) {
+    var series = chart_5_1.series.push(new am4charts.ColumnSeries());
+    series.dataFields.valueY = field;
+    series.dataFields.categoryX = "year";
+    series.name = name;
+    // Set up tooltip
+    series.adapter.add("tooltipText", function(ev) {
+      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      chart_5_1.series.each(function(item) {
+        text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 대\n";
+      });
+      return text;
+    });
+    series.tooltip.getFillFromObject = false;
+    series.tooltip.background.fill = am4core.color("#fff");
+    series.tooltip.label.fill = am4core.color("#00");
+    series.stacked = stacked;
+    series.columns.template.width = am4core.percent(60);
+  }
 
-//   createSeries1("series1", "승용", false);
-//   createSeries1("series2", "화물", false);
-//   createSeries1("series3", "이륜", false);
-//   createSeries1("series4", "승합", false);
-//   createSeries1("series5", "특수", false);
-//   /* Add legend */
-//   chart_5_1.legend = new am4charts.Legend();
+  createSeries1("series1", "승용", false);
+  createSeries1("series2", "화물", false);
+  createSeries1("series3", "이륜", false);
+  createSeries1("series4", "승합", false);
+  createSeries1("series5", "특수", false);
+  /* Add legend */
+  chart_5_1.legend = new am4charts.Legend();
 
-//   /* Create a cursor */
-//   chart_5_1.cursor = new am4charts.XYCursor();
-//   chart_5_1.cursor.maxTooltipDistance = 0;
-//   chart_5_1.cursor.behavior = 'none';
-//   chart_5_1.logo.height = -15000;
+  /* Create a cursor */
+  chart_5_1.cursor = new am4charts.XYCursor();
+  chart_5_1.cursor.maxTooltipDistance = 0;
+  chart_5_1.cursor.behavior = 'none';
+  chart_5_1.logo.height = -15000;
 
-//   // axis break
-//   axisBreak = valueAxis.axisBreaks.create();
-//   axisBreak.startValue = 50000;
-//   axisBreak.endValue = 220000;
-//   // axisBreak.breakSize = 0.005;
+  // axis break
+  axisBreak = valueAxis.axisBreaks.create();
+  axisBreak.startValue = 50000;
+  axisBreak.endValue = 220000;
+  // axisBreak.breakSize = 0.005;
 
-//   // fixed axis break
-//   d = (axisBreak.endValue - axisBreak.startValue) / (valueAxis.max - valueAxis.min);
-//   axisBreak.breakSize = 0.05 * (1 - d) / d;
+  // fixed axis break
+  d = (axisBreak.endValue - axisBreak.startValue) / (valueAxis.max - valueAxis.min);
+  axisBreak.breakSize = 0.05 * (1 - d) / d;
 
-//   // make break expand on hover
-//   hoverState = axisBreak.states.create("hover");
-//   hoverState.properties.breakSize = 1;
-//   hoverState.properties.opacity = 0.1;
-//   hoverState.transitionDuration = 1500;
+  // make break expand on hover
+  hoverState = axisBreak.states.create("hover");
+  hoverState.properties.breakSize = 1;
+  hoverState.properties.opacity = 0.1;
+  hoverState.transitionDuration = 1500;
 
-//   axisBreak.defaultState.transitionDuration = 1000;
-//   });
-// }
+  axisBreak.defaultState.transitionDuration = 1000;
+  });
+}
 
-// /* 05_02_영업용자동차등록대수 -----------------------------------------------------------*/
-// if(val == 'chart_box_05_02'){
-//   am4core.ready(function() {
+/* 05_02_영업용자동차등록대수 -----------------------------------------------------------*/
+if(val == 'chart_box_05_02'){
+  am4core.ready(function() {
 
-//   // 5-2. 영업용 자동차 등록대수_chartdiv30 //
-//   am4core.useTheme(am4themes_animated);
+  // 5-2. 영업용 자동차 등록대수_chartdiv30 //
+  am4core.useTheme(am4themes_animated);
 
-//   chart_5_2 = am4core.create("chart_05_02", am4charts.XYChart);
+  chart_5_2 = am4core.create("chart_05_02", am4charts.XYChart);
 
-//   // Add data
-//   chart_5_2.data = [ {
-//     "year" : "2016",
-//     "series1" : 3862,
-//     "series2" : 1943,
-//     "series3" : 1871,
-//     "series4" : 402,
-//     "series5" : 501,
-//     "series6" : 457
-//   }, {
-//     "year" : "2017",
-//     "series1" : 3861,
-//     "series2" : 2026,
-//     "series3" : 2054,
-//     "series4" : 411,
-//     "series5" : 477,
-//     "series6" : 457
-//   }, {
-//     "year" : "2018",
-//     "series1" : 3860,
-//     "series2" : 2106,
-//     "series3" : 2073,
-//     "series4" : 409,
-//     "series5" : 463,
-//     "series6" : 445
-//   }, {
-//     "year" : "2019",
-//     "series1" : 3859,
-//     "series2" : 2041,
-//     "series3" : 2130,
-//     "series4" : 408,
-//     "series5" : 458,
-//     "series6" : 445
-//   }, {
-//     "year" : "2020",
-//     "series1" : 3858,
-//     "series2" : 2009,
-//     "series3" : 2203,
-//     "series4" : 408,
-//     "series5" : 443,
-//     "series6" : 466
-//   }, {
-//     "year" : "2021",
-//     "series1" : 3798,
-//     "series2" : 1907,
-//     "series3" : 2367,
-//     "series4" : 399,
-//     "series5" : 443,
-//     "series6" : 468
+  // Add data
+  chart_5_2.data = [ {
+    "year" : "2016",
+    "series1" : 3862,
+    "series2" : 1943,
+    "series3" : 1871,
+    "series4" : 402,
+    "series5" : 501,
+    "series6" : 457
+  }, {
+    "year" : "2017",
+    "series1" : 3861,
+    "series2" : 2026,
+    "series3" : 2054,
+    "series4" : 411,
+    "series5" : 477,
+    "series6" : 457
+  }, {
+    "year" : "2018",
+    "series1" : 3860,
+    "series2" : 2106,
+    "series3" : 2073,
+    "series4" : 409,
+    "series5" : 463,
+    "series6" : 445
+  }, {
+    "year" : "2019",
+    "series1" : 3859,
+    "series2" : 2041,
+    "series3" : 2130,
+    "series4" : 408,
+    "series5" : 458,
+    "series6" : 445
+  }, {
+    "year" : "2020",
+    "series1" : 3858,
+    "series2" : 2009,
+    "series3" : 2203,
+    "series4" : 408,
+    "series5" : 443,
+    "series6" : 466
+  }, {
+    "year" : "2021",
+    "series1" : 3798,
+    "series2" : 1907,
+    "series3" : 2367,
+    "series4" : 399,
+    "series5" : 443,
+    "series6" : 468
 
-//   } ];
+  } ];
 
-//   // Create axes
-//   categoryAxis = chart_5_2.xAxes.push(new am4charts.CategoryAxis());
-//   categoryAxis.dataFields.category = "year";
-//   categoryAxis.renderer.grid.template.location = 0;
+  // Create axes
+  categoryAxis = chart_5_2.xAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.dataFields.category = "year";
+  categoryAxis.renderer.grid.template.location = 0;
 
-//   valueAxis = chart_5_2.yAxes.push(new am4charts.ValueAxis());
-//   valueAxis.min = 0;
-//   valueAxis.max = 4500;
+  valueAxis = chart_5_2.yAxes.push(new am4charts.ValueAxis());
+  valueAxis.min = 0;
+  valueAxis.max = 4500;
 
-//   // Create series
-//   function createSeries2(field, name, stacked) {
-//     var series = chart_5_2.series.push(new am4charts.ColumnSeries());
-//     series.dataFields.valueY = field;
-//     series.dataFields.categoryX = "year";
-//     series.name = name;
-//     // Set up tooltip
-//     series.adapter.add("tooltipText", function(ev) {
-//       var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
-//       chart_5_2.series.each(function(item) {
-//         text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 대\n";
-//       });
-//       return text;
-//     });
-//     series.tooltip.getFillFromObject = false;
-//     series.tooltip.background.fill = am4core.color("#fff");
-//     series.tooltip.label.fill = am4core.color("#00");
-//     series.stacked = stacked;
-//     series.columns.template.width = am4core.percent(60);
-//   }
+  // Create series
+  function createSeries2(field, name, stacked) {
+    var series = chart_5_2.series.push(new am4charts.ColumnSeries());
+    series.dataFields.valueY = field;
+    series.dataFields.categoryX = "year";
+    series.name = name;
+    // Set up tooltip
+    series.adapter.add("tooltipText", function(ev) {
+      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      chart_5_2.series.each(function(item) {
+        text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 대\n";
+      });
+      return text;
+    });
+    series.tooltip.getFillFromObject = false;
+    series.tooltip.background.fill = am4core.color("#fff");
+    series.tooltip.label.fill = am4core.color("#00");
+    series.stacked = stacked;
+    series.columns.template.width = am4core.percent(60);
+  }
 
-//   createSeries2("series1", "택시", false);
-//   createSeries2("series2", "일반화물", false);
-//   createSeries2("series3", "개인화물", false);
-//   createSeries2("series4", "시내버스", false);
-//   createSeries2("series5", "시외버스", false);
-//   createSeries2("series6", "전세버스", false);
-//   /* Add legend */
-//   chart_5_2.legend = new am4charts.Legend();
+  createSeries2("series1", "택시", false);
+  createSeries2("series2", "일반화물", false);
+  createSeries2("series3", "개인화물", false);
+  createSeries2("series4", "시내버스", false);
+  createSeries2("series5", "시외버스", false);
+  createSeries2("series6", "전세버스", false);
+  /* Add legend */
+  chart_5_2.legend = new am4charts.Legend();
 
-//   /* Create a cursor */
-//   chart_5_2.cursor = new am4charts.XYCursor();
-//   chart_5_2.cursor.maxTooltipDistance = 0;
-//   chart_5_2.cursor.behavior = 'none';
-//   chart_5_2.logo.height = -15000;
+  /* Create a cursor */
+  chart_5_2.cursor = new am4charts.XYCursor();
+  chart_5_2.cursor.maxTooltipDistance = 0;
+  chart_5_2.cursor.behavior = 'none';
+  chart_5_2.logo.height = -15000;
 
-//   // axis break
-//   // axisBreak = valueAxis.axisBreaks.create();
-//   // axisBreak.startValue = 2500;
-//   // axisBreak.endValue = 3500;
-//   // axisBreak.breakSize = 0.005;
+  // axis break
+  // axisBreak = valueAxis.axisBreaks.create();
+  // axisBreak.startValue = 2500;
+  // axisBreak.endValue = 3500;
+  // axisBreak.breakSize = 0.005;
 
-//   // fixed axis break
-//   d = (axisBreak.endValue - axisBreak.startValue) / (valueAxis.max - valueAxis.min);
-//   axisBreak.breakSize = 0.05 * (1 - d) / d;
+  // fixed axis break
+  d = (axisBreak.endValue - axisBreak.startValue) / (valueAxis.max - valueAxis.min);
+  axisBreak.breakSize = 0.05 * (1 - d) / d;
 
-//   // make break expand on hover
-//   hoverState = axisBreak.states.create("hover");
-//   hoverState.properties.breakSize = 1;
-//   hoverState.properties.opacity = 0.1;
-//   hoverState.transitionDuration = 1500;
+  // make break expand on hover
+  hoverState = axisBreak.states.create("hover");
+  hoverState.properties.breakSize = 1;
+  hoverState.properties.opacity = 0.1;
+  hoverState.transitionDuration = 1500;
 
-//   axisBreak.defaultState.transitionDuration = 1000;
-//   });
-// }
+  axisBreak.defaultState.transitionDuration = 1000;
+  });
+}
 
-// /* 05_03_도로현황 -----------------------------------------------------------*/
-// if(val == 'chart_box_05_03'){
-//   am4core.ready(function() {
-//   am4core.useTheme(am4themes_animated);
+/* 05_03_도로현황 -----------------------------------------------------------*/
+if(val == 'chart_box_05_03'){
+  am4core.ready(function() {
+  am4core.useTheme(am4themes_animated);
 
-//   // 5-3. 도로 현황_chartdiv31 //
-//   chart_5_3 = am4core.create("chart_05_03", am4charts.XYChart);
-//   chart_5_3.hiddenState.properties.opacity = 0; // this creates initial fade-in
+  // 5-3. 도로 현황_chartdiv31 //
+  chart_5_3 = am4core.create("chart_05_03", am4charts.XYChart);
+  chart_5_3.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
-//     // Add data
-//     chart_5_3.data = [{
-//       "year": "2016",
-//       "value1": 773601,
-//       "value2": 35095,
-//       "value3": 15415,
-//       "value4": 13080,
-//       "value5": 837191
-//     }, {
-//       "year": "2017",
-//       "value1": 773601,
-//       "value2": 35095,
-//       "value3": 15415,
-//       "value4": 13080,
-//       "value5": 837191
-//     }, {
-//       "year": "2018",
-//       "value1": 864087,
-//       "value2": 54844,
-//       "value3": 21845,
-//       "value4": 13080,
-//       "value5": 953856
-//     }, {
-//       "year": "2019",
-//       "value1": 864087,
-//       "value2": 57194,
-//       "value3": 21845,
-//       "value4": 13080,
-//       "value5": 956206
-//     }, {
-//       "year": "2020",
-//       "value1": 864087,
-//       "value2": 57194,
-//       "value3": 21845,
-//       "value4": 13080,
-//       "value5": 956206 
-//     }, {
-//       "year": "2021",
-//       "value1": 865585,
-//       "value2": 57194,
-//       "value3": 21845,
-//       "value4": 13080,
-//       "value5": 957704 
-//     }];
+    // Add data
+    chart_5_3.data = [{
+      "year": "2016",
+      "value1": 773601,
+      "value2": 35095,
+      "value3": 15415,
+      "value4": 13080,
+      "value5": 837191
+    }, {
+      "year": "2017",
+      "value1": 773601,
+      "value2": 35095,
+      "value3": 15415,
+      "value4": 13080,
+      "value5": 837191
+    }, {
+      "year": "2018",
+      "value1": 864087,
+      "value2": 54844,
+      "value3": 21845,
+      "value4": 13080,
+      "value5": 953856
+    }, {
+      "year": "2019",
+      "value1": 864087,
+      "value2": 57194,
+      "value3": 21845,
+      "value4": 13080,
+      "value5": 956206
+    }, {
+      "year": "2020",
+      "value1": 864087,
+      "value2": 57194,
+      "value3": 21845,
+      "value4": 13080,
+      "value5": 956206 
+    }, {
+      "year": "2021",
+      "value1": 865585,
+      "value2": 57194,
+      "value3": 21845,
+      "value4": 13080,
+      "value5": 957704 
+    }];
     
-//   /* Create axes */
-//   categoryAxis = chart_5_3.xAxes.push(new am4charts.CategoryAxis());
-//   categoryAxis.dataFields.category = "year";
-//   categoryAxis.renderer.minGridDistance = 30;
+  /* Create axes */
+  categoryAxis = chart_5_3.xAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.dataFields.category = "year";
+  categoryAxis.renderer.minGridDistance = 30;
 
-//   /* Create value axis */
-//   valueAxis = chart_5_3.yAxes.push(new am4charts.ValueAxis());
-//   valueAxis.min = 0;
-//   valueAxis.max = 1200000;
-//   valueAxis.renderer.opposite = true;
-//   /* Create value axis */
-//   valueAxis1 = chart_5_3.yAxes.push(new am4charts.ValueAxis());
-//   valueAxis1.min = 0;
-//   valueAxis1.max = 1200000;
+  /* Create value axis */
+  valueAxis = chart_5_3.yAxes.push(new am4charts.ValueAxis());
+  valueAxis.min = 0;
+  valueAxis.max = 1200000;
+  valueAxis.renderer.opposite = true;
+  /* Create value axis */
+  valueAxis1 = chart_5_3.yAxes.push(new am4charts.ValueAxis());
+  valueAxis1.min = 0;
+  valueAxis1.max = 1200000;
 
-//   valueAxis1.syncWithAxis = valueAxis;
+  valueAxis1.syncWithAxis = valueAxis;
 
-//   // Create series
-//   function createSeries3(field, name, stacked) {
-//     if(field == "value5")
-//     {
-//       var series = chart_5_3.series.push(new am4charts.LineSeries());
-//       series.dataFields.valueY = field;
-//       series.dataFields.categoryX = "year";
-//       series.name = name;
-//       series.tooltipText = "";
-//       series.strokeWidth = 3;
-//       series.yAxis = valueAxis;
-//       series.stroke = am4core.color("#fdd400");
-//       series.fill = am4core.color("#fdd400");
-//       // Set up tooltip
-//       series.adapter.add("tooltipText", function(ev) {
-//         var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
-//         chart_5_3.series.each(function(item) {
-//           if(item.name == "총계")
-//           {
-//             text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} m\n";
-//           }          
-//           else
-//           {
-//             text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} m\n";
-//           }
-//         });
-//         return text;
-//       });
+  // Create series
+  function createSeries3(field, name, stacked) {
+    if(field == "value5")
+    {
+      var series = chart_5_3.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = field;
+      series.dataFields.categoryX = "year";
+      series.name = name;
+      series.tooltipText = "";
+      series.strokeWidth = 3;
+      series.yAxis = valueAxis;
+      series.stroke = am4core.color("#fdd400");
+      series.fill = am4core.color("#fdd400");
+      // Set up tooltip
+      series.adapter.add("tooltipText", function(ev) {
+        var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+        chart_5_3.series.each(function(item) {
+          if(item.name == "총계")
+          {
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} m\n";
+          }          
+          else
+          {
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} m\n";
+          }
+        });
+        return text;
+      });
   
-//       series.tooltip.getFillFromObject = false;
-//       series.tooltip.background.fill = am4core.color("#fff");
-//       series.tooltip.label.fill = am4core.color("#00");
+      series.tooltip.getFillFromObject = false;
+      series.tooltip.background.fill = am4core.color("#fff");
+      series.tooltip.label.fill = am4core.color("#00");
   
-//       // Prevent cross-fading of tooltips
-//       series.tooltip.defaultState.transitionDuration = 0;
-//       series.tooltip.hiddenState.transitionDuration = 0;
+      // Prevent cross-fading of tooltips
+      series.tooltip.defaultState.transitionDuration = 0;
+      series.tooltip.hiddenState.transitionDuration = 0;
   
-//       var bullet = series.bullets.push(new am4charts.CircleBullet());
-//       bullet.circle.radius = 5;
-//     }
-//     else
-//     {
-//       var series = chart_5_3.series.push(new am4charts.ColumnSeries());
-//       series.dataFields.valueY = field;
-//       series.dataFields.categoryX = "year";
-//       series.name = name;
-//       series.yAxis = valueAxis1;
-//       // Set up tooltip
-//       series.adapter.add("tooltipText", function(ev) {
-//         var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
-//         chart_5_3.series.each(function(item) {
-//           if(item.name == "총계")
-//           {
-//             text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} m\n";
-//           }          
-//           else
-//           {
-//             text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} m\n";
-//           }
-//         });
-//         return text;
-//       });
-//       series.tooltip.getFillFromObject = false;
-//       series.tooltip.background.fill = am4core.color("#fff");
-//       series.tooltip.label.fill = am4core.color("#00");
-//       series.stacked = stacked;
-//       series.columns.template.width = am4core.percent(60);
-//     }
-//   }
+      var bullet = series.bullets.push(new am4charts.CircleBullet());
+      bullet.circle.radius = 5;
+    }
+    else
+    {
+      var series = chart_5_3.series.push(new am4charts.ColumnSeries());
+      series.dataFields.valueY = field;
+      series.dataFields.categoryX = "year";
+      series.name = name;
+      series.yAxis = valueAxis1;
+      // Set up tooltip
+      series.adapter.add("tooltipText", function(ev) {
+        var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+        chart_5_3.series.each(function(item) {
+          if(item.name == "총계")
+          {
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} m\n";
+          }          
+          else
+          {
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} m\n";
+          }
+        });
+        return text;
+      });
+      series.tooltip.getFillFromObject = false;
+      series.tooltip.background.fill = am4core.color("#fff");
+      series.tooltip.label.fill = am4core.color("#00");
+      series.stacked = stacked;
+      series.columns.template.width = am4core.percent(60);
+    }
+  }
 
-//   createSeries3("value1", "시도", true);
-//   createSeries3("value2", "일반국도", true);
-//   createSeries3("value3", "지방도", true);
-//   createSeries3("value4", "고속도로", true);
-//   createSeries3("value5", "총계", false); 
+  createSeries3("value1", "시도", true);
+  createSeries3("value2", "일반국도", true);
+  createSeries3("value3", "지방도", true);
+  createSeries3("value4", "고속도로", true);
+  createSeries3("value5", "총계", false); 
 
-//   // Add legend
-//   chart_5_3.legend = new am4charts.Legend();
+  // Add legend
+  chart_5_3.legend = new am4charts.Legend();
 
-//   // Add cursor
-//   chart_5_3.cursor = new am4charts.XYCursor();
-//   chart_5_3.cursor.maxTooltipDistance = 0;
-//   chart_5_3.cursor.behavior = 'none';
-//   chart_5_3.logo.height = -15000;
-//     });
-// }
+  // Add cursor
+  chart_5_3.cursor = new am4charts.XYCursor();
+  chart_5_3.cursor.maxTooltipDistance = 0;
+  chart_5_3.cursor.behavior = 'none';
+  chart_5_3.logo.height = -15000;
+    });
+}
 
-// /* 05_04_교통사고건수 -----------------------------------------------------------*/
-// if(val == 'chart_box_05_04'){
-//   am4core.ready(function() {
-//   am4core.useTheme(am4themes_animated);
+/* 05_04_교통사고건수 -----------------------------------------------------------*/
+if(val == 'chart_box_05_04'){
+  am4core.ready(function() {
+  am4core.useTheme(am4themes_animated);
 
-//   // 5-4. 교통사고건수(자동차)_chartdiv32 //
-//   chart_5_4 = am4core.create("chart_05_04", am4charts.XYChart);
+  // 5-4. 교통사고건수(자동차)_chartdiv32 //
+  chart_5_4 = am4core.create("chart_05_04", am4charts.XYChart);
 
-//   // Data for both series
-//   chart_5_4.data = [ {
-//     "year" : "2016",
-//     "series1" : 3214,
-//     "series2" : 3666,
-//     "series3" : 50
-//   }, {
-//     "year" : "2017",
-//     "series1" : 2427,
-//     "series2" : 3801,
-//     "series3" : 53
-//   }, {
-//     "year" : "2018",
-//     "series1" : 2256,
-//     "series2" : 3342,
-//     "series3" : 36
-//   }, {
-//     "year" : "2019",
-//     "series1" : 2365,
-//     "series2" : 3541,
-//     "series3" : 35
-//   }, {
-//     "year" : "2020",
-//     "series1" : 2082,
-//     "series2" : 3116,
-//     "series3" : 40
-//   }, {
-//     "year" : "2021",
-//     "series1" : 2151,
-//     "series2" : 3070,
-//     "series3" : 39
-//   }, {
-//     "year" : "2022",
-//     "series1" : 1918,
-//     "series2" : 2720,
-//     "series3" : 26
-//   } ];
+  // Data for both series
+  chart_5_4.data = [ {
+    "year" : "2016",
+    "series1" : 3214,
+    "series2" : 3666,
+    "series3" : 50
+  }, {
+    "year" : "2017",
+    "series1" : 2427,
+    "series2" : 3801,
+    "series3" : 53
+  }, {
+    "year" : "2018",
+    "series1" : 2256,
+    "series2" : 3342,
+    "series3" : 36
+  }, {
+    "year" : "2019",
+    "series1" : 2365,
+    "series2" : 3541,
+    "series3" : 35
+  }, {
+    "year" : "2020",
+    "series1" : 2082,
+    "series2" : 3116,
+    "series3" : 40
+  }, {
+    "year" : "2021",
+    "series1" : 2151,
+    "series2" : 3070,
+    "series3" : 39
+  }, {
+    "year" : "2022",
+    "series1" : 1918,
+    "series2" : 2720,
+    "series3" : 26
+  } ];
 
-//   // Create axes
-//   categoryAxis = chart_5_4.xAxes.push(new am4charts.CategoryAxis());
-//   categoryAxis.dataFields.category = "year";
-//   categoryAxis.renderer.grid.template.location = 0;
+  // Create axes
+  categoryAxis = chart_5_4.xAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.dataFields.category = "year";
+  categoryAxis.renderer.grid.template.location = 0;
 
-//   valueAxis = chart_5_4.yAxes.push(new am4charts.ValueAxis());
-//   valueAxis.min = 0;
-//   valueAxis.max = 4500;
+  valueAxis = chart_5_4.yAxes.push(new am4charts.ValueAxis());
+  valueAxis.min = 0;
+  valueAxis.max = 4500;
 
-//   // Create series
-//   function createSeries4(field, name, stacked) {
-//     var series = chart_5_4.series.push(new am4charts.ColumnSeries());
-//     series.dataFields.valueY = field;
-//     series.dataFields.categoryX = "year";
-//     series.name = name;
-//     // Set up tooltip
-//     series.adapter.add("tooltipText", function(ev) {
-//       var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
-//       chart_5_4.series.each(function(item) {
-//         if(item.name == "사고(건)")
-//           {
-//             text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 건\n";
-//           }          
-//           else
-//           {
-//             text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
-//           }
-//       });
-//       return text;
-//     });
-//     series.tooltip.getFillFromObject = false;
-//     series.tooltip.background.fill = am4core.color("#fff");
-//     series.tooltip.label.fill = am4core.color("#00");
-//     series.stacked = stacked;
-//     series.columns.template.width = am4core.percent(60);
-//   }
+  // Create series
+  function createSeries4(field, name, stacked) {
+    var series = chart_5_4.series.push(new am4charts.ColumnSeries());
+    series.dataFields.valueY = field;
+    series.dataFields.categoryX = "year";
+    series.name = name;
+    // Set up tooltip
+    series.adapter.add("tooltipText", function(ev) {
+      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      chart_5_4.series.each(function(item) {
+        if(item.name == "사고(건)")
+          {
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 건\n";
+          }          
+          else
+          {
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
+          }
+      });
+      return text;
+    });
+    series.tooltip.getFillFromObject = false;
+    series.tooltip.background.fill = am4core.color("#fff");
+    series.tooltip.label.fill = am4core.color("#00");
+    series.stacked = stacked;
+    series.columns.template.width = am4core.percent(60);
+  }
 
-//   createSeries4("series1", "사고(건)", false);
-//   createSeries4("series2", "부상(명)", false);
-//   createSeries4("series3", "사망(명)", false);
-//   /* Add legend */
-//   chart_5_4.legend = new am4charts.Legend();
+  createSeries4("series1", "사고(건)", false);
+  createSeries4("series2", "부상(명)", false);
+  createSeries4("series3", "사망(명)", false);
+  /* Add legend */
+  chart_5_4.legend = new am4charts.Legend();
 
-//   /* Create a cursor */
-//   chart_5_4.cursor = new am4charts.XYCursor();
-//   chart_5_4.cursor.maxTooltipDistance = 0;
-//   chart_5_4.cursor.behavior = 'none';
-//   chart_5_4.logo.height = -15000;
+  /* Create a cursor */
+  chart_5_4.cursor = new am4charts.XYCursor();
+  chart_5_4.cursor.maxTooltipDistance = 0;
+  chart_5_4.cursor.behavior = 'none';
+  chart_5_4.logo.height = -15000;
 
-//   // axis break
-//   // axisBreak = valueAxis.axisBreaks.create();
-//   // axisBreak.startValue = 50000;
-//   // axisBreak.endValue = 200000;
-//   // axisBreak.breakSize = 0.005;
+  // axis break
+  // axisBreak = valueAxis.axisBreaks.create();
+  // axisBreak.startValue = 50000;
+  // axisBreak.endValue = 200000;
+  // axisBreak.breakSize = 0.005;
 
-//   // fixed axis break
-//   d = (axisBreak.endValue - axisBreak.startValue) / (valueAxis.max - valueAxis.min);
-//   axisBreak.breakSize = 0.05 * (1 - d) / d;
+  // fixed axis break
+  d = (axisBreak.endValue - axisBreak.startValue) / (valueAxis.max - valueAxis.min);
+  axisBreak.breakSize = 0.05 * (1 - d) / d;
 
-//   // make break expand on hover
-//   hoverState = axisBreak.states.create("hover");
-//   hoverState.properties.breakSize = 1;
-//   hoverState.properties.opacity = 0.1;
-//   hoverState.transitionDuration = 1500;
+  // make break expand on hover
+  hoverState = axisBreak.states.create("hover");
+  hoverState.properties.breakSize = 1;
+  hoverState.properties.opacity = 0.1;
+  hoverState.transitionDuration = 1500;
 
-//   axisBreak.defaultState.transitionDuration = 1000;
+  axisBreak.defaultState.transitionDuration = 1000;
 
-//       });
-// }
+      });
+}
 
-// /* 05_05_화재발생 -----------------------------------------------------------*/
-// if(val == 'chart_box_05_05'){
-//   am4core.ready(function() {
+/* 05_05_화재발생 -----------------------------------------------------------*/
+if(val == 'chart_box_05_05'){
+  am4core.ready(function() {
 
-//   // 5-5. 화재발생_chartdiv33 //
-//   am4core.useTheme(am4themes_animated);
+  // 5-5. 화재발생_chartdiv33 //
+  am4core.useTheme(am4themes_animated);
 
-//   chart_5_5 = am4core.create("chart_05_05", am4charts.XYChart);
+  chart_5_5 = am4core.create("chart_05_05", am4charts.XYChart);
 
-//   // Data for both series
-//   chart_5_5.data = [ {
-//     "year" : "2015",
-//     "value1" : 928572,
-//     "value2" : 335,
-//     "value3" : 14
-//   }, {
-//     "year" : "2016",
-//     "value1" : 1467276,
-//     "value2" : 329,
-//     "value3" : 13
-//   }, {
-//     "year" : "2017",
-//     "value1" : 1734507,
-//     "value2" : 339,
-//     "value3" : 18
-//   }, {
-//     "year" : "2018",
-//     "value1" : 1861256,
-//     "value2" : 345,
-//     "value3" : 45
-//   }, {
-//     "year" : "2019",
-//     "value1" : 3247296,
-//     "value2" : 413,
-//     "value3" : 23
-//   }, {
-//     "year" : "2020",
-//     "value1" : 3076936,
-//     "value2" : 457,
-//     "value3" : 15
-//   }, {
-//     "year" : "2021",
-//     "value1" : 2917270,
-//     "value2" : 390,
-//     "value3" : 36
-//   }, {
-//     "year" : "2022",
-//     "value1" : 2008709,
-//     "value2" : 343,
-//     "value3" : 11
-//   } ];
+  // Data for both series
+  chart_5_5.data = [ {
+    "year" : "2015",
+    "value1" : 928572,
+    "value2" : 335,
+    "value3" : 14
+  }, {
+    "year" : "2016",
+    "value1" : 1467276,
+    "value2" : 329,
+    "value3" : 13
+  }, {
+    "year" : "2017",
+    "value1" : 1734507,
+    "value2" : 339,
+    "value3" : 18
+  }, {
+    "year" : "2018",
+    "value1" : 1861256,
+    "value2" : 345,
+    "value3" : 45
+  }, {
+    "year" : "2019",
+    "value1" : 3247296,
+    "value2" : 413,
+    "value3" : 23
+  }, {
+    "year" : "2020",
+    "value1" : 3076936,
+    "value2" : 457,
+    "value3" : 15
+  }, {
+    "year" : "2021",
+    "value1" : 2917270,
+    "value2" : 390,
+    "value3" : 36
+  }, {
+    "year" : "2022",
+    "value1" : 2008709,
+    "value2" : 343,
+    "value3" : 11
+  } ];
 
-//   /* Create axes */
-//   categoryAxis = chart_5_5.xAxes.push(new am4charts.CategoryAxis());
-//   categoryAxis.dataFields.category = "year";
-//   categoryAxis.renderer.minGridDistance = 30;
+  /* Create axes */
+  categoryAxis = chart_5_5.xAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.dataFields.category = "year";
+  categoryAxis.renderer.minGridDistance = 30;
 
-//   /* Create value axis */
-//   valueAxis = chart_5_5.yAxes.push(new am4charts.ValueAxis());
-//   valueAxis.min = 0;
-//   valueAxis.max = 10000000;
-//   valueAxis.renderer.opposite = true;
-//   /* Create value axis */
-//   valueAxis1 = chart_5_5.yAxes.push(new am4charts.ValueAxis());
-//   valueAxis1.min = 0;
-//   valueAxis1.max = 600;
+  /* Create value axis */
+  valueAxis = chart_5_5.yAxes.push(new am4charts.ValueAxis());
+  valueAxis.min = 0;
+  valueAxis.max = 10000000;
+  valueAxis.renderer.opposite = true;
+  /* Create value axis */
+  valueAxis1 = chart_5_5.yAxes.push(new am4charts.ValueAxis());
+  valueAxis1.min = 0;
+  valueAxis1.max = 600;
 
-//   valueAxis1.syncWithAxis = valueAxis;
+  valueAxis1.syncWithAxis = valueAxis;
 
-//   // Create series
-//   function createSeries5(field, name, stacked) {
-//     if(field == "value1")
-//     {
-//       var series = chart_5_5.series.push(new am4charts.LineSeries());
-//       series.dataFields.valueY = field;
-//       series.dataFields.categoryX = "year";
-//       series.name = name;
-//       series.tooltipText = "";
-//       series.strokeWidth = 3;
-//       series.yAxis = valueAxis;
-//       series.stroke = am4core.color("#fdd400");
-//       series.fill = am4core.color("#fdd400");
-//       // Set up tooltip
-//       series.adapter.add("tooltipText", function(ev) {
-//         var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
-//         chart_5_5.series.each(function(item) {
-//           if(item.name == "피해액(천원)")
-//           {
-//             text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 천원\n";
-//           }          
-//           else if(item.name == "인명피해(명)")        
-//           {
-//             text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
-//           }
-//           else
-//           {
-//             text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 건\n";
-//           }
-//         });
-//         return text;
-//       });
+  // Create series
+  function createSeries5(field, name, stacked) {
+    if(field == "value1")
+    {
+      var series = chart_5_5.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = field;
+      series.dataFields.categoryX = "year";
+      series.name = name;
+      series.tooltipText = "";
+      series.strokeWidth = 3;
+      series.yAxis = valueAxis;
+      series.stroke = am4core.color("#fdd400");
+      series.fill = am4core.color("#fdd400");
+      // Set up tooltip
+      series.adapter.add("tooltipText", function(ev) {
+        var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+        chart_5_5.series.each(function(item) {
+          if(item.name == "피해액(천원)")
+          {
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 천원\n";
+          }          
+          else if(item.name == "인명피해(명)")        
+          {
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
+          }
+          else
+          {
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 건\n";
+          }
+        });
+        return text;
+      });
   
-//       series.tooltip.getFillFromObject = false;
-//       series.tooltip.background.fill = am4core.color("#fff");
-//       series.tooltip.label.fill = am4core.color("#00");
+      series.tooltip.getFillFromObject = false;
+      series.tooltip.background.fill = am4core.color("#fff");
+      series.tooltip.label.fill = am4core.color("#00");
   
-//       // Prevent cross-fading of tooltips
-//       series.tooltip.defaultState.transitionDuration = 0;
-//       series.tooltip.hiddenState.transitionDuration = 0;
+      // Prevent cross-fading of tooltips
+      series.tooltip.defaultState.transitionDuration = 0;
+      series.tooltip.hiddenState.transitionDuration = 0;
   
-//       var bullet = series.bullets.push(new am4charts.CircleBullet());
-//       bullet.circle.radius = 5;
-//     }
-//     else
-//     {
-//       var series = chart_5_5.series.push(new am4charts.ColumnSeries());
-//       series.dataFields.valueY = field;
-//       series.dataFields.categoryX = "year";
-//       series.name = name;
-//       series.yAxis = valueAxis1;
-//       // Set up tooltip
-//       series.adapter.add("tooltipText", function(ev) {
-//         var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
-//         chart_5_5.series.each(function(item) {
-//           if(item.name == "피해액(천원)")
-//           {
-//             text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 천원\n";
-//           }
-//           else if(item.name == "인명피해(명)")        
-//           {
-//             text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
-//           }
-//           else
-//           {
-//             text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 건\n";
-//           }
-//         });
-//         return text;
-//       });
-//       series.tooltip.getFillFromObject = false;
-//       series.tooltip.background.fill = am4core.color("#fff");
-//       series.tooltip.label.fill = am4core.color("#00");
-//       series.stacked = stacked;
-//       series.columns.template.width = am4core.percent(60);
-//     }
-//   }
-//   createSeries5("value2", "발생(건)", false);
-//   createSeries5("value3", "인명피해(명)", false);
-//   createSeries5("value1", "피해액(천원)", false);
+      var bullet = series.bullets.push(new am4charts.CircleBullet());
+      bullet.circle.radius = 5;
+    }
+    else
+    {
+      var series = chart_5_5.series.push(new am4charts.ColumnSeries());
+      series.dataFields.valueY = field;
+      series.dataFields.categoryX = "year";
+      series.name = name;
+      series.yAxis = valueAxis1;
+      // Set up tooltip
+      series.adapter.add("tooltipText", function(ev) {
+        var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+        chart_5_5.series.each(function(item) {
+          if(item.name == "피해액(천원)")
+          {
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 천원\n";
+          }
+          else if(item.name == "인명피해(명)")        
+          {
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
+          }
+          else
+          {
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 건\n";
+          }
+        });
+        return text;
+      });
+      series.tooltip.getFillFromObject = false;
+      series.tooltip.background.fill = am4core.color("#fff");
+      series.tooltip.label.fill = am4core.color("#00");
+      series.stacked = stacked;
+      series.columns.template.width = am4core.percent(60);
+    }
+  }
+  createSeries5("value2", "발생(건)", false);
+  createSeries5("value3", "인명피해(명)", false);
+  createSeries5("value1", "피해액(천원)", false);
 
-//   // Add legend
-//   chart_5_5.legend = new am4charts.Legend();
+  // Add legend
+  chart_5_5.legend = new am4charts.Legend();
 
-//   // Add cursor
-//   chart_5_5.cursor = new am4charts.XYCursor();
-//   chart_5_5.cursor.maxTooltipDistance = 0;
-//       chart_5_5.cursor.behavior = 'none';
-//   chart_5_5.logo.height = -15000;
-//     });
-//   }
+  // Add cursor
+  chart_5_5.cursor = new am4charts.XYCursor();
+  chart_5_5.cursor.maxTooltipDistance = 0;
+      chart_5_5.cursor.behavior = 'none';
+  chart_5_5.logo.height = -15000;
+    });
+  }
 
-// /* 05_06_119구급활동실적 -----------------------------------------------------------*/
-// if(val == 'chart_box_05_06'){
-//     am4core.ready(function() {
-//     am4core.useTheme(am4themes_animated);
+/* 05_06_119구급활동실적 -----------------------------------------------------------*/
+if(val == 'chart_box_05_06'){
+    am4core.ready(function() {
+    am4core.useTheme(am4themes_animated);
 
-//   // 5-6. 119 구급활동 실적_chartdiv34 //
-//   chart_5_6 = am4core.create("chart_05_06", am4charts.XYChart);
+  // 5-6. 119 구급활동 실적_chartdiv34 //
+  chart_5_6 = am4core.create("chart_05_06", am4charts.XYChart);
 
-//   // Data for both series
-//   chart_5_6.data = [ {
-//     "year" : "2015",
-//     "series1" : 38601,
-//     "series2" : 24570,
-//     "series3" : 25295
-//   }, {
-//     "year" : "2016",
-//     "series1" : 39867,
-//     "series2" : 25284,
-//     "series3" : 23397
-//   }, {
-//     "year" : "2017",
-//     "series1" : 40867,
-//     "series2" : 25669,
-//     "series3" : 26275
-//   }, {
-//     "year" : "2018",
-//     "series1" : 43287,
-//     "series2" : 26963,
-//     "series3" : 26406
-//   }, {
-//     "year" : "2019",
-//     "series1" : 37183,
-//     "series2" : 22637,
-//     "series3" : 23034
-//   }, {
-//     "year" : "2020",
-//     "series1" : 34778,
-//     "series2" : 20478,
-//     "series3" : 20820
-//   }, {
-//     "year" : "2021",
-//     "series1" : 40006,
-//     "series2" : 22476,
-//     "series3" : 22981
-//   } ];
+  // Data for both series
+  chart_5_6.data = [ {
+    "year" : "2015",
+    "series1" : 38601,
+    "series2" : 24570,
+    "series3" : 25295
+  }, {
+    "year" : "2016",
+    "series1" : 39867,
+    "series2" : 25284,
+    "series3" : 23397
+  }, {
+    "year" : "2017",
+    "series1" : 40867,
+    "series2" : 25669,
+    "series3" : 26275
+  }, {
+    "year" : "2018",
+    "series1" : 43287,
+    "series2" : 26963,
+    "series3" : 26406
+  }, {
+    "year" : "2019",
+    "series1" : 37183,
+    "series2" : 22637,
+    "series3" : 23034
+  }, {
+    "year" : "2020",
+    "series1" : 34778,
+    "series2" : 20478,
+    "series3" : 20820
+  }, {
+    "year" : "2021",
+    "series1" : 40006,
+    "series2" : 22476,
+    "series3" : 22981
+  } ];
 
-//   // Create axes
-//   categoryAxis = chart_5_6.xAxes.push(new am4charts.CategoryAxis());
-//   categoryAxis.dataFields.category = "year";
-//   categoryAxis.renderer.grid.template.location = 0;
+  // Create axes
+  categoryAxis = chart_5_6.xAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.dataFields.category = "year";
+  categoryAxis.renderer.grid.template.location = 0;
 
-//   valueAxis = chart_5_6.yAxes.push(new am4charts.ValueAxis());
-//   valueAxis.min = 0;
-//   valueAxis.max = 50000;
+  valueAxis = chart_5_6.yAxes.push(new am4charts.ValueAxis());
+  valueAxis.min = 0;
+  valueAxis.max = 50000;
 
-//   // Create series
-//   function createSeries6(field, name, stacked) {
-//     var series = chart_5_6.series.push(new am4charts.ColumnSeries());
-//     series.dataFields.valueY = field;
-//     series.dataFields.categoryX = "year";
-//     series.name = name;
-//     // Set up tooltip
-//     series.adapter.add("tooltipText", function(ev) {
-//       var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
-//       chart_5_6.series.each(function(item) {
-//         if(item.name == "구급환자(명)")
-//           {
-//             text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
-//           }          
-//           else
-//           {
-//             text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 건\n";
-//           }
-//       });
-//       return text;
-//     });
-//     series.tooltip.getFillFromObject = false;
-//     series.tooltip.background.fill = am4core.color("#fff");
-//     series.tooltip.label.fill = am4core.color("#00");
-//     series.stacked = stacked;
-//     series.columns.template.width = am4core.percent(60);
-//   }
+  // Create series
+  function createSeries6(field, name, stacked) {
+    var series = chart_5_6.series.push(new am4charts.ColumnSeries());
+    series.dataFields.valueY = field;
+    series.dataFields.categoryX = "year";
+    series.name = name;
+    // Set up tooltip
+    series.adapter.add("tooltipText", function(ev) {
+      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      chart_5_6.series.each(function(item) {
+        if(item.name == "구급환자(명)")
+          {
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
+          }          
+          else
+          {
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 건\n";
+          }
+      });
+      return text;
+    });
+    series.tooltip.getFillFromObject = false;
+    series.tooltip.background.fill = am4core.color("#fff");
+    series.tooltip.label.fill = am4core.color("#00");
+    series.stacked = stacked;
+    series.columns.template.width = am4core.percent(60);
+  }
 
-//   createSeries6("series1", "신고건수(건)", false);
-//   createSeries6("series2", "이송건수(건)", false);
-//   createSeries6("series3", "구급환자(명)", false);
-//   /* Add legend */
-//   chart_5_6.legend = new am4charts.Legend();
+  createSeries6("series1", "신고건수(건)", false);
+  createSeries6("series2", "이송건수(건)", false);
+  createSeries6("series3", "구급환자(명)", false);
+  /* Add legend */
+  chart_5_6.legend = new am4charts.Legend();
 
-//   /* Create a cursor */
-//   chart_5_6.cursor = new am4charts.XYCursor();
-//   chart_5_6.cursor.maxTooltipDistance = 0;
-//   chart_5_6.cursor.behavior = 'none';
-//   chart_5_6.logo.height = -15000;
+  /* Create a cursor */
+  chart_5_6.cursor = new am4charts.XYCursor();
+  chart_5_6.cursor.maxTooltipDistance = 0;
+  chart_5_6.cursor.behavior = 'none';
+  chart_5_6.logo.height = -15000;
 
-//   // axis break
-//   // axisBreak = valueAxis.axisBreaks.create();
-//   // axisBreak.startValue = 50000;
-//   // axisBreak.endValue = 200000;
-//   // axisBreak.breakSize = 0.005;
+  // axis break
+  // axisBreak = valueAxis.axisBreaks.create();
+  // axisBreak.startValue = 50000;
+  // axisBreak.endValue = 200000;
+  // axisBreak.breakSize = 0.005;
 
-//   // fixed axis break
-//   d = (axisBreak.endValue - axisBreak.startValue) / (valueAxis.max - valueAxis.min);
-//   axisBreak.breakSize = 0.05 * (1 - d) / d;
+  // fixed axis break
+  d = (axisBreak.endValue - axisBreak.startValue) / (valueAxis.max - valueAxis.min);
+  axisBreak.breakSize = 0.05 * (1 - d) / d;
 
-//   // make break expand on hover
-//   hoverState = axisBreak.states.create("hover");
-//   hoverState.properties.breakSize = 1;
-//   hoverState.properties.opacity = 0.1;
-//   hoverState.transitionDuration = 1500;
+  // make break expand on hover
+  hoverState = axisBreak.states.create("hover");
+  hoverState.properties.breakSize = 1;
+  hoverState.properties.opacity = 0.1;
+  hoverState.transitionDuration = 1500;
 
-//   axisBreak.defaultState.transitionDuration = 1000;
+  axisBreak.defaultState.transitionDuration = 1000;
 
-//   });
-// }
+  });
+}
 
 
 
 /*----- 06_관광·문화 Chart 영역---------------------------------------------------------------------------*/
+/* 06_01_주요관관지관광객수 -----------------------------------------------------------*/
+if(val == 'chart_box_06_01'){
+  am4core.ready(function() {
+  am4core.useTheme(am4themes_animated);
 
+  // 6-1. 주요 관광지 관광객수_chartdiv35 //
+  am4core.options.queue = true;
 
+  chart_6_1 = am4core.create("chart_06_01", am4charts.XYChart);
+  chart_6_1.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+  // Add data
+  chart_6_1.data = [ {
+    "year" : "2016",
+    "value1" : 1095266,
+    "value2" : 343021,
+    "value3" : 0,
+    "value4" : 987845,
+    "value5" : 39262,
+    "value6" : 0,
+    "value7" : 0,
+    "value8" : 0,
+    "value9" : 0
+  }, {
+    "year" : "2017",
+    "value1" : 1211682,
+    "value2" : 417317,
+    "value3" : 148580,
+    "value4" : 595975,
+    "value5" : 21107,
+    "value6" : 57855,
+    "value7" : 30232,
+    "value8" : 0,
+    "value9" : 153992
+  }, {
+    "year" : "2018",
+    "value1" : 891387,
+    "value2" : 430540,
+    "value3" : 296832,
+    "value4" : 783449,
+    "value5" : 19168,
+    "value6" : 119894,
+    "value7" : 33774,
+    "value8" : 0,
+    "value9" : 537455
+  }, {
+    "year" : "2019",
+    "value1" : 821527,
+    "value2" : 447968,
+    "value3" : 268693,
+    "value4" : 806060,
+    "value5" : 20080,
+    "value6" : 129340,
+    "value7" : 25747,
+    "value8" : 61990,
+    "value9" : 646310
+  }, {
+    "year" : "2020",
+    "value1" : 284862,
+    "value2" : 94976,
+    "value3" : 153062,
+    "value4" : 252652,
+    "value5" : 863,
+    "value6" : 24766,
+    "value7" : 0,
+    "value8" : 37053,
+    "value9" : 371564
+  }, {
+    "year" : "2021",
+    "value1" : 447937,
+    "value2" : 95659,
+    "value3" : 38721,
+    "value4" : 723715,
+    "value5" : 744,
+    "value6" : 49130,
+    "value7" : 0,
+    "value8" : 46570,
+    "value9" : 530921
+  }, {
+    "year" : "2022.06",
+    "value1" : 278465,
+    "value2" : 194008,
+    "value3" : 20455,
+    "value4" : 439678,
+    "value5" : 2719,
+    "value6" : 26154,
+    "value7" : 0,
+    "value8" : 32381,
+    "value9" : 327423
+  }  ];
+
+  // Create axes
+  categoryAxis = chart_6_1.xAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.autoGridCount = false;
+  categoryAxis.labelFrequency = 0;
+  categoryAxis.dataFields.category = "year";
+  categoryAxis.renderer.grid.template.location = 0.5;
+  categoryAxis.renderer.minGridDistance = 20;
+  categoryAxis.renderer.cellStartLocation = 0.1;
+  categoryAxis.renderer.cellEndLocation = 0.9;
+
+  valueAxis = chart_6_1.yAxes.push(new am4charts.ValueAxis());
+  valueAxis.min = 0;
+  valueAxis.max = 1250000;
+  valueAxis.autoGridCount = false;
+  valueAxis.boldLabels = true;
+  valueAxis.gridCount = 4;
+  
+  // Create series
+  function createSeries1(field, name) {
+    var series = chart_6_1.series.push(new am4charts.LineSeries());
+    series.dataFields.valueY = field;
+    series.dataFields.categoryX = "year";
+    series.name = name;
+    series.tooltipText = "";
+    series.strokeWidth = 3;
+
+    // Set up tooltip
+    series.adapter.add("tooltipText", function(ev) {
+      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      chart_6_1.series.each(function(item) {
+        text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
+      });
+      return text;
+    });
+
+    series.tooltip.getFillFromObject = false;
+    series.tooltip.background.fill = am4core.color("#fff");
+    series.tooltip.label.fill = am4core.color("#00");
+
+    // Prevent cross-fading of tooltips
+    series.tooltip.defaultState.transitionDuration = 0;
+    series.tooltip.hiddenState.transitionDuration = 0;
+
+    var bullet = series.bullets.push(new am4charts.CircleBullet());
+    bullet.circle.radius = 5;
+
+    return series;
+  }
+
+  createSeries1("value1", "경기전");
+  createSeries1("value2", "국립전주박물관");
+  createSeries1("value3", "스파라쿠아 전주온천");
+  createSeries1("value4", "전주동물원");
+  createSeries1("value5", "전주한벽문화관");
+  createSeries1("value6", "전주한옥레일바이크");
+  createSeries1("value7", "전주한지박물관");
+  createSeries1("value8", "팔복예술공장");
+  createSeries1("value9", "한국도로공사수목원");
+
+  // Add legend
+  chart_6_1.legend = new am4charts.Legend();
+
+  // Add cursor
+  chart_6_1.cursor = new am4charts.XYCursor();
+  chart_6_1.cursor.maxTooltipDistance = 0;
+  chart_6_1.cursor.behavior = 'none';
+  chart_6_1.logo.height = -15000;
+
+  /*
+  * // this is exactly the same, but with events axisBreak.events.on("over",
+  * function() { axisBreak.animate( [{ property: "breakSize", to: 1 }, {
+  * property: "opacity", to: 0.1 }], 1500, am4core.ease.sinOut ); });
+  * axisBreak.events.on("out", function() { axisBreak.animate( [{ property:
+  * "breakSize", to: 0.005 }, { property: "opacity", to: 1 }], 1000,
+  * am4core.ease.quadOut ); });
+  */
+
+  chart_6_1.logo.height = -15000;
+
+  });
+}
+
+//
+/* 06_02_생략)통신사 관광지 관광객수 -----------------------------------------------------------*/
+// (6-2. 생략_20220314) 통신사 관광지 관광객수_chartdiv36 //
+// 자료 없음
+//
+
+/* 06_03_관광사업체등록현황 -----------------------------------------------------------*/
+if(val == 'chart_box_06_03'){
+  am4core.ready(function() {
+  am4core.useTheme(am4themes_animated);
+
+  // 6-2. 관광 사업체 등록 현황_chartdiv37 //
+  chart_6_3 = am4core.create("chart_06_03", am4charts.XYChart);
+  chart_6_3.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+  // Add data
+  chart_6_3.data = [ {
+    "year" : "2016",
+    "value1" : 417,
+    "value2" : 18,
+    "value3" : 102,
+    "value4" : 5,
+    "value5" : 11,
+    "value6" : 199,
+    "value7" : 752
+  }, {
+    "year" : "2017",
+    "value1" : 468,
+    "value2" : 17,
+    "value3" : 118,
+    "value4" : 7,
+    "value5" : 26,
+    "value6" : 210,
+    "value7" : 846
+  }, {
+    "year" : "2018",
+    "value1" : 483,
+    "value2" : 20,
+    "value3" : 121,
+    "value4" : 9,
+    "value5" : 41,
+    "value6" : 240,
+    "value7" : 914
+  }, {
+    "year" : "2019",
+    "value1" : 469,
+    "value2" : 21,
+    "value3" : 117,
+    "value4" : 10,
+    "value5" : 48,
+    "value6" : 241,
+    "value7" : 906
+  }, {
+    "year" : "2020",
+    "value1" : 503,
+    "value2" : 23,
+    "value3" : 120,
+    "value4" : 13,
+    "value5" : 38,
+    "value6" : 251,
+    "value7" : 948
+  }, {
+    "year" : "2021",
+    "value1" : 468,
+    "value2" : 24,
+    "value3" : 352,
+    "value4" : 13,
+    "value5" : 35,
+    "value6" : 38,
+    "value7" : 930
+  }, {
+    "year" : "2022.06",
+    "value1" : 454,
+    "value2" : 27,
+    "value3" : 364,
+    "value4" : 14,
+    "value5" : 33,
+    "value6" : 38,
+    "value7" : 930
+
+  } ];
+
+  /* Create axes */
+  categoryAxis = chart_6_3.xAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.dataFields.category = "year";
+  categoryAxis.renderer.minGridDistance = 30;
+
+  /* Create value axis */
+  valueAxis = chart_6_3.yAxes.push(new am4charts.ValueAxis());
+  valueAxis.min = 0;
+  valueAxis.max = 1200;
+  valueAxis.renderer.opposite = true;
+  /* Create value axis */
+  valueAxis1 = chart_6_3.yAxes.push(new am4charts.ValueAxis());
+  valueAxis1.min = 0;
+  valueAxis1.max = 1200;
+
+  valueAxis1.syncWithAxis = valueAxis;
+
+  // Create series
+  function createSeries3(field, name, stacked) {
+    if(field == "value7")
+    {
+      var series = chart_6_3.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = field;
+      series.dataFields.categoryX = "year";
+      series.name = name;
+      series.tooltipText = "";
+      series.strokeWidth = 3;
+      series.yAxis = valueAxis;
+      series.stroke = am4core.color("#fdd400");
+      series.fill = am4core.color("#fdd400");
+      // Set up tooltip
+      series.adapter.add("tooltipText", function(ev) {
+        var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+        chart_6_3.series.each(function(item) {
+          if(item.name == "총계")
+          {
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 개소\n";
+          }          
+          else
+          {
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 개소\n";
+          }
+        });
+        return text;
+      });
+  
+      series.tooltip.getFillFromObject = false;
+      series.tooltip.background.fill = am4core.color("#fff");
+      series.tooltip.label.fill = am4core.color("#00");
+  
+      // Prevent cross-fading of tooltips
+      series.tooltip.defaultState.transitionDuration = 0;
+      series.tooltip.hiddenState.transitionDuration = 0;
+  
+      var bullet = series.bullets.push(new am4charts.CircleBullet());
+      bullet.circle.radius = 5;
+    }
+    else
+    {
+      var series = chart_6_3.series.push(new am4charts.ColumnSeries());
+      series.dataFields.valueY = field;
+      series.dataFields.categoryX = "year";
+      series.name = name;
+      series.yAxis = valueAxis1;
+      // Set up tooltip
+      series.adapter.add("tooltipText", function(ev) {
+        var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+        chart_6_3.series.each(function(item) {
+          if(item.name == "총계")
+          {
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 개소\n";
+          }          
+          else
+          {
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 개소\n";
+          }
+        });
+        return text;
+      });
+      series.tooltip.getFillFromObject = false;
+      series.tooltip.background.fill = am4core.color("#fff");
+      series.tooltip.label.fill = am4core.color("#00");
+      series.stacked = stacked;
+      series.columns.template.width = am4core.percent(60);
+    }
+  }
+
+  createSeries3("value1", "여행업", true);
+  createSeries3("value2", "관광숙박업", true);
+  createSeries3("value3", "관광객이용시설업", true);
+  createSeries3("value4", "국제회의업", true);
+  createSeries3("value5", "유원시설업", true);
+  createSeries3("value6", "관광편의시설업", true);
+  createSeries3("value7", "총계", false);
+
+  // Add legend
+  chart_6_3.legend = new am4charts.Legend();
+
+  // Add cursor
+  chart_6_3.cursor = new am4charts.XYCursor();
+  chart_6_3.cursor.maxTooltipDistance = 0;
+  chart_6_3.cursor.behavior = 'none';
+  chart_6_3.logo.height = -15000;
+    });
+  }
+
+/* 06_04_박물관/미술관현황 -----------------------------------------------------------*/
+if(val == 'chart_box_06_04'){
+  am4core.ready(function() {
+  am4core.useTheme(am4themes_animated);
+
+  // 6-3. 박물관/미술관 현황_chartdiv38 //
+  chart_6_4 = am4core.create("chart_06_04", am4charts.XYChart);
+
+  // Add data
+  chart_6_4.data = [ {
+    "year" : "2016",
+    "series1" : 8,
+    "series2" : 12
+  }, {
+    "year" : "2017",
+    "series1" : 8,
+    "series2" : 12
+  }, {
+    "year" : "2018",
+    "series1" : 8,
+    "series2" : 13
+  }, {
+    "year" : "2019",
+    "series1" : 8,
+    "series2" : 13
+  }, {
+    "year" : "2020",
+    "series1" : 8,
+    "series2" : 13  
+  }, {
+    "year" : "2021",
+    "series1" : 16,
+    "series2" : 6
+  }, {
+    "year" : "2022.06",
+    "series1" : 11,
+    "series2" : 5
+  } ];
+
+  // Create axes
+  categoryAxis = chart_6_4.xAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.dataFields.category = "year";
+  categoryAxis.renderer.grid.template.location = 0.5;
+
+  valueAxis = chart_6_4.yAxes.push(new am4charts.ValueAxis());
+
+  // Create series
+  function createSeries4(field, name, stacked) {
+    var series = chart_6_4.series.push(new am4charts.ColumnSeries());
+    series.dataFields.valueY = field;
+    series.dataFields.categoryX = "year";
+    series.name = name;
+    // Set up tooltip
+    series.adapter.add("tooltipText", function(ev) {
+      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      chart_6_4.series.each(function(item) {
+        text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 개소\n";
+      });
+      return text;
+    });
+    series.tooltip.getFillFromObject = false;
+    series.tooltip.background.fill = am4core.color("#fff");
+    series.tooltip.label.fill = am4core.color("#00");
+    series.stacked = stacked;
+    series.columns.template.width = am4core.percent(60);
+  }
+
+  createSeries4("series1", "박물관", true);
+  createSeries4("series2", "미술관", true);
+
+  // Add cursor
+  chart_6_4.cursor = new am4charts.XYCursor();
+  chart_6_4.cursor.maxTooltipDistance = 0;
+  chart_6_4.cursor.behavior = 'none';
+  // Add legend
+  chart_6_4.legend = new am4charts.Legend();
+
+  chart_6_4.logo.height = -15000;
+    });
+  }
+
+/* 06_05_생략)민박/펜션업 현황 -----------------------------------------------------------*/
+if(val == 'chart_box_06_05'){
+  am4core.ready(function() {
+  am4core.useTheme(am4themes_animated);
+
+  // (6-5.생략_20220314) 민박/펜션업 현황_chartdiv39 //
+  chart_6_5 = am4core.create("chart_06_05", am4charts.XYChart);
+
+  // Add data
+  chart_6_5.data = [ {
+    "year" : "2014",
+    "series1" : 19,
+    "series2" : 33
+  }, {
+    "year" : "2015",
+    "series1" : 24,
+    "series2" : 37
+  }, {
+    "year" : "2016",
+    "series1" : 26,
+    "series2" : 36
+  }, {
+    "year" : "2017",
+    "series1" : 23,
+    "series2" : 38
+  }, {
+    "year" : "2018",
+    "series1" : 28,
+    "series2" : 45
+  }, {
+    "year" : "2019",
+    "series1" : 34,
+    "series2" : 42
+  }, {
+    "year" : "2020",
+    "series1" : 25,
+    "series2" : 34
+  }, {
+    "year" : "2021",
+    "series1" : 91,
+    "series2" : 29
+  } ];
+
+  // Create axes
+  categoryAxis = chart_6_5.xAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.dataFields.category = "year";
+  categoryAxis.renderer.grid.template.location = 0.5;
+  
+
+  valueAxis = chart_6_5.yAxes.push(new am4charts.ValueAxis());
+
+  // Create series
+  function createSeries5(field, name, stacked) {
+    var series = chart_6_5.series.push(new am4charts.ColumnSeries());
+    series.dataFields.valueY = field;
+    series.dataFields.categoryX = "year";
+    series.name = name;
+
+    // Set up tooltip
+    series.adapter.add("tooltipText", function(ev) {
+      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      chart_6_5.series.each(function(item) {
+        text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 개소\n";
+      });
+      return text;
+    });
+    series.tooltip.getFillFromObject = false;
+    series.tooltip.background.fill = am4core.color("#fff");
+    series.tooltip.label.fill = am4core.color("#00");
+
+    // Prevent cross-fading of tooltips
+    series.tooltip.defaultState.transitionDuration = 0;
+    series.tooltip.hiddenState.transitionDuration = 0;
+
+    //series.columns.template.tooltipText = "[font-size: 18px bold]{year} 년 [font-size: 18px bold]{name}: [font-size: 18px]{valueY}[/]";
+    series.stacked = stacked;
+    series.columns.template.width = am4core.percent(60);
+  }
+
+  createSeries5("series1", "민박", true);
+  createSeries5("series2", "펜션", true);
+
+  // Add cursor
+  chart_6_5.cursor = new am4charts.XYCursor();
+  chart_6_5.cursor.maxTooltipDistance = 0;
+  chart_6_5.cursor.behavior = 'none';
+  // Add legend
+  chart_6_5.legend = new am4charts.Legend();
+
+  chart_6_5.logo.height = -15000;
+    });
+  }
+
+/* 06_06_공공도서관대출자료수/도서수현황 -----------------------------------------------------------*/
+if(val == 'chart_box_06_06'){
+  am4core.ready(function() {
+  am4core.useTheme(am4themes_animated);
+  
+  // 6-4. 공공도서관_chartdiv40 //
+  chart_6_6 = am4core.create("chart_06_06", am4charts.XYChart);
+  chart_6_6.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+  // Add data
+  chart_6_6.data = [ {
+    "year" : "2015",
+    "value1" : 1291644,
+    "value2" : 1067163
+  }, {
+    "year" : "2016",
+    "value1" : 1306286,
+    "value2" : 1139753
+  }, {
+    "year" : "2017",
+    "value1" : 1383631,
+    "value2" : 1193005
+  }, {
+    "year" : "2018",
+    "value1" : 1407493,
+    "value2" : 1228521
+  }, {
+    "year" : "2019",
+    "value1" : 1414688,
+    "value2" : 1340723
+  }, {
+    "year" : "2020",
+    "value1" : 1347482,
+    "value2" : 736021
+  }, {
+    "year" : "2021",
+    "value1" : 1142410,
+    "value2" : 966486
+  },{
+    "year" : "2022.10",
+    "value1" : 1184339,
+    "value2" : 1177672
+  },{
+    "year" : "2022.11",
+    "value1" : 1188059,
+    "value2" : 1301279
+  },{
+    "year" : "2022.12",
+    "value1" : 1126791,
+    "value2" : 1418941
+  } ];
+
+  // Create axes
+  var dateAxis = chart_6_6.xAxes.push(new am4charts.CategoryAxis());
+  dateAxis.autoGridCount = false;
+  dateAxis.labelFrequency = 0;
+  dateAxis.dataFields.category = "year";
+  dateAxis.renderer.grid.template.location = 0.5;
+
+  var valueAxis = chart_6_6.yAxes.push(new am4charts.ValueAxis());
+  valueAxis.min = 600000;
+  valueAxis.max = 1600000;
+  // Create series
+  function createSeries(field, name) {
+    var series = chart_6_6.series.push(new am4charts.LineSeries());
+    series.dataFields.valueY = field;
+    series.dataFields.categoryX = "year";
+    series.name = name;
+    series.tooltipText = "";
+    series.strokeWidth = 3;
+
+    // Set up tooltip
+    series.adapter.add("tooltipText", function(ev) {
+      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      chart_6_6.series.each(function(item) {
+        text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 권\n";
+      });
+      return text;
+    });
+
+    series.tooltip.getFillFromObject = false;
+    series.tooltip.background.fill = am4core.color("#fff");
+    series.tooltip.label.fill = am4core.color("#00");
+
+    // Prevent cross-fading of tooltips
+    series.tooltip.defaultState.transitionDuration = 0;
+    series.tooltip.hiddenState.transitionDuration = 0;
+
+    var bullet = series.bullets.push(new am4charts.CircleBullet());
+    bullet.circle.radius = 5;
+
+    return series;
+  }
+
+  createSeries("value1", "도서수");
+  createSeries("value2", "대출자료수");
+
+  // Add legend
+  chart_6_6.legend = new am4charts.Legend();
+
+  // Add cursor
+  chart_6_6.cursor = new am4charts.XYCursor();
+  chart_6_6.cursor.maxTooltipDistance = 0;
+  chart_6_6.cursor.behavior = 'none';
+  chart_6_6.logo.height = -15000;
+  });
+}
 
 
 

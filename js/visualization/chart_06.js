@@ -16,6 +16,7 @@ jQuery(function() {
 function chart_drawing(val) 
 {
   
+/* 06_01_주요관관지관광객수 -----------------------------------------------------------*/
 if(val == 'chart_box_06_01'){
   am4core.ready(function() {
   am4core.useTheme(am4themes_animated);
@@ -188,12 +189,13 @@ if(val == 'chart_box_06_01'){
   });
 }
 
-
 //
+/* 06_02_생략)통신사 관광지 관광객수 -----------------------------------------------------------*/
 // (6-2. 생략_20220314) 통신사 관광지 관광객수_chartdiv36 //
 // 자료 없음
 //
 
+/* 06_03_관광사업체등록현황 -----------------------------------------------------------*/
 if(val == 'chart_box_06_03'){
   am4core.ready(function() {
   am4core.useTheme(am4themes_animated);
@@ -375,8 +377,7 @@ if(val == 'chart_box_06_03'){
     });
   }
 
-
-
+/* 06_04_박물관/미술관현황 -----------------------------------------------------------*/
 if(val == 'chart_box_06_04'){
   am4core.ready(function() {
   am4core.useTheme(am4themes_animated);
@@ -449,7 +450,7 @@ if(val == 'chart_box_06_04'){
   // Add cursor
   chart_6_4.cursor = new am4charts.XYCursor();
   chart_6_4.cursor.maxTooltipDistance = 0;
-     chart_6_4.cursor.behavior = 'none';
+  chart_6_4.cursor.behavior = 'none';
   // Add legend
   chart_6_4.legend = new am4charts.Legend();
 
@@ -457,7 +458,7 @@ if(val == 'chart_box_06_04'){
     });
   }
 
-
+/* 06_05_생략)민박/펜션업 현황 -----------------------------------------------------------*/
 if(val == 'chart_box_06_05'){
   am4core.ready(function() {
   am4core.useTheme(am4themes_animated);
@@ -542,7 +543,7 @@ if(val == 'chart_box_06_05'){
   // Add cursor
   chart_6_5.cursor = new am4charts.XYCursor();
   chart_6_5.cursor.maxTooltipDistance = 0;
-     chart_6_5.cursor.behavior = 'none';
+  chart_6_5.cursor.behavior = 'none';
   // Add legend
   chart_6_5.legend = new am4charts.Legend();
 
@@ -550,6 +551,7 @@ if(val == 'chart_box_06_05'){
     });
   }
 
+/* 06_06_공공도서관대출자료수/도서수현황 -----------------------------------------------------------*/
 if(val == 'chart_box_06_06'){
   am4core.ready(function() {
   am4core.useTheme(am4themes_animated);
@@ -654,8 +656,10 @@ if(val == 'chart_box_06_06'){
   chart_6_6.cursor.maxTooltipDistance = 0;
   chart_6_6.cursor.behavior = 'none';
   chart_6_6.logo.height = -15000;
-    });
-  }
+  });
+}
+
+
 }
 
 $(document).ready(function(){
