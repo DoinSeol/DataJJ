@@ -12,11 +12,11 @@
   <script type="text/javascript" src="../data/dashboard/js/amchart/charts.js"></script>
   <script type="text/javascript" src="../data/dashboard/js/amchart/animated.js"></script>
   <script type="text/javascript" src="../js/visualization/chart_01.js"></script>
-  <script type="text/javascript" src="../js/visualization/chart_02.js"></script>
+  <!-- <script type="text/javascript" src="../js/visualization/chart_02.js"></script>
   <script type="text/javascript" src="../js/visualization/chart_03.js"></script>
   <script type="text/javascript" src="../js/visualization/chart_04.js"></script>
   <script type="text/javascript" src="../js/visualization/chart_05.js"></script>
-  <script type="text/javascript" src="../js/visualization/chart_06.js"></script>
+  <script type="text/javascript" src="../js/visualization/chart_06.js"></script> -->
 </head>
 <body>
   <main>
@@ -211,18 +211,19 @@
             <!-- 리스트 -->
             <div class="visual_tab_wrap visual_tab_area">
               <div class="visual_menu_btn_area dep1 flex_r_ss flex_wrap">
-                <button class="btn visual_menu_btn_tab act" data-depth="0" data-idx="0">인구·교육</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="1">보건·복지</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="2">경제·산업</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="3">환경·녹지</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="4">교통·안전</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="5">관광·문화</button>
+                <button class="btn visual_menu_btn_tab 1dep act" data-depth="0" data-idx="0" data-tab="chart_box_01">인구·교육</button>
+                <button class="btn visual_menu_btn_tab 1dep" data-depth="0" data-idx="1" data-tab="chart_box_02">보건·복지</button>
+                <button class="btn visual_menu_btn_tab 1dep" data-depth="0" data-idx="2" data-tab="chart_box_03">경제·산업</button>
+                <button class="btn visual_menu_btn_tab 1dep" data-depth="0" data-idx="3" data-tab="chart_box_04">환경·녹지</button>
+                <button class="btn visual_menu_btn_tab 1dep" data-depth="0" data-idx="4" data-tab="chart_box_05">교통·안전</button>
+                <button class="btn visual_menu_btn_tab 1dep" data-depth="0" data-idx="5" data-tab="chart_box_06">관광·문화</button>
               </div>
               
+              <!-- 01_인구·교육 --------------------------------------------------------------------------------->
               <div class="visual_menu_content_area dep2 act" data-depth="0" data-idx="0">
                 <div class="visual_tab_area">
                   <div class="visual_menu_btn_area flex_r_ss flex_wrap">
-                    <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0"  data-tab="chart_box_01_01">주민등록인구 현황</button>
+                    <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0" data-tab="chart_box_01_01">주민등록인구 현황</button>
                     <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="1" data-tab="chart_box_01_02">연도별 인구 및 세대</button>
                     <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="2" data-tab="chart_box_01_03">동별 세대 및 인구</button>
                     <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="3" data-tab="chart_box_01_04">연령계층별 인구</button>
@@ -231,13 +232,14 @@
                     <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="6" data-tab="chart_box_01_07">학교, 학생 수</button>
                   </div>
             
+                  <!-- 01_인구·교육차트 ------------------------------------------------------------------------>
+                  <!-- 01_01_주민등록인구현황 ---------------------------------------------------------------->
                   <div id="chart_box_01_01" class="visual_menu_content_area act" data-depth="1" data-idx="0">
                     <h2 class="sub_cont_sub_title">주민등록인구 현황</h2>
                     <div class="visual_menu_info_area flex_r_ec">
-                      <p>기준 : 2023-09</p>
+                      <p>기준 : 2023-10</p>
                       <p>단위 : 명(외국인제외)</p>
                     </div>
-
                     <div class="chart clear flex_r_ss">
                       <div class="wd_half">
                         <dl>
@@ -264,153 +266,143 @@
                         </dl>
                       </div>
                     </div>
-
                     <div class="visual_menu_source_area">
                       <span>출처 : </span>주민등록인구통계 행정안전부
                     </div>
                   </div>
 
+                  <!-- 01_02_연도별 인구 및 세대 ---------------------------------------------------------------->
                   <div id="chart_box_01_02" class="visual_menu_content_area" data-depth="1" data-idx="1">
                     <h2 class="sub_cont_sub_title">연도별 인구 및 세대</h2>
                     <div class="visual_menu_info_area flex_r_ec">
-                      <p>기준 : 2022-12</p>
-                      <p>단위 : 명</p>
+                      <p>기준 : 2023-10</p>
+                      <p>단위 : 명(외국인제외)</p>
                     </div>
-
                     <div class="chart clear">
                       <div id="chart_01_02" class="population_graph03">
                         <!--차트영역-->
                       </div>
                     </div>
-                    
                     <div class="visual_menu_source_area">
                       <span>출처 : </span>주민등록인구통계 행정안전부
                     </div>
                   </div>
 
+                  <!-- 01_03_동별세대및인구 ---------------------------------------------------------------->
                   <div id="chart_box_01_03" class="visual_menu_content_area" data-depth="1" data-idx="2">
-                    <h2 class="sub_cont_sub_title">연도별 인구 및 세대</h2>
+                    <h2 class="sub_cont_sub_title">동별 세대 및 인구</h2>
                     <div class="visual_menu_info_area flex_r_ec">
-                      <p>기준 : 2022-12</p>
+                      <p>기준 : 2023-10</p>
                       <p>단위 : 명</p>
                     </div>
-
                     <div class="chart" style="overflow:hidden; overflow-x:scroll;">
+                      <!-- <div id="chart_01_03" class="chart_height"> -->
                       <div style="width:2100px;" id="chart_01_03" class="chart_height">
                         <!--차트영역-->
                       </div>
                     </div>
-                    
                     <div class="visual_menu_source_area">
                       <span>출처 : </span>주민등록인구통계 행정안전부
                     </div>
                   </div>
 
+                  <!-- 01_04_연령계층별인구 ---------------------------------------------------------------->
                   <div id="chart_box_01_04" class="visual_menu_content_area" data-depth="1" data-idx="3">
-                    <h2 class="sub_cont_sub_title">연도별 인구 및 세대</h2>
+                    <h2 class="sub_cont_sub_title">연령계층별 인구</h2>
                     <div class="visual_menu_info_area flex_r_ec">
-                      <p>기준 : 2022-12</p>
+                      <p>기준 : 2023-10</p>
                       <p>단위 : 명</p>
                     </div>
-
                     <div class="chart">
                       <div id="chart_01_04" class="chart_height">
                         <!--차트영역-->
                       </div>
                     </div>
-                    
                     <div class="visual_menu_source_area">
                       <span>출처 : </span>주민등록인구통계 행정안전부
                     </div>
                   </div>
 
+                  <!-- 01_05_인구동향(출생,사망,혼인,이혼) ---------------------------------------------------------------->
                   <div id="chart_box_01_05" class="visual_menu_content_area" data-depth="1" data-idx="4">
-                    <h2 class="sub_cont_sub_title">연도별 인구 및 세대</h2>
+                    <h2 class="sub_cont_sub_title">인구동향(출생,사망,혼인,이혼)</h2>
                     <div class="visual_menu_info_area flex_r_ec">
                       <p>기준 : 2022-12</p>
                       <p>단위 : 명</p>
                     </div>
-
                     <div class="chart">
                       <div id="chart_01_05" class="chart_height">
                         <!--차트영역-->
                       </div>
                     </div>
-                    
                     <div class="visual_menu_source_area">
-                      <span>출처 : </span>주민등록인구통계 행정안전부
+                      <span>출처 : </span>「인구동향조사」통계청 인구동향과
                     </div>
                   </div>
 
+                  <!-- 01_06_연도별 인구이동 ---------------------------------------------------------------->
                   <div id="chart_box_01_06" class="visual_menu_content_area" data-depth="1" data-idx="5">
-                    <h2 class="sub_cont_sub_title">연도별 인구 및 세대</h2>
+                    <h2 class="sub_cont_sub_title">연도별 인구이동</h2>
                     <div class="visual_menu_info_area flex_r_ec">
                       <p>기준 : 2022-12</p>
                       <p>단위 : 명</p>
                     </div>
-
                     <div class="chart">
                       <div id="chart_01_06" class="chart_height">
                         <!--차트영역-->
                       </div>
                     </div>
-                    
                     <div class="visual_menu_source_area">
-                      <span>출처 : </span>주민등록인구통계 행정안전부
+                      <span>출처 : </span>「국내인구이동통계」통계청 인구동향과
                     </div>
                   </div>
 
+                  <!-- 01_07_학교,학생수 ---------------------------------------------------------------->
                   <div id="chart_box_01_07" class="visual_menu_content_area" data-depth="1" data-idx="6">
-                    <h2 class="sub_cont_sub_title">연도별 인구 및 세대</h2>
+                    <h2 class="sub_cont_sub_title">학교, 학생 수</h2>
                     <div class="visual_menu_info_area flex_r_ec">
-                      <p>기준 : 2022-12</p>
+                      <p>기준 : 2023-04</p>
                       <p>단위 : 명</p>
                     </div>
-
                     <div class="chart">
                       <div id="chart_01_07" class="chart_height">
                         <!--차트영역-->
                       </div>
                     </div>
-                    
                     <div class="visual_menu_source_area">
-                      <span>출처 : </span>주민등록인구통계 행정안전부
+                      <span>출처 : </span>「교육통계」전라북도교육청
                     </div>
                   </div>
                 </div>
               </div>
 
+
+              <!-- 02_보건·복지 --------------------------------------------------------------------------------->
               <div class="visual_menu_content_area dep2" data-depth="0" data-idx="1">
                 <div class="visual_tab_area">
                   <div class="visual_menu_btn_area flex_r_ss flex_wrap">
-                    <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0">의료기관 현황</button>
-                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="1">의료기관종사 의료인력</button>
-                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="2">노인복지시설 현황</button>
-                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="3">장애인복지시설 현황</button>
-                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="4">국민연금 지급자수</button>
-                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="5">국민연금 지급금액</button>
+                    <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0" data-tab="chart_box_02_01">의료기관 현황</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="1" data-tab="chart_box_02_02">의료기관종사 의료인력</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="2" data-tab="chart_box_02_03">노인복지시설 현황</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="3" data-tab="chart_box_02_04">장애인복지시설 현황</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="4" data-tab="chart_box_02_08">국민연금 지급자수</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="5" data-tab="chart_box_02_07">국민연금 지급금액</button>
                   </div>
                   
-                  <!-- <div class="visual_menu_content_area act" data-depth="1" data-idx="0">02=02</div> -->
-
-
-                  <!-- <div class="visual_menu_content_area act" data-depth="1" data-idx="0">01</div> -->
+                  <!-- 02_보건·복지차트 ------------------------------------------------------------------------>
+                  <!-- 02_01_의료기관현황 ---------------------------------------------------------------->
                   <div id="chart_box_02_01" class="visual_menu_content_area act" data-depth="1" data-idx="0">
                     <h2 class="sub_cont_sub_title">의료기관 현황</h2>
                     <div class="visual_menu_info_area flex_r_ec">
-                      <p>기준 : 2023-09</p>
-                      <p>단위 : 명(외국인제외)</p>
+                      <p>기준 : 2022-12</p>
+                      <p>단위 : 개소</p>
                     </div>
-
                     <div class="chart clear flex_r_ss">
                       <div class="wd_half">
                         <dl>
                           <dt>의료기관</dt>
                           <dd>
-                            <div id="chart_01_02_01" class="population_graph01">
-                              <!--차트영역-->
-                            </div>
-                            <div id="chart_01_02_02" class="population_graph02">
+                            <div id="chart_02_01" class="population_graph03">
                               <!--차트영역-->
                             </div>
                           </dd>
@@ -428,12 +420,12 @@
                         </dl>
                       </div>
                     </div>
-
                     <div class="visual_menu_source_area">
-                      <span>출처 : </span>주민등록인구통계 행정안전부
+                      <span>출처 : </span>「건강보험통계」국민건강보험공단
                     </div>
                   </div>
 
+                  <!-- 02_02_의료기관종사 의료인력 ---------------------------------------------------------------->
                   <div id="chart_box_02_02" class="visual_menu_content_area" data-depth="1" data-idx="1">
                     <h2 class="sub_cont_sub_title">의료기관종사 의료인력</h2>
                     <div class="visual_menu_info_area flex_r_ec">
@@ -448,123 +440,525 @@
                     </div>
                     
                     <div class="visual_menu_source_area">
-                      <span>출처 : </span>주민등록인구통계 행정안전부
+                      <span>출처 : </span>「건강보험통계」국민건강보험공단
                     </div>
                   </div>
 
+                  <!-- 02_03_노인복지시설 현황 ---------------------------------------------------------------->
                   <div id="chart_box_02_03" class="visual_menu_content_area" data-depth="1" data-idx="2">
                     <h2 class="sub_cont_sub_title">노인복지시설 현황</h2>
                     <div class="visual_menu_info_area flex_r_ec">
-                      <p>기준 : 2022-12</p>
-                      <p>단위 : 명</p>
+                      <p>기준 : 2021-12</p>
+                      <p>단위 : 개소</p>
                     </div>
-
-                    <div class="chart" style="overflow:hidden; overflow-x:scroll;">
-                      <div style="width:2100px;" id="chart_02_03" class="chart_height">
+                    <div class="chart" >
+                    <!-- <div class="chart" style="overflow:hidden; overflow-x:scroll;"> -->
+                      <div id="chart_02_03" class="chart_height">
+                      <!-- <div style="width:2100px;" id="chart_02_03" class="chart_height"> -->
                         <!--차트영역-->
                       </div>
                     </div>
-                    
                     <div class="visual_menu_source_area">
-                      <span>출처 : </span>주민등록인구통계 행정안전부
+                      <span>출처 : </span>「노인복지시설현황」보건복지부 요양보험운영과
                     </div>
                   </div>
 
+                  <!-- 02_04_장애인복지시설 현황 ---------------------------------------------------------------->
                   <div id="chart_box_02_04" class="visual_menu_content_area" data-depth="1" data-idx="3">
                     <h2 class="sub_cont_sub_title">장애인복지시설 현황</h2>
                     <div class="visual_menu_info_area flex_r_ec">
-                      <p>기준 : 2022-12</p>
-                      <p>단위 : 명</p>
+                      <p>기준 : 2021-12</p>
+                      <p>단위 : 개소</p>
                     </div>
-
                     <div class="chart">
                       <div id="chart_02_04" class="chart_height">
                         <!--차트영역-->
                       </div>
                     </div>
-                    
                     <div class="visual_menu_source_area">
-                      <span>출처 : </span>주민등록인구통계 행정안전부
+                      <span>출처 : </span>「장애인복지시설알림표」보건복지부
                     </div>
                   </div>
 
-                  <div id="chart_box_02_05" class="visual_menu_content_area" data-depth="1" data-idx="4">
+                  <!-- 02_08_국민연금 지급자수 ---------------------------------------------------------------->
+                  <div id="chart_box_02_08" class="visual_menu_content_area" data-depth="1" data-idx="4">
                     <h2 class="sub_cont_sub_title">국민연금 지급자수</h2>
                     <div class="visual_menu_info_area flex_r_ec">
-                      <p>기준 : 2022-12</p>
+                      <p>기준 : 2021-12</p>
                       <p>단위 : 명</p>
                     </div>
-
                     <div class="chart">
-                      <div id="chart_02_05" class="chart_height">
+                      <div id="chart_02_08" class="chart_height">
                         <!--차트영역-->
                       </div>
                     </div>
-                    
                     <div class="visual_menu_source_area">
-                      <span>출처 : </span>주민등록인구통계 행정안전부
+                      <span>출처 : </span>「국민연금통계」국민연금공단 기획조정실
                     </div>
                   </div>
 
-                  <div id="chart_box_02_06" class="visual_menu_content_area" data-depth="1" data-idx="5">
+                  <!-- 02_07_국민연금 지급금액 ---------------------------------------------------------------->
+                  <div id="chart_box_02_07" class="visual_menu_content_area" data-depth="1" data-idx="5">
                     <h2 class="sub_cont_sub_title">국민연금 지급금액</h2>
                     <div class="visual_menu_info_area flex_r_ec">
-                      <p>기준 : 2022-12</p>
-                      <p>단위 : 명</p>
+                      <p>기준 : 2021-12</p>
+                      <p>단위 : 원</p>
                     </div>
-
                     <div class="chart">
-                      <div id="chart_02_06" class="chart_height">
+                      <div id="chart_02_07" class="chart_height">
                         <!--차트영역-->
                       </div>
                     </div>
-                    
                     <div class="visual_menu_source_area">
-                      <span>출처 : </span>주민등록인구통계 행정안전부
+                      <span>출처 : </span>「국민연금통계」국민연금공단 기획조정실
                     </div>
                   </div>  
 
-
-
                 </div>
               </div>
 
-              <div class="visual_menu_content_area dep2 " data-depth="0" data-idx="2">
-                <p>Third tab content</p>
+
+              <!-- 03_경제·산업 --------------------------------------------------------------------------------->
+              <div class="visual_menu_content_area dep2" data-depth="0" data-idx="2">
                 <div class="visual_tab_area">
-                    <div class="visual_menu_btn_area flex_r_ss flex_wrap">
-                      <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0">First</button>
-                      <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="1">Second</button>
-                      <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="2">Third</button>
-                      <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="3">Fourth</button>
-                    </div>
-            
-                    <div class="visual_menu_content_area act" data-depth="1" data-idx="0">2Depth First tab content</div>
-                    <div class="visual_menu_content_area" data-depth="1" data-idx="1">2Depth Second tab content</div>
-                    <div class="visual_menu_content_area" data-depth="1" data-idx="2">2Depth Third tab content</div>
-                    <div class="visual_menu_content_area" data-depth="1" data-idx="3">2Depth Fourth tab content</div>
+                  <div class="visual_menu_btn_area flex_r_ss flex_wrap">
+                    <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0" data-tab="chart_box_03_01">전주시 고용률·실업률</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="1" data-tab="chart_box_03_02">청년층(15~29세) 고용률</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="2" data-tab="chart_box_03_03">전주시 취업자·실업자</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="3" data-tab="chart_box_03_04">비경제활동인구</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="4" data-tab="chart_box_03_05">산업별 취업자</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="5" data-tab="chart_box_03_06">직업별 취업자</button>
                   </div>
+                  
+                  <!-- 03_경제·산업차트 ------------------------------------------------------------------------>
+                  <!-- 03_01_전주시고용률·실업률 ---------------------------------------------------------------->
+                  <div id="chart_box_03_01" class="visual_menu_content_area act" data-depth="1" data-idx="0">
+                    <h2 class="sub_cont_sub_title">전주시 고용률·실업률</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2022-12</p>
+                      <p>단위 : %</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_03_01" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「지역별고용조사」통계청 고용통계과
+                    </div>
+                  </div>
+
+                  <!-- 03_02_청년층(15~29세)고용률 ---------------------------------------------------------------->
+                  <div id="chart_box_03_02" class="visual_menu_content_area" data-depth="1" data-idx="1">
+                    <h2 class="sub_cont_sub_title">청년층(15~29세) 고용률</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2022-12</p>
+                      <p>단위 : %</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_03_02" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「지역별고용조사」통계청 고용통계과
+                    </div>
+                  </div>
+
+                  <!-- 03_03_전주시취업자·실업자 ---------------------------------------------------------------->
+                  <div id="chart_box_03_03" class="visual_menu_content_area" data-depth="1" data-idx="2">
+                    <h2 class="sub_cont_sub_title">전주시 취업자·실업자</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : </p>
+                      <p>단위 : </p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_03_03" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「」
+                    </div>
+                  </div>
+
+                  <!-- 03_04_비경제활동인구 ---------------------------------------------------------------->
+                  <div id="chart_box_03_04" class="visual_menu_content_area" data-depth="1" data-idx="3">
+                    <h2 class="sub_cont_sub_title">비경제활동인구</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2022-12</p>
+                      <p>단위 : 천명</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_03_04" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「지역별고용조사」통계청 고용통계과
+                    </div>
+                  </div>
+
+                  <!-- 03_05_산업별취업자 ---------------------------------------------------------------->
+                  <div id="chart_box_03_05" class="visual_menu_content_area" data-depth="1" data-idx="4">
+                    <h2 class="sub_cont_sub_title">산업별 취업자</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2022-12</p>
+                      <p>단위 : 천명</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_03_05" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「지역별고용조사」통계청 고용통계과
+                    </div>
+                  </div>
+
+                  <!-- 03_06_직업별취업자 ---------------------------------------------------------------->
+                  <div id="chart_box_03_06" class="visual_menu_content_area" data-depth="1" data-idx="5">
+                    <h2 class="sub_cont_sub_title">직업별 취업자</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2022-12</p>
+                      <p>단위 : 천명</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_03_06" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「지역별고용조사」통계청 고용통계과
+                    </div>
+                  </div>
+
                 </div>
-              <div class="visual_menu_content_area" data-depth="0" data-idx="3">Fourth tab content</div>
-            </div>
-            
-            <!-- <div class="visual_tab_wrap visual_tab_area">
-              <div class="visual_menu_btn_area ">
-                <button class="btn visual_menu_btn_tab act" data-depth="0" data-idx="0">First</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="1">Second</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="2">Third</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="3">Fourth</button>
               </div>
-              
-              <div class="visual_menu_content_area act" data-depth="0" data-idx="0">First tab content</div>
-              <div class="visual_menu_content_area" data-depth="0" data-idx="1">Second tab content</div>
-              <div class="visual_menu_content_area" data-depth="0" data-idx="2">Third tab content</div>
-              <div class="visual_menu_content_area" data-depth="0" data-idx="3">Fourth tab content</div>
-            </div> -->
+
+
+              <!-- 04_환경·녹지 --------------------------------------------------------------------------------->
+              <div class="visual_menu_content_area dep2" data-depth="0" data-idx="3">
+                <div class="visual_tab_area">
+                  <div class="visual_menu_btn_area flex_r_ss flex_wrap">
+                    <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0" data-tab="chart_box_04_01">월별 기온</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="1" data-tab="chart_box_04_02">월별강수량</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="2" data-tab="chart_box_04_03">미세먼지현황</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="3" data-tab="chart_box_04_04">쓰레기 배출</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="4" data-tab="chart_box_04_05">폐기물 발생 및 재활용 현황</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="5" data-tab="chart_box_04_06">녹지현황(면적)</button>
+                  </div>
+                  
+                  <!-- 04_환경·녹지차트 ------------------------------------------------------------------------>
+                  <!-- 04_01_월별기온 ---------------------------------------------------------------->
+                  <div id="chart_box_04_01" class="visual_menu_content_area act" data-depth="1" data-idx="0">
+                    <h2 class="sub_cont_sub_title">월별 기온</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2023-10</p>
+                      <p>단위 : ℃</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_04_01" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「기상관측통계」기상청 국가기후데이터센터
+                    </div>
+                  </div>
+
+                  <!-- 04_02_월별강수량 ---------------------------------------------------------------->
+                  <div id="chart_box_04_02" class="visual_menu_content_area" data-depth="1" data-idx="1">
+                    <h2 class="sub_cont_sub_title">월별강수량</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2023-10</p>
+                      <p>단위 : mm</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_04_02" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「기상관측통계」기상청 국가기후데이터센터
+                    </div>
+                  </div>
+
+                  <!-- 04_03_미세먼지현황 ---------------------------------------------------------------->
+                  <div id="chart_box_04_03" class="visual_menu_content_area" data-depth="1" data-idx="2">
+                    <h2 class="sub_cont_sub_title">미세먼지현황</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2023-10</p>
+                      <p>단위 : ㎍/㎥</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_04_03" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>전라북도 실시간 대기정보시스템
+                    </div>
+                  </div>
+
+                  <!-- 04_04_쓰레기배출 ---------------------------------------------------------------->
+                  <div id="chart_box_04_04" class="visual_menu_content_area" data-depth="1" data-idx="3">
+                    <h2 class="sub_cont_sub_title">쓰레기 배출</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2021-12</p>
+                      <p>단위 : 톤/일, %</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_04_04" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「전국 폐기물 발생 및 처리현황」환경부 자원순환정책과
+                    </div>
+                  </div>
+
+                  <!-- 04_05_폐기물발생및재활용현황 ---------------------------------------------------------------->
+                  <div id="chart_box_04_05" class="visual_menu_content_area" data-depth="1" data-idx="4">
+                    <h2 class="sub_cont_sub_title">폐기물 발생 및 재활용 현황</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2021-12</p>
+                      <p>단위 : 톤/일, %</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_04_05" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「전국 폐기물 발생 및 처리현황」환경부 자원순환정책과
+                    </div>
+                  </div>
+
+                  <!-- 04_06_녹지현황(면적) ---------------------------------------------------------------->
+                  <div id="chart_box_04_06" class="visual_menu_content_area" data-depth="1" data-idx="5">
+                    <h2 class="sub_cont_sub_title">녹지현황(면적)</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2021-12</p>
+                      <p>단위 : 천㎡</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_04_06" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「도시계획현황」한국토지주택공사 공간정보처
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <!-- 05_교통·안전 --------------------------------------------------------------------------------->
+              <div class="visual_menu_content_area dep2" data-depth="0" data-idx="4">
+                <div class="visual_tab_area">
+                  <div class="visual_menu_btn_area flex_r_ss flex_wrap">
+                    <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0" data-tab="chart_box_05_01">자동차 등록</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="1" data-tab="chart_box_05_02">영업용 자동차 등록대수</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="2" data-tab="chart_box_05_03">도로현황</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="3" data-tab="chart_box_05_04">교통사고건수</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="4" data-tab="chart_box_05_05">화재발생</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="5" data-tab="chart_box_05_06">119 구급활동 실적</button>
+                  </div>
+                  
+                  <!-- 05_교통·안전차트 ------------------------------------------------------------------------>
+                  <!-- 05_01_자동차등록 ---------------------------------------------------------------->
+                  <div id="chart_box_05_01" class="visual_menu_content_area act" data-depth="1" data-idx="0">
+                    <h2 class="sub_cont_sub_title">자동차 등록</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2023-10</p>
+                      <p>단위 : 대</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_05_01" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>차량등록과,「자동차등록현황보고」국토교통통계누리
+                    </div>
+                  </div>
+
+                  <!-- 05_02_영업용자동차등록대수 ---------------------------------------------------------------->
+                  <div id="chart_box_05_02" class="visual_menu_content_area" data-depth="1" data-idx="1">
+                    <h2 class="sub_cont_sub_title">영업용 자동차 등록대수</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2021-12</p>
+                      <p>단위 : 대</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_05_02" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>시민교통과
+                    </div>
+                  </div>
+
+                  <!-- 05_03_도로현황 ---------------------------------------------------------------->
+                  <div id="chart_box_05_03" class="visual_menu_content_area" data-depth="1" data-idx="2">
+                    <h2 class="sub_cont_sub_title">도로현황</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2021-12</p>
+                      <p>단위 : m</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_05_03" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「도로현황」국토교통부 도로운영과
+                    </div>
+                  </div>
+
+                  <!-- 05_04_교통사고건수 ---------------------------------------------------------------->
+                  <div id="chart_box_05_04" class="visual_menu_content_area" data-depth="1" data-idx="3">
+                    <h2 class="sub_cont_sub_title">교통사고건수</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2022-12</p>
+                      <p>단위 : 건, 천원</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_05_04" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「교통사고상세통계」도로교통공단
+                    </div>
+                  </div>
+
+                  <!-- 05_05_화재발생 ---------------------------------------------------------------->
+                  <div id="chart_box_05_05" class="visual_menu_content_area" data-depth="1" data-idx="4">
+                    <h2 class="sub_cont_sub_title">화재발생</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2022</p>
+                      <p>단위 : 건, 명, 천원</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_05_05" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>완산, 덕진 소방서
+                    </div>
+                  </div>
+
+                  <!-- 05_06_119구급활동실적 ---------------------------------------------------------------->
+                  <div id="chart_box_05_06" class="visual_menu_content_area" data-depth="1" data-idx="5">
+                    <h2 class="sub_cont_sub_title">119 구급활동 실적</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2021-12</p>
+                      <p>단위 : 건, 명</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_05_06" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>완산, 덕진 소방서
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <!-- 06_관광·문화 --------------------------------------------------------------------------------->
+              <div class="visual_menu_content_area dep2" data-depth="0" data-idx="5">
+                <div class="visual_tab_area">
+                  <div class="visual_menu_btn_area flex_r_ss flex_wrap">
+                    <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0" data-tab="chart_box_06_01">주요 관관지 관광객수</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="1" data-tab="chart_box_06_02">관광 사업체 등록 현황</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="2" data-tab="chart_box_06_03">박물관/미술관 현황</button>
+                    <button class="btn visual_menu_btn_tab" data-depth="1" data-idx="3" data-tab="chart_box_06_04">공공도서관 대출자료수/도서수현황</button>
+                  </div>
+                  
+                  <!-- 06_경제·산업차트 ------------------------------------------------------------------------>
+                  <!-- 06_01_주요관관지관광객수 ---------------------------------------------------------------->
+                  <div id="chart_box_06_01" class="visual_menu_content_area act" data-depth="1" data-idx="0">
+                    <h2 class="sub_cont_sub_title">주요 관관지 관광객수</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2022-06</p>
+                      <p>단위 : 명</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_06_01" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「주요관광지점 입장객통계」문화체육관광부 관광정책과
+                    </div>
+                  </div>
+
+                  <!-- 06_02_관광사업체등록현황 ---------------------------------------------------------------->
+                  <div id="chart_box_06_02" class="visual_menu_content_area" data-depth="1" data-idx="1">
+                    <h2 class="sub_cont_sub_title">관광 사업체 등록 현황</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2022-06</p>
+                      <p>단위 : 개소</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_06_02" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>「전국관광사업체현황」한국관광협회중앙회
+                    </div>
+                  </div>
+
+                  <!-- 06_03_박물관/미술관현황 ---------------------------------------------------------------->
+                  <div id="chart_box_06_03" class="visual_menu_content_area" data-depth="1" data-idx="2">
+                    <h2 class="sub_cont_sub_title">박물관/미술관 현황</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2022-06</p>
+                      <p>단위 : 개소</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_06_03" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>전통문화유산과
+                    </div>
+                  </div>
+
+                  <!-- 06_04_공공도서관대출자료수/도서수현황 ---------------------------------------------------------------->
+                  <div id="chart_box_06_04" class="visual_menu_content_area" data-depth="1" data-idx="3">
+                    <h2 class="sub_cont_sub_title">공공도서관 대출자료수/도서수현황</h2>
+                    <div class="visual_menu_info_area flex_r_ec">
+                      <p>기준 : 2022-12</p>
+                      <p>단위 : 권</p>
+                    </div>
+                    <div class="chart">
+                      <div id="chart_06_04" class="chart_height">
+                        <!--차트영역-->
+                      </div>
+                    </div>
+                    <div class="visual_menu_source_area">
+                      <span>출처 : </span>도서관운영과
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
 
             </div>
-
-
           </div>
         </div>
       </div>

@@ -13,24 +13,24 @@
 // })
 
 
-// jQuery(function () {
-//   $('.visual_menu_btn_area button').click(function () {
-//     var tab_id_2dep = $(this).attr('data-tab');
+jQuery(function () {
+  $('.visual_menu_btn_area button').click(function () {
+    var tab_id_2dep = $(this).attr('data-tab');
 
-//     $('.visual_menu_btn_area.dep2 button').removeClass('act');
-//     // $('.chart_wrap').removeClass('act');
+    $('.visual_menu_btn_area.dep2 button').removeClass('act');
+    // $('.chart_wrap').removeClass('act');
 
-//     $(this).addClass('act');
-//     $("#" + tab_id_2dep).addClass('act');
+    $(this).addClass('act');
+    $("#" + tab_id_2dep).addClass('act');
 
-//     chart_drawing(tab_id_2dep);
-//   });
+    chart_drawing(tab_id_2dep);
+  });
 
-//   $(document).ready(function () {
-//     var first = 'chart_box_01_01';
-//     chart_drawing(first);
-//   });
-// });
+  $(document).ready(function () {
+    var first = 'chart_box_01_01';
+    chart_drawing(first);
+  });
+});
 
 
 function chart_drawing(val) 
@@ -263,8 +263,7 @@ function chart_drawing(val)
 
 
 
-  if(val == 'chart_box_02_02')
-  {
+  if(val == 'chart_box_02_02'){
     am4core.ready(function() {
     am4core.useTheme(am4themes_animated);
         
@@ -1336,8 +1335,7 @@ function chart_drawing(val)
 
 
 
-  if(val == 'chart_box_02_08')
-{
+  if(val == 'chart_box_02_08'){
   am4core.ready(function() {
   am4core.useTheme(am4themes_animated);
       

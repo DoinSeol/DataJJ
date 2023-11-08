@@ -1,0 +1,1857 @@
+<!-- 차트 생성을 위한 JS 영역 -->
+<script type="text/javascript" src="../data/dashboard/js/amchart/core.js"></script>
+<script type="text/javascript" src="../data/dashboard/js/amchart/charts.js"></script>
+<script type="text/javascript" src="../data/dashboard/js/amchart/animated.js"></script>
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개선)전주시데이터포털</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script defer src="../js/index.js"></script>
+  <!-- 차트 생성을 위한 JS 영역 -->
+  <script type="text/javascript" src="../data/dashboard/js/amchart/core.js"></script>
+  <script type="text/javascript" src="../data/dashboard/js/amchart/charts.js"></script>
+  <script type="text/javascript" src="../data/dashboard/js/amchart/animated.js"></script>
+  <script type="text/javascript" src="../js/visualization/chart_01.js"></script>
+  <!-- <script type="text/javascript" src="../js/visualization/chart_02.js"></script> -->
+  <script type="text/javascript" src="../js/visualization/chart_03.js"></script>
+  <script type="text/javascript" src="../js/visualization/chart_04.js"></script>
+  <script type="text/javascript" src="../js/visualization/chart_05.js"></script>
+  <script type="text/javascript" src="../js/visualization/chart_06.js"></script>
+</head>
+<body>
+  <main>
+
+    <!-- 헤더:글로벌메뉴 -->
+    <header class="sub_header">
+      <div class="login_mobile">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
+          <span>로그인</span>
+        </a>
+      </div>
+
+      <div class="header_logo_wrap">
+        <a href="../index.html" title="홈으로이동"></a>
+      </div>
+
+      <nav class="gnb_menu_wrap">
+        <ul class="gnb_menu_list_wrap">
+          <li class="dep_01">
+            <a href="#">데이터개방</a>
+            <ul class="drop_down">
+              <li><a href="../01/01_01.html">공공데이터 소개</a></li>
+              <li><a href="../01/01_02.html">데이터 목록</a></li>
+              <li><a href="../01/01_03.html">데이터 요청 창구</a></li>
+              <li><a href="../01/01_04.html">설문조사</a></li>
+              <li><a href="../01/01_05.html">통합검색</a></li>
+            </ul>
+          </li>
+          <li class="dep_01">
+            <a href="#">데이터활용</a>
+            <ul class="drop_down">
+              <li><a href="./02_01.html">전주의 하루</a></li>
+              <li><a href="./02_02.html">통계 시각화</a></li>
+              <li><a href="#">경제·산업동향</a></li>
+              <li><a href="#">생활·지리정보</a></li>
+              <li><a href="#">상권·분석정보</a></li>
+            </ul>
+          </li>
+          <li class="dep_01">
+            <a href="#">통계마당</a>
+            <ul class="drop_down">
+              <li><a href="../03/03_01.html">통계보고서</a></li></li>
+              <li><a href="../03/03_02.html">통계 DB</a></li>
+              <li><a href="../03/03_03.html">통계 E-Book</a></li>
+              <li><a href="../03/03_04.html">통계조사 안내</a></li>
+            </ul>
+          </li>
+          <li class="dep_01">
+            <a href="#">이용안내</a>
+            <ul class="drop_down">
+              <li><a href="#">공지사항</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header_btn_wrap">
+        <ul>
+          <li class="dr_btn">
+            <a title="전주시청 홈페이지 새창열기" href="https://www.jeonju.go.kr/main/index.jsp" target="_blank">
+              전주시청 바로가기
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
+            </a>
+          </li>
+          <li class="login">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
+              <span>로그인</span>
+            </a>
+          </li>
+          <li class="all_menu_open">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+    <!-- 전체메뉴 -->
+    <div id="all_menu_contain">
+
+      <!-- <div class="all_menu_wrap"> -->
+
+        <div class="all_menu_top_wrap">
+
+          <div class="all_menu_top">
+            <a href="../index.html" title="홈으로이동"></a>
+          </div>
+
+          <div class="all_menu_close">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <nav class="all_menu_wrap">
+          <ul class="all_menu_list_wrap">
+            <li class="dep_01">
+              <a href="#">
+                데이터개방
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="../01/01_01.html">공공데이터 소개</a></li>
+                <li><a href="../01/01_02.html">데이터 목록</a></li>
+                <li><a href="../01/01_03.html">데이터 요청 창구</a></li>
+                <li><a href="../01/01_04.html">설문조사</a></li>
+                <li><a href="../01_05.html">통합검색</a></li>
+              </ul>
+            </li>
+            <li class="dep_01">
+              <a href="#">
+                데이터활용
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="./02_01.html">전주의 하루</a></li>
+                <li><a href="./02_02.html">통계 시각화</a></li>
+                <li><a href="#">경제·산업동향</a></li>
+                <li><a href="#">생활·지리정보</a></li>
+                <li><a href="#">상권·분석정보</a></li>
+              </ul>
+            </li>
+            <li class="dep_01">
+              <a href="#">
+                통계마당
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="../03/03_01.html">통계보고서</a></li></li>
+                <li><a href="../03/03_02.html">통계 DB</a></li>
+                <li><a href="../03/03_03.html">통계 E-Book</a></li>
+                <li><a href="../03/03_04.html">통계조사 안내</a></li>
+              </ul>
+            </li>
+            <li class="dep_01">
+              <a href="#">
+                이용안내
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="#">공지사항</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        
+      <!-- </div> -->
+    </div>
+
+
+    <!-- 서브 콘텐츠 -->
+    <section>
+      <div class="sub_section">
+        <!-- 서브 콘텐츠::top_common -->
+        <div class="sub_top_wrap">
+          <div class="sub_top">
+            <div class="sub_top_title">
+              <h1>통계 시각화</h1>
+            </div>
+            <div class="sub_top_navgation">
+              <a href="../index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+              </a>
+              <span>
+                <p>></p>
+                <a href="#">
+                  <p>데이터활용</p>
+                </a>
+              </span>
+              <span>
+              <p>></p>
+                <a href="#">
+                  <p>통계시각화</p>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 서브 콘텐츠::bottom -->
+        <div class="sub_cont_wrap">
+          <div class="sub_cont">
+            <!-- 서브 콘텐츠::02_02_통계시각화 -->
+            <!-- <h2 class="sub_cont_title"></h2> -->
+
+            <!-- 리스트 -->
+            <!-- 내용 -->
+            <div class="contents_html">
+              <ul class="ac_list clear">
+                <li class="current" data-tab="chart_box1">주민등록인구 현황</li>
+                <li data-tab="chart_box2">연도별 인구 및 세대</li>
+                <li data-tab="chart_box3">동별 세대 및 인구</li>
+                <li data-tab="chart_box4">연령계층별 인구</li>
+                <li data-tab="chart_box5">인구동향(출생,사망,혼인,이혼)</li>
+                <li data-tab="chart_box6">연도별 인구이동</li>
+                <li data-tab="chart_box7">학교, 학생 수</li>
+              </ul>
+
+              <div id="chart_box1" class="chart_wrap div_ful current">
+                <h4 class="stitle titline">주민등록인구 현황</h4>
+                <p class="unit2">단위 : 명 (외국인제외) </p>
+                <p class="unit">기준 : 2023-10 </p>
+                <div class="chart clear">
+                  <div class="wd_half">
+                    <dl>
+                      <dt>인구</dt>
+                      <dd>
+                        <div id="chartdiv1_1" class="population_graph01">
+                          <!--차트영역-->
+                        </div>
+                        <div id="chartdiv1_2" class="population_graph02">
+                          <!--차트영역-->
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="wd_half map_area">
+                    <dl>
+                      <dt>행정구별 현황</dt>
+                      <dd>
+                        <ul>
+                          <li class="deokjin"><span>덕진구</span><strong>316,137</strong></li>
+                          <li class="wansan"><span>완산구</span><strong>328,772</strong></li>
+                        </ul>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+                <p class="chart_source">출처 : 주민등록인구통계 행정안전부</p>
+              </div>
+              <div id="chart_box2" class="chart_wrap div_ful">
+                <h4 class="stitle titline">연도별 인구 및 세대</h4>
+                <p class="unit2">단위 : 명 (외국인제외)</p>
+                <p class="unit">기준 : 2023-10 </p>
+                <div class="chart clear">
+                  <div id="chartdiv2" class="population_graph03">
+                    <!--차트영역-->
+                  </div>
+                </div>
+                <p class="chart_source">출처 : 주민등록인구통계 행정안전부</p>
+              </div>
+              <div id="chart_box3" class="chart_wrap div_ful">
+                <h4 class="stitle titline">동별 세대 및 인구</h4>
+                <p class="unit2">단위 : 명</p>
+                <p class="unit">기준 : 2023-10 </p>
+                <div class="chart" style="overflow:hidden; overflow-x:scroll;">
+                  <div style="width:2100px;" id="chartdiv3" class="chart_height">
+                  </div>
+                </div>
+                <p class="chart_source">출처 : 주민등록인구통계 행정안전부</p>
+              </div>
+              <div id="chart_box4" class="chart_wrap div_ful">
+                <h4 class="stitle titline">연령계층별 인구</h4>
+                <p class="unit2">단위 : 명</p>
+                <p class="unit">기준 : 2023-10 </p>
+                <div class="chart">
+                  <div id="chartdiv4" class="chart_height">
+                    <!--차트영역-->
+                  </div>
+                </div>
+                <p class="chart_source">출처 : 주민등록인구통계 행정안전부</p>
+              </div>
+              <div id="chart_box5" class="chart_wrap div_ful">
+                <h4 class="stitle titline">인구동향(출생,사망,혼인,이혼)</h4>
+                <p class="unit2">단위 : 명</p>
+                <p class="unit">기준 : 2022-12 </p>
+                <div class="chart">
+                  <div id="chartdiv5" class="chart_height">
+                    <!--차트영역-->
+                  </div>
+                </div>
+                <p class="chart_source">출처 :「인구동향조사」 통계청 인구동향과</p>
+              </div>
+              <div id="chart_box6" class="chart_wrap div_ful">
+                <h4 class="stitle titline">연도별 인구이동</h4>
+                <p class="unit2">단위 : 명</p>
+                <p class="unit">기준 : 2022-12 </p>
+                <div class="chart">
+                  <div id="chartdiv6" class="chart_height">
+                    <!--차트영역-->
+                  </div>
+                </div>
+                <p class="chart_source">출처 :「국내인구이동통계」 통계청 인구동향과</p>
+              </div>
+              <!-- 학교/학생수 신규 추가 -->
+              <div id="chart_box7" class="chart_wrap div_ful">
+                <h4 class="stitle titline">학교, 학생 수 </h4>
+                <p class="unit2">단위 : 명</p>
+                <p class="unit">기준 : 2023-04 </p>
+                <div class="chart">
+                  <div id="chartdiv7" class="chart_height">
+                    <!--차트영역-->
+                  </div>
+                </div>
+                <p class="chart_source">출처 : 「교육통계」 전라북도교육청</p>
+              </div>
+
+            </div>
+            <!--//내용-->            
+            
+            
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 푸터 -->
+    <footer class="sub_footer">
+      <div class="footer_btn_wrap">
+        <ul>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이메일 무단수집 거부</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">통계관련사이트</a></li>
+        </ul>
+      </div>
+      <div class="footer_info_wrap">
+        <div class="footer_logo_wrap"></div>
+        <div class="footer_txt_wrap">
+          <address>(54994) 전라북도 전주시 완산구 노송광장로 10 &nbsp; ☎ 대표전화) 063-222-1000</address>
+          <p>본 사이트에 게시된 이메일주소의 자동수집을 거부하며, 이를 위반시 정보통신법에 의해 형사처벌됨을 유념하시기 바랍니다.</p>
+          <p class="copyright">COPYRIGHT © 2023 JEONJU CITY. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- 좌측사이드메뉴::FIX_visual_dep01 -->
+    <aside>
+      <!-- visual_dep01 -->
+      <div class="left_menu_wrap">
+        <div class="left_visual_menu_wrap">
+          <ul>
+            <li class="visual_dep01 visual_dep01_01">
+              <div></div>
+              <p>인구·가구</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_02">
+              <div></div>
+              <p>보건·복지</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_03">
+              <div></div>
+              <p>경제·산업</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_04">
+              <div></div>
+              <p>환경·녹지</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_05">
+              <div></div>
+              <p>교통·안전</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_06">
+              <div></div>
+              <p>관광·문화</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="left_direct_menu_wrap">
+          <ul>
+            <li class="direct_dep01">
+              <div></div>
+              <p>생활·산업<br/>동향</p>
+            </li>
+
+            <li class="direct_dep01">
+              <div></div>
+              <p>생활·지리<br/>정보</p>
+            </li>
+
+            <li class="direct_dep01">
+              <div></div>
+              <p>상권분석<br/>정보</p>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 좌측사이드메뉴::visual_dep02 -->
+    <div class="visual_dep02_contain">
+      <div class="visual_menu_close">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+        </a>
+      </div>
+      <div class="visual_dep02_top">
+        <div class="visual_dep02_top_icon"></div>
+        <p class="visual_dep02_top_title">인구·가구</p>
+      </div>
+      <ul class="visual_dep02_menu">
+        <li><a href="#"><span></span>주민등록인구 현황</a></li>
+        <li><a href="#"><span></span>연도별 인구 및 세대</a></li>
+        <li><a href="#"><span></span>동별 세대 및 인구</a></li>
+        <li><a href="#"><span></span>연령계층별 인구</a></li>
+        <li><a href="#"><span></span>인구동향</a></li>
+        <li><a href="#"><span></span>연도별 인구이동</a></li>
+        <li><a href="#"><span></span>학교, 학생 수</a></li>
+      </ul>
+
+    </div>
+
+    <!-- 좌측사이드메뉴::visual_dep03 -->
+    <div class="visual_dep03_contain">
+      <img src="../images/img_visualization/side_visual_1_1.png">
+    </div>
+
+    <!-- 좌측사이드메뉴::visual_back -->
+    <div class="visual_back_modal"></div>
+  </main>
+
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+	jQuery(function () {
+		$('.ac_list li').click(function () {
+			var tab_id = $(this).attr('data-tab');
+
+			$('.ac_list li').removeClass('current');
+			$('.chart_wrap').removeClass('current');
+
+			$(this).addClass('current');
+			$("#" + tab_id).addClass('current');
+
+			chart_drawing(tab_id);
+		});
+
+		$(document).ready(function () {
+			var first = 'chart_box1';
+			chart_drawing(first);
+		});
+	});
+
+	function chart_drawing(val) {
+
+		if (val == 'chart_box1') {
+			am4core.ready(function () {
+				am4core.useTheme(am4themes_animated);
+
+				/**
+				 * 인구/가구 Chart 영역
+				 */
+
+				//
+				// 1-1-1. 주민등록인구 현황_pie_chartdiv1_1 //
+				//
+				// Create chart instance
+				chart = am4core.create("chartdiv1_1", am4charts.PieChart);
+
+				// Add data
+				chart.data = [{
+					"sex": "남자",
+					"litres": 316650
+				}, {
+					"sex": "여자",
+					"litres": 327739
+				}];
+
+				// Add and configure Series
+				var pieSeries = chart.series.push(new am4charts.PieSeries());
+				pieSeries.dataFields.value = "litres";
+				pieSeries.dataFields.category = "sex";
+				pieSeries.slices.template.tooltipText = "[font-size: 18px bold]{category}: [font-size: 18px]{value} 명";
+
+				// This creates initial animation
+				pieSeries.hiddenState.properties.opacity = 1;
+				pieSeries.hiddenState.properties.endAngle = -90;
+				pieSeries.hiddenState.properties.startAngle = -90;
+
+				chart.hiddenState.properties.radius = am4core.percent(0);
+
+				// Add cursor
+				chart.cursor = new am4charts.XYCursor();
+
+				chart.logo.height = -15000;
+
+				//
+				// 1-1-2. 주민등록인구 현황_bar+line_chartdiv1_2 //
+				//
+
+				// am4core.useTheme(am4themes_kelly);
+				am4core.useTheme(am4themes_animated);
+
+				// Create chart instance
+				chart_7 = am4core.create("chartdiv1_2", am4charts.XYChart);
+
+				// Add data
+				chart_7.data = [{
+					"year": "2021",
+					"man": 323427,
+					"woman": 333842,
+					"units": 657269
+				}, {
+					"year": "2022",
+					"man": 320265,
+					"woman": 331230,
+					"units": 651495
+				}, {
+					"year": "2023.04",
+					"man": 318054,
+					"woman": 329252,
+					"units": 647306
+				}, {
+					"year": "2023.05",
+					"man": 317758,
+					"woman": 328970,
+					"units": 646728
+				}, {
+					"year": "2023.06",
+					"man": 317457,
+					"woman": 328693,
+					"units": 646150
+				}, {
+					"year": "2023.07",
+					"man": 317196,
+					"woman": 328404,
+					"units": 645600
+				}, {
+					"year": "2023.08",
+					"man": 316872,
+					"woman": 328037,
+					"units": 644909
+				}, {
+					"year": "2023.09",
+					"man": 316650,
+					"woman": 327739,
+					"units": 644389
+				}, {
+					"year": "2023.0",
+					"man": 316365,
+					"woman": 327739,
+					"units": 643920
+				},];
+
+				// Create axes
+				categoryAxis = chart_7.xAxes.push(new am4charts.CategoryAxis());
+				categoryAxis.autoGridCount = false;
+				categoryAxis.labelFrequency = 0;
+				categoryAxis.dataFields.category = "year";
+				categoryAxis.gridPosition = "start";
+				categoryAxis.labelRotation = 45;
+				// categoryAxis.gridCount = 11;
+				categoryAxis.renderer.grid.template.location = 0;
+				categoryAxis.renderer.minGridDistance = 20;
+				categoryAxis.renderer.cellStartLocation = 0.1;
+				categoryAxis.renderer.cellEndLocation = 0.9;
+
+				// First value axis
+				valueAxis = chart_7.yAxes.push(new am4charts.ValueAxis());
+				valueAxis.autoGridCount = false;
+				valueAxis.gridCount = 10;
+				valueAxis.min = 300000;
+				valueAxis.max = 400000;
+				// Second value axis
+				valueAxis2 = chart_7.yAxes.push(new am4charts.ValueAxis());
+				valueAxis2.autoGridCount = false;
+				valueAxis2.renderer.opposite = true;
+				valueAxis2.min = 600000;
+				valueAxis2.max = 700000
+				// Create series
+				function createSeries1(field, name, stacked) {
+					if (field == "units") {
+						var series = chart_7.series.push(new am4charts.LineSeries());
+						series.dataFields.valueY = field;
+						series.dataFields.categoryX = "year";
+						series.name = name;
+						series.tooltipText = "";
+						series.strokeWidth = 3;
+						series.yAxis = valueAxis2;
+						series.stroke = am4core.color("#fdd400");
+						series.fill = am4core.color("#fdd400");
+						// Set up tooltip
+						series.adapter.add("tooltipText", function (ev) {
+							var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+							chart_7.series.each(function (item) {
+								if (item.name == "총인구") {
+									text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								} else {
+									text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								}
+							});
+							return text;
+						});
+
+						series.tooltip.getFillFromObject = false;
+						series.tooltip.background.fill = am4core.color("#fff");
+						series.tooltip.label.fill = am4core.color("#00");
+
+						// Prevent cross-fading of tooltips
+						series.tooltip.defaultState.transitionDuration = 0;
+						series.tooltip.hiddenState.transitionDuration = 0;
+
+						var bullet = series.bullets.push(new am4charts.CircleBullet());
+						bullet.circle.radius = 5;
+					} else {
+						var series = chart_7.series.push(new am4charts.ColumnSeries());
+						series.dataFields.valueY = field;
+						series.dataFields.categoryX = "year";
+						series.name = name;
+						// Set up tooltip
+						series.adapter.add("tooltipText", function (ev) {
+							var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+							chart_7.series.each(function (item) {
+								if (item.name == "총인구") {
+									text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								} else {
+									text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								}
+							});
+							return text;
+						});
+						series.tooltip.getFillFromObject = false;
+						series.tooltip.background.fill = am4core.color("#fff");
+						series.tooltip.label.fill = am4core.color("#00");
+						series.stacked = stacked;
+						series.columns.template.width = am4core.percent(60);
+					}
+
+				}
+
+				createSeries1("man", "남자", false);
+				createSeries1("woman", "여자", false);
+				createSeries1("units", "총인구", false);
+
+				// Add legend
+				chart_7.legend = new am4charts.Legend();
+
+				// Add cursor
+				chart_7.cursor = new am4charts.XYCursor();
+				chart_7.cursor.maxTooltipDistance = 0;
+				chart_7.cursor.behavior = 'none';
+				chart_7.logo.height = -15000;
+
+			});
+		}
+
+		if (val == 'chart_box2') {
+			am4core.ready(function () {
+				am4core.useTheme(am4themes_animated);
+
+				//
+				// 1-2. 연도별 인구 및 세대_chartdiv2 //
+				//
+
+				// Create chart instance
+				chart_2 = am4core.create("chartdiv2", am4charts.XYChart);
+
+				// Add data
+				chart_2.data = [{
+					"year": "2020",
+					"value1": 666548,
+					"value2": 283334,
+					"value3": 2.35
+				}, {
+					"year": "2021",
+					"value1": 657269,
+					"value2": 293207,
+					"value3": 2.24
+				}, {
+					"year": "2022",
+					"value1": 651495,
+					"value2": 296241,
+					"value3": 2.20
+				}, {
+					"year": "2023.04",
+					"value1": 647306,
+					"value2": 296420,
+					"value3": 2.18
+				}, {
+					"year": "2023.05",
+					"value1": 646728,
+					"value2": 296637,
+					"value3": 2.18
+				}, {
+					"year": "2023.06",
+					"value1": 646150,
+					"value2": 296691,
+					"value3": 2.18
+				}, {
+					"year": "2023.07",
+					"value1": 645600,
+					"value2": 296819,
+					"value3": 2.18
+				}, {
+					"year": "2023.08",
+					"value1": 644909,
+					"value2": 296807,
+					"value3": 2.17
+				}, {
+					"year": "2023.09",
+					"value1": 644389,
+					"value2": 296785,
+					"value3": 2.17
+				}, {
+					"year": "2023.10",
+					"value1": 643920,
+					"value2": 296632,
+					"value3": 2.17
+				}];
+				// Create axes
+				categoryAxis = chart_2.xAxes.push(new am4charts.CategoryAxis());
+				categoryAxis.autoGridCount = false;
+				categoryAxis.labelFrequency = 0;
+				categoryAxis.dataFields.category = "year";
+
+				categoryAxis.renderer.grid.template.location = 0;
+				categoryAxis.renderer.minGridDistance = 20;
+
+
+				// First value axis
+				valueAxis = chart_2.yAxes.push(new am4charts.ValueAxis());
+				valueAxis.autoGridCount = false;
+				valueAxis.gridCount = 10;
+				valueAxis.min = 0;
+				valueAxis.max = 650000;
+				// Second value axis
+				valueAxis2 = chart_2.yAxes.push(new am4charts.ValueAxis());
+				valueAxis2.autoGridCount = false;
+				valueAxis2.renderer.opposite = true;
+				valueAxis2.min = 1.50;
+				valueAxis2.max = 2.50;
+				// Create series
+				function createSeries1(field, name, stacked) {
+					if (field == "value3") {
+						var series = chart_2.series.push(new am4charts.LineSeries());
+						series.dataFields.valueY = field;
+						series.dataFields.categoryX = "year";
+						series.name = name;
+						series.tooltipText = "";
+						series.strokeWidth = 3;
+						series.yAxis = valueAxis2;
+						series.stroke = am4core.color("#fdd400");
+						series.fill = am4core.color("#fdd400");
+						// Set up tooltip
+						series.adapter.add("tooltipText", function (ev) {
+							var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+							chart_2.series.each(function (item) {
+								if (item.name == "세대당 인구") {
+									text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								} else {
+									text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								}
+							});
+							return text;
+						});
+
+						series.tooltip.getFillFromObject = false;
+						series.tooltip.background.fill = am4core.color("#fff");
+						series.tooltip.label.fill = am4core.color("#00");
+
+						// Prevent cross-fading of tooltips
+						series.tooltip.defaultState.transitionDuration = 0;
+						series.tooltip.hiddenState.transitionDuration = 0;
+
+						var bullet = series.bullets.push(new am4charts.CircleBullet());
+						bullet.circle.radius = 5;
+					} else {
+						var series = chart_2.series.push(new am4charts.ColumnSeries());
+						series.dataFields.valueY = field;
+						series.dataFields.categoryX = "year";
+						series.name = name;
+						// Set up tooltip
+						series.adapter.add("tooltipText", function (ev) {
+							var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+							chart_2.series.each(function (item) {
+								if (item.name == "세대당 인구") {
+									text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								} else {
+									text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								}
+							});
+							return text;
+						});
+						series.tooltip.getFillFromObject = false;
+						series.tooltip.background.fill = am4core.color("#fff");
+						series.tooltip.label.fill = am4core.color("#00");
+						series.stacked = stacked;
+						series.columns.template.width = am4core.percent(60);
+					}
+
+				}
+
+				createSeries1("value1", "인구", false);
+				createSeries1("value2", "세대", false);
+				createSeries1("value3", "세대당 인구", false);
+
+				// Add legend
+				chart_2.legend = new am4charts.Legend();
+
+				// Add cursor
+				chart_2.cursor = new am4charts.XYCursor();
+				chart_2.cursor.maxTooltipDistance = 0;
+				chart_2.cursor.behavior = 'none';
+				chart_2.logo.height = -15000;
+
+				// Themes end
+			});
+		}
+		if (val == 'chart_box3') {
+			am4core.ready(function () {
+				am4core.useTheme(am4themes_animated);
+
+				//
+				// 1-3. 동별 세대 및 인구_chartdiv3 //
+				//    
+
+				// Create chart instance
+				chart_3 = am4core.create("chartdiv3", am4charts.XYChart);
+
+				// Add data
+				chart_3.data = [{
+					"year": "중앙동",
+					"series1": 9774,
+					"series2": 4955,
+					"series3": 4852,
+					"series4": 4922,
+					"series5": 47.8,
+				}, {
+					"year": "풍남동",
+					"series1": 3714,
+					"series2": 2320,
+					"series3": 1847,
+					"series4": 1867,
+					"series5": 53.6,
+				}, {
+					"year": "노송동",
+					"series1": 10693,
+					"series2": 5615,
+					"series3": 5223,
+					"series4": 5470,
+					"series5": 51.2,
+				}, {
+					"year": "완산동",
+					"series1": 5014,
+					"series2": 2654,
+					"series3": 2462,
+					"series4": 2552,
+					"series5": 51.3,
+				}, {
+					"year": "동서학동",
+					"series1": 5948,
+					"series2": 3154,
+					"series3": 2908,
+					"series4": 3040,
+					"series5": 52.9,
+				}, {
+					"year": "서서학동",
+					"series1": 8102,
+					"series2": 4373,
+					"series3": 3920,
+					"series4": 4182,
+					"series5": 52.5,
+				}, {
+					"year": "중화산1동",
+					"series1": 13697,
+					"series2": 6349,
+					"series3": 6518,
+					"series4": 7179,
+					"series5": 43.1,
+				}, {
+					"year": "중화산2동",
+					"series1": 19168,
+					"series2": 9224,
+					"series3": 9607,
+					"series4": 9561,
+					"series5": 41.2,
+				}, {
+					"year": "서신동",
+					"series1": 39626,
+					"series2": 17554,
+					"series3": 19254,
+					"series4": 20372,
+					"series5": 42,
+				}, {
+					"year": "평화1동",
+					"series1": 12100,
+					"series2": 7062,
+					"series3": 5804,
+					"series4": 6296,
+					"series5": 52.4,
+				}, {
+					"year": "평화2동",
+					"series1": 43792,
+					"series2": 18584,
+					"series3": 21020,
+					"series4": 22772,
+					"series5": 44.2,
+				}, {
+					"year": "삼천1동",
+					"series1": 11671,
+					"series2": 5331,
+					"series3": 5665,
+					"series4": 6006,
+					"series5": 46.4,
+				}, {
+					"year": "삼천2동",
+					"series1": 12625,
+					"series2": 6118,
+					"series3": 6053,
+					"series4": 6572,
+					"series5": 48,
+				}, {
+					"year": "삼천3동",
+					"series1": 20990,
+					"series2": 9101,
+					"series3": 10103,
+					"series4": 10887,
+					"series5": 45.6,
+				}, {
+					"year": "효자1동",
+					"series1": 13054,
+					"series2": 5957,
+					"series3": 6255,
+					"series4": 6799,
+					"series5": 46.7,
+				}, {
+					"year": "효자2동",
+					"series1": 9251,
+					"series2": 4466,
+					"series3": 4418,
+					"series4": 4833,
+					"series5": 48.1,
+				}, {
+					"year": "효자3동",
+					"series1": 14038,
+					"series2": 5955,
+					"series3": 6558,
+					"series4": 7480,
+					"series5": 46.4,
+				}, {
+					"year": "효자4동",
+					"series1": 38596,
+					"series2": 16548,
+					"series3": 18864,
+					"series4": 19732,
+					"series5": 38.9,
+				}, {
+					"year": "효자5동",
+					"series1": 36134,
+					"series2": 18228,
+					"series3": 18094,
+					"series4": 18040,
+					"series5": 38,
+				}, {
+					"year": "진북동",
+					"series1": 13083,
+					"series2": 6760,
+					"series3": 6341,
+					"series4": 6742,
+					"series5": 52.2,
+				}, {
+					"year": "인후1동",
+					"series1": 17440,
+					"series2": 7437,
+					"series3": 8362,
+					"series4": 9078,
+					"series5": 44.8,
+				}, {
+					"year": "인후2동",
+					"series1": 10473,
+					"series2": 5766,
+					"series3": 5179,
+					"series4": 5294,
+					"series5": 49.9,
+				}, {
+					"year": "인후3동",
+					"series1": 30544,
+					"series2": 14459,
+					"series3": 15066,
+					"series4": 15478,
+					"series5": 42.2,
+				}, {
+					"year": "덕진동",
+					"series1": 20577,
+					"series2": 10835,
+					"series3": 10398,
+					"series4": 10179,
+					"series5": 41.1,
+				}, {
+					"year": "금암1동",
+					"series1": 7877,
+					"series2": 5617,
+					"series3": 5282,
+					"series4": 3595,
+					"series5": 42.7,
+				}, {
+					"year": "금암2동",
+					"series1": 9423,
+					"series2": 5092,
+					"series3": 4585,
+					"series4": 4838,
+					"series5": 49.6,
+				}, {
+					"year": "팔복동",
+					"series1": 7631,
+					"series2": 4649,
+					"series3": 4152,
+					"series4": 3479,
+					"series5": 50.4,
+				}, {
+					"year": "우아1동",
+					"series1": 12191,
+					"series2": 5985,
+					"series3": 6073,
+					"series4": 6118,
+					"series5": 44.4,
+				}, {
+					"year": "우아2동",
+					"series1": 14005,
+					"series2": 7639,
+					"series3": 7333,
+					"series4": 6672,
+					"series5": 46.2,
+				}, {
+					"year": "호성동",
+					"series1": 18795,
+					"series2": 7872,
+					"series3": 8916,
+					"series4": 9879,
+					"series5": 45.2,
+				}, {
+					"year": "송천1동",
+					"series1": 64757,
+					"series2": 24170,
+					"series3": 32047,
+					"series4": 32710,
+					"series5": 37.1,
+				}, {
+					"year": "송천2동",
+					"series1": 25020,
+					"series2": 10353,
+					"series3": 12189,
+					"series4": 12831,
+					"series5": 43.6,
+				}, {
+					"year": "조촌동",
+					"series1": 12114,
+					"series2": 6245,
+					"series3": 6208,
+					"series4": 5906,
+					"series5": 46.9,
+				}, {
+					"year": "여의동",
+					"series1": 16150,
+					"series2": 7207,
+					"series3": 8185,
+					"series4": 7965,
+					"series5": 44.4,
+				}, {
+					"year": "혁신동",
+					"series1": 35753,
+					"series2": 12998,
+					"series3": 17624,
+					"series4": 18229,
+					"series5": 34.6,
+				}];
+
+				// Create axes
+				categoryAxis = chart_3.xAxes.push(new am4charts.CategoryAxis());
+				categoryAxis.dataFields.category = "year";
+				categoryAxis.renderer.grid.template.location = 0;
+				categoryAxis.renderer.minGridDistance = 20;
+				categoryAxis.renderer.cellStartLocation = 0.1;
+				categoryAxis.renderer.cellEndLocation = 0.9;
+
+				// First value axis
+				valueAxis = chart_3.yAxes.push(new am4charts.ValueAxis());
+				valueAxis.min = 0;
+				valueAxis.max = 70000;
+				
+				// Second value axis
+				valueAxis2 = chart_3.yAxes.push(new am4charts.ValueAxis());
+				valueAxis2.autoGridCount = false;
+				valueAxis2.renderer.opposite = true;
+				valueAxis2.min = 0;
+				valueAxis2.max = 70;
+
+				// Create series
+				function createSeries3(field, name, stacked) {
+
+					if (field == "series5" || field == "series3"|| field == "series4") {
+						var series = chart_3.series.push(new am4charts.LineSeries());
+						series.dataFields.valueY = field;
+						series.dataFields.categoryX = "year";
+						series.name = name;
+						series.tooltipText = "";
+						series.strokeWidth = 3;
+						series.yAxis = valueAxis2;
+						series.stroke = am4core.color("#fdd400");
+						series.fill = am4core.color("#fdd400");
+						// Set up tooltip
+						series.adapter.add("tooltipText", function (ev) {
+							var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+							chart_3.series.each(function (item) {
+								if (item.name == "평균연령") {
+									text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								} else if (item.name == "남자 인구수") {
+									text += "[" + item.stroke.hex + "]◐[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								} else if (item.name == "여자 인구수") {
+									text += "[" + item.stroke.hex + "]◑[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								} else {
+									text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								}
+							});
+							return text;
+						});
+
+						series.tooltip.getFillFromObject = false;
+						series.tooltip.background.fill = am4core.color("#fff");
+						series.tooltip.label.fill = am4core.color("#00");
+
+						// Prevent cross-fading of tooltips
+						series.tooltip.defaultState.transitionDuration = 0;
+						series.tooltip.hiddenState.transitionDuration = 0;
+
+						var bullet = series.bullets.push(new am4charts.CircleBullet());
+						bullet.circle.radius = 5;
+						
+					} else {
+						series = chart_3.series.push(new am4charts.ColumnSeries());
+						series.dataFields.valueY = field;
+						series.dataFields.categoryX = "year";
+						series.name = name;
+						// Set up tooltip
+						series.adapter.add("tooltipText", function (ev) {
+							var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+							chart_3.series.each(function (item) {
+								if (item.name == "평균연령") {
+									text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								} else if (item.name == "남자 인구수") {
+									text += "[" + item.stroke.hex + "]◐[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								} else if (item.name == "여자 인구수") {
+									text += "[" + item.stroke.hex + "]◑[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								} else {
+									text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								}
+							});
+							return text;
+						});
+						series.tooltip.getFillFromObject = false;
+						series.tooltip.background.fill = am4core.color("#fff");
+						series.tooltip.label.fill = am4core.color("#00");
+
+						// Prevent cross-fading of tooltips
+						series.tooltip.defaultState.transitionDuration = 0;
+						series.tooltip.hiddenState.transitionDuration = 0;
+
+						// series.columns.tem
+						series.stacked = stacked;
+						series.columns.template.width = am4core.percent(50);
+					}
+
+
+				}
+
+				createSeries3("series1", "인구", false);
+				createSeries3("series2", "세대", false);
+				createSeries3("series5", "평균연령", false);
+				createSeries3("series3", "남자 인구수", false);
+				createSeries3("series4", "여자 인구수", false);
+
+				// Add legend
+				chart_3.legend = new am4charts.Legend();
+				// Add cursor
+				chart_3.cursor = new am4charts.XYCursor();
+				chart_3.cursor.maxTooltipDistance = 0;
+				chart_3.cursor.behavior = 'none';
+				chart_3.logo.height = -15000;
+			});
+		}
+
+
+		if (val == 'chart_box4') {
+			am4core.ready(function () {
+				am4core.useTheme(am4themes_animated);
+
+				//
+				// 1-4. 연령계층별 인구_chartdiv4 //
+				//    
+
+				// Create chart instance
+				chart_4 = am4core.create("chartdiv4", am4charts.XYChart);
+
+				// Add data
+				chart_4.data = [{
+					"year": "2021",
+					"series1": 86089,
+					"series2": 468195,
+					"series3": 98891,
+					"series4": 42.2
+				}, {
+					"year": "2022",
+					"series1": 82176,
+					"series2": 461962,
+					"series3": 107357,
+					"series4": 42.8
+				}, {
+					"year": "2023.04",
+					"series1": 80383,
+					"series2": 458403,
+					"series3": 108520,
+					"series4": 43.1
+				}, {
+					"year": "2023.05",
+					"series1": 79982,
+					"series2": 457924,
+					"series3": 108822,
+					"series4": 43.1
+				}, {
+					"year": "2023.06",
+					"series1": 79708,
+					"series2": 457315,
+					"series3": 109127,
+					"series4": 43.2
+				}, {
+					"year": "2023.07",
+					"series1": 79341,
+					"series2": 456790,
+					"series3": 109469,
+					"series4": 43.2
+				}, {
+					"year": "2023.08",
+					"series1": 79003,
+					"series2": 455988,
+					"series3": 109918,
+					"series4": 43.3
+				}, {
+					"year": "2023.09",
+					"series1": 78635,
+					"series2": 455417,
+					"series3": 110337,
+					"series4": 43.3
+				}, {
+					"year": "2023.10",
+					"series1": 78311,
+					"series2": 454783,
+					"series3": 110826,
+					"series4": 43.4
+				},];
+
+				// Create axes
+				categoryAxis = chart_4.xAxes.push(new am4charts.CategoryAxis());
+				categoryAxis.dataFields.category = "year";
+				categoryAxis.renderer.grid.template.location = 0;
+				categoryAxis.renderer.minGridDistance = 20;
+
+
+				// First value axis
+				valueAxis = chart_4.yAxes.push(new am4charts.ValueAxis());
+				valueAxis.max = 650000;
+				valueAxis.min = 0;
+
+				// Second value axis
+				valueAxis2 = chart_4.yAxes.push(new am4charts.ValueAxis());
+				// valueAxis2.autoGridCount = false;
+				valueAxis2.renderer.opposite = true;
+				valueAxis2.min = 37.50;
+				valueAxis2.max = 44.00;
+
+				// Create series
+				function createSeries4(field, name, stacked) {
+					if (field == "series4") {
+						var series = chart_4.series.push(new am4charts.LineSeries());
+						series.dataFields.valueY = field;
+						series.dataFields.categoryX = "year";
+						series.name = name;
+						series.tooltipText = "";
+						series.strokeWidth = 3;
+						series.yAxis = valueAxis2;
+						series.stroke = am4core.color("#fdd400");
+						series.fill = am4core.color("#fdd400");
+						// Set up tooltip
+						series.adapter.add("tooltipText", function (ev) {
+							var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+							chart_4.series.each(function (item) {
+								if (item.name == "평균연령") {
+									text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								} else {
+									text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								}
+							});
+							return text;
+						});
+
+						series.tooltip.getFillFromObject = false;
+						series.tooltip.background.fill = am4core.color("#fff");
+						series.tooltip.label.fill = am4core.color("#00");
+						series.stacked = stacked;
+
+						// Prevent cross-fading of tooltips
+						series.tooltip.defaultState.transitionDuration = 0;
+						series.tooltip.hiddenState.transitionDuration = 0;
+
+						var bullet = series.bullets.push(new am4charts.CircleBullet());
+						bullet.circle.radius = 5;
+
+					} else {
+
+						var series = chart_4.series.push(new am4charts.ColumnSeries());
+						series.dataFields.valueY = field;
+						series.dataFields.categoryX = "year";
+						series.name = name;
+						// Set up tooltip
+						series.adapter.add("tooltipText", function (ev) {
+							var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+							chart_4.series.each(function (item) {
+								if (item.name == "평균연령") {
+									text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								} else {
+									text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+								}
+							});
+							return text;
+						});
+
+
+						series.tooltip.getFillFromObject = false;
+						series.tooltip.background.fill = am4core.color("#fff");
+						series.tooltip.label.fill = am4core.color("#00");
+						series.stacked = stacked;
+						// series.columns.template.width = am4core.percent(60);
+
+					}	
+				}
+
+				createSeries4("series1", "0~14세", true);
+				createSeries4("series2", "15~64세", true);
+				createSeries4("series3", "65세 이상", true);
+				createSeries4("series4", "평균연령", true);
+
+				// Add legend
+				chart_4.legend = new am4charts.Legend();
+
+				// Add cursor
+				chart_4.cursor = new am4charts.XYCursor();
+				chart_4.cursor.maxTooltipDistance = 0;
+				chart_4.cursor.behavior = 'none';
+
+				chart_4.logo.height = -15000;
+
+				// Themes end
+			});
+		}
+
+
+		if (val == 'chart_box5') {
+			am4core.ready(function () {
+
+				//
+				// 1-5. 인구동향(출생,사망,혼인,이혼)_chartdiv5 //
+				//    
+				am4core.useTheme(am4themes_animated);
+
+				// Create chart instance
+				chart_5 = am4core.create("chartdiv5", am4charts.XYChart);
+
+				// Add data
+				chart_5.data = [{
+					"year": "2016",
+					"value1": 4797,
+					"value2": 3190,
+					"value3": 3084,
+					"value4": 1306
+				}, {
+					"year": "2017",
+					"value1": 4298,
+					"value2": 3225,
+					"value3": 2911,
+					"value4": 1141
+				}, {
+					"year": "2018",
+					"value1": 3827,
+					"value2": 3356,
+					"value3": 2944,
+					"value4": 1251
+				}, {
+					"year": "2019",
+					"value1": 3502,
+					"value2": 3374,
+					"value3": 2828,
+					"value4": 1290
+				}, {
+					"year": "2020",
+					"value1": 3207,
+					"value2": 3403,
+					"value3": 2447,
+					"value4": 1216
+				}, {
+					"year": "2021",
+					"value1": 3134,
+					"value2": 3416,
+					"value3": 2185,
+					"value4": 1201
+				}, {
+					"year": "2022",
+					"value1": 2956,
+					"value2": 4201,
+					"value3": 2299,
+					"value4": 1062
+				}
+				];
+
+				// Create axes
+				categoryAxis = chart_5.xAxes.push(new am4charts.CategoryAxis());
+				categoryAxis.autoGridCount = false;
+				categoryAxis.labelFrequency = 0;
+				categoryAxis.dataFields.category = "year";
+				categoryAxis.renderer.grid.template.location = 0.5;
+
+				valueAxis = chart_5.yAxes.push(new am4charts.ValueAxis());
+				valueAxis.autoGridCount = false;
+				valueAxis.boldLabels = true;
+
+				// Create series
+				function createSeries5(field, name) {
+					var series = chart_5.series.push(new am4charts.LineSeries());
+					series.dataFields.valueY = field;
+					series.dataFields.categoryX = "year";
+					series.name = name;
+					series.tooltipText = "";
+					series.strokeWidth = 3;
+
+					// Set up tooltip
+					series.adapter.add("tooltipText", function (ev) {
+						var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+						chart_5.series.each(function (item) {
+							text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+						});
+						return text;
+					});
+
+					series.tooltip.getFillFromObject = false;
+					series.tooltip.background.fill = am4core.color("#fff");
+					series.tooltip.label.fill = am4core.color("#00");
+
+					// Prevent cross-fading of tooltips
+					series.tooltip.defaultState.transitionDuration = 0;
+					series.tooltip.hiddenState.transitionDuration = 0;
+
+					var bullet = series.bullets.push(new am4charts.CircleBullet());
+					bullet.circle.radius = 5;
+
+					return series;
+				}
+
+				createSeries5("value1", "출생");
+				createSeries5("value2", "사망");
+				createSeries5("value3", "혼인");
+				createSeries5("value4", "이혼");
+
+				// Add cursor
+				chart_5.cursor = new am4charts.XYCursor();
+				chart_5.cursor.maxTooltipDistance = 0;
+				chart_5.cursor.behavior = 'none';
+				// Add legend
+				chart_5.legend = new am4charts.Legend();
+
+				chart_5.logo.height = -15000;
+
+				// Themes end
+			});
+		}
+		if (val == 'chart_box6') {
+			am4core.ready(function () {
+				//
+				// 1-6. 연도별 인구이동_chartdiv6 //
+				//       
+
+				am4core.useTheme(am4themes_animated);
+
+				// Create chart instance
+				chart_6 = am4core.create("chartdiv6", am4charts.XYChart);
+
+				// Add data
+				chart_6.data = [{
+					"year": "2010",
+					"value1": 115287,
+					"value2": 115183
+				}, {
+					"year": "2011",
+					"value1": 111784,
+					"value2": 110454
+				}, {
+					"year": "2012",
+					"value1": 97671,
+					"value2": 97561
+				}, {
+					"year": "2013",
+					"value1": 96858,
+					"value2": 98238
+				}, {
+					"year": "2014",
+					"value1": 107301,
+					"value2": 106953
+				}, {
+					"year": "2015",
+					"value1": 98572,
+					"value2": 101573
+				}, {
+					"year": "2016",
+					"value1": 95810,
+					"value2": 98234
+				}, {
+					"year": "2017",
+					"value1": 84966,
+					"value2": 88848
+				}, {
+					"year": "2018",
+					"value1": 102608,
+					"value2": 101110
+				}, {
+					"year": "2019",
+					"value1": 99640,
+					"value2": 96550
+				}, {
+					"year": "2020",
+					"value1": 107423,
+					"value2": 104277
+				}, {
+					"year": "2021",
+					"value1": 93521,
+					"value2": 92637
+				}, {
+					"year": "2022",
+					"value1": 84656,
+					"value2": 80500
+				}];
+
+				// Modify chart's colors
+				chart_6.colors.list = [am4core.color("#845EC2"), am4core.color("#D65DB1"), am4core.color("#FF6F91"), am4core.color("#FF9671"), am4core.color("#FFC75F"), am4core.color("#F9F871"),];
+
+				// Create axes
+				categoryAxis = chart_6.xAxes.push(new am4charts.CategoryAxis());
+				categoryAxis.autoGridCount = false;
+				categoryAxis.labelFrequency = 0;
+				categoryAxis.dataFields.category = "year";
+				categoryAxis.renderer.grid.template.location = 0.5;
+
+				valueAxis = chart_6.yAxes.push(new am4charts.ValueAxis());
+				valueAxis.autoGridCount = false;
+				valueAxis.boldLabels = true;
+				valueAxis.gridCount = 4;
+
+				// Create series
+				function createSeries6(field, name) {
+					var series = chart_6.series.push(new am4charts.LineSeries());
+					series.dataFields.valueY = field;
+					series.dataFields.categoryX = "year";
+					series.name = name;
+					series.tooltipText = "";
+					series.strokeWidth = 3;
+
+					// Set up tooltip
+					series.adapter.add("tooltipText", function (ev) {
+						var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+						chart_6.series.each(function (item) {
+							text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + ": [font-size: 18px]{" + item.dataFields.valueY + "}\n";
+						});
+						return text;
+					});
+
+					series.tooltip.getFillFromObject = false;
+					series.tooltip.background.fill = am4core.color("#fff");
+					series.tooltip.label.fill = am4core.color("#00");
+
+					// Prevent cross-fading of tooltips
+					series.tooltip.defaultState.transitionDuration = 0;
+					series.tooltip.hiddenState.transitionDuration = 0;
+
+					var bullet = series.bullets.push(new am4charts.CircleBullet());
+					bullet.circle.radius = 5;
+
+					return series;
+				}
+
+				createSeries6("value1", "전입");
+				createSeries6("value2", "전출");
+
+				// Add cursor
+				chart_6.cursor = new am4charts.XYCursor();
+				chart_6.cursor.maxTooltipDistance = 0;
+				chart_6.cursor.behavior = 'none';
+				// Add legend
+				chart_6.legend = new am4charts.Legend();
+
+				chart_6.logo.height = -15000;
+
+			});
+		}
+		if (val == 'chart_box7') {
+			am4core.ready(function () {
+				//
+				// 1-7. 학교/학생 수_chartdiv6 //
+				//       
+
+				am4core.useTheme(am4themes_animated);
+
+				// Create chart instance
+				chart_7 = am4core.create("chartdiv7", am4charts.XYChart);
+
+				// Add data
+				chart_7.data = [{
+					"year": "2018",
+					"value1": 279,
+					"value2": 10538,
+					"value3": 38967,
+					"value4": 20582,
+					"value5": 25305,
+					"value6": 41839,
+					"value7": 137231,
+				}, {
+					"year": "2019",
+					"value1": 275,
+					"value2": 9293,
+					"value3": 39670,
+					"value4": 19684,
+					"value5": 23220,
+					"value6": 42400,
+					"value7": 134267,
+				}, {
+					"year": "2020",
+					"value1": 273,
+					"value2": 9171,
+					"value3": 39321,
+					"value4": 19850,
+					"value5": 21982,
+					"value6": 42193,
+					"value7": 132517,
+				}, {
+					"year": "2021",
+					"value1": 275,
+					"value2": 8961,
+					"value3": 39216,
+					"value4": 20236,
+					"value5": 21178,
+					"value6": 42004,
+					"value7": 131595,
+				}, {
+					"year": "2022",
+					"value1": 274,
+					"value2": 8452,
+					"value3": 39311,
+					"value4": 20221,
+					"value5": 20274,
+					"value6": 41188,
+					"value7": 129436,
+				},];
+
+				/* Create axes */
+				categoryAxis = chart_7.xAxes.push(new am4charts.CategoryAxis());
+				categoryAxis.dataFields.category = "year";
+				categoryAxis.renderer.minGridDistance = 30;
+
+				/* Create value axis */
+				valueAxis = chart_7.yAxes.push(new am4charts.ValueAxis());
+				valueAxis.min = 270;
+				valueAxis.max = 280;
+				valueAxis.renderer.minGridDistance = 1;
+				valueAxis.renderer.opposite = true;
+				valueAxis.renderer.grid.template.disabled = true;
+				/* Create value axis */
+				valueAxis1 = chart_7.yAxes.push(new am4charts.ValueAxis());
+				valueAxis1.min = 0;
+				valueAxis1.max = 160000;
+				valueAxis1.renderer.minGridDistance = 20;
+
+				// Create series
+				function createSeries7(field, name, stacked) {
+					if (field == "value1") {
+						var series = chart_7
+							.series
+							.push(new am4charts.LineSeries());
+						series.dataFields.valueY = field;
+						series.dataFields.categoryX = "year";
+						series.name = name;
+						series.tooltipText = "";
+						series.strokeWidth = 3;
+						series.yAxis = valueAxis;
+						series.stroke = am4core.color("#fdd400");
+						series.fill = am4core.color("#fdd400");
+						// Set up tooltip
+						series
+							.adapter
+							.add("tooltipText", function (ev) {
+								var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+								chart_7
+									.series
+									.each(function (item) {
+										if (item.name == "학교 수") {
+											text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-" +
+												"size: 18px]{" + item.dataFields.valueY + "}\n";
+										} else {
+											text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-" +
+												"size: 18px]{" + item.dataFields.valueY + "}\n";
+										}
+									});
+								return text;
+							});
+
+						series.tooltip.getFillFromObject = false;
+						series.tooltip.background.fill = am4core.color("#fff");
+						series.tooltip.label.fill = am4core.color("#00");
+
+						// Prevent cross-fading of tooltips
+						series.tooltip.defaultState.transitionDuration = 0;
+						series.tooltip.hiddenState.transitionDuration = 0;
+
+						var bullet = series
+							.bullets
+							.push(new am4charts.CircleBullet());
+						bullet.circle.radius = 5;
+					} else if (field == "value7") {
+						var series = chart_7
+							.series
+							.push(new am4charts.LineSeries());
+						series.dataFields.valueY = field;
+						series.dataFields.categoryX = "year";
+						series.name = name;
+						series.tooltipText = "";
+						series.strokeWidth = 3;
+						series.yAxis = valueAxis1;
+						series.stroke = am4core.color("#6c89cc");
+						series.fill = am4core.color("#6c89cc");
+						// Set up tooltip
+						series
+							.adapter
+							.add("tooltipText", function (ev) {
+								var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+								chart_7
+									.series
+									.each(function (item) {
+										if (item.name == "학생수 총계") {
+											text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-" +
+												"size: 18px]{" + item.dataFields.valueY + "}\n";
+										} else {
+											text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-" +
+												"size: 18px]{" + item.dataFields.valueY + "}\n";
+										}
+									});
+								return text;
+							});
+
+						series.tooltip.getFillFromObject = false;
+						series.tooltip.background.fill = am4core.color("#fff");
+						series.tooltip.label.fill = am4core.color("#00");
+
+						// Prevent cross-fading of tooltips
+						series.tooltip.defaultState.transitionDuration = 0;
+						series.tooltip.hiddenState.transitionDuration = 0;
+
+						var bullet = series
+							.bullets
+							.push(new am4charts.CircleBullet());
+						bullet.circle.radius = 5;
+					} else {
+						var series = chart_7
+							.series
+							.push(new am4charts.ColumnSeries());
+						series.dataFields.valueY = field;
+						series.dataFields.categoryX = "year";
+						series.name = name;
+						series.yAxis = valueAxis1;
+						// Set up tooltip
+						series
+							.adapter
+							.add("tooltipText", function (ev) {
+								var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+								chart_7
+									.series
+									.each(function (item) {
+										if (item.name == "총계") {
+											text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-" +
+												"size: 18px]{" + item.dataFields.valueY + "}\n";
+										} else {
+											text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-" +
+												"size: 18px]{" + item.dataFields.valueY + "}\n";
+										}
+									});
+								return text;
+							});
+						series.tooltip.getFillFromObject = false;
+						series.tooltip.background.fill = am4core.color("#fff");
+						series.tooltip.label.fill = am4core.color("#00");
+						series.stacked = stacked;
+						series.columns.template.width = am4core.percent(20);
+					}
+				}
+
+				createSeries7("value1", "학교수", false);
+				createSeries7("value2", "유치원 원아수", true);
+				createSeries7("value3", "초등학교 학생수", true);
+				createSeries7("value4", "중학교 학생수", true);
+				createSeries7("value5", "고등학교 학생수", true);
+				createSeries7("value6", "대학교 학생수", true);
+				createSeries7("value7", "학생수 총계", false);
+
+				// Add legend
+				chart_7.legend = new am4charts.Legend();
+
+				// Add cursor
+				chart_7.cursor = new am4charts.XYCursor();
+				chart_7.cursor.maxTooltipDistance = 0;
+				chart_7.cursor.behavior = 'none';
+				chart_7.logo.height = -15000;
+			});
+		}
+	}
+</script>

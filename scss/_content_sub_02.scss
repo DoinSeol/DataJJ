@@ -95,7 +95,7 @@ section{
               border: 1px solid #ddd;
               border-bottom: 2px solid #ddd;
               text-align:center;
-              padding: 16px;
+              padding: 8px 16px;
               box-sizing: border-box;
               cursor: pointer;
               &.act {
@@ -122,7 +122,7 @@ section{
               .visual_menu_btn_area {
                 background-color: #fff;
                 border: 1px solid #ddd;
-                border-top: none;
+                border-top: none; padding: 8px 0;
                 
                 .visual_menu_btn_tab {
                   font-size: 14px;
