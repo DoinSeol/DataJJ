@@ -16,16 +16,50 @@
   }
   tbody {
     tr {
+      border-bottom: 1px solid #ddd;
+      p {line-height: 1.5;}
+      th, td {
+        border-right: 1px solid #ddd;
+        &:last-child {border-right: none;}
+      }
+      th {
+        padding: 16px 8px 12px;
+        background-color: #eeeeee;
+        // color: #053153;
+        font-weight: bold;
+        vertical-align : middle;
+        text-align: center;
+      }
       td {
         padding: 14px;
         font-size: 14px;
-        border-bottom: 1px solid #ddd;
         vertical-align : middle;
-        &:nth-of-type(odd) {background-color: #f5f5f5; text-align: center; font-weight: bold; min-width: 100px;}
+        border-right: 1px solid #ddd;
+        // &:nth-of-type(odd) {background-color: #f5f5f5; text-align: center; font-weight: bold; min-width: 100px;}
+        &:first-child {background-color: #f5f5f5; text-align: center; font-weight: bold; min-width: 100px;}
       }
     }
   }
 }
+
+// 02_03_경제·산업 지표 세부 내용
+.chart_R_mixed {
+  tbody{
+    tr {
+      td {
+        background-color: transparent;
+        text-align: center;
+        &:first-child {background-color: transparent; font-weight: normal;}
+        &.first_column {
+          background-color: #eeeeee;
+          font-weight: bold;
+          vertical-align : middle;
+        }
+      }
+    }
+  }
+}
+
 
 // 
 .chart_C_basic {

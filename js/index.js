@@ -68,6 +68,20 @@ $(document).ready(function(){
 
 
 
+  // 02_05 상권분석정보
+  // tab_menu
+  $('ul.info_business_menu_btn_area li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.info_business_menu_btn_area li').removeClass('act');
+    $('.info_business_menu_content_area').removeClass('act');
+
+    $(this).addClass('act');
+    $("#"+tab_id).addClass('act');
+  })
+
+
+
   // 03_01_통계보고서
   $('.report_list_box').click(function(){
     $('.report_list').slideUp();

@@ -65,7 +65,18 @@ section {
           margin-right: 6px;
         }
       }
-      .sub_cont_inner {padding-top: 18px; margin-bottom: 32px; gap: 24px;}
+      .sub_cont_inner {
+        padding-top: 18px; margin-bottom: 32px; gap: 24px;
+
+        .summary_direct_bt_box {
+          text-align: center;
+          gap: 18px;
+          p {
+            line-height: 1.5;
+          }
+          .btn_square_navy {}
+        }
+      }
 
       h2.sub_cont_sub_title {
         position: relative;
