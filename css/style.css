@@ -1471,10 +1471,10 @@ section .sub_cont_wrap .sub_cont h3.sub_num_title::before {
   text-align: center;
   color: #fff;
   display: inline-block;
-  width: 16px;
+  width: 18px;
   height: 18px;
   padding: 6px 4px;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
   background-color: #0D7ACF;
   border-radius: 4px;
   margin-right: 6px;
