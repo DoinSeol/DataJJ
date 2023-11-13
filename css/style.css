@@ -2550,6 +2550,12 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.visual_tab_wrap
   color: #404a6f;
   font-weight: 600;
 }
+section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.info_business_wrap ul.info_business_menu_btn_area li.visual_menu_btn_tab.btn {
+  border-radius: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 @media screen and (min-width: 400px) {
   section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.yearly_list_box_wrap .yearly_list_box .yearly_list {
     width: calc(50% - 6px);
@@ -2562,9 +2568,14 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.visual_tab_wrap
   section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.visual_tab_wrap {
     width: 100%;
   }
-  section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.visual_tab_wrap .dep1.visual_menu_btn_area .btn.visual_menu_btn_tab {
+  section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.visual_tab_wrap ul.visual_menu_btn_area.dep1 li.visual_menu_btn_tab.btn {
     width: 16.6666666667%;
     min-height: 25px;
+  }
+  section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.info_business_wrap.tab_style_RS ul.info_business_menu_btn_area.dep1 li.visual_menu_btn_tab.btn {
+    width: 33.3333333333%;
+    min-height: 25px;
+    border-radius: 0px;
   }
 }
 @media screen and (min-width: 920px) {
@@ -2577,6 +2588,11 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.visual_tab_wrap
   section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.visual_tab_wrap .content_area.visual_menu_content_area.dep2_cont .chart .wd_half:nth-child(2) {
     width: 45%;
     border-left: 1px solid #ddd;
+  }
+  section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.info_business_wrap.tab_style_RS ul.info_business_menu_btn_area.dep1 li.visual_menu_btn_tab.btn {
+    width: 25%;
+    min-height: 25px;
+    border-radius: 0px;
   }
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.sub_intro_box_wrap .sub_intro_box {
