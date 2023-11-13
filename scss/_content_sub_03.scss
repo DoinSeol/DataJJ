@@ -234,7 +234,7 @@ section{
         }
 
 
-        // 03_02_02_통계DB_02.전주시사회조사
+        // 03_02_01_통계DB
         // .sub_cont_inner.db_visual_detail_dw_wrap {
         //   .db_visual_dw_box {
         //     text-align: center;
@@ -246,6 +246,29 @@ section{
         //     .btn_square_navy {}
         //   }
         // }
+
+        .sub_cont_inner.db_visual_detail_data_wrap {
+          .db_visual_detail_btn_area.dep1 {
+            border-bottom: 2px solid #ddd;
+            .db_visual_btn_tab.btn {
+              // background:#fff;
+              border-bottom: none;
+              width: calc(100% / 7); min-height:25px; 
+              &.act {
+                background:#0D7ACF; color: #fff;
+                border: 1px solid #0D7ACF;
+                border-bottom: none;
+              // color: #0D7ACF;
+              // background:#fff; color: #333;
+              // border: 1px solid #0D7ACF;
+              // border-bottom: 2px solid #0D7ACF;
+              }
+            }
+            .db_visual_detail_content_area.content_area.dep1_cont {
+
+            }
+          }
+        }
         
 
         // 03_03_통계 E-Book
@@ -304,6 +327,9 @@ section{
             }
           }
         }
+
+
+
 
         // 03_04_통계조사안내
         .sub_cont_inner.research_list_box_wrap {

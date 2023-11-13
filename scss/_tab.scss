@@ -18,7 +18,9 @@ section {
               text-align:center;
               padding: 12px 16px;
               box-sizing: border-box;
-              cursor: pointer;
+              overflow: hidden; 
+              text-overflow: ellipsis;
+              white-space: nowrap;
               &.act {
                 background:#0D7ACF; color: #fff;
               // background:#fff; color: #333;

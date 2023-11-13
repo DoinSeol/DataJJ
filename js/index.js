@@ -96,6 +96,23 @@ $(document).ready(function(){
     }
   });
 
+
+
+  // 03_02_통계DB
+  // 03_02_02_통계DB :: tab_menu
+  $('ul.db_visual_detail_btn_area li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.db_visual_detail_btn_area li').removeClass('act');
+    $('.db_visual_detail_content_area').removeClass('act');
+
+    $(this).addClass('act');
+    $("#"+tab_id).addClass('act');
+  })
+
+
+
+  
   // 03_04_통계조사안내
   $('.research_list_title').click(function(){
     $(this).next(".research_list").stop().slideToggle(300);
@@ -166,6 +183,8 @@ $(window).resize(function(){
   }
   
   }).resize();
+
+
 
 
 
