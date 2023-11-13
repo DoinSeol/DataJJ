@@ -94,6 +94,29 @@ section {
               list-style: none;
               .btn {
                 // float:left; 
+                width: calc(100% / 3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 서브콘텐츠::920
+@media screen and (min-width: 920px){
+  section {
+    div.sub_section {
+      .sub_cont_wrap {
+        .sub_cont {
+          .tab_style_RS {
+            .dep1 {
+              margin: 0px;
+              padding: 0px;
+              list-style: none;
+              .btn {
+                // float:left; 
                 width: calc(100% / 6); min-height:25px; 
                 background:#f5f5f5; border-radius:10px 10px 0 0;
                 border: 1px solid #ddd;
@@ -110,11 +133,9 @@ section {
                 }
               }
             }
-
           }
         }
       }
     }
   }
-  
 }
