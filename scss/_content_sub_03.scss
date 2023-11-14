@@ -235,25 +235,13 @@ section{
 
 
         // 03_02_01_통계DB
-        // .sub_cont_inner.db_visual_detail_dw_wrap {
-        //   .db_visual_dw_box {
-        //     text-align: center;
-        //     gap: 20px;
-        //     p {
-        //       line-height: 1.5;
-        //       // margin-bottom: -4px;
-        //     }
-        //     .btn_square_navy {}
-        //   }
-        // }
-
         .sub_cont_inner.db_visual_detail_data_wrap {
           .db_visual_detail_btn_area.dep1 {
             border-bottom: 2px solid #ddd;
             .db_visual_btn_tab.btn {
               // background:#fff;
               border-bottom: none;
-              width: calc(100% / 7); min-height:25px; 
+              // width: calc(100% / 7); min-height:25px; 
               &.act {
                 background:#0D7ACF; color: #fff;
                 border: 1px solid #0D7ACF;
@@ -264,9 +252,13 @@ section{
               // border-bottom: 2px solid #0D7ACF;
               }
             }
-            .db_visual_detail_content_area.content_area.dep1_cont {
+          }
 
-            }
+          .db_visual_detail_content_area.content_area.dep1_cont {
+            // div {background-color: red;}
+
+            .db_visual_detail_inner_title {}
+            .db_visual_detail_content {}
           }
         }
         
@@ -554,6 +546,9 @@ section{
             }
           }
 
+
+
+
           // 03_04_통계조사안내  
           .sub_cont_inner.research_list_box_wrap {
             ul.research_list_contain {
@@ -589,12 +584,38 @@ section{
 
 // 서브콘텐츠::1024
 @media screen and (min-width: 1024px){
-  
+  section {
+    div.sub_section {
+      .sub_cont_wrap {
+        .sub_cont {
+          // 03_02_01_통계DB
+          // .sub_cont_inner.db_visual_detail_data_wrap {
+          //   .db_visual_detail_btn_area.dep1 {
+          //     border-bottom: 2px solid #ddd;
+          //     .db_visual_btn_tab.btn {
+          //       // background:#fff;
+          //       border-bottom: none;
+          //       width: calc(100% / 7); min-height:25px; 
+          //       &.act {
+          //         background:#0D7ACF; color: #fff;
+          //         border: 1px solid #0D7ACF;
+          //         border-bottom: none;
+          //       // color: #0D7ACF;
+          //       // background:#fff; color: #333;
+          //       // border: 1px solid #0D7ACF;
+          //       // border-bottom: 2px solid #0D7ACF;
+          //       }
+          //     }
+          //     .db_visual_detail_content_area.content_area.dep1_cont {
+          //       // div {background-color: red;}
+          //     }
+          //   }
+          // }
 
-
-
-
-
+        }
+      }
+    }
+  }
 }
 
 // 서브콘텐츠::1060
