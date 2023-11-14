@@ -1469,7 +1469,7 @@ section .sub_cont_wrap .sub_cont .db_visual_detail_inner:last-child {
 }
 section .sub_cont_wrap .sub_cont .db_visual_detail_inner .sub_num_title {
   position: relative;
-  padding-left: 32px;
+  padding-left: 36px;
   display: flex;
   margin-bottom: 18px;
 }
@@ -2970,9 +2970,9 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detai
   border-bottom: none;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1 .db_visual_btn_tab.btn.act {
-  background: #0D7ACF;
+  background: #053153;
   color: #fff;
-  border: 1px solid #0D7ACF;
+  border: 1px solid #053153;
   border-bottom: none;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.data_set_box_wrap .data_set_box .data_set_3 .data_set_serch_box select {
