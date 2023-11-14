@@ -1648,6 +1648,24 @@ section .sub_cont_wrap .sub_cont .db_visual_detail_inner ul.db_visual_detail_con
   vertical-align: middle;
 }
 
+.chart_R_mixed_NL {
+  border-top: none;
+  border-bottom: none;
+}
+.chart_R_mixed_NL tbody tr td {
+  background-color: transparent;
+  text-align: center;
+}
+.chart_R_mixed_NL tbody tr td:first-child {
+  background-color: transparent;
+  font-weight: normal;
+}
+.chart_R_mixed_NL tbody tr td.first_column {
+  background-color: #eeeeee;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
 .chart_C_basic {
   width: 100%;
   position: relative;
@@ -2964,7 +2982,7 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_wrap 
   background-color: #ffa217;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1 {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 3px solid #053153;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1 .db_visual_btn_tab.btn {
   border-bottom: none;

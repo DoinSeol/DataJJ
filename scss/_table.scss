@@ -61,6 +61,25 @@
 }
 
 
+.chart_R_mixed_NL {
+  border-top: none;
+  border-bottom: none;
+  tbody{
+    tr {
+      td {
+        background-color: transparent;
+        text-align: center;
+        &:first-child {background-color: transparent; font-weight: normal;}
+        &.first_column {
+          background-color: #eeeeee;
+          font-weight: bold;
+          vertical-align : middle;
+        }
+      }
+    }
+  }
+}
+
 // 
 .chart_C_basic {
   width: 100%;
