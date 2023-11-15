@@ -145,6 +145,7 @@ section {
 
             .db_visual_chart {
               width: 100%; height: 200px;
+              overflow-x: auto;
               img {height: 100%;}
             }
             .db_visual_title {

@@ -1525,6 +1525,7 @@ section .sub_cont_wrap .sub_cont .db_visual_detail_inner .db_visual_detail_conte
 section .sub_cont_wrap .sub_cont .db_visual_detail_inner .db_visual_detail_content li.db_visual_chart_box .db_visual_chart {
   width: 100%;
   height: 200px;
+  overflow-x: auto;
 }
 section .sub_cont_wrap .sub_cont .db_visual_detail_inner .db_visual_detail_content li.db_visual_chart_box .db_visual_chart img {
   height: 100%;
@@ -2983,9 +2984,18 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_wrap 
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1 {
   border-bottom: 3px solid #053153;
+  align-items: stretch;
+}
+section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1.tab_box_5 .db_visual_btn_tab.btn {
+  width: 20%;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1 .db_visual_btn_tab.btn {
   border-bottom: none;
+  border-radius: 0px;
+  min-height: 25px;
+}
+section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1 .db_visual_btn_tab.btn.blank {
+  background-color: #ddd;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1 .db_visual_btn_tab.btn.act {
   background: #053153;

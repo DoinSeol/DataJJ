@@ -238,10 +238,16 @@ section{
         .sub_cont_inner.db_visual_detail_data_wrap {
           .db_visual_detail_btn_area.dep1 {
             border-bottom: 3px solid #053153;
+            align-items: stretch;
+            &.tab_box_5 .db_visual_btn_tab.btn {width: calc(100% / 5);}
+            
             .db_visual_btn_tab.btn {
               // background:#fff;
               border-bottom: none;
-              // width: calc(100% / 7); min-height:25px; 
+              border-radius: 0px;
+              
+              min-height:25px; 
+              &.blank {background-color: #ddd;}
               &.act {
                 background:#053153; color: #fff;
                 border: 1px solid #053153;
