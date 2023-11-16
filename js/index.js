@@ -83,18 +83,29 @@ $(document).ready(function(){
 
 
   // 03_01_통계보고서
-  $('.report_list_box').click(function(){
-    $('.report_list').slideUp();
-    $('.report_list_box').removeClass( 'active' );
-      if (
-      $(this).children('.report_list').is(':hidden')){
-      $(this).children('.report_list').slideDown();
-      $(this).addClass( 'active' );
-    } else{
-      $(this).children('.report_list').slideUp();
-      $(this).removeClass( 'active' );
-    }
+  // $('.report_list_box').click(function(){
+  //   $('.report_list').slideUp();
+  //   $('.report_list_box').removeClass( 'active' );
+  //     if (
+  //     $(this).children('.report_list').is(':hidden')){
+  //     $(this).children('.report_list').slideDown();
+  //     $(this).addClass( 'active' );
+  //   } else{
+  //     $(this).children('.report_list').slideUp();
+  //     $(this).removeClass( 'active' );
+  //   }
+  // });
+
+  $('.report_list_box.title').click(function(){
+    $(this).next(".content").stop().slideToggle(300);
+    $(this).toggleClass('active').siblings().removeClass('active');
+    $(this).next(".content").siblings(".content").slideUp(300); // 1개씩 펼치기
   });
+
+  $('.report_list_box a').click(function(e){
+    e.preventDefault();   
+  });
+
 
 
 
@@ -116,8 +127,11 @@ $(document).ready(function(){
   // 03_04_통계조사안내
   $('.research_list_title').click(function(){
     $(this).next(".research_list").stop().slideToggle(300);
-    $(this).toggleClass('active').siblings().removeClass('active');
-    $(this).next(".research_list").siblings(".research_list").slideUp(300); // 1개씩 펼치기
+    $(this).toggleClass('active');
+    // $(this).toggleClass('active').siblings().removeClass('active');
+    // $(this).next(".research_list").siblings(".research_list").slideUp(300); // 1개씩 펼치기
+
+
   });
 
 });

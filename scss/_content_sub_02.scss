@@ -55,7 +55,7 @@ section{
               &:nth-child(1) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_01.png");}
               &:nth-child(2) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_02.png");}
               &:nth-child(3) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_03.png");}
-              &:nth-child(4) .yearly_list_icon {background-image: url("../images/icotn_tabn_sub_cont/yearly_icon_04.png");}
+              &:nth-child(4) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_04.png");}
               &:nth-child(5) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_05.png");}
               &:nth-child(6) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_06.png");}
               &:nth-child(7) .yearly_list_icon {background-image: url("../images/icon_sub_cont/yearly_icon_07.png");}
@@ -110,8 +110,11 @@ section{
                 .population_graph01 { height:100px;}
                 .population_graph02 { height:270px;}
                 .population_graph03 {height:350px; margin-top:30px;}
-                .chart_height {height:350px;}
-                tspan {font-size: 12px;}
+                .chart_height {height:400px;}
+                tspan {
+                  font-size: 12px;
+                  letter-spacing: -1;
+                }
                 // .wd_half:nth-child(2) {border-left: 1px solid #ddd;}
 
                 .wd_half {

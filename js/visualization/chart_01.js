@@ -329,12 +329,12 @@ function chart_drawing(val) {
           series.fill = am4core.color("#fdd400");
           // Set up tooltip
           series.adapter.add("tooltipText", function (ev) {
-            var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+            var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
             chart_2.series.each(function (item) {
               if (item.name == "세대당 인구") {
-                text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               } else {
-                text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               }
             });
             return text;
@@ -357,12 +357,12 @@ function chart_drawing(val) {
           series.name = name;
           // Set up tooltip
           series.adapter.add("tooltipText", function (ev) {
-            var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+            var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
             chart_2.series.each(function (item) {
               if (item.name == "세대당 인구") {
-                text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               } else {
-                text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               }
             });
             return text;
@@ -688,16 +688,16 @@ function chart_drawing(val) {
           series.fill = am4core.color("#fdd400");
           // Set up tooltip
           series.adapter.add("tooltipText", function (ev) {
-            var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+            var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
             chart_3.series.each(function (item) {
               if (item.name == "평균연령") {
-                text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               } else if (item.name == "남자 인구수") {
-                text += "[" + item.stroke.hex + "]◐[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]◐[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               } else if (item.name == "여자 인구수") {
-                text += "[" + item.stroke.hex + "]◑[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]◑[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               } else {
-                text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               }
             });
             return text;
@@ -721,16 +721,16 @@ function chart_drawing(val) {
           series.name = name;
           // Set up tooltip
           series.adapter.add("tooltipText", function (ev) {
-            var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+            var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
             chart_3.series.each(function (item) {
               if (item.name == "평균연령") {
-                text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               } else if (item.name == "남자 인구수") {
-                text += "[" + item.stroke.hex + "]◐[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]◐[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               } else if (item.name == "여자 인구수") {
-                text += "[" + item.stroke.hex + "]◑[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]◑[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               } else {
-                text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               }
             });
             return text;
@@ -869,12 +869,12 @@ function chart_drawing(val) {
           series.fill = am4core.color("#fdd400");
           // Set up tooltip
           series.adapter.add("tooltipText", function (ev) {
-            var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+            var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
             chart_4.series.each(function (item) {
               if (item.name == "평균연령") {
-                text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               } else {
-                text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               }
             });
             return text;
@@ -900,12 +900,12 @@ function chart_drawing(val) {
           series.name = name;
           // Set up tooltip
           series.adapter.add("tooltipText", function (ev) {
-            var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+            var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
             chart_4.series.each(function (item) {
               if (item.name == "평균연령") {
-                text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               } else {
-                text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+                text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
               }
             });
             return text;
@@ -1020,9 +1020,9 @@ function chart_drawing(val) {
 
         // Set up tooltip
         series.adapter.add("tooltipText", function (ev) {
-          var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+          var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
           chart_5.series.each(function (item) {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
           });
           return text;
         });
@@ -1152,9 +1152,9 @@ function chart_drawing(val) {
 
         // Set up tooltip
         series.adapter.add("tooltipText", function (ev) {
-          var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+          var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
           chart_6.series.each(function (item) {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
           });
           return text;
         });
@@ -1284,15 +1284,15 @@ function chart_drawing(val) {
           series
             .adapter
             .add("tooltipText", function (ev) {
-              var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+              var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
               chart_7
                 .series
                 .each(function (item) {
                   if (item.name == "학교 수") {
-                    text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-" +
+                    text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-" +
                       "size: 18px]{" + item.dataFields.valueY + "}\n";
                   } else {
-                    text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-" +
+                    text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-" +
                       "size: 18px]{" + item.dataFields.valueY + "}\n";
                   }
                 });
@@ -1327,15 +1327,15 @@ function chart_drawing(val) {
           series
             .adapter
             .add("tooltipText", function (ev) {
-              var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+              var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
               chart_7
                 .series
                 .each(function (item) {
                   if (item.name == "학생수 총계") {
-                    text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-" +
+                    text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-" +
                       "size: 18px]{" + item.dataFields.valueY + "}\n";
                   } else {
-                    text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-" +
+                    text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-" +
                       "size: 18px]{" + item.dataFields.valueY + "}\n";
                   }
                 });
@@ -1366,15 +1366,15 @@ function chart_drawing(val) {
           series
             .adapter
             .add("tooltipText", function (ev) {
-              var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+              var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
               chart_7
                 .series
                 .each(function (item) {
                   if (item.name == "총계") {
-                    text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-" +
+                    text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-" +
                       "size: 18px]{" + item.dataFields.valueY + "}\n";
                   } else {
-                    text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-" +
+                    text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-" +
                       "size: 18px]{" + item.dataFields.valueY + "}\n";
                   }
                 });
@@ -1554,15 +1554,15 @@ function createSeries8(field, name, stacked) {
     series.fill = am4core.color("#fdd400");
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_2_1.series.each(function(item) {
         if(item.name == "총계")
         {
-          text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+          text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
         }          
         else
         {
-          text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+          text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
         }
       });
       return text;
@@ -1588,15 +1588,15 @@ function createSeries8(field, name, stacked) {
     series.yAxis = valueAxis1;
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_2_1.series.each(function(item) {
         if(item.name == "총계")
         {
-          text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+          text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
         }          
         else
         {
-          text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+          text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
         }
       });
       return text;
@@ -1762,15 +1762,15 @@ chart_2_2 = am4core.create("chart_02_02", am4charts.XYChart);
       series.fill = am4core.color("#fdd400");
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_2_2.series.each(function(item) {
           if(item.name == "총계")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }          
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }
         });
         return text;
@@ -1796,15 +1796,15 @@ chart_2_2 = am4core.create("chart_02_02", am4charts.XYChart);
       series.yAxis = valueAxis1;
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_2_2.series.each(function(item) {
           if(item.name == "총계")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }          
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }
         });
         return text;
@@ -1943,15 +1943,15 @@ function createSeries10(field, name, stacked) {
     series.fill = am4core.color("#fdd400");
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_2_3.series.each(function(item) {
         if(item.name == "총계")
         {
-          text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+          text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
         }          
         else
         {
-          text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+          text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
         }
       });
       return text;
@@ -1977,15 +1977,15 @@ function createSeries10(field, name, stacked) {
     series.yAxis = valueAxis1;
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_2_3.series.each(function(item) {
         if(item.name == "총계")
         {
-          text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+          text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
         }          
         else
         {
-          text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+          text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
         }
       });
       return text;
@@ -2132,15 +2132,15 @@ function createSeries11(field, name, stacked) {
     series.fill = am4core.color("#fdd400");
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_2_4.series.each(function(item) {
         if(item.name == "총계")
         {
-          text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+          text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
         }          
         else
         {
-          text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+          text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
         }
       });
       return text;
@@ -2166,15 +2166,15 @@ function createSeries11(field, name, stacked) {
     series.yAxis = valueAxis1;
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_2_4.series.each(function(item) {
         if(item.name == "총계")
         {
-          text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+          text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
         }          
         else
         {
-          text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+          text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
         }
       });
       return text;
@@ -2274,9 +2274,9 @@ series.strokeWidth = 3;
 
 // Set up tooltip
 series.adapter.add("tooltipText", function(ev) {
-var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
 chart_2_5.series.each(function(item) {
-text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "}%\n";
+text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "}%\n";
 });
 return text;
 });
@@ -2437,9 +2437,9 @@ function createSeries13(field, name) {
 
   // Set up tooltip
   series.adapter.add("tooltipText", function(ev) {
-    var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+    var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
     chart_2_6.series.each(function(item) {
-      text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 명\n";
+      text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 명\n";
     });
     return text;
   });
@@ -2614,15 +2614,15 @@ am4core.useTheme(am4themes_animated);
       series.fill = am4core.color("#fdd400");
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_2_7.series.each(function(item) {
           if(item.name == "총계")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }          
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }
         });
         return text;
@@ -2648,15 +2648,15 @@ am4core.useTheme(am4themes_animated);
       series.yAxis = valueAxis1;
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_2_7.series.each(function(item) {
           if(item.name == "총계")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }          
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }
         });
         return text;
@@ -2830,15 +2830,15 @@ am4core.useTheme(am4themes_animated);
       series.fill = am4core.color("#fdd400");
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_2_8.series.each(function(item) {
           if(item.name == "총계")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }          
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }
         });
         return text;
@@ -2864,15 +2864,15 @@ am4core.useTheme(am4themes_animated);
       series.yAxis = valueAxis1;
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_2_8.series.each(function(item) {
           if(item.name == "총계")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }          
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }
         });
         return text;
@@ -2980,9 +2980,9 @@ if(val == 'chart_box_03_01'){
 
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_3_1.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "}%\n";
+        text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "}%\n";
       });
       return text;
     });
@@ -3114,9 +3114,9 @@ if(val == 'chart_box_03_02'){
 
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_3_2.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "}%\n";
+        text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "}%\n";
       });
       return text;
     });
@@ -3220,9 +3220,9 @@ if(val == 'chart_box_03_03'){
 
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_3_3.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 천명\n";
+        text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 천명\n";
       });
       return text;
     });
@@ -3345,9 +3345,9 @@ if(val == 'chart_box_03_04'){
 
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_3_4.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 천명\n";
+        text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 천명\n";
       });
       return text;
     });
@@ -3513,12 +3513,12 @@ series.stroke = am4core.color("#fdd400");
 series.fill = am4core.color("#fdd400");
 // Set up tooltip
 series.adapter.add("tooltipText", function(ev) {
-var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
 chart_3_5.series.each(function(item) {
 if (item.name == "총계") {
-text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
 } else {
-text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
 }
 });
 return text;
@@ -3541,12 +3541,12 @@ series.dataFields.categoryX = "year";
 series.name = name;
 // Set up tooltip
 series.adapter.add("tooltipText", function(ev) {
-var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
 chart_3_5.series.each(function(item) {
 if (item.name == "총계") {
-text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
 } else {
-text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
 }
 });
 return text;
@@ -3693,12 +3693,12 @@ if(val == 'chart_box_03_06'){
       series.fill = am4core.color("#fdd400");
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_3_6.series.each(function(item) {
           if (item.name == "총계") {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
           } else {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
           }
         });
         return text;
@@ -3721,12 +3721,12 @@ if(val == 'chart_box_03_06'){
       series.name = name;
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_3_6.series.each(function(item) {
           if (item.name == "총계") {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
           } else {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
           }
         });
         return text;
@@ -3809,9 +3809,9 @@ if(val == 'chart_box_03_07'){
 
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_3_7.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+        text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
       });
       return text;
     });
@@ -4041,9 +4041,9 @@ if(val == 'chart_box_03_08'){
 
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_3_8.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+        text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
       });
       return text;
     });
@@ -4055,8 +4055,8 @@ if(val == 'chart_box_03_08'){
     series.tooltip.defaultState.transitionDuration = 0;
     series.tooltip.hiddenState.transitionDuration = 0;
 
-    // series.columns.template.tooltipText = "[font-size: 12px bold]{year} 년
-    // [font-size: 12px bold]{name}: [font-size: 12px]{valueY}[/]";
+    // series.columns.template.tooltipText = "[font-size: 14px bold]{year} 년
+    // [font-size: 14px bold]{name}: [font-size: 14px]{valueY}[/]";
     series.stacked = stacked;
     series.columns.template.width = am4core.percent(60);
   }
@@ -4160,9 +4160,9 @@ if(val == 'chart_box_03_09'){
 
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_3_9.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + ": [font-size: 12px]{" + item.dataFields.valueY + "}\n";
+        text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + ": [font-size: 14px]{" + item.dataFields.valueY + "}\n";
       });
       return text;
     });
@@ -4174,8 +4174,8 @@ if(val == 'chart_box_03_09'){
     series.tooltip.defaultState.transitionDuration = 0;
     series.tooltip.hiddenState.transitionDuration = 0;
 
-    // series.columns.template.tooltipText = "[font-size: 12px bold]{year} 년
-    // [font-size: 12px bold]{name}: [font-size: 12px]{valueY}[/]";
+    // series.columns.template.tooltipText = "[font-size: 14px bold]{year} 년
+    // [font-size: 14px bold]{name}: [font-size: 14px]{valueY}[/]";
     series.stacked = stacked;
     series.columns.template.width = am4core.percent(60);
   }
@@ -4299,9 +4299,9 @@ if (val == 'chart_box_04_01') {
 
       // Set up tooltip
       series.adapter.add("tooltipText", function (ev) {
-        var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_4_1.series.each(function (item) {
-          text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "}℃\n";
+          text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "}℃\n";
         });
         return text;
       });
@@ -4404,9 +4404,9 @@ if (val == 'chart_box_04_02') {
       series.name = name;
       // Set up tooltip
       series.adapter.add("tooltipText", function (ev) {
-        var text = "[font-size: 12px bold]{categoryX}[/]\n"
+        var text = "[font-size: 14px bold]{categoryX}[/]\n"
         chart_4_2.series.each(function (item) {
-          text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} mm\n";
+          text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} mm\n";
         });
         return text;
       });
@@ -4513,9 +4513,9 @@ if (val == 'chart_box_04_03') {
 
       // Set up tooltip
       series.adapter.add("tooltipText", function (ev) {
-        var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_4_3.series.each(function (item) {
-          text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} pm\n";
+          text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} pm\n";
         });
         return text;
       });
@@ -4644,13 +4644,13 @@ if (val == 'chart_box_04_04') {
         series.fill = am4core.color("#fdd400");
         // Set up tooltip
         series.adapter.add("tooltipText", function (ev) {
-          var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+          var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
           chart_4_4.series.each(function (item) {
             if (item.name == "폐기물재활용률(%)") {
-              text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} %\n";
+              text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} %\n";
             }
             else {
-              text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 톤/일\n";
+              text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 톤/일\n";
             }
           });
           return text;
@@ -4675,13 +4675,13 @@ if (val == 'chart_box_04_04') {
         series.yAxis = valueAxis1;
         // Set up tooltip
         series.adapter.add("tooltipText", function (ev) {
-          var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+          var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
           chart_4_4.series.each(function (item) {
             if (item.name == "폐기물재활용률(%)") {
-              text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} %\n";
+              text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} %\n";
             }
             else {
-              text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 톤/일\n";
+              text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 톤/일\n";
             }
           });
           return text;
@@ -4782,13 +4782,13 @@ if (val == 'chart_box_04_05') {
         series.fill = am4core.color("#fdd400");
         // Set up tooltip
         series.adapter.add("tooltipText", function (ev) {
-          var text = "[font-size: 12px bold]{categoryX}[/]\n"
+          var text = "[font-size: 14px bold]{categoryX}[/]\n"
           chart_4_5.series.each(function (item) {
             if (item.name == "수거율") {
-              text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} %\n";
+              text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} %\n";
             }
             else {
-              text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 톤/일\n";
+              text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 톤/일\n";
             }
           });
           return text;
@@ -4813,13 +4813,13 @@ if (val == 'chart_box_04_05') {
         series.yAxis = valueAxis;
         // Set up tooltip
         series.adapter.add("tooltipText", function (ev) {
-          var text = "[font-size: 12px bold]{categoryX}[/]\n"
+          var text = "[font-size: 14px bold]{categoryX}[/]\n"
           chart_4_5.series.each(function (item) {
             if (item.name == "수거율") {
-              text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} %\n";
+              text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} %\n";
             }
             else {
-              text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 톤/일\n";
+              text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 톤/일\n";
             }
           });
           return text;
@@ -4931,13 +4931,13 @@ if (val == 'chart_box_04_06') {
         series.fill = am4core.color("#fdd400");
         // Set up tooltip
         series.adapter.add("tooltipText", function (ev) {
-          var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+          var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
           chart_4_6.series.each(function (item) {
             if (item.name == "총계") {
-              text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 천㎡\n";
+              text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 천㎡\n";
             }
             else {
-              text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 천㎡\n";
+              text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 천㎡\n";
             }
           });
           return text;
@@ -4962,13 +4962,13 @@ if (val == 'chart_box_04_06') {
         series.yAxis = valueAxis1;
         // Set up tooltip
         series.adapter.add("tooltipText", function (ev) {
-          var text = "[font-size: 12px bold]{categoryX} 기준[/]\n"
+          var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
           chart_4_6.series.each(function (item) {
             if (item.name == "총계") {
-              text += "[" + item.stroke.hex + "]●[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 천㎡\n";
+              text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 천㎡\n";
             }
             else {
-              text += "[" + item.stroke.hex + "]■[/] [font-size: 12px bold]" + item.name + " : [font-size: 12px]{" + item.dataFields.valueY + "} 천㎡\n";
+              text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 천㎡\n";
             }
           });
           return text;
@@ -5094,9 +5094,9 @@ if(val == 'chart_box_05_01'){
     series.name = name;
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_5_1.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 대\n";
+        text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 대\n";
       });
       return text;
     });
@@ -5219,9 +5219,9 @@ if(val == 'chart_box_05_02'){
     series.name = name;
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_5_2.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 대\n";
+        text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 대\n";
       });
       return text;
     });
@@ -5353,15 +5353,15 @@ if(val == 'chart_box_05_03'){
       series.fill = am4core.color("#fdd400");
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_5_3.series.each(function(item) {
           if(item.name == "총계")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} m\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} m\n";
           }          
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} m\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} m\n";
           }
         });
         return text;
@@ -5387,15 +5387,15 @@ if(val == 'chart_box_05_03'){
       series.yAxis = valueAxis1;
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_5_3.series.each(function(item) {
           if(item.name == "총계")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} m\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} m\n";
           }          
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} m\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} m\n";
           }
         });
         return text;
@@ -5488,15 +5488,15 @@ if(val == 'chart_box_05_04'){
     series.name = name;
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_5_4.series.each(function(item) {
         if(item.name == "사고(건)")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 건\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 건\n";
           }          
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 명\n";
           }
       });
       return text;
@@ -5625,19 +5625,19 @@ if(val == 'chart_box_05_05'){
       series.fill = am4core.color("#fdd400");
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_5_5.series.each(function(item) {
           if(item.name == "피해액(천원)")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 천원\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 천원\n";
           }          
           else if(item.name == "인명피해(명)")        
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 명\n";
           }
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 건\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 건\n";
           }
         });
         return text;
@@ -5663,19 +5663,19 @@ if(val == 'chart_box_05_05'){
       series.yAxis = valueAxis1;
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_5_5.series.each(function(item) {
           if(item.name == "피해액(천원)")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 천원\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 천원\n";
           }
           else if(item.name == "인명피해(명)")        
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 명\n";
           }
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 건\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 건\n";
           }
         });
         return text;
@@ -5765,15 +5765,15 @@ if(val == 'chart_box_05_06'){
     series.name = name;
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_5_6.series.each(function(item) {
         if(item.name == "구급환자(명)")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 명\n";
           }          
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 건\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 건\n";
           }
       });
       return text;
@@ -5821,7 +5821,7 @@ if(val == 'chart_box_05_06'){
 
 
 /*----- 06_관광·문화 Chart 영역---------------------------------------------------------------------------*/
-/* 06_01_주요관관지관광객수 -----------------------------------------------------------*/
+/* 06_01_주요관광지관광객수 -----------------------------------------------------------*/
 if(val == 'chart_box_06_01'){
   am4core.ready(function() {
   am4core.useTheme(am4themes_animated);
@@ -5940,9 +5940,9 @@ if(val == 'chart_box_06_01'){
 
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_6_1.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 명\n";
+        text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 명\n";
       });
       return text;
     });
@@ -6108,15 +6108,15 @@ if(val == 'chart_box_06_03'){
       series.fill = am4core.color("#fdd400");
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_6_3.series.each(function(item) {
           if(item.name == "총계")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }          
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }
         });
         return text;
@@ -6142,15 +6142,15 @@ if(val == 'chart_box_06_03'){
       series.yAxis = valueAxis1;
       // Set up tooltip
       series.adapter.add("tooltipText", function(ev) {
-        var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+        var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
         chart_6_3.series.each(function(item) {
           if(item.name == "총계")
           {
-            text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }          
           else
           {
-            text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 개소\n";
+            text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
           }
         });
         return text;
@@ -6236,9 +6236,9 @@ if(val == 'chart_box_06_04'){
     series.name = name;
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_6_4.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 개소\n";
+        text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
       });
       return text;
     });
@@ -6323,9 +6323,9 @@ if(val == 'chart_box_06_05'){
 
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_6_5.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]■[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 개소\n";
+        text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 개소\n";
       });
       return text;
     });
@@ -6337,7 +6337,7 @@ if(val == 'chart_box_06_05'){
     series.tooltip.defaultState.transitionDuration = 0;
     series.tooltip.hiddenState.transitionDuration = 0;
 
-    //series.columns.template.tooltipText = "[font-size: 18px bold]{year} 년 [font-size: 18px bold]{name}: [font-size: 18px]{valueY}[/]";
+    //series.columns.template.tooltipText = "[font-size: 14px bold]{year} 년 [font-size: 14px bold]{name}: [font-size: 14px]{valueY}[/]";
     series.stacked = stacked;
     series.columns.template.width = am4core.percent(60);
   }
@@ -6429,9 +6429,9 @@ if(val == 'chart_box_06_06'){
 
     // Set up tooltip
     series.adapter.add("tooltipText", function(ev) {
-      var text = "[font-size: 18px bold]{categoryX} 기준[/]\n"
+      var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
       chart_6_6.series.each(function(item) {
-        text += "[" + item.stroke.hex + "]●[/] [font-size: 18px bold]" + item.name + " : [font-size: 18px]{" + item.dataFields.valueY + "} 권\n";
+        text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 권\n";
       });
       return text;
     });
