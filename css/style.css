@@ -29,6 +29,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  list-style: none;
 }
 
 a {
@@ -3316,6 +3317,247 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.research_list_b
 @media screen and (min-width: 1400px) {
   section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_wrap .db_visual_box {
     width: calc(25% - 12px);
+  }
+}
+section .sub_section.login {
+  padding: 0px;
+  background-color: #f5f5f5;
+}
+section .sub_section.login .login_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+}
+section .sub_section.login .login_container .login_top {
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid #ddd;
+  padding-left: 24px;
+}
+section .sub_section.login .login_container .login_top a {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../images/logo/logo.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto;
+}
+section .sub_section.login .login_container .login_area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+section .sub_section.login .login_container .login_area .login_title h1 {
+  color: #555;
+}
+section .sub_section.login .login_container .login_area .login_bt_box {
+  padding: 32px 12px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  gap: 12px;
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt {
+  width: 100%;
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(1) a .login_icon {
+  background-image: url("../login/images/login_01_i.png");
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(2) a .login_icon {
+  background-image: url("../login/images/login_02_i.png");
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(3) a .login_icon {
+  background-image: url("../login/images/login_03_i.png");
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(4) a .login_icon {
+  background-image: url("../login/images/login_04_i.png");
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(1) a:hover {
+  background-color: #5529af;
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(2) a:hover {
+  background-color: #7bc5f1;
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(3) a:hover {
+  background-color: #49ac3c;
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(4) a:hover {
+  background-color: #ffcf11;
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt a:hover .login_text {
+  color: #fff;
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt a {
+  background-color: #fff;
+  width: 100%;
+  height: 65px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  translate: 0.5s;
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt a .login_icon {
+  width: 65px;
+  height: 100%;
+  margin-bottom: 0;
+  background-color: #fff;
+  border: none;
+  border-right: 1px solid #ddd;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60% auto;
+}
+section .sub_section.login .login_container .login_area .login_bt_box .login_bt a .login_text {
+  color: #555;
+  padding: 12px;
+}
+section .sub_section.login .login_container .login_area .login_page_bt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+section .sub_section.login .login_container .login_area .login_page_bt a {
+  background-color: #0D7ACF;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  width: 120px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+@media screen and (min-width: 920px) {
+  section .sub_section.login {
+    padding: 0px;
+    background-color: #f5f5f5;
+  }
+  section .sub_section.login .login_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+  }
+  section .sub_section.login .login_container .login_top {
+    width: 100%;
+    height: 64px;
+    border-bottom: 1px solid #ddd;
+    padding-left: 24px;
+  }
+  section .sub_section.login .login_container .login_top a {
+    width: 200px;
+    height: 100%;
+    background-image: url("../../images/logo/logo.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto;
+  }
+  section .sub_section.login .login_container .login_area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box {
+    padding: 32px 0 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 12px;
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt {
+    width: auto;
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(1) a .login_icon {
+    border: 5px solid #5529af;
+    background-image: url("../login/images/login_01_i.png");
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(2) a .login_icon {
+    border: 5px solid #7bc5f1;
+    background-image: url("../login/images/login_02_i.png");
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(3) a .login_icon {
+    border: 5px solid #49ac3c;
+    background-image: url("../login/images/login_03_i.png");
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(4) a .login_icon {
+    border: 5px solid #ffcf11;
+    background-image: url("../login/images/login_04_i.png");
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(1) a:hover {
+    background-color: #5529af;
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(2) a:hover {
+    background-color: #7bc5f1;
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(3) a:hover {
+    background-color: #49ac3c;
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt:nth-child(4) a:hover {
+    background-color: #ffcf11;
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt a:hover .login_text {
+    color: #fff;
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt a {
+    background-color: #fff;
+    width: 210px;
+    height: 350px;
+    padding: 24px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    translate: 0.5s;
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt a .login_icon {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% auto;
+  }
+  section .sub_section.login .login_container .login_area .login_bt_box .login_bt a .login_text {
+    color: #555;
+  }
+  section .sub_section.login .login_container .login_area .login_page_bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  section .sub_section.login .login_container .login_area .login_page_bt a {
+    background-color: #0D7ACF;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    width: 120px;
+    padding: 10px;
+    border-radius: 30px;
   }
 }
 @font-face {
