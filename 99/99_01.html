@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개선)전주시데이터포털</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script defer src="../js/index.js"></script>
+  <script defer src="../js/privacy_tab.js"></script>
+</head>
+<body>
+  <main>
+
+    <!-- 헤더:글로벌메뉴 -->
+    <header class="sub_header">
+      <div class="login_mobile">
+        <a href="../login/login.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
+          <span>로그인</span>
+        </a>
+      </div>
+
+      <div class="header_logo_wrap">
+        <a href="../index.html" title="홈으로이동"></a>
+      </div>
+
+      <nav class="gnb_menu_wrap">
+        <ul class="gnb_menu_list_wrap">
+          <li class="dep_01">
+            <a href="#">데이터개방</a>
+            <ul class="drop_down">
+              <li><a href="../01/01_01.html">공공데이터 소개</a></li>
+              <li><a href="../01/01_02.html">데이터 목록</a></li>
+              <li><a href="../01/01_03.html">데이터 요청 창구</a></li>
+              <li><a href="../01/01_04.html">설문조사</a></li>
+              <li><a href="../01/01_05.html">통합검색</a></li>
+            </ul>
+          </li>
+          <li class="dep_01">
+            <a href="#">데이터활용</a>
+            <ul class="drop_down">
+              <li><a href="../02/02_01.html">전주의 하루</a></li>
+              <li><a href="../02/02_02.html">통계 시각화</a></li>
+              <li><a href="../02/02_03.html">경제·산업동향</a></li>
+              <li><a href="../02/02_04.html">생활·지리정보</a></li>
+              <li><a href="../02/02_05.html">상권·분석정보</a></li>
+            </ul>
+          </li>
+          <li class="dep_01">
+            <a href="#">통계마당</a>
+            <ul class="drop_down">
+              <li><a href="../03/03_01.html">통계보고서</a></li></li>
+              <li><a href="../03/03_02.html">통계 DB</a></li>
+              <li><a href="../03/03_03.html">통계 E-Book</a></li>
+              <li><a href="../03/03_04.html">통계조사 안내</a></li>
+            </ul>
+          </li>
+          <li class="dep_01">
+            <a href="#">이용안내</a>
+            <ul class="drop_down">
+              <li><a href="../04/04_01.html">공지사항</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header_btn_wrap">
+        <ul>
+          <li class="dr_btn">
+            <a title="전주시청 홈페이지 새창열기" href="https://www.jeonju.go.kr/main/index.jsp" target="_blank">
+              전주시청 바로가기
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
+            </a>
+          </li>
+          <li class="login">
+            <a href="../login/login.html">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
+              <span>로그인</span>
+            </a>
+          </li>
+          <li class="all_menu_open">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+    <!-- 전체메뉴 -->
+    <div id="all_menu_contain">
+
+      <!-- <div class="all_menu_wrap"> -->
+
+        <div class="all_menu_top_wrap">
+
+          <div class="all_menu_top">
+            <a href="../index.html" title="홈으로이동"></a>
+          </div>
+
+          <div class="all_menu_close">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <nav class="all_menu_wrap">
+          <ul class="all_menu_list_wrap">
+            <li class="dep_01">
+              <a href="#">
+                데이터개방
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="../01/01_01.html">공공데이터 소개</a></li>
+                <li><a href="../01/01_02.html">데이터 목록</a></li>
+                <li><a href="../01/01_03.html">데이터 요청 창구</a></li>
+                <li><a href="../01/01_04.html">설문조사</a></li>
+                <li><a href="../01/01_05.html">통합검색</a></li>
+              </ul>
+            </li>
+            <li class="dep_01">
+              <a href="#">
+                데이터활용
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="../02/02_01.html">전주의 하루</a></li>
+                <li><a href="../02/02_02.html">통계 시각화</a></li>
+                <li><a href="../02/02_03.html">경제·산업동향</a></li>
+                <li><a href="../02/02_04.html">생활·지리정보</a></li>
+                <li><a href="../02/02_05.html">상권·분석정보</a></li>
+              </ul>
+            </li>
+            <li class="dep_01">
+              <a href="#">
+                통계마당
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="../03/03_01.html">통계보고서</a></li></li>
+                <li><a href="../03/03_02.html">통계 DB</a></li>
+                <li><a href="../03/03_03.html">통계 E-Book</a></li>
+                <li><a href="../03/03_04.html">통계조사 안내</a></li>
+              </ul>
+            </li>
+            <li class="dep_01">
+              <a href="#">
+                이용안내
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="../04/04_01.html">공지사항</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        
+      <!-- </div> -->
+    </div>
+
+
+    <!-- 서브 콘텐츠 -->
+    <section>
+      <div class="sub_section">
+        <!-- 서브 콘텐츠::top_common -->
+        <div class="sub_top_wrap">
+          <div class="sub_top">
+            <div class="sub_top_title">
+              <h1>개인정보처리방침</h1>
+            </div>
+            <div class="sub_top_navgation">
+              <a href="../index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+              </a>
+              <span>
+                <p>></p>
+                <a href="#">
+                  <p>개인정보처리방침</p>
+                </a>
+              </span>
+              <!-- <span>
+              <p>></p>
+                <a href="#">
+                  <p>공공데이터 소개</p>
+                </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 서브 콘텐츠::bottom -->
+        <div class="sub_cont_wrap">
+          <div class="sub_cont">
+            <!-- 서브 콘텐츠::99_01_개인정보처리방침 -->
+            <h2 class="sub_cont_title">전주시 개인정보처리방침</h2>
+            <div class="sub_cont_inner info_economy_wrap">
+              <div class="intro_privacy_box gray_back_box radius_m flex_c_cc summary_direct_bt_box">
+                <p>
+                  전주시는 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이정한 바를 준수하여, 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다.
+                  <!-- <br/> -->
+                  이에 「개인정보 보호법」 제30조에 따라 정보주체에게 개인정보 처리에 관한 절차 및 기준을 안내하고, 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
+                </p>
+              </div>
+            </div>
+
+
+            <h2 class="sub_cont_title">목차</h2>
+            <div class="sub_cont_inner list_privacy_wrap flex_r_bc">
+              <ul class="privacy_list_tab_box sub_font_sans">
+                <li><a href="#" data-anchor="anchor_div1">제1조 (개인정보의 처리목적)</a></li>
+                <li><a href="#" data-anchor="anchor_div2">제2조 (개인정보의 처리 및 보유기간)</a></li>
+                <li><a href="#" data-anchor="anchor_div3">제3조 (개인정보처리의 위탁에 관한 사항)</a></li>
+                <li><a href="#" data-anchor="anchor_div4">제4조 (개인정보 파기 절차 및 방법)</a></li>
+                <li><a href="#" data-anchor="anchor_div5">제5조 (정보주체와 법정대리인의 권리·의무 및 그 행사방법)</a></li>
+                <li><a href="#" data-anchor="anchor_div6">제6조 (개인정보의 안전성 확보조치)</a></li>
+                <li><a href="#" data-anchor="anchor_div7">제7조 (개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항)</a></li>
+                <li><a href="#" data-anchor="anchor_div8">제8조 (개인정보 보호책임자)</a></li>
+                <li><a href="#" data-anchor="anchor_div9">제9조 개인정보 열람청구</a></li>
+                <li><a href="#" data-anchor="anchor_div10">제10조 권익침해 구제방법</a></li>
+                <li><a href="#" data-anchor="anchor_div11">제11조 개인정보 처리방침 변경</a></li>
+              </ul>
+            </div>
+
+            <!-- <h2 class="sub_cont_title">공공데이터제공 책임관 및 실무담당자</h2> -->
+            <div class="sub_cont_inner cont_privacy_box">
+              <div class="privacy_wrap sub_font_sans flex_c_ss">
+
+                <div  id="anchor_div1" class="privacy_box">
+                  <h3>제1조 (개인정보의 처리 목적)</h3>
+                  <div class="privacy_text_box">
+                    <p><strong>전주시</strong>는 개인정보보호 종합포털(<a href="https://www.privacy.go.kr/" target="_blank">www.privacy.go.kr</a>)을 통해 공개되는 전주시 개인정보 파일 등에 대해서 명시된 목적을 사유로 처리합니다. 
+                      처리하고 있는 개인정보는 명시된 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
+                    </p>
+                  </div>
+                  <a class="btn_square_arrow_blue" title="경제·산업동향 새창열기" href="https://www.privacy.go.kr/front/wcp/dcl/per/personalInfoFileSrhList.do"  target="_blank">
+                    <span>전주시 개인정보파일 바로가기 (기관명: 전주시, 완산구, 덕진구)</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+                  </a>
+                </div>
+
+                
+                <div id="anchor_div2" class="privacy_box">
+                  <h3>제2조(개인정보의 처리 및 보유기간)</h3>
+                  <div class="privacy_text_box">
+                    <p>① <strong>전주시</strong>는 법령에 따른 개인정보 보유·이용 기간 또는 정보주체로부터 개인정보를 수집 시 동의 받은 개인정보 보유·이용기간 내에서 개인정보를 처리합니다.</p>
+                    <p>② 각각의 개인정보 처리 내용, 항목 및 보유 기간은 다음과 같습니다.</p>
+                    <ul class="num" >
+                      <li>
+                        <p>1. 개인정보 처리내용 : 공공데이터 제공신청 접수</p>
+                        <p>2. 개인정보 처리항목 : 이름, 연락처, 이메일</p>
+                        <p>3. 개인정보 보유기간 : 준영구</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                
+                <div id="anchor_div3" class="privacy_box">
+                  <h3>제3조 (개인정보처리의 위탁에 관한 사항)</h3>
+                  <div class="privacy_text_box">
+                    <p>① <strong>전주시</strong>는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.</p>
+                    <ul class="num" >
+                      <li>
+                        <h5 class="st_text">
+                          개인정보 위탁 업무 현황
+                        </h5>
+                        <p>1. 위탁자 : 좋은정보기술</p>
+                        <p>2. 위탁내용 : 전주시 데이터포털 운영관리</p>
+                        <p>3. 위탁기간 : 2023. 1. 1. ~ 12. 31.</p>
+                      </li>
+                    </ul>
+                    <p>② <strong>전주시</strong>는 위탁계약 체결 시 「개인정보 보호법」 제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적·관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리·감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</p>
+                    <p>③ 위탁업무의 내용이 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.</p>
+                    
+                  </div>
+                </div> 
+                
+                <div id="anchor_div4" class="privacy_box">
+                  <h3>제 4조 (개인정보 파기 절차 및 방법)</h3>
+                  <div class="privacy_text_box">
+                      <p>① <strong>전주시</strong>는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.</p>
+                      <p>② 정보주체로부터 동의받은 개인정보 보유기간이 경과하거나 처리목적이 달성되었음에도 불구하고 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보를 별도의 데이터베이스(DB)로 옮기거나 보관장소를 달리하여 보존합니다.</p>
+                      <p>③ 개인정보 파기의 절차 및 방법은 다음과 같습니다.</p>
+                      <ul class="num" >
+                        <li>
+                          <h5 class="st_text">1. 파기절차</h5>
+                          <p>
+                            전주시는 파기하여야 하는 개인정보(또는 개인정보파일)에 대해 개인정보 파기계획을 수립하여 파기합니다. 전주시는 파기사유가 발생한 개인정보(또는 개인정보파일)를 선정하고, 전주시의 개인정보 보호책임자의 승인을 받아 개인정보(또는 개인정보파일)을 파기합니다.
+                          </p>
+                        </li>
+                        <li>
+                          <h5 class="st_text">2. 파기방법</h5>
+                          <p>
+                            전주시는 전자적 파일 형태로 기록·저장된 개인정보는 기록을 재생할 수 없도록 파기하며, 종이 문서에 기록·저장된 개인정보는 분쇄기로 분쇄하거나 소각하여 파기합니다.
+                          </p>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+
+                <div id="anchor_div5" class="privacy_box">
+                  <h3>제 5조 (정보주체와 법정대리인의 권리·의무 및 그 행사방법)</h3>
+                  <div class="privacy_text_box">
+                    <p>① 정보주체는 전주시에 대해 언제든지 개인정보 열람·정정·삭제·처리정지 요구 등의 권리를 행사할 수 있습니다.</p>
+                    <p>② 권리행사는 전주시에 대해 「개인정보 보호법」 시행령 제41조 제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며, 전주시는 이에 대해 지체없이 조치하겠습니다.</p>
+                    <p>③ 권리행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수도 있습니다. 이 경우 “개인정보 처리 방법에 관한 고시(제2020-7호)” 별지 제11호 서식에 따른 위임장은 제출하셔야 합니다.</p>
+                    <p>④ 개인정보 열람 및 처리정지 요구는 「개인정보 보호법」 제35조 제4항, 제37조 제2항에 의하여 정보주체의 권리가 제한 될 수 있습니다.</p>
+                    <p>⑤ 개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 있습니다.</p>
+                    <p>⑥ 전주시는 정보주체 권리에 따른 열람의 요구 , 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.</p>
+                  </div>
+                </div>
+
+
+                <div id="anchor_div6" class="privacy_box">
+                
+                  <h3>제6조 (개인정보의 안전성 확보조치)</h3>
+                  <div class="privacy_text_box">
+                    <P><strong>전주시</strong>는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</P>
+                    <ul class="num">
+                      <li>
+                        <h5 class="st_text">1. 개인정보 취급 직원의 최소화 및 교육</h5>
+                        <p>개인정보를 취급하는 직원을 지정하고 담당자를 최소화하여 개인정보를 관리하는 대책을 시행하고 있습니다.</p>
+                      </li>
+                      <li>
+                        <h5 class="st_text">2. 내부관리계획의 수립 및 시행  개인정보의 안전한 처리를 위하여 내부관리계획을 수립하고 시행하고 있습니다.</h5>
+                      </li>
+                      <li>
+                        <h5 class="st_text">3. 해킹 등에 대비한 기술적 대책</h5>
+                        <p>전주시는 해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및 훼손을 막기 위하여 보안프로그램을 설치하고 주기적인 갱신·점검을 하며 외부로부터 접근이 통제된 구역에 시스템을 설치하고 기술적/물리적으로 감시 및 차단하고 있습니다.</p>
+                      </li>
+                      <li>
+                        <h5 class="st_text">4. 개인정보의 암호화</strong></h5>
+                        <p>이용자의 개인정보 및 비밀번호는 암호화 되어 저장 및 관리되고 있어 본인만이 알 수 있으며 중요한 데이터는 파일 및 전송 데이터를 암호화하거나 파일 잠금 기능을 사용하는 등의 별도 보안기능을 사용하고 있습니다.</p>
+                      </li>
+                      <li>
+                        <h5 class="st_text">5. 접속기록의 보관 및 위변조 방지</strong></h5>
+                        <p>개인정보처리시스템에 접속한 기록을 최소 1년 이상 보관, 관리하고 있으며, 다만 5만명 이상의 정보주체에 관하여 개인정보를 추가하거나, 고유식별정보 또는 민감정보를 처리하는 경우에는 2년이상 보관, 관리하고 있습니다. 또한, 접속기록이 위변조 및 도난, 분실되지 않도록 보안기능을 사용하고 있습니다.</p>
+                      </li>
+                      <li>
+                        <h5 class="st_text">6. 개인정보에 대한 접근 제한</strong></h5>
+                        <p>개인정보를 처리하는 데이터베이스시스템에 대한 접근권한의 부여, 변경, 말소를 통하여 개인정보에 대한 접근통제를 위하여 필요한 조치를 하고 있으며 침입차단시스템을 이용하여 외부로부터의 무단 접근을 통제하고 있습니다.</p>
+                      </li>
+                      <li>
+                        <h5 class="st_text">7. 문서보안을 위한 잠금장치 사용</strong></h5>
+                        <p>개인정보가 포함된 서류, 보조저장매체 등을 잠금장치가 있는 안전한 장보에 보관하고 있습니다.</p>
+                      </li>
+                      <li>
+                        <h5 class="st_text">8. 비인가자에 대한 출입 통제</strong></h5>
+                        <p>개인정보를 보관하고 있는 물리적 보관 장소를 별도로 두고 이에 대해 출입통제 절차를 수립, 운영하고 있습니다.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="anchor_div7" class="privacy_box">                
+                  <h3>제7조 (개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항)</h3>
+                  <div class="privacy_text_box">
+                    <p><strong>전주시</strong>는 정보주체의 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용하지 않습니다.</p>
+                  </div>
+                </div>
+
+                <div id="anchor_div8" class="privacy_box">                
+                  <h3>제8조 (개인정보 보호책임자)</h3>
+                  <div class="privacy_text_box">
+                    <p>① <strong>전주시</strong>는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</p>
+                    <ul class="num">
+                      <li>
+                        <h5 class="st_text">개인정보 보호책임자</h5>
+                        <p>- 성명 : 최락기</p>
+                        <p>- 직책 : 기획조정국장</p>
+                        <p>- 직급 : 지방부이사관</p>
+                        <p>- 연락처 : 063-281-2301, choihappy@korea.kr</p>
+                        <p>※ 개인정보 보호 담당부서로 연결됩니다.</p>
+                      </li>
+                      <li>
+                        <h5 class="st_text">개인정보 보호 담당부서</h5>
+                        <p>- 부서명: 기획조정국 정보화정책과</p>
+                        <p>- 담당자 : 최예서</p>
+                        <p>- 연락처 : 063-281-2490</p>
+                        <p>- 이메일 : yeseo114@korea.kr</p>
+                        <p>- 팩스 : 063-281-2860</p>
+                      </li>
+                    </ul>
+                    <p>② 정보주체께서는 전주시의 서비스(또는 사업)를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 전주시는 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.</p>
+                  </div>
+                </div>
+
+                <div id="anchor_div9" class="privacy_box">
+                  <h3>제9조 개인정보 열람청구</h3>
+                  <div class="privacy_text_box">
+                    <p>
+                      정보주체는 「개인정보 보호법」 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다. 전주시는 정보주체의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다.
+                    </p>
+                    <ul class="num">
+                      <li>
+                        <h5 class="st_text">개인정보 보호책임자</h5>
+                        <p>- 부서명 : 기획조정국 정보화정책과</p>
+                        <p>- 담당자 : 최예서</p>
+                        <p>- 연락처 : 063-281-2490</p>
+                        <p>- 이메일 : yeseo114@korea.kr</p>
+                        <p>- 팩스 : 063-281-2860</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="anchor_div10" class="privacy_box">
+                  <h3>제10조 권익침해 구제방법</h3>
+                  <div class="privacy_text_box">
+                    <p> 정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 드에 분쟁해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침애희 신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.</p>
+                      
+                    <ul class="num">
+                      <li>
+                          1. 개인정보분쟁조정위원회 : (국번없이) 1833-6972 <span><a href="https://www.kopico.go.kr/main/main.do" target="_blank">(www.kopico.go.kr)</a>
+                      </li>
+                      <li>
+                          2. 개인정보침해신고센터 : (국번없이) 118 <span><a href="https://privacy.kisa.or.kr/main.do" target="_blank">(privacy.kisa.or.kr)</a></span>
+                      </li>
+                      <li>
+                          3. 대검찰청 : (국번없이) 1301 <span><a href="https://www.spo.go.kr/site/spo/main.do" target="_blank">(www.spo.go.kr)</a></span>
+                      </li>
+                      <li>
+                          4. 경찰청 : (국번없이) 182 <span><a href="https://ecrm.police.go.kr/minwon/main" target="_blank">(ecrm.cyber.go.kr)</a></span>
+                      </li>
+                    </ul>
+                    <p>「개인정보보호법」 제35조(개인정보의 열람), 제36조(개인정보의 정정·삭제), 제37조(개인정보의 처리정지 등)의 규정에 의한 요구에 대하여 공공기관의 장이 행한 처분 또는 부작위로 인하여 권리 또는 이익의 침해를 받은 자는 행정심판법이 정하는 바에 따라 행정심판을 청구할 수 있습니다.</p>
+                  </div>
+                  <a class="btn_square_arrow_blue" title="중앙행정심판위원회 새창열기" href="https://www.simpan.go.kr/nsph/index.do"  target="_blank">
+                    <span>중앙행정심판위원회 : (국번없이) 110 (www.simpan.go.kr)</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+                  </a>
+                </div>
+                
+                <div id="anchor_div11" class="privacy_box">
+                  <h3>제11조 (개인정보 처리방침의 변경)</h3>
+                  <div class="privacy_text_box">
+                    <p>① 이 개인정보처리방침은 2022년 8월 1일부터 적용됩니다.</p>
+                    <p>② 이전의 개인정보 처리방침은 아래에서 확인하실 수 있습니다.</p>
+                    <ul class="box dot">
+                      <li><a href="https://www.jeonju.go.kr/index.9is?contentUid=9be517a75340e723015354e134704bc6">2016.03.13. 이전 개인정보처리방침 보기</a></li>
+                      <li><a href="https://www.jeonju.go.kr/index.9is?contentUid=9be517a7562671b2015633fe23ba64ff">2016.03.14~2016.07.24. 개인정보처리방침 보기</a></li>
+                      <li><a href="https://www.jeonju.go.kr/index.9is?contentUid=9be517a759fea2cb015a351f3e7977a6">2016.07.25.~2017.01.25. 개인정보처리방침 보기</a></li>
+                      <li><a href="https://www.jeonju.go.kr/index.9is?contentUid=9be517a750ea77f50150eefa50e507d0">2017.01.25.~2018.01.23. 개인정보처리방침 보기</a></li>
+                      <li><a href="https://www.jeonju.go.kr/index.9is?contentUid=9be517a760df16c501611bb7d1d74e53">2018.01.24.~2019.06.18. 개인정보처리방침 보기</a></li>
+                      <li><a href="https://www.jeonju.go.kr/index.9is?contentUid=9be517a76c5b5865016ca7a17aad3866">2019.06.19.~2019.07.24. 개인정보처리방침 보기</a></li>
+                      <li><a href="https://www.jeonju.go.kr/index.9is?contentUid=9be517a7706ab9b2017079a8aa884ac8">2019.07.25.~2020.02.23. 개인정보처리방침 보기</a></li>
+                      <li><a href="https://www.jeonju.go.kr/index.9is?contentUid=9be517a778ba4af0017964b89f565e57">2020.02.24.~2021.05.16. 개인정보처리방침 보기</a></li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="privacy_bottom_box flex_c_cc border_t_lg">
+                  <img src="../images/logo/gong_mark.jpg" style="width: 200px;">
+                  <p style="text-align: center; margin:10px 0">본 저작물은 "공공누리" <a href="https://www.kogl.or.kr/info/license.do#04-tab" target="_blank" style="color:#0d7acf">제4유형:출처표시+상업적 이용금지+변경금지</a>조건에 따라 이용 할 수 있습니다.</p>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 푸터 -->
+    <footer class="sub_footer">
+      <div class="footer_btn_wrap">
+        <ul>
+          <li><a href="./99_01.html">개인정보처리방침</a></li>
+          <li><a href="./99_02.html">이메일 무단수집 거부</a></li>
+          <li><a href="./99_03.html">이용약관</a></li>
+          <li><a href="./99_04.html">통계관련사이트</a></li>
+        </ul>
+      </div>
+      <div class="footer_info_wrap">
+        <div class="footer_logo_wrap"></div>
+        <div class="footer_txt_wrap">
+          <address>(54994) 전라북도 전주시 완산구 노송광장로 10 &nbsp; ☎ 대표전화 063-222-1000</address>
+          <p>본 사이트에 게시된 이메일주소의 자동수집을 거부하며, 이를 위반시 정보통신법에 의해 형사처벌됨을 유념하시기 바랍니다.</p>
+          <p class="copyright">COPYRIGHT © 2023 JEONJU CITY. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- 좌측사이드메뉴::FIX_visual_dep01 -->
+    <aside>
+      <!-- visual_dep01 -->
+      <div class="left_menu_wrap">
+        <div class="left_visual_menu_wrap">
+          <ul>
+            <li class="visual_dep01 visual_dep01_01">
+              <div></div>
+              <p>인구·가구</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_02">
+              <div></div>
+              <p>보건·복지</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_03">
+              <div></div>
+              <p>경제·산업</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_04">
+              <div></div>
+              <p>환경·녹지</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_05">
+              <div></div>
+              <p>교통·안전</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_06">
+              <div></div>
+              <p>관광·문화</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="left_direct_menu_wrap">
+          <ul>
+            <li class="direct_dep01">
+              <div></div>
+              <p>생활·산업<br/>동향</p>
+            </li>
+
+            <li class="direct_dep01">
+              <div></div>
+              <p>생활·지리<br/>정보</p>
+            </li>
+
+            <li class="direct_dep01">
+              <div></div>
+              <p>상권분석<br/>정보</p>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 좌측사이드메뉴::visual_dep02 -->
+    <div class="visual_dep02_contain">
+      <div class="visual_menu_close">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+        </a>
+      </div>
+      <div class="visual_dep02_top">
+        <div class="visual_dep02_top_icon"></div>
+        <p class="visual_dep02_top_title">인구·가구</p>
+      </div>
+      <ul class="visual_dep02_menu">
+        <li><a href="#"><span></span>주민등록인구 현황</a></li>
+        <li><a href="#"><span></span>연도별 인구 및 세대</a></li>
+        <li><a href="#"><span></span>동별 세대 및 인구</a></li>
+        <li><a href="#"><span></span>연령계층별 인구</a></li>
+        <li><a href="#"><span></span>인구동향</a></li>
+        <li><a href="#"><span></span>연도별 인구이동</a></li>
+        <li><a href="#"><span></span>학교, 학생 수</a></li>
+      </ul>
+
+    </div>
+
+    <!-- 좌측사이드메뉴::visual_dep03 -->
+    <div class="visual_dep03_contain">
+      <img src="../images/img_visualization/side_visual_1_1.png">
+    </div>
+
+    <!-- 좌측사이드메뉴::visual_back -->
+    <div class="visual_back_modal"></div>
+
+
+
+
+  </main>
+</body>
+</html>
