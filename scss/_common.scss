@@ -432,7 +432,7 @@ aside {
 
 // 좌측사이드메뉴_dep02::Mobile
 .visual_dep02_contain {
-  position:absolute; top:0; 
+  position:fixed; top:0; 
   // left: 84px; 
   left: -220px;
   z-index: 13;
