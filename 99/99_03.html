@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개선)전주시데이터포털</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script defer src="../js/index.js"></script>
+</head>
+<body>
+  <main>
+
+    <!-- 헤더:글로벌메뉴 -->
+    <header class="sub_header">
+      <div class="login_mobile">
+        <a href="../login/login.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
+          <span>로그인</span>
+        </a>
+      </div>
+
+      <div class="header_logo_wrap">
+        <a href="../index.html" title="홈으로이동"></a>
+      </div>
+
+      <nav class="gnb_menu_wrap">
+        <ul class="gnb_menu_list_wrap">
+          <li class="dep_01">
+            <a href="#">데이터개방</a>
+            <ul class="drop_down">
+              <li><a href="../01/01_01.html">공공데이터 소개</a></li>
+              <li><a href="../01/01_02.html">데이터 목록</a></li>
+              <li><a href="../01/01_03.html">데이터 요청 창구</a></li>
+              <li><a href="../01/01_04.html">설문조사</a></li>
+              <li><a href="../01/01_05.html">통합검색</a></li>
+            </ul>
+          </li>
+          <li class="dep_01">
+            <a href="#">데이터활용</a>
+            <ul class="drop_down">
+              <li><a href="../02/02_01.html">전주의 하루</a></li>
+              <li><a href="../02/02_02.html">통계 시각화</a></li>
+              <li><a href="../02/02_03.html">경제·산업동향</a></li>
+              <li><a href="../02/02_04.html">생활·지리정보</a></li>
+              <li><a href="../02/02_05.html">상권·분석정보</a></li>
+            </ul>
+          </li>
+          <li class="dep_01">
+            <a href="#">통계마당</a>
+            <ul class="drop_down">
+              <li><a href="../03/03_01.html">통계보고서</a></li></li>
+              <li><a href="../03/03_02.html">통계 DB</a></li>
+              <li><a href="../03/03_03.html">통계 E-Book</a></li>
+              <li><a href="../03/03_04.html">통계조사 안내</a></li>
+            </ul>
+          </li>
+          <li class="dep_01">
+            <a href="#">이용안내</a>
+            <ul class="drop_down">
+              <li><a href="../04/04_01.html">공지사항</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header_btn_wrap">
+        <ul>
+          <li class="dr_btn">
+            <a title="전주시청 홈페이지 새창열기" href="https://www.jeonju.go.kr/main/index.jsp" target="_blank">
+              전주시청 바로가기
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>
+            </a>
+          </li>
+          <li class="login">
+            <a href="../login/login.html">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
+              <span>로그인</span>
+            </a>
+          </li>
+          <li class="all_menu_open">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+    <!-- 전체메뉴 -->
+    <div id="all_menu_contain">
+
+      <!-- <div class="all_menu_wrap"> -->
+
+        <div class="all_menu_top_wrap">
+
+          <div class="all_menu_top">
+            <a href="../index.html" title="홈으로이동"></a>
+          </div>
+
+          <div class="all_menu_close">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <nav class="all_menu_wrap">
+          <ul class="all_menu_list_wrap">
+            <li class="dep_01">
+              <a href="#">
+                데이터개방
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="../01/01_01.html">공공데이터 소개</a></li>
+                <li><a href="../01/01_02.html">데이터 목록</a></li>
+                <li><a href="../01/01_03.html">데이터 요청 창구</a></li>
+                <li><a href="../01/01_04.html">설문조사</a></li>
+                <li><a href="../01/01_05.html">통합검색</a></li>
+              </ul>
+            </li>
+            <li class="dep_01">
+              <a href="#">
+                데이터활용
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="../02/02_01.html">전주의 하루</a></li>
+                <li><a href="../02/02_02.html">통계 시각화</a></li>
+                <li><a href="../02/02_03.html">경제·산업동향</a></li>
+                <li><a href="../02/02_04.html">생활·지리정보</a></li>
+                <li><a href="../02/02_05.html">상권·분석정보</a></li>
+              </ul>
+            </li>
+            <li class="dep_01">
+              <a href="#">
+                통계마당
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="../03/03_01.html">통계보고서</a></li></li>
+                <li><a href="../03/03_02.html">통계 DB</a></li>
+                <li><a href="../03/03_03.html">통계 E-Book</a></li>
+                <li><a href="../03/03_04.html">통계조사 안내</a></li>
+              </ul>
+            </li>
+            <li class="dep_01">
+              <a href="#">
+                이용안내
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+              </a>
+              <ul class="drop_down">
+                <li><a href="../04/04_01.html">공지사항</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        
+      <!-- </div> -->
+    </div>
+
+
+    <!-- 서브 콘텐츠 -->
+    <section>
+      <div class="sub_section">
+        <!-- 서브 콘텐츠::top_common -->
+        <div class="sub_top_wrap">
+          <div class="sub_top">
+            <div class="sub_top_title">
+              <h1>이용약관</h1>
+            </div>
+            <div class="sub_top_navgation">
+              <a href="../index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+              </a>
+              <span>
+                <p>></p>
+                <p>서비스</p>
+              </span>
+              <span>
+                <p>></p>
+                <a href="#">
+                  <p>이용약관</p>
+                </a>
+              </span>
+              <!-- <span>
+              <p>></p>
+                <a href="#">
+                  <p>공공데이터 소개</p>
+                </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 서브 콘텐츠::bottom -->
+        <div class="sub_cont_wrap">
+          <div class="sub_cont">
+
+            <h2 class="sub_cont_title">제1장 총칙</h2>
+            <div class="sub_cont_inner cont_privacy_box">
+              <div class="privacy_wrap sub_font_sans flex_c_ss">
+
+                <div  id="anchor_div1" class="privacy_box">
+                  <h3>제1조 (목적)</h3>
+                  <div class="privacy_text_box">
+                    <p>
+                      이 약관은 전주시 (이하 "전주시"라 합니다) 홈페이지가 제공하는 통합회원 서비스(이하 "서비스"라 합니다)를 이용함에 있어 이용자와 전주시간의 권리·의무 및 책임사항과 기타 필요한 사항을 규정함을 목적으로 합니다.
+                    </p>
+                  </div>
+                </div>
+
+                
+                <div id="anchor_div2" class="privacy_box">
+                  <h3>제2조 (약관의 효력 및 변경)</h3>
+                  <div class="privacy_text_box">
+                    <ul class="num dot">
+                      <li>이 약관은 서비스 화면에 게시하거나 기타의 방법으로 공지함으로써 이용자에게 공시하고, 이에 동의한 이용자가 서비스에 가입함으로써 효력이 발생합니다.</li>
+                      <li>전주시는 필요하다고 인정되는 경우 이 약관의 내용을 변경할 수 있으며, 변경된 약관은 서비스 화면에 공지함으로써 이용자가 직접 확인할 수 있도록 할 것입니다.</li>
+                      <li>이용자는 변경된 약관에 동의하지 않으실 경우 서비스 이용을 중단하고 본인의 회원등록을 취소할 수 있으며, 계속 사용하시는 경우에는 약관 변경에 동의한 것으로 간주되며 변경된 약관은 전항과 같은 방법으로 효력이 발생합니다.</li>
+                      <li>이용자가 이 약관의 내용에 동의하는 경우 전주시의 서비스 제공행위 및 이용자의 서비스 이용행위에는 이 약관이 우선적으로 적용될 것입니다. 이 약관에 명시되지 않은 사항에 대해서는 정보통신망이용촉진및정보보호등에관한법률, 프로그램 보호법 등 기타 대한민국의 관련법령과 상관습에 의합니다.</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                
+                <div id="anchor_div3" class="privacy_box">
+                  <h3>제3조 (용어의 정의)</h3>
+                  <div class="privacy_text_box">
+                    <p>이 약관에서 사용하는 용어의 정의는 다음과 같습니다.</p>
+                    <ul class="num" >
+                      <li>1. 이용자 : 서비스에 접속하여 전주시가 제공하는 서비스를 받는 회원 및 비회원</li>
+                      <li>2. 회원 : 서비스에 접속하여 이 약관에 동의하고, ID(고유번호)와 PASSWORD(비밀번호)를 발급 받아 실명확인 절차를 거친 자</li>
+                      <li>3. 비회원 : 회원가입을 하지 않고 전주시가 제공하는 서비스를 이용하는 자</li>
+                      <li>4. ID(고유번호) : 회원 식별과 회원의 서비스 이용을 위하여 이용자가 선정하고 전주시가 승인하는 영문자와 숫자의 조합(하나의 주민등록번호에 하나의 ID만 발급, 이용 가능합니다)</li>
+                      <li>5. PASSWORD(비밀번호) : 회원의 정보 보호를 위해 이용자 자신이 설정한 문자와 숫자의 조합</li>
+                      <li>6. 이용해지 : 전주시 또는 회원이 서비스 이용 이후 그 이용계약을 종료시키는 의사표시</li>
+                    </ul>
+                    <p>이 약관에서 사용하는 용어의 정의는 제1항에서 정하는 것을 제외하고는 관계법령 및 서비스별 안내에서 정하는 바에 의합니다.</p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+
+            <h2 class="sub_cont_title">제2장 서비스 이용계약</h2>
+            <div class="sub_cont_inner cont_privacy_box">
+              <div class="privacy_wrap sub_font_sans flex_c_ss">
+
+                <div id="anchor_div4" class="privacy_box">
+                  <h3>제4조 (이용계약의 성립)</h3>
+                  <div class="privacy_text_box">
+                    <p>이용계약은 이용자의 약관내용에 대한 동의와 이용자의 이용신청에 대한 전주시의 승낙으로 성립합니다.</p>
+                  </div>
+                </div>
+
+                <div id="anchor_div5" class="privacy_box">
+                  <h3>제5조 (이용신청)</h3>
+                  <div class="privacy_text_box">
+                    <p>이용신청은 서비스의 회원정보 화면에서 이용자가 전주시에서 요구하는 가입신청 양식에 개인의 신상정보를 기록하는 방식으로 신청합니다.</p>
+                  </div>
+                </div>
+
+
+                <div id="anchor_div6" class="privacy_box">
+                  <h3>제6조 (이용신청의 승낙)</h3>
+                  <div class="privacy_text_box">
+                    <P>① 전주시는 제5조에서 정한 사항을 정확히 기재하여 이용신청을 하였을 경우 특별한 사정이 없는 한 서비스 이용신청을 승낙합니다.</P>
+                    <P>② 전주시는 다음 각 호에 해당하는 경우에 대하여는 그 신청에 대한 제한 사유가 해소될 때까지 승낙을 유보 또는 일부 서비스 이용을 제한할 수 있습니다.</P>
+                    <ul class="num" >
+                      <li>1. 내용이 허위(차명, 비실명, 주민등록번호 도용 등)인 것으로 판명되거나, 그러하다고 의심할만한 합리적인 사유가 발생할 경우</li>
+                      <li>2. 기타 전주시가 필요하다고 인정되는 경우</li>
+                    </ul>
+                    <P>③ 전주시는 다음에 해당하는 경우에는 이용신청을 승낙하지 아니할 수 있습니다.</P>
+                    <ul class="num" >
+                      <li>1. 본인의 실명으로 신청하지 않았을 때</li>
+                      <li>2. 다른 사람의 명의를 사용하여 신청하였을 때</li>
+                      <li>3. 신청서의 내용을 허위로 기재하였을 때</li>
+                      <li>4. 사회의 안녕 질서 또는 미풍양속을 저해할 목적으로 신청하였을 때</li>
+                      <li>5. 기타 전주시가 정한 이용신청 요건이 미비 되었을 때</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="anchor_div7" class="privacy_box">                
+                  <h3>제7조 (계약사항의 변경)</h3>
+                  <div class="privacy_text_box">
+                    <p>회원은 회원정보관리를 통해 언제든지 자신의 정보를 열람하고 수정할 수 있습니다. 회원은 이용신청 시 기재한 사항이 변경되었을 때에는 수정을 하여야 하며, 수정하지 아니하여 발생하는 문제의 책임은 회원에게 있습니다.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <h2 class="sub_cont_title">제3장 서비스 제공 및 이용</h2>
+            <div class="sub_cont_inner cont_privacy_box">
+              <div class="privacy_wrap sub_font_sans flex_c_ss">
+
+                <div id="anchor_div8" class="privacy_box">                
+                  <h3>제8조 (서비스 이용)</h3>
+                  <div class="privacy_text_box">
+                    <ul class="num dot">
+                      <li>전주시는 회원의 이용신청을 승낙한 때부터 서비스를 개시합니다. 단, 일부 서비스의 경우에는 지정된 일자부터 서비스를 개시합니다.</li>
+                      <li>전주시의 업무상 또는 기술상의 장애로 인하여 서비스를 개시하지 못하는 경우에는 사이트에 공시하거나 회원에게 이를 통지합니다.</li>
+                      <li>서비스의 이용은 연중무휴 1일 24시간을 원칙으로 합니다. 다만, 전주시의 업무상 또는 기술상의 이유로 서비스가 일시 중지될 수 있고, 또한 정기점검 등 운영상의 목적으로 전주시가 정한 기간에는 서비스가 일시 중지될 수 있습니다. 이러한 경우 전주시는 사전 또는 사후에 이를 공지합니다.</li>
+                      <li>회원에 가입한 후라도 일부 서비스 이용 시 서비스 제공자의 요구에 따라 특정 회원에게만 서비스를 제공할 수도 있습니다.</li>
+                      <li>전주시는 서비스를 일정범위로 분할하여 각 범위별로 이용가능 시간을 별도로 정할 수 있습니다. 이 경우 그 내용을 사전에 공지합니다.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="anchor_div9" class="privacy_box">
+                  <h3>제9조 (서비스의 변경, 중지 및 정보의 저장과 사용)</h3>
+                  <div class="privacy_text_box">
+                    <ul class="num dot">
+                      <li>회원은 본 서비스에 보관되거나 전송된 메시지 및 기타 통신 메시지 등의 내용이 국가의 비상사태, 정전, 전주시의 관리범위 외의 서비스 설비 장애 및 기타 불가항력에 의하여 보관되지 못하였거나 삭제된 경우, 전송되지 못한 경우 및 기타 통신 데이터의 손실에 대해 전주시가 아무런 책임을 지지 않음에 동의합니다.</li>
+                      <li>전주시가 정상적인 서비스 제공의 어려움으로 인하여 일시적으로 서비스를 중지하여야 할 경우에는 서비스 중지 1주일전에 고지 후 서비스를 중지할 수 있으며, 이 기간동안 회원이 고지내용을 인지하지 못한데 대하여 전주시는 책임을 부담하지 아니합니다. 상당한 이유가 있을 경우 위 사전 고지기간은 감축되거나 생략될 수 있습니다. 또한 위 서비스 중지에 의하여 본 서비스에 보관되거나 전송된 메시지 및 기타 통신 메시지 등의 내용이 보관되지 못하였거나 삭제된 경우, 전송되지 못한 경우 및 기타 통신 데이터의 손실이 있을 경우에 대하여도 전주시는 책임을 부담하지 아니합니다.</li>
+                      <li>전주시의 사정으로 서비스를 영구적으로 중단하여야 할 경우 제2항을 준용합니다. 다만, 이 경우 사전 고지기간은 1개월로 합니다.</li>
+                      <li>전주시는 사전 고지 후 서비스를 일시적으로 수정, 변경 및 중단할 수 있으며, 이에 대하여 회원 또는 제3자에게 어떠한 책임도 부담하지 아니합니다.</li>
+                      <li>전주시는 회원이 이 약관의 내용에 위배되는 행동을 한 경우, 임의로 서비스 사용을 중지할 수 있습니다. 이 경우 전주시는 회원의 접속을 금지할 수 있으며, 회원이 게시한 내용의 전부 또는 일부를 임의로 삭제할 수 있습니다.</li>
+                      <li>장기간 휴면 회원인 경우 안내 메일 또는 공지사항 발표 후 1주일간의 통지 기간을 거쳐 서비스 사용을 중지할 수 있습니다.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="anchor_div10" class="privacy_box">
+                  <h3>제10조 (정보의 제공 및 광고의 게재)</h3>
+                  <div class="privacy_text_box">
+                    <ul class="num dot">
+                      <li>전주시는 회원이 서비스 이용 중 필요가 있다고 인정되는 다양한 정보 및 광고에 대해서는 전자우편이나 서신우편, SMS(핸드폰 문자메시지), DM, 메신저 등의 방법으로 회원에게 제공할 수 있으며, 만약 원치 않는 정보를 수신한 경우 회원은 이를 수신거부 할 수 있습니다.</li>
+                      <li>전주시는 서비스의 운용과 관련하여 서비스화면, 홈페이지, 전자우편 등에 광고 등을 게재할 수 있으며, 전주시는 서비스를 이용하고자 하는 회원이 이 광고게재에 대하여 동의하는 것으로 간주합니다.</li>
+                      <li>전주시는 서비스 상에 게재되어 있거나 서비스를 통한 광고주와의 판촉활동에 회원이 참여하거나 교신 또는 거래의 결과로서 발생하는 모든 손실 또는 손해에 대해 책임을 지지 않습니다.</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div id="anchor_div11" class="privacy_box">
+                  <h3>제11조 (게시물 또는 내용물의 삭제)</h3>
+                  <div class="privacy_text_box">
+                    <p>① 전주시는 회원이 게시하거나 등록하는 서비스 내의 모든 내용물이 다음 각 호의 경우에 해당된다고 판단되는 경우 사전 통지 없이 삭제할 수 있으며, 이에 대해 전주시는 어떠한 책임도 지지 않습니다.</p>
+                    <ul class="num">
+                      <li>1. 전주시, 다른 회원 또는 제3자를 비방하거나 중상 모략으로 명예를 손상시키는 내용인 경우</li>
+                      <li>2. 공공질서 및 미풍양속에 위반되는 내용인 경우</li>
+                      <li>3. 범죄적 행위에 결부된다고 인정되는 내용일 경우</li>
+                      <li>4. 제3자의 저작권 등 기타 권리를 침해하는 내용인 경우</li>
+                      <li>5. 서비스 성격에 부합하지 않는 정보의 경우</li>
+                      <li>6. 기타 관계 법령 및 전주시에서 정한 규정 등에 위배되는 경우</li>
+                    </ul>
+                    <p>② 전주시는 서비스에 게시된 내용을 사전 통지된 지 3일 이후 편집, 이동, 삭제할 수 있는 권리를 보유하며, 게시된 내용이 이 약관에 위배되거나 상용 또는 비합법적, 불건전한 내용일 경우 및 해지 회원이 게시한 게시물은 사전통보 없이 삭제할 수 있습니다.</p>
+                    <p>③ 전주시는 게시된 내용이 일정기간 이상 경과되어, 게시물로써의 효력을 상실하여 그 존치 목적이 불분명한 경우 공지사항 발표 후 1주일간의 통지기간을 거쳐 해당 게시물을 삭제할 수 있습니다.</p>
+                  </div>
+                </div>
+
+                <div id="anchor_div10" class="privacy_box">
+                  <h3>제12조 (게시물의 저작권)</h3>
+                  <div class="privacy_text_box">
+                    <ul class="num dot">
+                      <li>회원이 서비스 내에 게시한 게시물의 저작권은 회원에게 있으며, 전주시는 다른 서비스에서의 개재 등 활용할 수 있습니다.</li>
+                      <li>회원의 게시물이 타인의 저작권, 프로그램 저작권 등을 침해함으로써 발생하는 민, 형사상의 책임은 전적으로 회원이 부담하여야 합니다.</li>
+                      <li>회원은 서비스를 이용하여 얻은 정보를 가공, 판매하는 행위 등 서비스에 게재된 자료를 상업적으로 사용할 수 없습니다.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="anchor_div10" class="privacy_box">
+                  <h3>제13조 (전주시의 소유권)</h3>
+                  <div class="privacy_text_box">
+                    <ul class="num dot">
+                      <li>전주시가 제공하는 서비스, 그에 필요한 소프트웨어, 이미지, 마크, 로고, 디자인, 서비스명칭, 정보 및 상표 등과 관련된 지적재산권 및 기타권리는 전주시에게 소유권이 있습니다.</li>
+                      <li>회원은 전주시가 명시적으로 승인한 경우를 제외하고는 제1항 소정의 각 재산에 대한 전부 또는 일부의 수정, 대여, 대출, 판매, 배포, 제작, 양도, 재라이센스, 담보권 설정행위, 상업적 이용행위를 할 수 없으며, 제3자로 하여금 이와 같은 행위를 하도록 허락할 수 없습니다.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="anchor_div10" class="privacy_box">
+                  <h3><부칙></h3>
+                  <div class="privacy_text_box">
+                    <p>본 약관은 2014년 1월 21일부터 시행됩니다.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 푸터 -->
+    <footer class="sub_footer">
+      <div class="footer_btn_wrap">
+        <ul>
+          <li><a href="./99_01.html">개인정보처리방침</a></li>
+          <li><a href="./99_02.html">이메일 무단수집 거부</a></li>
+          <li><a href="./99_03.html">이용약관</a></li>
+          <li><a href="./99_04.html">통계관련사이트</a></li>
+        </ul>
+      </div>
+      <div class="footer_info_wrap">
+        <div class="footer_logo_wrap"></div>
+        <div class="footer_txt_wrap">
+          <address>(54994) 전라북도 전주시 완산구 노송광장로 10 &nbsp; ☎ 대표전화 063-222-1000</address>
+          <p>본 사이트에 게시된 이메일주소의 자동수집을 거부하며, 이를 위반시 정보통신법에 의해 형사처벌됨을 유념하시기 바랍니다.</p>
+          <p class="copyright">COPYRIGHT © 2023 JEONJU CITY. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- 좌측사이드메뉴::FIX_visual_dep01 -->
+    <aside>
+      <!-- visual_dep01 -->
+      <div class="left_menu_wrap">
+        <div class="left_visual_menu_wrap">
+          <ul>
+            <li class="visual_dep01 visual_dep01_01">
+              <div></div>
+              <p>인구·가구</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_02">
+              <div></div>
+              <p>보건·복지</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_03">
+              <div></div>
+              <p>경제·산업</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_04">
+              <div></div>
+              <p>환경·녹지</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_05">
+              <div></div>
+              <p>교통·안전</p>
+            </li>
+
+            <li class="visual_dep01 visual_dep01_06">
+              <div></div>
+              <p>관광·문화</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="left_direct_menu_wrap">
+          <ul>
+            <li class="direct_dep01">
+              <div></div>
+              <p>생활·산업<br/>동향</p>
+            </li>
+
+            <li class="direct_dep01">
+              <div></div>
+              <p>생활·지리<br/>정보</p>
+            </li>
+
+            <li class="direct_dep01">
+              <div></div>
+              <p>상권분석<br/>정보</p>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 좌측사이드메뉴::visual_dep02 -->
+    <div class="visual_dep02_contain">
+      <div class="visual_menu_close">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+        </a>
+      </div>
+      <div class="visual_dep02_top">
+        <div class="visual_dep02_top_icon"></div>
+        <p class="visual_dep02_top_title">인구·가구</p>
+      </div>
+      <ul class="visual_dep02_menu">
+        <li><a href="#"><span></span>주민등록인구 현황</a></li>
+        <li><a href="#"><span></span>연도별 인구 및 세대</a></li>
+        <li><a href="#"><span></span>동별 세대 및 인구</a></li>
+        <li><a href="#"><span></span>연령계층별 인구</a></li>
+        <li><a href="#"><span></span>인구동향</a></li>
+        <li><a href="#"><span></span>연도별 인구이동</a></li>
+        <li><a href="#"><span></span>학교, 학생 수</a></li>
+      </ul>
+
+    </div>
+
+    <!-- 좌측사이드메뉴::visual_dep03 -->
+    <div class="visual_dep03_contain">
+      <img src="../images/img_visualization/side_visual_1_1.png">
+    </div>
+
+    <!-- 좌측사이드메뉴::visual_back -->
+    <div class="visual_back_modal"></div>
+
+
+
+
+  </main>
+</body>
+</html>
