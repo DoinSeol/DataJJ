@@ -2603,6 +2603,9 @@ am4core.useTheme(am4themes_animated);
   function createSeries14(field, name, stacked) {
     if(field == "value11")
     {
+      // var markerTemplate = chart_2_7.legend.markers.template;
+      //   markerTemplate.width = 20;
+      //   markerTemplate.height = 20;
       var series = chart_2_7.series.push(new am4charts.LineSeries());
       series.dataFields.valueY = field;
       series.dataFields.categoryX = "year";
@@ -4557,11 +4560,151 @@ if (val == 'chart_box_04_04') {
 
     am4core.useTheme(am4themes_animated);
 
-    // 4-5. 폐기물 발생 및 재활용 현황_chartdiv26 //
+    // 4-4. 쓰레기 배출_chartdiv27 //
     chart_4_4 = am4core.create("chart_04_04", am4charts.XYChart);
 
-    // Add data
+    // Data for both series
     chart_4_4.data = [{
+      "year": "2015",
+      "value1": 691,
+      "value2": 100
+    }, {
+      "year": "2016",
+      "value1": 615,
+      "value2": 100
+    }, {
+      "year": "2017",
+      "value1": 754,
+      "value2": 100
+    }, {
+      "year": "2018",
+      "value1": 876,
+      "value2": 100
+    }, {
+      "year": "2019",
+      "value1": 585,
+      "value2": 100
+    }, {
+      "year": "2020",
+      "value1": 543,
+      "value2": 100
+    }, {
+      "year": "2021",
+      "value1": 599,
+      "value2": 100
+    }];
+
+    /* Create axes */
+    categoryAxis = chart_4_4.xAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = "year";
+    categoryAxis.renderer.minGridDistance = 30;
+
+    /* Create value axis */
+    valueAxis = chart_4_4.yAxes.push(new am4charts.ValueAxis());
+    valueAxis.min = 400;
+    valueAxis.max = 1000;
+
+    /* Create value axis */
+    valueAxis1 = chart_4_4.yAxes.push(new am4charts.ValueAxis());
+    valueAxis1.min = 0;
+    valueAxis1.max = 100;
+    valueAxis1.renderer.opposite = true;
+    valueAxis1.syncWithAxis = valueAxis;
+
+    // Create series
+    function createSeries5(field, name, stacked) {
+      if (field == "value2") {
+        var series = chart_4_4.series.push(new am4charts.LineSeries());
+        series.dataFields.valueY = field;
+        series.dataFields.categoryX = "year";
+        series.name = name;
+        series.tooltipText = "";
+        series.strokeWidth = 3;
+        series.yAxis = valueAxis1;
+        series.stroke = am4core.color("#fdd400");
+        series.fill = am4core.color("#fdd400");
+        // Set up tooltip
+        series.adapter.add("tooltipText", function (ev) {
+          var text = "[font-size: 14px bold]{categoryX}[/]\n"
+          chart_4_4.series.each(function (item) {
+            if (item.name == "수거율") {
+              text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} %\n";
+            }
+            else {
+              text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 톤/일\n";
+            }
+          });
+          return text;
+        });
+
+        series.tooltip.getFillFromObject = false;
+        series.tooltip.background.fill = am4core.color("#fff");
+        series.tooltip.label.fill = am4core.color("#00");
+
+        // Prevent cross-fading of tooltips
+        series.tooltip.defaultState.transitionDuration = 0;
+        series.tooltip.hiddenState.transitionDuration = 0;
+
+        var bullet = series.bullets.push(new am4charts.CircleBullet());
+        bullet.circle.radius = 5;
+      }
+      else {
+        var series = chart_4_4.series.push(new am4charts.ColumnSeries());
+        series.dataFields.valueY = field;
+        series.dataFields.categoryX = "year";
+        series.name = name;
+        series.yAxis = valueAxis;
+        // Set up tooltip
+        series.adapter.add("tooltipText", function (ev) {
+          var text = "[font-size: 14px bold]{categoryX}[/]\n"
+          chart_4_4.series.each(function (item) {
+            if (item.name == "수거율") {
+              text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} %\n";
+            }
+            else {
+              text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 톤/일\n";
+            }
+          });
+          return text;
+        });
+        series.tooltip.getFillFromObject = false;
+        series.tooltip.background.fill = am4core.color("#fff");
+        series.tooltip.label.fill = am4core.color("#00");
+        series.stacked = stacked;
+        series.columns.template.width = am4core.percent(60);
+      }
+
+    }
+    createSeries5("value1", "쓰레기배출량", false);
+    createSeries5("value2", "수거율", false);
+
+    // Add legend
+    chart_4_4.legend = new am4charts.Legend();
+
+    // Add cursor
+    chart_4_4.cursor = new am4charts.XYCursor();
+    chart_4_4.cursor.maxTooltipDistance = 0;
+    chart_4_4.cursor.behavior = 'none';
+    chart_4_4.logo.height = -15000;
+  });
+  
+}
+
+/* 04_05_폐기물발생및재활용현황 ------------------------------------------------------*/
+if (val == 'chart_box_04_05') {
+
+
+
+
+  am4core.ready(function () {
+
+    am4core.useTheme(am4themes_animated);
+
+    // 4-5. 폐기물 발생 및 재활용 현황_chartdiv26 //
+    chart_4_5 = am4core.create("chart_04_05", am4charts.XYChart);
+
+    // Add data
+    chart_4_5.data = [{
       "year": "2015",
       "value1": 691,
       "value2": 2264,
@@ -4614,17 +4757,17 @@ if (val == 'chart_box_04_04') {
     }];
 
     /* Create axes */
-    categoryAxis = chart_4_4.xAxes.push(new am4charts.CategoryAxis());
+    categoryAxis = chart_4_5.xAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = "year";
     categoryAxis.renderer.minGridDistance = 30;
 
     /* Create value axis */
-    valueAxis = chart_4_4.yAxes.push(new am4charts.ValueAxis());
+    valueAxis = chart_4_5.yAxes.push(new am4charts.ValueAxis());
     valueAxis.min = 0;
     valueAxis.max = 100;
     valueAxis.renderer.opposite = true;
     /* Create value axis */
-    valueAxis1 = chart_4_4.yAxes.push(new am4charts.ValueAxis());
+    valueAxis1 = chart_4_5.yAxes.push(new am4charts.ValueAxis());
     valueAxis1.min = 0;
     valueAxis1.max = 6000;
 
@@ -4633,7 +4776,7 @@ if (val == 'chart_box_04_04') {
     // Create series
     function createSeries4(field, name, stacked) {
       if (field == "value5") {
-        var series = chart_4_4.series.push(new am4charts.LineSeries());
+        var series = chart_4_5.series.push(new am4charts.LineSeries());
         series.dataFields.valueY = field;
         series.dataFields.categoryX = "year";
         series.name = name;
@@ -4645,146 +4788,8 @@ if (val == 'chart_box_04_04') {
         // Set up tooltip
         series.adapter.add("tooltipText", function (ev) {
           var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
-          chart_4_4.series.each(function (item) {
-            if (item.name == "폐기물재활용률(%)") {
-              text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} %\n";
-            }
-            else {
-              text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 톤/일\n";
-            }
-          });
-          return text;
-        });
-
-        series.tooltip.getFillFromObject = false;
-        series.tooltip.background.fill = am4core.color("#fff");
-        series.tooltip.label.fill = am4core.color("#00");
-
-        // Prevent cross-fading of tooltips
-        series.tooltip.defaultState.transitionDuration = 0;
-        series.tooltip.hiddenState.transitionDuration = 0;
-
-        var bullet = series.bullets.push(new am4charts.CircleBullet());
-        bullet.circle.radius = 5;
-      }
-      else {
-        var series = chart_4_4.series.push(new am4charts.ColumnSeries());
-        series.dataFields.valueY = field;
-        series.dataFields.categoryX = "year";
-        series.name = name;
-        series.yAxis = valueAxis1;
-        // Set up tooltip
-        series.adapter.add("tooltipText", function (ev) {
-          var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
-          chart_4_4.series.each(function (item) {
-            if (item.name == "폐기물재활용률(%)") {
-              text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} %\n";
-            }
-            else {
-              text += "[" + item.stroke.hex + "]■[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} 톤/일\n";
-            }
-          });
-          return text;
-        });
-        series.tooltip.getFillFromObject = false;
-        series.tooltip.background.fill = am4core.color("#fff");
-        series.tooltip.label.fill = am4core.color("#00");
-        series.stacked = stacked;
-        series.columns.template.width = am4core.percent(60);
-      }
-    }
-
-    createSeries4("value1", "생활폐기물", true);
-    createSeries4("value2", "사업장배출시설계폐기물", true);
-    createSeries4("value3", "건설폐기물", true);
-    createSeries4("value4", "지정폐기물", true);
-    createSeries4("value5", "폐기물재활용률(%)", false);
-
-    // Add legend
-    chart_4_4.legend = new am4charts.Legend();
-
-    // Add cursor
-    chart_4_4.cursor = new am4charts.XYCursor();
-    chart_4_4.cursor.maxTooltipDistance = 0;
-    chart_4_4.cursor.behavior = 'none';
-    chart_4_4.logo.height = -15000;
-  });
-}
-
-/* 04_05_폐기물발생및재활용현황 ------------------------------------------------------*/
-if (val == 'chart_box_04_05') {
-  am4core.ready(function () {
-
-    am4core.useTheme(am4themes_animated);
-
-    // 4-4. 쓰레기 배출_chartdiv27 //
-    chart_4_5 = am4core.create("chart_04_05", am4charts.XYChart);
-
-    // Data for both series
-    chart_4_5.data = [{
-      "year": "2015",
-      "value1": 691,
-      "value2": 100
-    }, {
-      "year": "2016",
-      "value1": 615,
-      "value2": 100
-    }, {
-      "year": "2017",
-      "value1": 754,
-      "value2": 100
-    }, {
-      "year": "2018",
-      "value1": 876,
-      "value2": 100
-    }, {
-      "year": "2019",
-      "value1": 585,
-      "value2": 100
-    }, {
-      "year": "2020",
-      "value1": 543,
-      "value2": 100
-    }, {
-      "year": "2021",
-      "value1": 599,
-      "value2": 100
-    }];
-
-    /* Create axes */
-    categoryAxis = chart_4_5.xAxes.push(new am4charts.CategoryAxis());
-    categoryAxis.dataFields.category = "year";
-    categoryAxis.renderer.minGridDistance = 30;
-
-    /* Create value axis */
-    valueAxis = chart_4_5.yAxes.push(new am4charts.ValueAxis());
-    valueAxis.min = 400;
-    valueAxis.max = 1000;
-
-    /* Create value axis */
-    valueAxis1 = chart_4_5.yAxes.push(new am4charts.ValueAxis());
-    valueAxis1.min = 0;
-    valueAxis1.max = 100;
-    valueAxis1.renderer.opposite = true;
-    valueAxis1.syncWithAxis = valueAxis;
-
-    // Create series
-    function createSeries5(field, name, stacked) {
-      if (field == "value2") {
-        var series = chart_4_5.series.push(new am4charts.LineSeries());
-        series.dataFields.valueY = field;
-        series.dataFields.categoryX = "year";
-        series.name = name;
-        series.tooltipText = "";
-        series.strokeWidth = 3;
-        series.yAxis = valueAxis1;
-        series.stroke = am4core.color("#fdd400");
-        series.fill = am4core.color("#fdd400");
-        // Set up tooltip
-        series.adapter.add("tooltipText", function (ev) {
-          var text = "[font-size: 14px bold]{categoryX}[/]\n"
           chart_4_5.series.each(function (item) {
-            if (item.name == "수거율") {
+            if (item.name == "폐기물재활용률(%)") {
               text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} %\n";
             }
             else {
@@ -4810,12 +4815,12 @@ if (val == 'chart_box_04_05') {
         series.dataFields.valueY = field;
         series.dataFields.categoryX = "year";
         series.name = name;
-        series.yAxis = valueAxis;
+        series.yAxis = valueAxis1;
         // Set up tooltip
         series.adapter.add("tooltipText", function (ev) {
-          var text = "[font-size: 14px bold]{categoryX}[/]\n"
+          var text = "[font-size: 14px bold]{categoryX} 기준[/]\n"
           chart_4_5.series.each(function (item) {
-            if (item.name == "수거율") {
+            if (item.name == "폐기물재활용률(%)") {
               text += "[" + item.stroke.hex + "]●[/] [font-size: 14px bold]" + item.name + " : [font-size: 14px]{" + item.dataFields.valueY + "} %\n";
             }
             else {
@@ -4830,10 +4835,13 @@ if (val == 'chart_box_04_05') {
         series.stacked = stacked;
         series.columns.template.width = am4core.percent(60);
       }
-
     }
-    createSeries5("value1", "쓰레기배출량", false);
-    createSeries5("value2", "수거율", false);
+
+    createSeries4("value1", "생활폐기물", true);
+    createSeries4("value2", "사업장배출시설계폐기물", true);
+    createSeries4("value3", "건설폐기물", true);
+    createSeries4("value4", "지정폐기물", true);
+    createSeries4("value5", "폐기물재활용률(%)", false);
 
     // Add legend
     chart_4_5.legend = new am4charts.Legend();

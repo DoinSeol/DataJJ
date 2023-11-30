@@ -349,9 +349,8 @@ aside {
     display: flex; flex-direction: column; justify-content: space-between; align-items: center;
     .left_visual_menu_wrap, .left_direct_menu_wrap {
       width: 100%;
-      ul{
-
-        li {
+      ul {
+        li.visual_dep01 {
           display: flex; flex-direction: column; gap:12px; justify-content: flex-end; align-items: center;
           padding: 12px 0; cursor: pointer; height: 85px;
           
@@ -359,9 +358,7 @@ aside {
             width: 100%; height: 100%;
             background-repeat: no-repeat; background-position: center center; background-size:auto;
           }
-        }
 
-        li.visual_dep01 {
           &:nth-child(1) div {background-image: url("../images/icon_common/side_icon_1_1.svg");}
           &:nth-child(2) div {background-image: url("../images/icon_common/side_icon_1_2.svg");}
           &:nth-child(3) div {background-image: url("../images/icon_common/side_icon_1_3.svg");}
@@ -384,7 +381,15 @@ aside {
           }
         }
 
-        li.direct_dep01 {
+        li.direct_dep01 a {
+          display: flex; flex-direction: column; gap:6px; justify-content: flex-end; align-items: center;
+          padding: 12px 0; cursor: pointer; height: 90px;
+          
+          div {
+            width: 100%; height: 100%;
+            background-repeat: no-repeat; background-position: center center; background-size:auto;
+          }
+
           &:nth-child(1) div {background-image: url("../images/icon_common/side_icon_2_1.svg");}
           &:nth-child(2) div {background-image: url("../images/icon_common/side_icon_2_2.svg");}
           &:nth-child(3) div {background-image: url("../images/icon_common/side_icon_2_3.svg");}

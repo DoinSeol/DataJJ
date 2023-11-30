@@ -111,10 +111,17 @@ section{
                 .population_graph02 { height:270px;}
                 .population_graph03 {height:350px; margin-top:30px;}
                 .chart_height {height:400px;}
+                .chart_height.extend_h {height: 700px;}
+
                 tspan {
+                  // font-family: "Noto Sans KR";
                   font-size: 12px;
-                  letter-spacing: -1;
+                  letter-spacing: -1.2px;
                 }
+                // rect {
+                //   width: 18px;
+                //   height: 18px;
+                // }
                 // .wd_half:nth-child(2) {border-left: 1px solid #ddd;}
 
                 .wd_half {
@@ -182,6 +189,30 @@ section{
 
 
 
+// 서브콘텐츠::373
+@media screen and (min-width: 374px){
+  section{
+    div.sub_section {
+      .sub_cont_wrap {
+        .sub_cont {
+
+        // 02_02_통계시각화
+        .sub_cont_inner.visual_tab_wrap {
+          .content_area.visual_menu_content_area {
+            &.dep2_cont { 
+              .chart {
+              .chart_height.extend_h {height: 550px;}
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
 
 // 서브콘텐츠::400
 @media screen and (min-width: 400px){
@@ -197,6 +228,12 @@ section{
               }
             }
           }
+
+
+            
+
+          }
+
         }
       }
     }
@@ -224,6 +261,14 @@ section{
             ul.visual_menu_btn_area.dep1 {
               li.visual_menu_btn_tab.btn {
                 width: calc(100% / 6); min-height:25px; 
+              }
+            }
+
+            .content_area.visual_menu_content_area {
+              &.dep2_cont { 
+                .chart {
+                .chart_height.extend_h {height: 400px;}
+                }
               }
             }
           }
