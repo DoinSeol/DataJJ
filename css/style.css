@@ -2941,7 +2941,6 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detai
   align-items: stretch;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1 .db_visual_btn_tab.btn {
-  border-bottom: none;
   border-radius: 0px;
   min-height: 25px;
 }
@@ -3274,6 +3273,9 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.research_list_b
   section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1.tab_box_5 .db_visual_btn_tab.btn {
     width: 20%;
   }
+  section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1.tab_box_7 .db_visual_btn_tab.btn {
+    width: 25%;
+  }
   section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_content_area.content_area.dep1_cont .db_visual_detail_inner_cont.inner_box_3 .db_visual_detail_inner {
     width: calc(33.3333333333% - 24px);
     min-width: 400px;
@@ -3308,6 +3310,15 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.research_list_b
   }
   section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_wrap .db_visual_box {
     width: calc(33.3333333333% - 11.5px);
+  }
+  section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1.tab_box_5 .db_visual_btn_tab.btn {
+    width: 20%;
+  }
+  section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1.tab_box_7 .db_visual_btn_tab.btn {
+    width: 14.2857142857%;
+  }
+  section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_btn_area.dep1 .db_visual_btn_tab.btn {
+    border-bottom: none;
   }
   section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.ebook_list_wrap .ebook_list_box a.ebook_list {
     width: calc(25% - 12px);

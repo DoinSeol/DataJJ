@@ -253,7 +253,6 @@ section{
             
             .db_visual_btn_tab.btn {
               // background:#fff;
-              border-bottom: none;
               border-radius: 0px;
               
               min-height:25px; 
@@ -658,7 +657,12 @@ section{
           // 03_02_01_통계DB
           .sub_cont_inner.db_visual_detail_data_wrap {
             .db_visual_detail_btn_area.dep1 {
-              &.tab_box_5 .db_visual_btn_tab.btn {width: calc(100% / 5);}
+              &.tab_box_5 .db_visual_btn_tab.btn {
+                width: calc(100% / 5);
+              }
+              &.tab_box_7 .db_visual_btn_tab.btn {
+                width: calc(100% / 4);
+              }
             }
 
             .db_visual_detail_content_area.content_area.dep1_cont {
@@ -763,6 +767,21 @@ section{
           .sub_cont_inner.db_visual_wrap {
             .db_visual_box {
               width: calc((100% / 3) - 11.5px);
+            }
+          }
+
+          // 03_02_01_통계DB
+          .sub_cont_inner.db_visual_detail_data_wrap {
+            .db_visual_detail_btn_area.dep1 {
+              &.tab_box_5 .db_visual_btn_tab.btn {
+                width: calc(100% / 5);
+              }
+              &.tab_box_7 .db_visual_btn_tab.btn {
+                width: calc(100% / 7);
+              }
+              .db_visual_btn_tab.btn {
+                border-bottom: none;
+              }
             }
           }
 
