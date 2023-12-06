@@ -58,6 +58,7 @@ $(document).ready(function(){
   // side_menu_dep03_open
   $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseenter', function(){
     $('.visual_dep03_contain').show();
+    $('.visual_dep03_contain').css({"display": "flex"});
   });
 
   // side_menu_dep03_close
