@@ -3,7 +3,7 @@ section {
     .sub_cont_wrap {
       .sub_cont {
 
-        // 99_01_개인정보처리방침
+        // 09_01_개인정보처리방침
         .sub_cont_inner.list_privacy_wrap {
           .privacy_list_tab_box {display: flex; flex-wrap:wrap; align-items: stretch; justify-content: space-between;}
           .privacy_list_tab_box li {width: calc(50% - 7.5px); margin-bottom:10px; background-repeat: no-repeat; background-position: 16px center; background-size: 20px auto;}
@@ -100,7 +100,7 @@ section {
           }
         }
 
-        // 99_02_이메일무단수집거부
+        // 09_02_이메일무단수집거부
         .sub_cont_inner.info_email_wrap {
           .intro_privacy_email_box {
             line-height: 1.5;
@@ -108,7 +108,7 @@ section {
 
         }
 
-        // 99_04_통계관련사이트
+        // 09_04_통계관련사이트
         .sub_cont_inner.cont_stie_wrap {
           gap: 18px;
           .site_bt_box {
@@ -149,7 +149,7 @@ section {
     div.sub_section {
       .sub_cont_wrap {
         .sub_cont {
-          // 99_04_통계관련사이트
+          // 09_04_통계관련사이트
           .sub_cont_inner.cont_stie_wrap {
             .site_bt_box {
               width: calc((100% / 2) - 18px);
@@ -173,7 +173,7 @@ section {
       .sub_cont_wrap {
         .sub_cont {
           
-          // 99_02_이메일무단수집거부
+          // 09_02_이메일무단수집거부
           .sub_cont_inner.info_email_wrap {
             .intro_privacy_email_box {
               padding-left: 140px;
@@ -202,7 +202,7 @@ section {
       .sub_cont_wrap {
         .sub_cont {
 
-          // 99_04_통계관련사이트
+          // 09_04_통계관련사이트
           .sub_cont_inner.cont_stie_wrap {
             .site_bt_box {
               width: calc((100% / 3) - 12px);

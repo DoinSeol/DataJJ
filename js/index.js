@@ -25,6 +25,7 @@ $(document).ready(function(){
 
   $( '.all_menu_open' ).on('click', function() {
     $( '#all_menu_contain' ).slideDown( 300, 'linear' );
+    $('#all_menu_contain').css({"display": "flex"});
   } );
 
   $( '.all_menu_close' ).on('click', function() {

@@ -203,7 +203,7 @@ header.sub_header {
   position: fixed; top:0; left: 0; z-index: 15;
   background-color: #0D7ACF;
   display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
-  // display: none;
+  display: none;
   overflow-y: auto;
 
   .all_menu_top_wrap {
