@@ -169,7 +169,7 @@ section{
 
 
         // 02_05_생활지리정보
-        .sub_cont_inner.info_business_wrap {
+        .sub_cont_inner/*.info_business_wrap*/ {
           ul.info_business_menu_btn_area{
             li.business_menu_btn_tab.btn {
               border-radius: 0px;
@@ -274,8 +274,8 @@ section{
           }
 
           // 02_05_생활지리정보
-          .sub_cont_inner.info_business_wrap.tab_style_RS {
-            ul.info_business_menu_btn_area.dep1 {
+          .sub_cont_inner/*.info_business_wrap.tab_style_RS*/ {
+            ul.info_business_menu_btn_area.dep1.tab_style_RS {
               li.business_menu_btn_tab.btn {
                 width: calc(100% / 3); min-height:25px; 
                 border-radius: 0px;
@@ -324,8 +324,8 @@ section{
           }
 
           // 02_05_생활지리정보
-          .sub_cont_inner.info_business_wrap.tab_style_RS {
-            ul.info_business_menu_btn_area.dep1 {
+          .sub_cont_inner/*.info_business_wrap.tab_style_RS*/ {
+            ul.info_business_menu_btn_area.dep1.tab_style_RS {
               li.business_menu_btn_tab.btn {
                 width: calc(100% / 4); min-height:25px; 
                 border-radius: 0px;

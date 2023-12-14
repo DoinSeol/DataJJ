@@ -67,7 +67,16 @@ $(document).ready(function(){
   });
 
   // 02_02 통계 시각화
+  // tab_menu
+  // $('visual_menu_btn_area.dep1 button').click(function(){
+  //   var tab_id = $(this).attr('data-tab');
 
+  //   $('.visual_menu_btn_area.dep1 button').removeClass('act');
+  //   $('.visual_menu_content_area.content_area.dep1_cont').removeClass('act');
+
+  //   $(this).addClass('act');
+  //   $("#"+tab_id).addClass('act');
+  // })
 
 
   // 02_05 상권분석정보
@@ -204,41 +213,41 @@ $(window).resize(function(){
 
 
 
-
-function findParent(el, className){
-  let check = el.parentNode.classList.contains(className);
+// 시각화탭(ver.01)
+// function findParent(el, className){
+//   let check = el.parentNode.classList.contains(className);
   
-  if(check === true){
-    return el.parentNode;
-  }else{
-    return findParent(el.parentNode, className);
-  }
-}
+//   if(check === true){
+//     return el.parentNode;
+//   }else{
+//     return findParent(el.parentNode, className);
+//   }
+// }
 
-function bindingTabEvent(wrap){
-  let wrapEl = document.querySelectorAll(wrap);
+// function bindingTabEvent(wrap){
+//   let wrapEl = document.querySelectorAll(wrap);
   
-  wrapEl.forEach(function(tabArea){
-    let btn = tabArea.querySelectorAll('.visual_menu_btn_tab');
+//   wrapEl.forEach(function(tabArea){
+//     let btn = tabArea.querySelectorAll('.visual_menu_btn_tab');
     
-    btn.forEach(function(item){
-      item.addEventListener('click', function(){
-        let parent = findParent(this, 'visual_tab_area');
-        let idx = this.dataset['idx'];
-        let depth = this.dataset['depth'];
-        let btnArr = parent.querySelectorAll('.visual_menu_btn_tab[data-depth="'+ depth +'"]');
-        let contentArr = parent.querySelectorAll('.visual_menu_content_area[data-depth="'+ depth +'"]');
+//     btn.forEach(function(item){
+//       item.addEventListener('click', function(){
+//         let parent = findParent(this, 'visual_tab_area');
+//         let idx = this.dataset['idx'];
+//         let depth = this.dataset['depth'];
+//         let btnArr = parent.querySelectorAll('.visual_menu_btn_tab[data-depth="'+ depth +'"]');
+//         let contentArr = parent.querySelectorAll('.visual_menu_content_area[data-depth="'+ depth +'"]');
         
-        btnArr.forEach(function(btn){ btn.classList.remove('act'); });
-        this.classList.add('act');
-        contentArr.forEach(function(content){ content.classList.remove('act'); });
-        parent.querySelector('.visual_menu_content_area[data-idx="'+ idx +'"][data-depth="'+ depth +'"]').classList.add('act');
-      });
-    });
-  });
-}
+//         btnArr.forEach(function(btn){ btn.classList.remove('act'); });
+//         this.classList.add('act');
+//         contentArr.forEach(function(content){ content.classList.remove('act'); });
+//         parent.querySelector('.visual_menu_content_area[data-idx="'+ idx +'"][data-depth="'+ depth +'"]').classList.add('act');
+//       });
+//     });
+//   });
+// }
 
-bindingTabEvent('.visual_tab_wrap');
+// bindingTabEvent('.visual_tab_wrap');
 
 
 

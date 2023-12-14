@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/jquery-3.7.1.min.js"></script>
   <script defer src="../js/index.js"></script>
+  <script src="../js/popup_db.js"></script>
 </head>
 <body>
   <main>
@@ -39,7 +40,7 @@
           <li class="dep_01">
             <a href="#">데이터활용</a>
             <ul class="drop_down">
-              <li><a href="../02/02_01.html">전주의 하루</a></li>
+              <li><a href="../02/02_01_04.html">전주의 하루</a></li>
               <li><a href="../02/02_02.html">통계 시각화</a></li>
               <li><a href="../02/02_03.html">경제·산업동향</a></li>
               <li><a href="../02/02_04.html">생활·지리정보</a></li>
@@ -128,7 +129,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
               </a>
               <ul class="drop_down">
-                <li><a href="../02/02_01.html">전주의 하루</a></li>
+                <li><a href="../02/02_01_04.html">전주의 하루</a></li>
                 <li><a href="../02/02_02.html">통계 시각화</a></li>
                 <li><a href="../02/02_03.html">경제·산업동향</a></li>
                 <li><a href="../02/02_04.html">생활·지리정보</a></li>
@@ -202,7 +203,7 @@
                 <p>
                   전주시 통계연보에 대한 통계를 조회하고 다운로드 받으실 수 있습니다.
                 </p>
-                <a class="btn_square_arrow_navy" title="kosis 홈페이지 새창열기" href="#">
+                <a class="btn_square_arrow_navy" title="kosis 홈페이지 새창열기" href="#" onclick='popStatisticsDB("711_MT_MTITLE*MT_OTITLE")'>
                   <span>통계조회 및 다운로드 바로가기</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
                 </a>
@@ -256,9 +257,9 @@
             </div>
 
             <h2 class="sub_cont_title">주요 통계</h2>
-            <div class="sub_cont_inner db_visual_detail_data_wrap tab_style_RS">
+            <div class="sub_cont_inner db_visual_detail_data_wrap">
 
-              <ul class="db_visual_detail_btn_area dep1 tab_box_5 flex_r_ss flex_wrap">
+              <ul class="db_visual_detail_btn_area dep1 tab_style_RS tab_box_5 flex_r_ss flex_wrap">
                 <li class="btn db_visual_btn_tab act" data-tab="db_visual_detail_01_01">인구추이</li>
                 <li class="btn db_visual_btn_tab" data-tab="db_visual_detail_01_02">경제활동인구</li>
                 <li class="btn db_visual_btn_tab" data-tab="db_visual_detail_01_03">용도별 전력사용량</li>

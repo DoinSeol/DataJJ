@@ -48,7 +48,7 @@
           <li class="dep_01">
             <a href="#">데이터활용</a>
             <ul class="drop_down">
-              <li><a href="./02_01.html">전주의 하루</a></li>
+              <li><a href="./02_01_04.html">전주의 하루</a></li>
               <li><a href="./02_02.html">통계 시각화</a></li>
               <li><a href="./02_03.html">경제·산업동향</a></li>
               <li><a href="./02_04.html">생활·지리정보</a></li>
@@ -137,7 +137,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
               </a>
               <ul class="drop_down">
-                <li><a href="./02_01.html">전주의 하루</a></li>
+                <li><a href="./02_01_04.html">전주의 하루</a></li>
                 <li><a href="./02_02.html">통계 시각화</a></li>
                 <li><a href="./02_03.html">경제·산업동향</a></li>
                 <li><a href="./02_04.html">생활·지리정보</a></li>
@@ -206,21 +206,23 @@
           <div class="sub_cont">
             <!-- 서브 콘텐츠::02_02_통계시각화 -->
             <!-- <h2 class="sub_cont_title"></h2> -->
-
+            
+            
             <!-- 탭메뉴_1deps -->
-            <div class="sub_cont_inner visual_tab_wrap visual_tab_area tab_style_RS">
-              <div class="visual_menu_btn_area dep1 flex_r_ss flex_wrap">
-                <button class="btn visual_menu_btn_tab act" data-depth="0" data-idx="0" data-tab="chart_box_01">인구·교육</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="1" data-tab="chart_box_02">보건·복지</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="2" data-tab="chart_box_03">경제·산업</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="3" data-tab="chart_box_04">환경·녹지</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="4" data-tab="chart_box_05">교통·안전</button>
-                <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="5" data-tab="chart_box_06">관광·문화</button>
-              </div>
+            <div class="visual_menu_btn_area dep1 flex_r_ss flex_wrap tab_style_RS">
+              <button class="btn visual_menu_btn_tab act" data-depth="0" data-idx="0" data-tab="chart_box_01">인구·교육</button>
+              <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="1" data-tab="chart_box_02">보건·복지</button>
+              <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="2" data-tab="chart_box_03">경제·산업</button>
+              <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="3" data-tab="chart_box_04">환경·녹지</button>
+              <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="4" data-tab="chart_box_05">교통·안전</button>
+              <button class="btn visual_menu_btn_tab" data-depth="0" data-idx="5" data-tab="chart_box_06">관광·문화</button>
+            </div>
+
+            <div class="sub_cont_inner visual_tab_wrap visual_tab_area">
               
               <!-- 탭메뉴_2deps -->
               <!-- 01_인구·교육 --------------------------------------------------------------------------------->
-              <div class="visual_menu_content_area content_area dep1_cont act" data-depth="0" data-idx="0">
+              <div id="chart_box_01" class="visual_menu_content_area content_area dep1_cont act" data-depth="0" data-idx="0">
                 <div class="visual_tab_area">
                   <div class="visual_menu_btn_area dep2 flex_r_ss flex_wrap">
                     <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0" data-tab="chart_box_01_01">주민등록인구 현황</button>
@@ -378,7 +380,7 @@
 
 
               <!-- 02_보건·복지 --------------------------------------------------------------------------------->
-              <div class="visual_menu_content_area content_area dep1_cont" data-depth="0" data-idx="1">
+              <div id="chart_box_02" class="visual_menu_content_area content_area dep1_cont" data-depth="0" data-idx="1">
                 <div class="visual_tab_area">
                   <div class="visual_menu_btn_area dep2 flex_r_ss flex_wrap">
                     <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0" data-tab="chart_box_02_01">의료기관 현황</button>
@@ -519,7 +521,7 @@
 
 
               <!-- 03_경제·산업 --------------------------------------------------------------------------------->
-              <div class="visual_menu_content_area content_area dep1_cont" data-depth="0" data-idx="2">
+              <div id="chart_box_03" class="visual_menu_content_area content_area dep1_cont" data-depth="0" data-idx="2">
                 <div class="visual_tab_area">
                   <div class="visual_menu_btn_area dep2 flex_r_ss flex_wrap">
                     <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0" data-tab="chart_box_03_01">전주시 고용률·실업률</button>
@@ -638,7 +640,7 @@
 
 
               <!-- 04_환경·녹지 --------------------------------------------------------------------------------->
-              <div class="visual_menu_content_area content_area dep1_cont" data-depth="0" data-idx="3">
+              <div id="chart_box_04" class="visual_menu_content_area content_area dep1_cont" data-depth="0" data-idx="3">
                 <div class="visual_tab_area">
                   <div class="visual_menu_btn_area dep2 flex_r_ss flex_wrap">
                     <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0" data-tab="chart_box_04_01">월별 기온</button>
@@ -757,7 +759,7 @@
 
 
               <!-- 05_교통·안전 --------------------------------------------------------------------------------->
-              <div class="visual_menu_content_area content_area dep1_cont" data-depth="0" data-idx="4">
+              <div id="chart_box_05" class="visual_menu_content_area content_area dep1_cont" data-depth="0" data-idx="4">
                 <div class="visual_tab_area">
                   <div class="visual_menu_btn_area dep2 flex_r_ss flex_wrap">
                     <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0" data-tab="chart_box_05_01">자동차 등록</button>
@@ -876,7 +878,7 @@
 
 
               <!-- 06_관광·문화 --------------------------------------------------------------------------------->
-              <div class="visual_menu_content_area content_area dep1_cont" data-depth="0" data-idx="5">
+              <div id="chart_box_06" class="visual_menu_content_area content_area dep1_cont" data-depth="0" data-idx="5">
                 <div class="visual_tab_area">
                   <div class="visual_menu_btn_area dep2 flex_r_ss flex_wrap">
                     <button class="btn visual_menu_btn_tab act" data-depth="1" data-idx="0" data-tab="chart_box_06_01">주요 관광지 관광객수</button>

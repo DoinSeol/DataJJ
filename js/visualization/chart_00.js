@@ -1,31 +1,74 @@
 jQuery(function () {
-  $('.visual_menu_btn_area button').click(function () {
+  // 시각화탭(ver.01)
+  // $('.visual_menu_btn_area button').click(function () {
+  //   var tab_id_2dep = $(this).attr('data-tab');
+
+  //   $('.visual_menu_btn_area.dep2 button').removeClass('act');
+  //   $('.chart_wrap').removeClass('act');
+
+  //   $('.visual_menu_btn_area.dep1 button').removeClass('act');
+  //   $(this).addClass('act');
+  //   $("#" + tab_id_2dep).addClass('act');
+
+  //   chart_drawing(tab_id_2dep);
+
+  //   if(tab_id_2dep == 'chart_box_02'){
+  //     chart_drawing('chart_box_02_01');
+  //   }
+  //   if(tab_id_2dep == 'chart_box_03'){
+  //     chart_drawing('chart_box_03_01');
+  //   }
+  //   if(tab_id_2dep == 'chart_box_04'){
+  //     chart_drawing('chart_box_04_01');
+  //   }
+  //   if(tab_id_2dep == 'chart_box_05'){
+  //     chart_drawing('chart_box_05_01');
+  //   }
+  //   if(tab_id_2dep == 'chart_box_06'){
+  //     chart_drawing('chart_box_06_01');
+  //   }
+  // });
+
+
+  $('.visual_menu_btn_area.dep1 button').click(function(){
+    var tab_id_1dep = $(this).attr('data-tab');
+
+    $('.visual_menu_btn_area.dep1 button').removeClass('act');
+    $('.visual_menu_content_area.content_area.dep1_cont').removeClass('act');
+
+    $(this).addClass('act');
+    $("#"+tab_id_1dep).addClass('act');
+
+    if(tab_id_1dep == 'chart_box_02'){
+      chart_drawing('chart_box_02_01');
+    }
+    if(tab_id_1dep == 'chart_box_03'){
+      chart_drawing('chart_box_03_01');
+    }
+    if(tab_id_1dep == 'chart_box_04'){
+      chart_drawing('chart_box_04_01');
+    }
+    if(tab_id_1dep == 'chart_box_05'){
+      chart_drawing('chart_box_05_01');
+    }
+    if(tab_id_1dep == 'chart_box_06'){
+      chart_drawing('chart_box_06_01');
+    }
+
+  })
+
+  $('.visual_menu_btn_area.dep2 button').click(function(){
     var tab_id_2dep = $(this).attr('data-tab');
 
     $('.visual_menu_btn_area.dep2 button').removeClass('act');
-    // $('.chart_wrap').removeClass('act');
+    $('.visual_menu_content_area.content_area.dep2_cont').removeClass('act');
 
     $(this).addClass('act');
-    $("#" + tab_id_2dep).addClass('act');
+    $("#"+tab_id_2dep).addClass('act');
 
     chart_drawing(tab_id_2dep);
 
-    if(tab_id_2dep == 'chart_box_02'){
-      chart_drawing('chart_box_02_01');
-    }
-    if(tab_id_2dep == 'chart_box_03'){
-      chart_drawing('chart_box_03_01');
-    }
-    if(tab_id_2dep == 'chart_box_04'){
-      chart_drawing('chart_box_04_01');
-    }
-    if(tab_id_2dep == 'chart_box_05'){
-      chart_drawing('chart_box_05_01');
-    }
-    if(tab_id_2dep == 'chart_box_06'){
-      chart_drawing('chart_box_06_01');
-    }
-  });
+  })
 
   $(document).ready(function () {
     var first = 'chart_box_01_01';
