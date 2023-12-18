@@ -17,46 +17,43 @@ head.addEventListener('mouseleave', () => {
 // })
 
 
-
 // side_menu_dep03_list ---------------------------------------------------------------------
-$(document).on("click", ".left_visual_menu_ul > li", (e) => {
-  const index = $(e.target).index();
-  alert(index);
+// $(document).on("click", ".left_visual_menu_ul > li", (e) => {
+//   const index = $(e.target).index();
+//   alert(index);
   
-  const dep_03_1 = ["주민등록인구 현황", "연도별 인구 및 세대", "동별 세대 및 인구", "연령계층별 인구", "인구동향", "연도별 인구이동", "학교, 학생 수"];
-  const dep_03_2 = ["의료기관 현황", "의료기관종사자·의료인력", "노인복지시설 현황", "장애인복지시설 현황", "국민연금 지급자수", "국민연금 지급금액"];
-  const dep_03_3 = ["교용률·실업률", "청년층 고용률", "취업자·비실업자", "비경제활동인구", "산업별 취업자", "직업별 취업자"];
-  const dep_03_4 = ["월별기온", "월별강수량", "미세먼지현황", "쓰레기 배출", "폐기물·재활용 현황", "녹지현황(면적)"];
-  const dep_03_5 = ["자동차 등록", "영업용 자동차 등록대수", "도로현황", "교통사고건수", "화재발생", "119 구급활동 실적"];
-  const dep_03_6 = ["주요 관광지 관광객수", "관광 사업체 등록 현황", "박물관/미술관 현황", "공공도서관 현황"];
+//   const dep_03_1 = ["주민등록인구 현황", "연도별 인구 및 세대", "동별 세대 및 인구", "연령계층별 인구", "인구동향", "연도별 인구이동", "학교, 학생 수"];
+//   const dep_03_2 = ["의료기관 현황", "의료기관종사자·의료인력", "노인복지시설 현황", "장애인복지시설 현황", "국민연금 지급자수", "국민연금 지급금액"];
+//   const dep_03_3 = ["교용률·실업률", "청년층 고용률", "취업자·비실업자", "비경제활동인구", "산업별 취업자", "직업별 취업자"];
+//   const dep_03_4 = ["월별기온", "월별강수량", "미세먼지현황", "쓰레기 배출", "폐기물·재활용 현황", "녹지현황(면적)"];
+//   const dep_03_5 = ["자동차 등록", "영업용 자동차 등록대수", "도로현황", "교통사고건수", "화재발생", "119 구급활동 실적"];
+//   const dep_03_6 = ["주요 관광지 관광객수", "관광 사업체 등록 현황", "박물관/미술관 현황", "공공도서관 현황"];
 
-  let dep_03_list = "";
+//   let dep_03_list = "";
 
-  const dep_03_list_num = "dep_03_" + index;
+//   const dep_03_list_num = "dep_03_" + index;
 
 
+//   for(let i=0; i < dep_03_list_num.length; i++) {
+//     dep_03_list += "<li><a href='#'><span></span>" + dep_03_1[i] + "</a></li>";
+//   }
   
-  for(let i=0; i < dep_03_list_num.length; i++) {
-    dep_03_list += "<li><a href='#'><span></span>" + dep_03_1[i] + "</a></li>";
-  }
+//   document.getElementById("visual_dep02_menu").innerHTML = dep_03_list;
   
-  document.getElementById("visual_dep02_menu").innerHTML = dep_03_list;
+//     // side_menu_dep03
+//     $(".visual_dep03_contain").hide();
   
-    // side_menu_dep03
-    $(".visual_dep03_contain").hide();
+//     // side_menu_dep03_open
+//     $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseenter', function(){
+//       $('.visual_dep03_contain').show();
+//       $('.visual_dep03_contain').css({"display": "flex"});
+//     });
   
-    // side_menu_dep03_open
-    $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseenter', function(){
-      $('.visual_dep03_contain').show();
-      $('.visual_dep03_contain').css({"display": "flex"});
-    });
-  
-    // side_menu_dep03_close
-    $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseleave', function(){
-      $('.visual_dep03_contain').hide();
-    });
-});
-
+//     // side_menu_dep03_close
+//     $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseleave', function(){
+//       $('.visual_dep03_contain').hide();
+//     });
+// });
 
 
 // visual_dep02_ul = function () {
@@ -85,10 +82,63 @@ $(document).on("click", ".left_visual_menu_ul > li", (e) => {
 // }
 
 
-
-
-
 $(document).ready(function(){
+
+// side_visualization_menu
+  $(".left_visual_menu_ul > li").click(function () {
+    const index = $(".left_visual_menu_ul > li").index(this) + 1;
+    // alert(index);
+    const dep_01_1 = ["인구·가구", "보건·복지", "경제·산업", "환경·녹지", "교통·안전", "관광·문화"];
+    const dep_03_1 = ["주민등록인구 현황", "연도별 인구 및 세대", "동별 세대 및 인구", "연령계층별 인구", "인구동향", "연도별 인구이동", "학교, 학생 수"];
+    const dep_03_2 = ["의료기관 현황", "의료기관 종사자·인력", "노인복지시설 현황", "장애인복지시설 현황", "국민연금 지급자수", "국민연금 지급금액"];
+    const dep_03_3 = ["교용률·실업률", "청년층 고용률", "취업자·비실업자", "비경제활동인구", "산업별 취업자", "직업별 취업자"];
+    const dep_03_4 = ["월별기온", "월별강수량", "미세먼지현황", "쓰레기 배출", "폐기물·재활용 현황", "녹지현황(면적)"];
+    const dep_03_5 = ["자동차 등록", "영업용 자동차 등록", "도로현황", "교통사고건수", "화재발생", "119 구급활동 실적"];
+    const dep_03_6 = ["주요 관광지 관광객수", "관광 사업체 등록 현황", "박물관/미술관 현황", "공공도서관 현황"];
+  
+    let dep_03_list = "";
+    let dep_03_list_num = eval("dep_03_" + index);
+
+    const img_visualization = document.querySelectorAll('.img_visualization');
+
+    // 시각화 메뉴
+    for(let i=0; i < dep_03_list_num.length; i++) {
+      dep_03_list += "<li><a href='./02/02_02.html'><span></span>" + dep_03_list_num[i] + "</a></li>";
+    }
+    
+    document.getElementById("visual_dep02_menu").innerHTML = dep_03_list;
+    document.getElementById("visual_dep02_title").innerHTML = dep_01_1[index - 1];
+
+
+    // 시각화 이미지
+    // const imgSrc = $("this").find('img');
+    const srcName = $(".img_visualization").attr('src');
+
+    
+    $('.visual_dep02_menu > li').hover(function(){
+      const indexImg = $(".visual_dep02_menu > li").index(this) + 1;
+      $('.img_visualization').attr('src', './images/img_visualization/side_visual_' + index + '_' + indexImg + '.png' );
+      // alert(index + '_' + indexImg);
+    })
+
+    // side_menu_dep03
+    $(".visual_dep03_contain").hide();
+  
+    // side_menu_dep03_open
+    $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseenter', function(){
+      $('.visual_dep03_contain').show();
+      $('.visual_dep03_contain').css({"display": "flex"});
+    });
+  
+    // side_menu_dep03_close
+    $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseleave', function(){
+      $('.visual_dep03_contain').hide();
+    });
+
+
+  });
+
+
 
 
   // all_menu
