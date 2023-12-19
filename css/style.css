@@ -715,10 +715,10 @@ aside .left_menu_wrap .left_direct_menu_wrap ul li {
   align-items: center;
   display: none;
   overflow-y: hidden;
+  padding: 16px 0px;
 }
 .visual_dep03_contain img {
-  width: 100%;
-  margin-bottom: 16px;
+  height: 100%;
 }
 
 @media screen and (min-width: 600px) {

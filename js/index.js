@@ -97,27 +97,34 @@ $(document).ready(function(){
     const dep_03_6 = ["주요 관광지 관광객수", "관광 사업체 등록 현황", "박물관/미술관 현황", "공공도서관 현황"];
   
     let dep_03_list = "";
+    // let dep_03_list_sub = "";
     let dep_03_list_num = eval("dep_03_" + index);
 
     const img_visualization = document.querySelectorAll('.img_visualization');
 
-    // 시각화 메뉴
+    // 시각화 메뉴_2deps::클릭
     for(let i=0; i < dep_03_list_num.length; i++) {
       dep_03_list += "<li><a href='./02/02_02.html'><span></span>" + dep_03_list_num[i] + "</a></li>";
+      // dep_03_list_sub += "<li><a href='../02/02_02.html'><span></span>" + dep_03_list_num[i] + "</a></li>";
     }
+
     
     document.getElementById("visual_dep02_menu").innerHTML = dep_03_list;
+    // document.getElementById("visual_dep02_menu_sub").innerHTML = dep_03_list_sub;
     document.getElementById("visual_dep02_title").innerHTML = dep_01_1[index - 1];
 
+    $(".visual_dep02_contain.main .visual_dep02_top_icon").css({"background-image":"url(./images/icon_common/side_icon_1_" + index + "_b.svg)"})
+    $(".visual_dep02_contain.sub .visual_dep02_top_icon").css({"background-image":"url(../images/icon_common/side_icon_1_" + index + "_b.svg)"})
 
-    // 시각화 이미지
+    // 시각화 이미지_3deps::마우스오버
     // const imgSrc = $("this").find('img');
     const srcName = $(".img_visualization").attr('src');
 
     
     $('.visual_dep02_menu > li').hover(function(){
       const indexImg = $(".visual_dep02_menu > li").index(this) + 1;
-      $('.img_visualization').attr('src', './images/img_visualization/side_visual_' + index + '_' + indexImg + '.png' );
+      $('.visual_dep03_contain.main .img_visualization').attr('src', './images/img_visualization/side_visual_' + index + '_' + indexImg + '.png' );
+      $('.visual_dep03_contain.sub .img_visualization').attr('src', '../images/img_visualization/side_visual_' + index + '_' + indexImg + '.png' );
       // alert(index + '_' + indexImg);
     })
 
@@ -137,9 +144,6 @@ $(document).ready(function(){
 
 
   });
-
-
-
 
   // all_menu
   $("#all_menu_contain").hide();

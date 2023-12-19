@@ -530,8 +530,9 @@ aside {
   display: flex; justify-content: center; align-items: center;
   display: none;
   overflow-y: hidden;
+  padding: 16px 0px;
 
-  img {width: 100%; margin-bottom: 16px;}
+  img {height: 100%;}
 }
 
 // 콘텐츠::600
