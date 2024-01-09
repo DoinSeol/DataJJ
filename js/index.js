@@ -16,77 +16,12 @@ head.addEventListener('mouseleave', () => {
 //   report_list_box.classList.add('active');
 // })
 
-
-// side_menu_dep03_list ---------------------------------------------------------------------
-// $(document).on("click", ".left_visual_menu_ul > li", (e) => {
-//   const index = $(e.target).index();
-//   alert(index);
-  
-//   const dep_03_1 = ["주민등록인구 현황", "연도별 인구 및 세대", "동별 세대 및 인구", "연령계층별 인구", "인구동향", "연도별 인구이동", "학교, 학생 수"];
-//   const dep_03_2 = ["의료기관 현황", "의료기관종사자·의료인력", "노인복지시설 현황", "장애인복지시설 현황", "국민연금 지급자수", "국민연금 지급금액"];
-//   const dep_03_3 = ["교용률·실업률", "청년층 고용률", "취업자·비실업자", "비경제활동인구", "산업별 취업자", "직업별 취업자"];
-//   const dep_03_4 = ["월별기온", "월별강수량", "미세먼지현황", "쓰레기 배출", "폐기물·재활용 현황", "녹지현황(면적)"];
-//   const dep_03_5 = ["자동차 등록", "영업용 자동차 등록대수", "도로현황", "교통사고건수", "화재발생", "119 구급활동 실적"];
-//   const dep_03_6 = ["주요 관광지 관광객수", "관광 사업체 등록 현황", "박물관/미술관 현황", "공공도서관 현황"];
-
-//   let dep_03_list = "";
-
-//   const dep_03_list_num = "dep_03_" + index;
-
-
-//   for(let i=0; i < dep_03_list_num.length; i++) {
-//     dep_03_list += "<li><a href='#'><span></span>" + dep_03_1[i] + "</a></li>";
-//   }
-  
-//   document.getElementById("visual_dep02_menu").innerHTML = dep_03_list;
-  
-//     // side_menu_dep03
-//     $(".visual_dep03_contain").hide();
-  
-//     // side_menu_dep03_open
-//     $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseenter', function(){
-//       $('.visual_dep03_contain').show();
-//       $('.visual_dep03_contain').css({"display": "flex"});
-//     });
-  
-//     // side_menu_dep03_close
-//     $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseleave', function(){
-//       $('.visual_dep03_contain').hide();
-//     });
-// });
-
-
-// visual_dep02_ul = function () {
-
-//   const dep_03_1 = ["주민등록인구 현황", "연도별 인구 및 세대", "동별 세대 및 인구", "연령계층별 인구", "인구동향", "연도별 인구이동", "학교, 학생 수"]
-//   let dep_03_list = "";
-  
-//   for(let i=0; i < dep_03_1.length; i++) {
-//     dep_03_list += "<li><a href='#'><span></span>" + dep_03_1[i] + "</a></li>";
-//   }
-//   document.getElementById("visual_dep02_menu").innerHTML = dep_03_list;
-
-//   // side_menu_dep03
-//   $(".visual_dep03_contain").hide();
-  
-//   // side_menu_dep03_open
-//   $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseenter', function(){
-//     $('.visual_dep03_contain').show();
-//     $('.visual_dep03_contain').css({"display": "flex"});
-//   });
-
-//   // side_menu_dep03_close
-//   $('.visual_dep02_menu li, .visual_dep03_contain').on('mouseleave', function(){
-//     $('.visual_dep03_contain').hide();
-//   });
-// }
-
-
 $(document).ready(function(){
 
 // side_visualization_menu
   $(".left_visual_menu_ul > li").click(function () {
     const index = $(".left_visual_menu_ul > li").index(this) + 1;
+
     // alert(index);
     const dep_01_1 = ["인구·가구", "보건·복지", "경제·산업", "환경·녹지", "교통·안전", "관광·문화"];
     const dep_03_1 = ["주민등록인구 현황", "연도별 인구 및 세대", "동별 세대 및 인구", "연령계층별 인구", "인구동향", "연도별 인구이동", "학교, 학생 수"];
@@ -97,26 +32,31 @@ $(document).ready(function(){
     const dep_03_6 = ["주요 관광지 관광객수", "관광 사업체 등록 현황", "박물관/미술관 현황", "공공도서관 현황"];
   
     let dep_03_list = "";
-    // let dep_03_list_sub = "";
     let dep_03_list_num = eval("dep_03_" + index);
 
     const img_visualization = document.querySelectorAll('.img_visualization');
 
-    // 시각화 메뉴_2deps::클릭
-    for(let i=0; i < dep_03_list_num.length; i++) {
-      dep_03_list += "<li><a href='./02/02_02.html'><span></span>" + dep_03_list_num[i] + "</a></li>";
-      // dep_03_list_sub += "<li><a href='../02/02_02.html'><span></span>" + dep_03_list_num[i] + "</a></li>";
+    // 시각화 메뉴_2deps리스트 (1deps클릭시)
+    for(let i=1; i <= dep_03_list_num.length; i++) {
+      dep_03_list += "<li><a href='/02/02_02.html'><span></span>" + dep_03_list_num[i - 1] + "</a></li>";
     }
 
-    
-    document.getElementById("visual_dep02_menu").innerHTML = dep_03_list;
-    // document.getElementById("visual_dep02_menu_sub").innerHTML = dep_03_list_sub;
+    // CMS 시각화 탭 페이지 분리 시_2deps리스트
+    // for(let j=1; j<=dep_01_1.length; j++){
+    //   if (index == j) {
+    //     for(let i=1; i <= dep_03_list_num.length; i++) {
+    //       dep_03_list += "<li><a href='/02/02_02_0" + j + ".html'><span></span>" + dep_03_list_num[i - 1] + "</a></li>";
+    //     }
+    //   }
+    // }
+
     document.getElementById("visual_dep02_title").innerHTML = dep_01_1[index - 1];
+    document.getElementById("visual_dep02_menu").innerHTML = dep_03_list;
 
     $(".visual_dep02_contain.main .visual_dep02_top_icon").css({"background-image":"url(./images/icon_common/side_icon_1_" + index + "_b.svg)"})
     $(".visual_dep02_contain.sub .visual_dep02_top_icon").css({"background-image":"url(../images/icon_common/side_icon_1_" + index + "_b.svg)"})
 
-    // 시각화 이미지_3deps::마우스오버
+    // 시각화 이미지_3deps (2deps마우스오버시)
     // const imgSrc = $("this").find('img');
     const srcName = $(".img_visualization").attr('src');
 

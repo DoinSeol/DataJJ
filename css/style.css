@@ -2811,6 +2811,15 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.report_list_box
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.report_list_box_wrap ul.report_list_contain li.report_list_box.active.title .report_list_title button:hover {
   background-image: url(../images/icon_main_cont/minus-solid_y.svg);
 }
+section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_info_data_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_info_data_wrap img {
+  width: 100%;
+  max-width: 800px;
+}
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_wrap {
   gap: 16px;
 }
@@ -2823,11 +2832,11 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_wrap 
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_wrap .db_visual_box .inner_top {
   width: 100%;
-  height: 100px;
-  padding: 16px 8px;
+  height: 75px;
+  padding: 15px 16px 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -2841,7 +2850,7 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_wrap 
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_wrap .db_visual_box .inner_bottom {
   width: 100%;
-  height: calc(100% - 100px);
+  height: calc(100% - 75px);
   background-color: #efefef;
   background-repeat: no-repeat;
   background-position: center;
