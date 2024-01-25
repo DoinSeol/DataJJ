@@ -1901,7 +1901,7 @@ section .sub_cont_wrap .sub_cont h2.sub_cont_sub_title::before {
 .sub_paging_wrap, .sub_paging_wrap ul.sub_pasing_box {
   gap: 11px;
 }
-.sub_paging_wrap button, .sub_paging_wrap ul.sub_pasing_box li.paging_number_li a {
+.sub_paging_wrap button, .sub_paging_wrap ul.sub_pasing_box li a {
   width: 28px;
   height: 28px;
   font-size: 13px;
@@ -1933,16 +1933,16 @@ section .sub_cont_wrap .sub_cont h2.sub_cont_sub_title::before {
 .sub_paging_wrap button:hover {
   border-bottom: 1px solid #666;
 }
-.sub_paging_wrap ul.sub_pasing_box li.paging_number_li a {
+.sub_paging_wrap ul.sub_pasing_box li a {
   border-radius: 4px;
   transition: 0.1s;
 }
-.sub_paging_wrap ul.sub_pasing_box li.paging_number_li a:hover {
+.sub_paging_wrap ul.sub_pasing_box li a:hover {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.3);
   border: none;
 }
-.sub_paging_wrap ul.sub_pasing_box li.paging_number_li a.active {
+.sub_paging_wrap ul.sub_pasing_box li a.active {
   color: #fff;
   background-color: #0D7ACF;
   border: none;
@@ -2967,7 +2967,8 @@ section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detai
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_content_area.content_area.dep1_cont .db_visual_detail_inner_cont {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 36px;
+  -moz-column-gap: 36px;
+       column-gap: 36px;
   row-gap: 48px;
 }
 section div.sub_section .sub_cont_wrap .sub_cont .sub_cont_inner.db_visual_detail_data_wrap .db_visual_detail_content_area.content_area.dep1_cont .db_visual_detail_inner_cont.inner_box_3 .db_visual_detail_inner {
@@ -4173,6 +4174,4 @@ select option {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

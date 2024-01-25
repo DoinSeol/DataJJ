@@ -2,7 +2,7 @@
 .sub_paging_wrap {
   padding-top: 16px;
   &, ul.sub_pasing_box {gap: 11px;}
-  button, ul.sub_pasing_box li.paging_number_li a {
+  button, ul.sub_pasing_box li a {
     width: 28px; height: 28px;
     font-size: 13px; color: #777;
     // font-family: 'Noto Sans KR'; 
@@ -20,7 +20,7 @@
     &:hover {border-bottom: 1px solid #666;}
   }
   ul.sub_pasing_box {
-    li.paging_number_li a {
+    li a {
       // border: 1px solid #ddd; 
       border-radius: 4px;
       transition: 0.1s;
@@ -28,7 +28,7 @@
         color: #fff; background-color: rgba(0, 0, 0, 0.3); border: none;
       }
     }
-    li.paging_number_li a.active {
+    li a.active {
       color: #fff; background-color: #0D7ACF; border: none; 
     }
   }
